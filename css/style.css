@@ -460,3 +460,11 @@ font-weight:600;
 }
 
 }
+
+.visitor-quote{
+    text-align:center;
+    font-size:22px;
+    color:#8B0000;
+    margin-bottom:40px;
+    font-style:italic;
+}
