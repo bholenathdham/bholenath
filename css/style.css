@@ -147,4 +147,13 @@ justify-content:center;
 font-size:2rem;
 }
 
+.logo img{
+    height:70px;
+    width:auto;
+}
+
+@media(max-width:768px){
+    .logo img{
+        height:55px;
+    }
 }
