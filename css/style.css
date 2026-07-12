@@ -271,7 +271,7 @@ font-weight:600;
 }
 
 .story{
-    max-width:900px;
+    max-width:auto;
     margin:auto;
     background:white;
     padding:50px;
