@@ -188,3 +188,65 @@ padding:10px 18px;
 border-radius:10px;
 font-weight:600;
 }
+
+.quote-section{
+    padding:80px 20px;
+    background:linear-gradient(
+        135deg,
+        #fff8f0,
+        #fff
+    );
+}
+
+.quote-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    background:white;
+    padding:50px 30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.quote-icon{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.quote-en{
+    font-size:30px;
+    font-weight:600;
+    color:#8B0000;
+    line-height:1.6;
+    margin-bottom:25px;
+    font-style:italic;
+}
+
+.quote-bn{
+    font-size:24px;
+    color:#444;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.quote-sign{
+    font-size:22px;
+    font-weight:bold;
+    color:#ff6600;
+}
+
+@media(max-width:768px){
+
+.quote-en{
+    font-size:22px;
+}
+
+.quote-bn{
+    font-size:18px;
+}
+
+.quote-icon{
+    font-size:45px;
+}
+
+}
