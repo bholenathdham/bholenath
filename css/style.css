@@ -51,7 +51,19 @@ color:white;
 }
 
 .hero h2{
-font-size:3rem;
+    font-size:3.5rem;
+    font-weight:700;
+    color:#ffffff;
+
+    text-shadow:
+    -2px -2px 0 #ffffff,
+     2px -2px 0 #ffffff,
+    -2px  2px 0 #ffffff,
+     2px  2px 0 #ffffff,
+     0px  0px 15px rgba(255,255,255,0.7),
+     3px  3px 10px rgba(0,0,0,0.8);
+
+    letter-spacing:2px;
 }
 
 .hero p{
@@ -553,7 +565,7 @@ min-height:70vh;
 }
 
 .hero h2{
-font-size:2rem;
+font-size:2.4rem;
 }
 
 .quote-en{
