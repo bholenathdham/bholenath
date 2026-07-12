@@ -639,3 +639,43 @@ font-style:italic;
     cursor:pointer;
     font-weight:bold;
 }
+#backToTop{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#c45c00;
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
+
+#backToTop:hover{
+    transform:translateY(-5px);
+}
+
+@media(max-width:768px){
+
+#backToTop{
+    width:50px;
+    height:50px;
+    font-size:20px;
+}
+
+}
