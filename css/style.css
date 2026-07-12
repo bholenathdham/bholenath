@@ -597,3 +597,16 @@ transform:translateY(-3px);
     padding:8px;
     font-size:14px;
 }
+
+.footer-divider{
+width:120px;
+height:2px;
+background:#ff6600;
+margin:15px auto;
+}
+.hero-tagline{
+font-size:20px;
+margin-top:15px;
+opacity:.95;
+font-style:italic;
+}
