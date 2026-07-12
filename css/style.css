@@ -590,3 +590,10 @@ transition:.3s;
 .story:hover{
 transform:translateY(-3px);
 }
+.top-bar{
+    background:#8B0000;
+    color:white;
+    text-align:center;
+    padding:8px;
+    font-size:14px;
+}
