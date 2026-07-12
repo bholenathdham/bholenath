@@ -250,3 +250,14 @@ font-weight:600;
 }
 
 }
+
+.blessings-list{
+    margin-top:20px;
+    margin-left:20px;
+    line-height:2;
+    font-size:18px;
+}
+
+.blessings-list li{
+    margin-bottom:10px;
+}
