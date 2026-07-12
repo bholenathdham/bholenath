@@ -269,3 +269,43 @@ font-weight:600;
     color:#c45c00;
     margin-top:40px;
 }
+
+.story{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    line-height:1.9;
+}
+
+.story h2{
+    text-align:center;
+    color:#c45c00;
+    margin-bottom:20px;
+}
+
+.story h3{
+    color:#8B0000;
+    margin-top:25px;
+}
+
+.story blockquote{
+    background:#fff4e8;
+    border-left:5px solid #ff6600;
+    padding:20px;
+    margin:25px 0;
+    font-style:italic;
+    border-radius:10px;
+}
+
+.story p{
+    text-align:justify;
+    font-size:18px;
+}
+
+.blessings-list{
+    margin-left:25px;
+    line-height:2;
+}
