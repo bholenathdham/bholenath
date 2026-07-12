@@ -381,3 +381,11 @@ font-weight:600;
 }
 
 }
+
+.mantra-quote{
+    text-align:center;
+    font-size:22px;
+    font-style:italic;
+    color:#8B0000;
+    margin-bottom:40px;
+}
