@@ -261,3 +261,11 @@ font-weight:600;
 .blessings-list li{
     margin-bottom:10px;
 }
+
+.mahadev-ending{
+    text-align:center;
+    font-size:28px;
+    font-weight:700;
+    color:#c45c00;
+    margin-top:40px;
+}
