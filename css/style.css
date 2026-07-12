@@ -11,18 +11,6 @@ color:#222;
 line-height:1.6;
 }
 
-header{
-background:#fff;
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.1);
-}
-
 nav ul{
 display:flex;
 gap:20px;
@@ -45,7 +33,7 @@ cursor:pointer;
 }
 
 .hero{
-height:100vh;
+height:85vh;
 background:
 linear-gradient(
 rgba(0,0,0,.55),
@@ -82,7 +70,7 @@ border-radius:8px;
 }
 
 section{
-padding:80px 10%;
+padding:50px 6%;
 }
 
 section h2{
@@ -190,67 +178,39 @@ font-weight:600;
 }
 
 .quote-section{
-    padding:80px 20px;
-    background:linear-gradient(
-        135deg,
-        #fff8f0,
-        #fff
-    );
+    padding:40px 6%;
 }
 
 .quote-box{
-    max-width:1200px;
+    max-width:1000px;
     margin:auto;
     text-align:center;
     background:white;
-    padding:50px 30px;
+    padding:35px;
     border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .quote-icon{
-    font-size:60px;
-    margin-bottom:20px;
+    font-size:50px;
+    margin-bottom:15px;
 }
 
 .quote-en{
-    font-size:30px;
-    font-weight:600;
+    font-size:28px;
     color:#8B0000;
-    line-height:1.6;
-    margin-bottom:25px;
     font-style:italic;
 }
 
 .quote-bn{
-    font-size:24px;
-    color:#444;
-    line-height:1.8;
-    margin-bottom:25px;
+    font-size:22px;
 }
 
 .quote-sign{
-    font-size:22px;
-    font-weight:bold;
-    color:#ff6600;
+    margin-top:15px;
+    font-weight:600;
+    color:#c45c00;
 }
-
-@media(max-width:768px){
-
-.quote-en{
-    font-size:22px;
-}
-
-.quote-bn{
-    font-size:18px;
-}
-
-.quote-icon{
-    font-size:45px;
-}
-
-}
-
 .blessings-list{
     margin-top:20px;
     margin-left:20px;
@@ -271,13 +231,13 @@ font-weight:600;
 }
 
 .story{
-    max-width:auto;
-    margin:auto;
+    max-width:1000px;
+    margin:0 auto;
     background:white;
-    padding:50px;
+    padding:35px;
     border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    line-height:1.9;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    line-height:1.8;
 }
 
 .story h2{
@@ -288,31 +248,43 @@ font-weight:600;
 
 .story h3{
     color:#8B0000;
-    margin-top:25px;
-}
-
-.story blockquote{
-    background:#fff4e8;
-    border-left:5px solid #ff6600;
-    padding:20px;
-    margin:25px 0;
-    font-style:italic;
-    border-radius:10px;
+    margin:20px 0 10px;
 }
 
 .story p{
+    font-size:17px;
+    margin-bottom:15px;
     text-align:justify;
-    font-size:18px;
 }
 
+.story blockquote{
+    background:#fff5e8;
+    border-left:5px solid #c45c00;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+    font-style:italic;
+}
+
+@media(max-width:768px){
+
+.story{
+padding:25px;
+}
+
+.story p{
+font-size:16px;
+}
+
+}
 .blessings-list{
     margin-left:25px;
     line-height:2;
 }
 
 #mantras{
-    padding:100px 20px;
-    background:#faf7f2;
+padding:50px 6%;
+background:#faf7f2;
 }
 
 #mantras h2{
@@ -323,8 +295,8 @@ font-weight:600;
 }
 
 .mantra-container{
-    max-width:auto;
-    margin:auto;
+   max-width:1200px;
+   margin:auto;
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
@@ -332,7 +304,7 @@ font-weight:600;
 
 .mantra-card{
     background:white;
-    padding:40px;
+    padding:25px;
     border-radius:20px;
     text-align:center;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
@@ -391,8 +363,8 @@ font-weight:600;
 }
 
 #visit{
-    padding:100px 20px;
-    background:#fafafa;
+padding:50px 6%;
+background:#fafafa;
 }
 
 #visit h2{
@@ -412,7 +384,7 @@ font-weight:600;
 
 .visitor-card{
     background:white;
-    padding:35px;
+    padding:25px;
     border-radius:20px;
     text-align:center;
     box-shadow:0 15px 40px rgba(0,0,0,.08);
@@ -470,141 +442,151 @@ font-weight:600;
 }
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    background:rgba(255,255,255,0.95);
-
-    backdrop-filter:blur(10px);
-
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(10px);
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+padding:10px 6%;
 }
 
 .header-container{
-    max-width:1200px;
-    margin:auto;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:12px 20px;
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
 .logo img{
-    height:65px;
-    width:auto;
+height:60px;
+width:auto;
 }
 
 .logo-text h1{
-    margin:0;
-    font-size:24px;
-    color:#8B0000;
+font-size:24px;
+color:#8B0000;
+margin:0;
 }
 
 .logo-text span{
-    font-size:12px;
-    color:#c45c00;
+font-size:12px;
+color:#c45c00;
 }
 
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-    margin:0;
-    padding:0;
+display:flex;
+gap:20px;
+list-style:none;
 }
 
-nav ul li a{
-    text-decoration:none;
-    color:#333;
-    font-weight:600;
-    transition:.3s;
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
 }
 
-nav ul li a:hover{
-    color:#c45c00;
-}
-
-#langToggle{
-    border:none;
-    background:#c45c00;
-    color:white;
-
-    padding:10px 18px;
-
-    border-radius:8px;
-
-    cursor:pointer;
+nav a:hover{
+color:#c45c00;
 }
 
 .menu-toggle{
-    display:none;
+display:none;
 }
+
 @media(max-width:768px){
 
+.header-container{
+flex-wrap:wrap;
+}
+
+.logo img{
+height:50px;
+}
+
+.logo-text h1{
+font-size:18px;
+}
+
+.logo-text span{
+display:none;
+}
+
 .menu-toggle{
-    display:block;
-    font-size:28px;
-    background:none;
-    border:none;
-    cursor:pointer;
+display:block;
+font-size:28px;
+background:none;
+border:none;
+cursor:pointer;
 }
 
 nav{
-    display:none;
-
-    position:absolute;
-    top:100%;
-    left:0;
-
-    width:100%;
-
-    background:white;
-
-    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+display:none;
+width:100%;
+margin-top:10px;
 }
 
 nav.active{
-    display:block;
+display:block;
 }
 
 nav ul{
-    flex-direction:column;
-    padding:20px;
-    gap:15px;
-}
-
-.logo-text h1{
-    font-size:18px;
-}
-
-.logo-text span{
-    display:none;
-}
-
-.logo img{
-    height:50px;
+flex-direction:column;
+text-align:center;
+gap:10px;
+padding:10px 0;
 }
 
 #langToggle{
-    padding:8px 12px;
-    font-size:14px;
+margin-top:10px;
+}
+
+.hero{
+min-height:70vh;
+}
+
+.hero h2{
+font-size:2rem;
+}
+
+.quote-en{
+font-size:22px;
+}
+
+.quote-bn{
+font-size:18px;
 }
 
 }
 
-.top-bar{
-    background:#8B0000;
-    color:white;
-    text-align:center;
-    padding:8px;
-    font-size:14px;
+html{
+scroll-behavior:smooth;
+}
+
+section h2{
+color:#8B0000;
+font-size:36px;
+margin-bottom:25px;
+}
+
+.card,
+.mantra-card,
+.visitor-card,
+.story,
+.quote-box{
+transition:.3s;
+}
+
+.card:hover,
+.mantra-card:hover,
+.visitor-card:hover,
+.story:hover{
+transform:translateY(-3px);
 }
