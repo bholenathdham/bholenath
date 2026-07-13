@@ -1135,24 +1135,23 @@ text-align:center;
 .jyotirlinga-intro{
 text-align:center;
 max-width:900px;
-margin:0 auto 35px;
+margin:0 auto 40px;
 font-size:18px;
 color:#555;
 }
 
 .jyotirlinga-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
 .jyotirlinga-card{
 background:white;
-padding:25px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 transition:.3s;
 }
 
@@ -1160,15 +1159,34 @@ transition:.3s;
 transform:translateY(-8px);
 }
 
-.jyotirlinga-card h3{
-color:#8B0000;
-margin-bottom:10px;
-font-size:20px;
+.jyotirlinga-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
 }
 
-.jyotirlinga-card p{
-color:#666;
-font-size:15px;
+.jyotirlinga-content{
+padding:20px;
 text-align:center;
-margin:0;
+}
+
+.jyotirlinga-content h3{
+color:#8B0000;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.state{
+font-size:16px;
+color:#666;
+font-weight:500;
+}
+
+@media(max-width:768px){
+
+.jyotirlinga-card img{
+height:180px;
+}
+
 }
