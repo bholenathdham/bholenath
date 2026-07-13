@@ -135,4 +135,4 @@ setInterval(() => {
     document.getElementById("quoteTextBn").innerText =
     quotesBn[quoteIndex];
 
-}, 5000);
+}, 15000);
