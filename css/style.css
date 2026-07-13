@@ -691,3 +691,36 @@ font-style:italic;
 }
 
 }
+
+#dailyQuote{
+padding:50px 6%;
+background:#fffaf5;
+}
+
+.quote-card{
+
+max-width:900px;
+
+margin:auto;
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+text-align:center;
+}
+
+#quoteText{
+
+font-size:24px;
+
+font-style:italic;
+
+color:#8B0000;
+
+line-height:1.7;
+}
