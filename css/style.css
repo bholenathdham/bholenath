@@ -825,3 +825,86 @@ transform:translateY(-3px);
 
 }
 
+#festivals{
+background:#faf7f2;
+padding:80px 10%;
+}
+
+#festivals h2{
+text-align:center;
+font-size:38px;
+color:#c45c00;
+margin-bottom:15px;
+}
+
+.festival-subtitle{
+text-align:center;
+max-width:800px;
+margin:0 auto 40px auto;
+color:#666;
+font-size:17px;
+}
+
+.festival-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.festival-card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.festival-card:hover{
+transform:translateY(-8px);
+}
+
+.festival-icon{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.festival-card h3{
+color:#8B0000;
+margin-bottom:15px;
+font-size:22px;
+}
+
+.festival-card p{
+color:#555;
+line-height:1.8;
+}
+
+.festival-quote{
+text-align:center;
+margin-top:50px;
+font-size:22px;
+font-style:italic;
+color:#c45c00;
+font-weight:600;
+}
+
+@media(max-width:768px){
+
+#festivals{
+padding:60px 20px;
+}
+
+#festivals h2{
+font-size:30px;
+}
+
+.festival-card{
+padding:25px;
+}
+
+.festival-quote{
+font-size:18px;
+}
+
+}
