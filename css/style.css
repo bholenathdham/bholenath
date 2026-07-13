@@ -824,3 +824,39 @@ transform:translateY(-3px);
 }
 
 }
+
+.logo-link{
+display:flex;
+align-items:center;
+gap:15px;
+text-decoration:none;
+color:inherit;
+}
+
+.logo-link:hover{
+opacity:.9;
+}
+
+.logo-text h1{
+margin:0;
+font-size:24px;
+color:#8B0000;
+}
+
+.logo-text span{
+font-size:12px;
+color:#c45c00;
+display:block;
+margin-top:2px;
+}
+@media(max-width:768px){
+
+.logo-text h1{
+font-size:18px;
+}
+
+.logo-text span{
+font-size:10px;
+}
+
+}
