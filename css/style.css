@@ -1097,3 +1097,37 @@ padding:60px 10%;
 margin:10px;
 display:inline-block;
 }
+
+.worship-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.worship-card{
+background:white;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+font-size:40px;
+}
+
+.worship-card:hover{
+transform:translateY(-8px);
+}
+
+.worship-card h3{
+font-size:22px;
+color:#8B0000;
+margin:15px 0;
+}
+
+.worship-card p{
+font-size:15px;
+line-height:1.8;
+color:#555;
+text-align:center;
+}
