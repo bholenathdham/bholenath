@@ -266,3 +266,66 @@ font-size:18px;
 line-height:1.9;
 color:#444;
 }
+/* SECTION SPACING */
+
+.story + .story{
+margin-top:40px;
+}
+
+/* PARAGRAPHS */
+
+.story p{
+text-align:justify;
+}
+
+/* MAHADEV ENDING */
+
+.mahadev-ending{
+text-align:center;
+font-size:32px;
+font-weight:700;
+color:#c45c00;
+margin-top:50px;
+}
+
+/* JYOTIRLINGA HEADINGS */
+
+.jyotirlinga-content h3{
+color:#8B0000;
+margin-bottom:12px;
+font-size:22px;
+}
+
+/* WORSHIP CARD TEXT */
+
+.worship-card p{
+text-align:center;
+color:#555;
+line-height:1.8;
+}
+
+/* SYMBOL CARD TEXT */
+
+.shiva-card p{
+color:#555;
+line-height:1.8;
+}
+
+/* MOBILE STORY */
+
+@media(max-width:768px){
+
+.story{
+padding:25px;
+margin:30px 15px;
+}
+
+.story h2{
+font-size:28px;
+}
+
+blockquote{
+font-size:18px;
+}
+
+}
