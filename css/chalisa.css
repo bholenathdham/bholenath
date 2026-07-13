@@ -102,3 +102,53 @@ font-size:16px;
 }
 
 }
+.language-switcher{
+display:flex;
+justify-content:center;
+gap:10px;
+margin:30px 0;
+flex-wrap:wrap;
+}
+
+.lang-btn{
+padding:12px 24px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+background:#eee;
+transition:.3s;
+}
+
+.lang-btn.active{
+background:#ff6600;
+color:#fff;
+}
+
+.lang-content{
+display:none;
+}
+
+.lang-content.active{
+display:block;
+}
+
+.chalisa-verse{
+background:#fff;
+padding:25px;
+border-radius:15px;
+margin-bottom:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+line-height:2;
+font-size:20px;
+white-space:pre-line;
+}
+
+.hi{
+font-family:'Noto Sans Devanagari',sans-serif;
+}
+
+.bn{
+font-family:'Noto Sans Bengali',sans-serif;
+}
