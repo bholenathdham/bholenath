@@ -693,34 +693,73 @@ font-style:italic;
 }
 
 #dailyQuote{
-padding:50px 6%;
-background:#fffaf5;
+    padding:60px 6%;
+    background:linear-gradient(135deg,#fff8f0,#fffdf8);
 }
 
 .quote-card{
+    max-width:900px;
+    margin:auto;
+    padding:50px 40px;
 
-max-width:900px;
+    background:white;
 
-margin:auto;
+    border-radius:25px;
 
-background:white;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
-padding:35px;
+    text-align:center;
 
-border-radius:20px;
+    position:relative;
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-text-align:center;
+    overflow:hidden;
 }
 
-#quoteText{
+.quote-card::before{
+    content:"🕉️";
+    position:absolute;
+    top:15px;
+    left:25px;
+    font-size:40px;
+    opacity:.15;
+}
 
-font-size:24px;
+.quote-card::after{
+    content:"🔱";
+    position:absolute;
+    bottom:15px;
+    right:25px;
+    font-size:40px;
+    opacity:.15;
+}
 
-font-style:italic;
+#quoteTextEn,
+#quoteTextBn{
+    font-size:30px;
+    line-height:1.8;
+    color:#8B0000;
+    font-style:italic;
+    font-weight:600;
+}
 
-color:#8B0000;
+.quote-author{
+    margin-top:25px;
+    color:#c45c00;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:1px;
+}
 
-line-height:1.7;
+@media(max-width:768px){
+
+#quoteTextEn,
+#quoteTextBn{
+    font-size:22px;
+    line-height:1.7;
+}
+
+.quote-card{
+    padding:35px 25px;
+}
+
 }
