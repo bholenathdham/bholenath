@@ -1,109 +1,143 @@
+// LANGUAGE TOGGLE
+
 const toggle = document.getElementById("langToggle");
+
+if (toggle) {
 
 let bengali = false;
 
-toggle.addEventListener("click",()=>{
+toggle.addEventListener("click", () => {
 
 const en = document.querySelectorAll(".en");
 const bn = document.querySelectorAll(".bn");
 
 bengali = !bengali;
 
-if(bengali){
+if (bengali) {
 
-en.forEach(el=>el.classList.add("hidden"));
-bn.forEach(el=>el.classList.remove("hidden"));
+en.forEach(el => el.classList.add("hidden"));
+bn.forEach(el => el.classList.remove("hidden"));
 
-toggle.innerText="English";
+toggle.innerText = "English";
 
-}else{
+} else {
 
-en.forEach(el=>el.classList.remove("hidden"));
-bn.forEach(el=>el.classList.add("hidden"));
+en.forEach(el => el.classList.remove("hidden"));
+bn.forEach(el => el.classList.add("hidden"));
 
-toggle.innerText="বাংলা";
+toggle.innerText = "বাংলা";
 
 }
 
 });
 
+}
+
+
+// MOBILE MENU
+
 const menuToggle = document.getElementById("menuToggle");
 const navbar = document.getElementById("navbar");
 
+if (menuToggle && navbar) {
+
 menuToggle.addEventListener("click", () => {
 
-    navbar.classList.toggle("active");
+navbar.classList.toggle("active");
 
 });
 
+}
+
+
+// WAIT FOR PAGE LOAD
+
 window.addEventListener("DOMContentLoaded", () => {
+
+
+// LIGHTBOX
 
 const galleryImages = document.querySelectorAll(".gallery img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const closeLightbox = document.querySelector(".close-lightbox");
 
+if (galleryImages.length && lightbox && lightboxImg) {
+
 galleryImages.forEach(img => {
 
-    img.addEventListener("click", () => {
+img.addEventListener("click", () => {
 
-        lightbox.style.display = "flex";
-        lightboxImg.src = img.src;
-
-    });
+lightbox.style.display = "flex";
+lightboxImg.src = img.src;
 
 });
+
+});
+
+}
+
+if (closeLightbox && lightbox) {
 
 closeLightbox.addEventListener("click", () => {
 
-    lightbox.style.display = "none";
+lightbox.style.display = "none";
 
 });
+
+}
+
+if (lightbox) {
 
 lightbox.addEventListener("click", (e) => {
 
-    if(e.target === lightbox){
-        lightbox.style.display = "none";
-    }
+if (e.target === lightbox) {
+
+lightbox.style.display = "none";
+
+}
 
 });
 
-});
+}
 
-lightbox.addEventListener("click", (e) => {
 
-    if(e.target === lightbox){
-
-        lightbox.style.display = "none";
-
-    }
-
-});
+// BACK TO TOP
 
 const backToTop = document.getElementById("backToTop");
 
+if (backToTop) {
+
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 400){
+if (window.scrollY > 400) {
 
-        backToTop.style.display = "block";
+backToTop.style.display = "block";
 
-    }else{
+} else {
 
-        backToTop.style.display = "none";
+backToTop.style.display = "none";
 
-    }
+}
 
 });
 
 backToTop.addEventListener("click", () => {
 
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
 
 });
+
+}
+
+
+// DAILY QUOTES
+
+const quoteEn = document.getElementById("quoteTextEn");
+const quoteBn = document.getElementById("quoteTextBn");
 
 const quotesEn = [
 "Where there is faith, there is the grace of Mahadev.",
@@ -123,38 +157,52 @@ const quotesBn = [
 "হর হর মহাদেব।"
 ];
 
+if (quoteEn && quoteBn) {
+
 let quoteIndex = 0;
 
 setInterval(() => {
 
-    quoteIndex = (quoteIndex + 1) % quotesEn.length;
+quoteIndex = (quoteIndex + 1) % quotesEn.length;
 
-    document.getElementById("quoteTextEn").innerText =
-    quotesEn[quoteIndex];
-
-    document.getElementById("quoteTextBn").innerText =
-    quotesBn[quoteIndex];
+quoteEn.innerText = quotesEn[quoteIndex];
+quoteBn.innerText = quotesBn[quoteIndex];
 
 }, 15000);
+
+}
+
+
+// TEMPLE BELL
 
 const bellBtn = document.getElementById("bellBtn");
 
 if (bellBtn) {
 
-    bellBtn.addEventListener("click", function() {
+bellBtn.addEventListener("click", () => {
 
-        const bell = document.getElementById("bellSound");
+const bell = document.getElementById("bellSound");
 
-        bell.currentTime = 0;
+if (bell) {
 
-        const playPromise = bell.play();
+bell.currentTime = 0;
 
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.log("Audio blocked:", error);
-            });
-        }
+const playPromise = bell.play();
 
-    });
+if (playPromise !== undefined) {
+
+playPromise.catch(error => {
+
+console.log("Audio blocked:", error);
+
+});
 
 }
+
+}
+
+});
+
+}
+
+});
