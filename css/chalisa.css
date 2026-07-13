@@ -1,1 +1,103 @@
+.chalisa-hero{
+padding:120px 20px 80px;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('../images/temple5.png');
+background-size:cover;
+background-position:center;
+color:white;
+}
 
+.chalisa-hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.chalisa-hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+.chalisa-container{
+max-width:1000px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.chalisa-container h2{
+text-align:center;
+color:#8B0000;
+margin-bottom:30px;
+font-size:36px;
+}
+
+.verse-card{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+margin-bottom:30px;
+}
+
+.verse-card h3{
+color:#8B0000;
+margin-top:20px;
+margin-bottom:10px;
+}
+
+.verse-card p{
+line-height:2;
+font-size:18px;
+white-space:pre-line;
+}
+
+.related-links{
+text-align:center;
+padding:60px 20px;
+}
+
+.related-grid{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:12px 24px;
+background:#ff6600;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.hidden{
+display:none !important;
+}
+
+@media(max-width:768px){
+
+.chalisa-hero h1{
+font-size:34px;
+}
+
+.chalisa-container h2{
+font-size:28px;
+}
+
+.verse-card{
+padding:20px;
+}
+
+.verse-card p{
+font-size:16px;
+}
+
+}
