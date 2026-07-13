@@ -335,3 +335,10 @@ max-width:700px;
 margin:auto;
 opacity:.95;
 }
+.bn{
+font-family:'Noto Sans Bengali',sans-serif;
+}
+
+.hidden{
+display:none;
+}
