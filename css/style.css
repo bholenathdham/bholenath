@@ -1201,3 +1201,68 @@ font-size:14px;
 font-weight:600;
 margin-top:8px;
 }
+
+.shiva-intro{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:40px;
+align-items:center;
+margin-bottom:60px;
+}
+
+.shiva-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.shiva-info h2{
+color:#8B0000;
+margin-bottom:20px;
+}
+
+.shiva-info p{
+font-size:18px;
+line-height:1.9;
+margin-bottom:20px;
+}
+
+.shiva-highlights{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:25px;
+}
+
+.highlight-card{
+background:#fff4e8;
+padding:18px;
+border-radius:12px;
+text-align:center;
+font-weight:600;
+color:#8B0000;
+}
+
+@media(max-width:768px){
+
+.shiva-intro{
+grid-template-columns:1fr;
+}
+
+.shiva-highlights{
+grid-template-columns:1fr;
+}
+
+}
+
+.shiva-quote{
+background:linear-gradient(135deg,#fff4e8,#ffffff);
+padding:30px;
+border-radius:20px;
+text-align:center;
+font-size:24px;
+font-style:italic;
+color:#8B0000;
+margin:40px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
