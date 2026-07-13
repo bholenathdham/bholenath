@@ -104,3 +104,35 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+
+const quotesEn = [
+"Where there is faith, there is the grace of Mahadev.",
+"Om Namah Shivaya is the path to inner peace.",
+"Lord Shiva blesses those who walk with humility.",
+"Faith turns obstacles into opportunities.",
+"The devotee who remembers Mahadev is never alone.",
+"Har Har Mahadev."
+];
+
+const quotesBn = [
+"যেখানে বিশ্বাস আছে, সেখানেই মহাদেবের কৃপা আছে।",
+"ওঁ নমঃ শিবায় অন্তরের শান্তির পথ।",
+"মহাদেব তাঁদের আশীর্বাদ করেন যারা বিনয় ও ভক্তির পথে চলেন।",
+"বিশ্বাস বাধাকে সুযোগে পরিণত করে।",
+"যে ভক্ত মহাদেবকে স্মরণ করে, সে কখনও একা নয়।",
+"হর হর মহাদেব।"
+];
+
+let quoteIndex = 0;
+
+setInterval(() => {
+
+    quoteIndex = (quoteIndex + 1) % quotesEn.length;
+
+    document.getElementById("quoteTextEn").innerText =
+    quotesEn[quoteIndex];
+
+    document.getElementById("quoteTextBn").innerText =
+    quotesBn[quoteIndex];
+
+}, 5000);
