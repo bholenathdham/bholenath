@@ -1050,3 +1050,46 @@ padding:30px 20px;
 }
 
 }
+.hero-small{
+height:50vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('../images/temple1.jpeg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero-small h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.shiva-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.shiva-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.related-links{
+text-align:center;
+padding:60px 10%;
+}
+
+.related-links .btn{
+margin:10px;
+display:inline-block;
+}
