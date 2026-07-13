@@ -1058,7 +1058,7 @@ url('../images/temple5.png');
 background-size:cover;
 background-position:center;
 display:flex;
-justify-content:center;
+content:center;
 align-items:center;
 text-align:center;
 color:white;
