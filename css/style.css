@@ -908,3 +908,84 @@ font-size:18px;
 }
 
 }
+
+#temple-bell{
+padding:80px 10%;
+background:linear-gradient(135deg,#fff8f0,#fff);
+}
+
+.bell-container{
+max-width:800px;
+margin:auto;
+text-align:center;
+background:white;
+padding:50px 30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.bell-icon{
+font-size:70px;
+margin-bottom:20px;
+animation:swing 3s infinite;
+}
+
+@keyframes swing{
+0%{transform:rotate(0deg);}
+25%{transform:rotate(12deg);}
+50%{transform:rotate(0deg);}
+75%{transform:rotate(-12deg);}
+100%{transform:rotate(0deg);}
+}
+
+.bell-container h2{
+color:#8B0000;
+margin-bottom:15px;
+}
+
+.bell-container p{
+color:#555;
+line-height:1.8;
+margin-bottom:20px;
+}
+
+#bellBtn{
+background:#c45c00;
+color:white;
+border:none;
+padding:15px 30px;
+font-size:18px;
+font-weight:600;
+border-radius:12px;
+cursor:pointer;
+transition:.3s;
+}
+
+#bellBtn:hover{
+transform:translateY(-3px);
+background:#a94d00;
+}
+
+#blessingMessage{
+margin-top:25px;
+font-size:20px;
+font-weight:600;
+color:#8B0000;
+}
+
+@media(max-width:768px){
+
+.bell-icon{
+font-size:55px;
+}
+
+#bellBtn{
+width:100%;
+font-size:16px;
+}
+
+#blessingMessage{
+font-size:17px;
+}
+
+}
