@@ -230,3 +230,12 @@ font-size:20px;
 }
 
 }
+
+.story{
+max-width:1200px;
+margin:60px auto;
+padding:50px;
+background:white;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
