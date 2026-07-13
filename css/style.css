@@ -1131,3 +1131,44 @@ line-height:1.8;
 color:#555;
 text-align:center;
 }
+
+.jyotirlinga-intro{
+text-align:center;
+max-width:900px;
+margin:0 auto 35px;
+font-size:18px;
+color:#555;
+}
+
+.jyotirlinga-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.jyotirlinga-card{
+background:white;
+padding:25px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.jyotirlinga-card:hover{
+transform:translateY(-8px);
+}
+
+.jyotirlinga-card h3{
+color:#8B0000;
+margin-bottom:10px;
+font-size:20px;
+}
+
+.jyotirlinga-card p{
+color:#666;
+font-size:15px;
+text-align:center;
+margin:0;
+}
