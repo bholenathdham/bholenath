@@ -147,14 +147,13 @@ if (bellBtn) {
 
         bell.currentTime = 0;
 
-        bell.play()
-        .then(() => {
-            console.log("Bell played");
-        })
-        .catch(err => {
-            console.error("Bell error:", err);
-            alert("Bell sound could not be played.");
-        });
+        const playPromise = bell.play();
+
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Audio blocked:", error);
+            });
+        }
 
     });
 
