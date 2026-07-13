@@ -136,3 +136,26 @@ setInterval(() => {
     quotesBn[quoteIndex];
 
 }, 15000);
+
+const bellBtn = document.getElementById("bellBtn");
+
+if (bellBtn) {
+
+    bellBtn.addEventListener("click", function() {
+
+        const bell = document.getElementById("bellSound");
+
+        bell.currentTime = 0;
+
+        bell.play()
+        .then(() => {
+            console.log("Bell played");
+        })
+        .catch(err => {
+            console.error("Bell error:", err);
+            alert("Bell sound could not be played.");
+        });
+
+    });
+
+}
