@@ -209,6 +209,14 @@ display:none;
 }
 
 @media(max-width:768px){
+@media(max-width:768px){
+
+.footer-domain{
+font-size:12px;
+}
+
+}
+    
 
 header{
 flex-direction:column;
