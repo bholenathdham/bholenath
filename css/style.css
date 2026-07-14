@@ -1062,19 +1062,14 @@ padding:30px 20px;
 /* ===== FOOTER FULL WIDTH FIX ===== */
 
 #footer-placeholder{
+#footer-placeholder{
 width:100%;
-display:block;
 margin:0;
 padding:0;
 }
 
 #footer-placeholder footer{
-width:100vw !important;
-max-width:none !important;
-
-margin-left:calc(50% - 50vw) !important;
-margin-right:calc(50% - 50vw) !important;
-
-box-sizing:border-box;
-display:block;
+width:100%;
+max-width:100%;
+margin:0;
 }
