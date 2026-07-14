@@ -157,12 +157,15 @@ margin-top:40px;
 }
 
 .jyotirlinga-card{
+display:block !important;
 background:#fff;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+margin:0;
+max-width:none;
+width:100%;
 transition:.3s;
-height:100%;
 }
 
 .jyotirlinga-card:hover{
@@ -171,41 +174,21 @@ box-shadow:0 15px 40px rgba(0,0,0,.12);
 }
 
 .jyotirlinga-card img{
-width:100%;
-height:220px;
-object-fit:cover;
 display:block;
+width:100% !important;
+height:240px !important;
+object-fit:cover;
 }
 
 .jyotirlinga-content{
 padding:25px;
+text-align:center;
 }
 
 .jyotirlinga-content h3{
 font-size:24px;
-margin-bottom:12px;
 color:#8B0000;
-}
-
-.jyotirlinga-content p{
-line-height:1.8;
-color:#555;
-}
-@media(max-width:768px){
-
-.jyotirlinga-card{
-flex-direction:column;
-}
-
-.jyotirlinga-card img{
-width:100%;
-height:240px;
-}
-
-.jyotirlinga-content{
-padding:20px;
-}
-
+margin-bottom:12px;
 }
 
 .state-badge{
@@ -216,7 +199,6 @@ padding:8px 14px;
 border-radius:50px;
 font-size:14px;
 font-weight:600;
-margin-top:10px;
 }
 
 /* RELATED LINKS */
