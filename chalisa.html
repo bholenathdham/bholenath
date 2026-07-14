@@ -428,44 +428,16 @@ Kiya Upadrav Tarak Bhari Devan Sab Mili, Tumahi Juhari
 
 </section>
 
-<footer>
-
-<div class="footer-content">
-
-<img src="assets/logo.png"
-alt="Bholenath Dham Logo"
-class="footer-logo">
-
-<h3 class="en">Bholenath Dham</h3>
-<h3 class="bn hidden">ভোলেনাথ ধাম</h3>
-
-<p class="en">
-A sacred abode of Lord Shiva in Digha, Chandpara, West Bengal.
-</p>
-
-<p class="bn hidden">
-পশ্চিমবঙ্গের দিঘা, চাঁদপাড়ায় অবস্থিত ভগবান শিবের এক পবিত্র ধাম।
-</p>
-
-<div class="footer-divider"></div>
-
-<p>
-🔱 Har Har Mahadev 🔱
-</p>
-
-<p>
-© 2026 Bholenath Dham. All Rights Reserved.
-</p>
-
-</div>
-
-</footer>
-
+<div id="footer-placeholder"></div>
+<script>
+fetch('footer.html')
+.then(response => response.text())
+.then(data => {
+document.getElementById('footer-placeholder').innerHTML = data;
+});
+</script>
 <script src="js/main.js"></script>
 <script src="js/chalisa.js"></script>
-</body>
-</html>  
-
 
 </body>
 </html>
