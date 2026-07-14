@@ -96,14 +96,16 @@ line-height:1.8;
 }
 
 .related-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
 gap:25px;
+margin-top:40px;
 }
 
 .related-card{
 background:linear-gradient(135deg,#fffdf8,#fff5e8);
-
+width:320px;
 border:2px solid #f4d19b;
 border-radius:22px;
 
