@@ -243,4 +243,63 @@ color:#ff6600;
 letter-spacing:10px;
 }
 /* FOOTER */
+#spiritual{
+padding:80px 10%;
+background:#faf7f2;
+text-align:center;
+}
 
+#spiritual h2{
+color:#8B0000;
+font-size:38px;
+margin-bottom:15px;
+}
+
+.spiritual-subtitle{
+color:#555;
+margin-bottom:40px;
+font-size:18px;
+}
+
+.resource-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.resource-card{
+background:white;
+padding:40px 25px;
+border-radius:20px;
+text-decoration:none;
+color:#222;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.resource-card:hover{
+transform:translateY(-8px);
+}
+
+.resource-icon{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.resource-card h3{
+color:#8B0000;
+}
+
+@media(max-width:768px){
+
+#spiritual h2{
+font-size:30px;
+}
+
+.resource-card{
+padding:30px 20px;
+}
+
+}
