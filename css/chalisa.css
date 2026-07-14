@@ -308,3 +308,97 @@ padding:30px 20px;
 }
 
 }
+
+footer{
+background:linear-gradient(135deg,#111,#1a1a1a);
+width:100%;
+padding:25px 15px;
+box-sizing:border-box;
+text-align:center;
+color:white;
+}
+
+.footer-inner{
+max-width:1200px;
+margin:0 auto;
+}
+
+.footer-logo{
+height:80px;
+width:auto;
+margin-bottom:15px;
+filter:drop-shadow(0 0 8px rgba(255,153,51,.4));
+}
+
+footer h3{
+font-size:24px;
+font-weight:600;
+color:#ff9933;
+margin-bottom:10px;
+}
+
+footer p{
+font-size:14px;
+color:#ddd;
+line-height:1.7;
+margin:5px 0;
+}
+
+.footer-divider{
+width:120px;
+height:2px;
+background:#ff9933;
+margin:15px auto;
+border-radius:10px;
+}
+
+footer p:last-child{
+font-size:13px;
+color:#999;
+margin-top:10px;
+}
+
+@media(max-width:768px){
+
+footer{
+padding:20px 10px;
+}
+
+footer h3{
+font-size:20px;
+}
+
+footer p{
+font-size:13px;
+}
+
+}
+
+#footer-placeholder{
+width:100%;
+margin:0;
+padding:0;
+}
+
+#footer-placeholder footer{
+width:100%;
+margin:0;
+max-width:none;
+}
+
+html,
+body{
+overflow-x:hidden;
+}
+.mahadev-footer{
+font-size:18px;
+font-weight:600;
+color:#ff9933;
+letter-spacing:1px;
+}
+
+.footer-domain{
+font-size:13px;
+color:#aaa;
+margin-top:10px;
+}
