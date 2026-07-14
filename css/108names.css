@@ -314,21 +314,18 @@ gap:18px;
 }
 
 .blessings-box li{
-background:white;
-padding:18px 20px;
-border-radius:15px;
+background:rgba(255,255,255,.8);
 
-font-size:17px;
-font-weight:500;
+padding:18px 25px;
 
-box-shadow:0 5px 15px rgba(0,0,0,.06);
+border-left:4px solid #ff9933;
+border-radius:12px;
 
-transition:.3s;
-}
+font-size:18px;
 
-.blessings-box li:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(196,92,0,.15);
+text-align:left;
+
+box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
 
 @media(max-width:768px){
@@ -343,8 +340,18 @@ font-size:26px;
 }
 
 .blessings-box li{
-font-size:15px;
-padding:15px;
+background:rgba(255,255,255,.8);
+
+padding:18px 25px;
+
+border-left:4px solid #ff9933;
+border-radius:12px;
+
+font-size:18px;
+
+text-align:left;
+
+box-shadow:0 4px 12px rgba(0,0,0,.05);
 }
 
 }
