@@ -435,3 +435,12 @@ display:none;
 .hidden{
 display:none !important;
 }
+
+body{
+background:
+linear-gradient(
+180deg,
+#fffdf9 0%,
+#fff8ef 100%
+);
+}
