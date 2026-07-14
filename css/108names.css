@@ -211,15 +211,100 @@ text-align:center;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
+.blessings-box{
+max-width:1000px;
+margin:60px auto;
+padding:45px;
+
+background:linear-gradient(135deg,#fffaf2,#fff2df);
+
+border:2px solid #f4d19b;
+border-radius:25px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+position:relative;
+overflow:hidden;
+}
+
+.blessings-box::before{
+content:"🕉️";
+position:absolute;
+top:15px;
+left:20px;
+font-size:50px;
+opacity:.1;
+}
+
+.blessings-box::after{
+content:"🔱";
+position:absolute;
+bottom:15px;
+right:20px;
+font-size:50px;
+opacity:.1;
+}
+
 .blessings-box h2{
+text-align:center;
 color:#8B0000;
-margin-bottom:25px;
+font-size:34px;
+margin-bottom:30px;
 }
 
 .blessings-box ul{
 list-style:none;
-line-height:2.4;
-font-size:18px;
+padding:0;
+margin:0;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:18px;
+}
+
+.blessings-box li{
+background:white;
+padding:18px 20px;
+border-radius:15px;
+
+font-size:17px;
+font-weight:500;
+
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+transition:.3s;
+}
+
+.blessings-box li:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(196,92,0,.15);
+}
+
+@media(max-width:768px){
+
+.blessings-box{
+padding:30px 20px;
+margin:40px 20px;
+}
+
+.blessings-box h2{
+font-size:26px;
+}
+
+.blessings-box li{
+font-size:15px;
+padding:15px;
+}
+
+}
+
+.benefit-quote{
+text-align:center;
+font-size:20px;
+font-style:italic;
+color:#c45c00;
+margin-bottom:30px;
+line-height:1.8;
 }
 
 .final-mantra{
