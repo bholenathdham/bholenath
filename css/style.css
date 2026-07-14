@@ -1166,3 +1166,12 @@ color:#8B0000;
 font-size:28px;
 margin-bottom:20px;
 }
+
+body{
+background:
+linear-gradient(
+180deg,
+#fffdf9 0%,
+#fff8ef 100%
+);
+}
