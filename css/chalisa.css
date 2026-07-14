@@ -30,8 +30,8 @@ position:relative;
 .chalisa-container::before{
 content:"🕉️";
 position:absolute;
-left:-40px;
-top:150px;
+left:-60px;
+top:675px;
 font-size:120px;
 opacity:.04;
 pointer-events:none;
@@ -40,8 +40,8 @@ pointer-events:none;
 .chalisa-container::after{
 content:"🔱";
 position:absolute;
-right:-40px;
-bottom:150px;
+right:-60px;
+bottom:310px;
 font-size:120px;
 opacity:.04;
 pointer-events:none;
