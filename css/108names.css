@@ -253,86 +253,68 @@ font-size:18px;
 }
 
 .blessings-box{
-max-width:1000px;
+max-width:850px;
 margin:60px auto;
-padding:45px;
+padding:45px 35px;
 
-background:linear-gradient(135deg,#fffaf2,#fff2df);
+background:linear-gradient(135deg,#fffdf8,#fff5e8);
 
 border:2px solid #f4d19b;
 border-radius:25px;
 
-box-shadow:0 15px 35px rgba(0,0,0,.08);
+box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-position:relative;
-overflow:hidden;
-}
-
-.blessings-box::before{
-content:"🕉️";
-position:absolute;
-top:15px;
-left:20px;
-font-size:50px;
-opacity:.1;
-}
-
-.blessings-box::after{
-content:"🔱";
-position:absolute;
-bottom:15px;
-right:20px;
-font-size:50px;
-opacity:.1;
+text-align:center;
 }
 
 .blessings-box h2{
-text-align:center;
-color:#8B0000;
 font-size:34px;
-margin-bottom:15px;
+color:#8B0000;
+margin-bottom:20px;
 }
 
-.blessings-box h2::after{
-content:"";
-display:block;
-width:80px;
-height:3px;
-background:#ff9933;
-margin:15px auto 0;
-border-radius:10px;
+.benefit-quote{
+font-size:20px;
+font-style:italic;
+color:#c45c00;
+margin-bottom:30px;
+line-height:1.8;
 }
 
 .blessings-box ul{
 list-style:none;
 padding:0;
 margin:0;
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:18px;
+max-width:650px;
+margin:auto;
 }
 
 .blessings-box li{
-background:rgba(255,255,255,.8);
+background:white;
 
+margin:12px 0;
 padding:18px 25px;
 
 border-left:4px solid #ff9933;
 border-radius:12px;
 
 font-size:18px;
-
 text-align:left;
 
-box-shadow:0 4px 12px rgba(0,0,0,.05);
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+transition:.3s;
+}
+
+.blessings-box li:hover{
+transform:translateX(8px);
 }
 
 @media(max-width:768px){
 
 .blessings-box{
 padding:30px 20px;
-margin:40px 20px;
+margin:40px 15px;
 }
 
 .blessings-box h2{
@@ -340,18 +322,8 @@ font-size:26px;
 }
 
 .blessings-box li{
-background:rgba(255,255,255,.8);
-
-padding:18px 25px;
-
-border-left:4px solid #ff9933;
-border-radius:12px;
-
-font-size:18px;
-
-text-align:left;
-
-box-shadow:0 4px 12px rgba(0,0,0,.05);
+font-size:16px;
+padding:15px 18px;
 }
 
 }
