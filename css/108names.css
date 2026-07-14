@@ -22,6 +22,10 @@ color:#fff;
 .names-hero h1{
 font-size:52px;
 margin-bottom:20px;
+
+text-shadow:
+0 0 10px rgba(255,255,255,.3),
+0 0 20px rgba(255,153,51,.3);
 }
 
 .names-hero p{
@@ -66,24 +70,34 @@ color:#444;
 
 .mahadev-quote{
 max-width:900px;
-margin:40px auto;
+margin:50px auto;
+padding:40px;
 
-padding:30px;
+background:
+linear-gradient(135deg,#fffdf8,#fff5e8);
 
-background:white;
+border:2px solid #f4d19b;
+border-radius:25px;
 
-border-left:6px solid #ff6600;
+position:relative;
+}
 
-border-radius:20px;
+.mahadev-quote::before{
+content:"🕉️";
+position:absolute;
+top:15px;
+left:20px;
+font-size:40px;
+opacity:.1;
+}
 
-text-align:center;
-
-font-size:26px;
-font-weight:700;
-
-color:#8B0000;
-
-box-shadow:0 8px 20px rgba(0,0,0,.08);
+.mahadev-quote::after{
+content:"🔱";
+position:absolute;
+bottom:15px;
+right:20px;
+font-size:40px;
+opacity:.1;
 }
 
 .mahadev-quote span{
@@ -96,8 +110,27 @@ color:#555;
 
 .names-container{
 max-width:1200px;
-margin:auto;
-padding:40px 20px;
+margin:60px auto;
+padding:50px 20px;
+position:relative;
+}
+
+.names-container::before{
+content:"🕉️";
+position:absolute;
+top:20px;
+left:30px;
+font-size:80px;
+opacity:.04;
+}
+
+.names-container::after{
+content:"🔱";
+position:absolute;
+bottom:20px;
+right:30px;
+font-size:80px;
+opacity:.04;
 }
 
 .names-grid{
@@ -127,6 +160,15 @@ top:10px;
 right:15px;
 font-size:28px;
 opacity:.12;
+}
+
+.name-card::after{
+content:"🔱";
+position:absolute;
+bottom:10px;
+left:15px;
+font-size:22px;
+opacity:.08;
 }
 
 .name-card:hover{
@@ -234,7 +276,17 @@ opacity:.1;
 text-align:center;
 color:#8B0000;
 font-size:34px;
-margin-bottom:30px;
+margin-bottom:15px;
+}
+
+.blessings-box h2::after{
+content:"";
+display:block;
+width:80px;
+height:3px;
+background:#ff9933;
+margin:15px auto 0;
+border-radius:10px;
 }
 
 .blessings-box ul{
@@ -379,10 +431,10 @@ align-items:center;
 justify-content:center;
 gap:15px;
 
-margin:40px auto;
+margin:60px auto;
 
-font-size:22px;
-font-weight:600;
+font-size:24px;
+font-weight:700;
 color:#c45c00;
 }
 
@@ -394,4 +446,11 @@ height:2px;
 background:linear-gradient(to right,transparent,#ff9933,transparent);
 }
 
-
+body{
+background:
+linear-gradient(
+180deg,
+#fffdf9 0%,
+#fff8ef 100%
+);
+}
