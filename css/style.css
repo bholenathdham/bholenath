@@ -91,10 +91,19 @@ margin-bottom:30px;
 }
 
 .card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+max-width:1000px;
+margin:40px auto;
+padding:40px;
+
+background:linear-gradient(135deg,#fffdf8,#fff5e8);
+
+border:2px solid #f4d19b;
+border-radius:25px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+position:relative;
+overflow:hidden;
 }
 
 .gallery{
