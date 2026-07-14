@@ -936,15 +936,65 @@ line-height:1.8;
 }
 
 .festival-quote{
+max-width:850px;
+margin:50px auto 20px;
+padding:25px 35px;
+
+background:linear-gradient(135deg,#fff8ef,#fff3dd);
+
+border:2px solid #f4d19b;
+border-radius:60px;
+
 text-align:center;
-margin-top:50px;
-font-size:22px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+position:relative;
+overflow:hidden;
+}
+
+.festival-quote::before{
+content:"🕉️";
+position:absolute;
+left:25px;
+top:50%;
+transform:translateY(-50%);
+font-size:32px;
+opacity:.15;
+}
+
+.festival-quote::after{
+content:"🔱";
+position:absolute;
+right:25px;
+top:50%;
+transform:translateY(-50%);
+font-size:32px;
+opacity:.15;
+}
+
+.festival-quote p{
+margin:0;
+font-size:24px;
 font-style:italic;
-color:#c45c00;
 font-weight:600;
+color:#c45c00;
+line-height:1.8;
 }
 
 @media(max-width:768px){
+
+.festival-quote{
+margin:35px 15px;
+padding:20px;
+border-radius:25px;
+}
+
+.festival-quote p{
+font-size:18px;
+}
+
+}
 
 #festivals{
 padding:60px 20px;
