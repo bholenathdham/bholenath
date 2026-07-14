@@ -125,9 +125,16 @@ border-radius:15px;
 
 footer{
 background:linear-gradient(135deg,#111,#1a1a1a);
-color:white;
-text-align:center;
+width:100%;
 padding:25px 15px;
+box-sizing:border-box;
+text-align:center;
+color:white;
+}
+
+.footer-inner{
+max-width:1200px;
+margin:0 auto;
 }
 
 .footer-logo{
