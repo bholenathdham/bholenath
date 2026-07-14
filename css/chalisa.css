@@ -487,3 +487,12 @@ min-height:100vh;
 footer{
 margin-top:0;
 }
+
+body{
+background:
+linear-gradient(
+180deg,
+#fffdf9 0%,
+#fff8ef 100%
+);
+}
