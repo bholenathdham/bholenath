@@ -138,9 +138,10 @@ margin:0 auto;
 }
 
 .footer-logo{
-height:60px;
+height:80px;
 width:auto;
-margin-bottom:12px;
+margin-bottom:15px;
+filter:drop-shadow(0 0 8px rgba(255,153,51,.4));
 }
 
 footer h3{
@@ -175,10 +176,6 @@ margin-top:10px;
 
 footer{
 padding:20px 10px;
-}
-
-.footer-logo{
-height:50px;
 }
 
 footer h3{
@@ -221,9 +218,6 @@ display:none;
 font-size:12px;
 }
 
-}
-    
-
 header{
 flex-direction:column;
 gap:15px;
@@ -254,11 +248,6 @@ font-size:2rem;
     height:55px;
 }
 
-}
-
-.footer-logo{
-height:120px;
-margin-bottom:20px;
 }
 
 .status-box{
