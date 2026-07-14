@@ -54,11 +54,16 @@ white-space:pre-line;
 }
 
 .related-links{
-padding:50px 20px;
+padding:20px 20px 40px;
+text-align:center;
 }
 
 .related-grid{
-margin-bottom:40px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
 }
 
 .btn{
