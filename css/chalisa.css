@@ -256,7 +256,45 @@ color:#ff6600;
 margin:40px 0;
 opacity:.8;
 }
+.mahadev-quote{
+max-width:850px;
+margin:35px auto;
+padding:30px;
+text-align:center;
 
+background:linear-gradient(135deg,#fff8ee,#fff3e0);
+
+border:1px solid #ffd699;
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+font-size:28px;
+font-weight:600;
+color:#8B0000;
+}
+
+.mahadev-quote span{
+display:block;
+margin-top:12px;
+font-size:17px;
+font-weight:400;
+line-height:1.8;
+color:#555;
+}
+
+@media(max-width:768px){
+
+.mahadev-quote{
+padding:22px;
+font-size:22px;
+}
+
+.mahadev-quote span{
+font-size:15px;
+}
+
+}
 /* FOOTER */
 
 /* ===== FOOTER ===== */
