@@ -1277,3 +1277,16 @@ linear-gradient(
 #fff8ef 100%
 );
 }
+.quote-icon{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.quote-footer{
+margin-top:12px;
+font-size:14px;
+letter-spacing:2px;
+font-weight:600;
+color:#8B0000;
+text-transform:uppercase;
+}
