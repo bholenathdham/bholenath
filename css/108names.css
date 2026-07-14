@@ -1,3 +1,5 @@
+/* HERO SECTION */
+
 .names-hero{
 height:55vh;
 display:flex;
@@ -5,29 +7,45 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+padding:120px 20px 80px;
 
 background:
 linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('../images/kailash.jpg');
+url('../images/temple2.png');
 
 background-size:cover;
 background-position:center;
 
-color:white;
-padding:20px;
+color:#fff;
 }
 
 .names-hero h1{
 font-size:52px;
-margin-bottom:15px;
-text-shadow:0 0 20px rgba(255,255,255,.4);
+margin-bottom:20px;
 }
 
 .names-hero p{
-max-width:800px;
+max-width:750px;
 font-size:20px;
+line-height:1.8;
 }
 
+@media(max-width:768px){
+
+.names-hero{
+height:45vh;
+padding:100px 20px 60px;
+}
+
+.names-hero h1{
+font-size:34px;
+}
+
+.names-hero p{
+font-size:16px;
+}
+
+}
 .names-intro{
 max-width:950px;
 margin:60px auto;
