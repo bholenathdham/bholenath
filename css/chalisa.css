@@ -21,7 +21,7 @@ margin:auto;
 }
 
 .chalisa-container{
-max-width:auto;
+max-width:1000px;
 margin:60px auto;
 padding:0 20px;
 }
@@ -155,7 +155,7 @@ font-family:'Noto Sans Bengali',sans-serif;
 }
 
 .chalisa-intro{
-max-width:auto;
+max-width:900px;
 margin:0 auto 40px;
 padding:30px;
 background:linear-gradient(135deg,#fffaf2,#fff4e5);
@@ -180,7 +180,7 @@ margin-bottom:30px;
 
 }
 .chalisa-card{
-max-width:auto;
+max-width:750px;
 margin:40px auto;
 padding:50px 40px;
 background:#fffdf7;
