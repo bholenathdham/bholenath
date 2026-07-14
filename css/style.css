@@ -496,11 +496,76 @@ background:#faf7f2;
 }
 
 .mantra-quote{
-    text-align:center;
-    font-size:22px;
-    font-style:italic;
-    color:#8B0000;
-    margin-bottom:40px;
+max-width:900px;
+margin:50px auto;
+
+padding:30px 40px;
+
+background:linear-gradient(135deg,#fff8ef,#fff3dd);
+
+border:2px solid #f4d19b;
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+position:relative;
+overflow:hidden;
+}
+
+.mantra-quote::before{
+content:"🕉️";
+position:absolute;
+top:15px;
+left:20px;
+font-size:40px;
+opacity:.1;
+}
+
+.mantra-quote::after{
+content:"🔱";
+position:absolute;
+bottom:15px;
+right:20px;
+font-size:40px;
+opacity:.1;
+}
+
+.quote-symbol{
+font-size:28px;
+margin-bottom:12px;
+}
+
+.mantra-quote p{
+margin:0;
+font-size:24px;
+font-style:italic;
+font-weight:600;
+color:#8B0000;
+line-height:1.8;
+}
+
+.mantra-quote span{
+display:block;
+margin-top:15px;
+font-size:16px;
+font-weight:600;
+letter-spacing:1px;
+color:#c45c00;
+}
+
+@media(max-width:768px){
+
+.mantra-quote{
+margin:30px 15px;
+padding:25px 20px;
+}
+
+.mantra-quote p{
+font-size:18px;
+}
+
 }
 
 #visit{
