@@ -251,7 +251,7 @@ letter-spacing:10px;
 
 footer{
 background:linear-gradient(135deg,#111,#1a1a1a);
-width:100%;
+max-width:auto;
 padding:25px 15px;
 box-sizing:border-box;
 text-align:center;
@@ -259,7 +259,7 @@ color:white;
 }
 
 .footer-inner{
-max-width:1200px;
+max-width:auto;
 margin:0 auto;
 }
 
@@ -302,6 +302,7 @@ margin-top:10px;
 
 footer{
 padding:20px 10px;
+max-width:auto;
 }
 
 footer h3{
