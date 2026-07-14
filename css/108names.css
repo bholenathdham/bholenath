@@ -71,15 +71,21 @@ color:#444;
 .mahadev-quote{
 max-width:900px;
 margin:50px auto;
-padding:40px;
+
+padding:45px 30px;
 
 background:
-linear-gradient(135deg,#fffdf8,#fff5e8);
+linear-gradient(135deg,#fffaf2,#fff0dc);
 
 border:2px solid #f4d19b;
 border-radius:25px;
 
+text-align:center;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
 position:relative;
+overflow:hidden;
 }
 
 .mahadev-quote::before{
@@ -87,8 +93,8 @@ content:"🕉️";
 position:absolute;
 top:15px;
 left:20px;
-font-size:40px;
-opacity:.1;
+font-size:55px;
+opacity:.08;
 }
 
 .mahadev-quote::after{
@@ -96,16 +102,24 @@ content:"🔱";
 position:absolute;
 bottom:15px;
 right:20px;
-font-size:40px;
-opacity:.1;
+font-size:55px;
+opacity:.08;
+}
+
+.mahadev-quote .en,
+.mahadev-quote .bn{
+font-size:34px;
+font-weight:700;
+color:#8B0000;
 }
 
 .mahadev-quote span{
 display:block;
-margin-top:15px;
+margin-top:18px;
 font-size:18px;
 font-weight:400;
 color:#555;
+line-height:1.8;
 }
 
 .names-container{
