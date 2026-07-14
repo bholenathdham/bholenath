@@ -178,25 +178,65 @@ margin-bottom:30px;
 }
 
 }
-.verse-number{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:32px;
-height:32px;
-background:#ff6600;
-color:white;
-border-radius:50%;
-font-size:14px;
-font-weight:bold;
-margin-right:10px;
-}
 .chalisa-card{
-max-width:950px;
+max-width:900px;
 margin:40px auto;
-padding:60px;
-background:#fffdf8;
-border:1px solid #f5d7a5;
+padding:50px 40px;
+background:#fffdf7;
+border:2px solid #f0d6a0;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+position:relative;
 }
+
+.chalisa-card::before{
+content:"🕉️";
+position:absolute;
+top:15px;
+right:20px;
+font-size:30px;
+opacity:.2;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+color:#8B0000;
+margin-bottom:30px;
+}
+
+.dohra,
+.chaupai{
+text-align:center;
+margin:30px 0 20px;
+}
+
+.dohra h4,
+.chaupai h4{
+display:inline-block;
+padding:8px 22px;
+background:#fff0dc;
+border-radius:30px;
+color:#8B0000;
+font-size:24px;
+font-weight:700;
+}
+
+.verse{
+text-align:center;
+font-size:24px;
+line-height:2.2;
+color:#222;
+margin:8px 0;
+padding:0;
+}
+
+.hi .verse{
+font-family:"Noto Sans Devanagari", sans-serif;
+font-weight:500;
+}
+
+.verse-number{
+display:none;
+}
+
