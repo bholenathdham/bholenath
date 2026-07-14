@@ -241,6 +241,19 @@ font-weight:400;
 color:#555;
 }
 
+.mahadev-divider{
+text-align:center;
+margin:50px auto;
+font-size:28px;
+color:#ff6600;
+}
 
+.mahadev-divider span{
+display:block;
+font-size:14px;
+letter-spacing:4px;
+color:#8B0000;
+margin-top:8px;
+}
 
 
