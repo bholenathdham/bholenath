@@ -223,22 +223,84 @@ font-size:18px;
 }
 
 .final-mantra{
+max-width:900px;
+margin:70px auto;
+padding:50px 40px;
+
+background:linear-gradient(135deg,#fff8ef,#fff3dd);
+
+border:2px solid #f4d19b;
+border-radius:25px;
+
 text-align:center;
 
-padding:60px 20px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
 
-font-size:34px;
+position:relative;
+overflow:hidden;
+}
 
+.final-mantra::before{
+content:"🕉️";
+position:absolute;
+top:15px;
+left:20px;
+font-size:50px;
+opacity:.12;
+}
+
+.final-mantra::after{
+content:"🔱";
+position:absolute;
+bottom:15px;
+right:20px;
+font-size:50px;
+opacity:.12;
+}
+
+.final-mantra .mantra-text{
+font-size:38px;
 font-weight:700;
-
 color:#8B0000;
+margin-bottom:20px;
+text-shadow:0 2px 8px rgba(196,92,0,.15);
 }
 
 .final-mantra p{
-margin-top:20px;
 font-size:18px;
-font-weight:400;
+line-height:1.9;
 color:#555;
+max-width:700px;
+margin:0 auto;
+}
+
+.final-mantra .blessing{
+display:block;
+margin-top:25px;
+font-size:22px;
+font-weight:600;
+color:#c45c00;
+}
+
+@media(max-width:768px){
+
+.final-mantra{
+padding:35px 25px;
+margin:50px 20px;
+}
+
+.final-mantra .mantra-text{
+font-size:28px;
+}
+
+.final-mantra p{
+font-size:16px;
+}
+
+.final-mantra .blessing{
+font-size:18px;
+}
+
 }
 
 .mahadev-divider{
