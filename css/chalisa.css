@@ -152,3 +152,29 @@ font-family:'Noto Sans Devanagari',sans-serif;
 .bn{
 font-family:'Noto Sans Bengali',sans-serif;
 }
+
+.chalisa-intro{
+max-width:900px;
+margin:0 auto 40px;
+padding:30px;
+background:linear-gradient(135deg,#fffaf2,#fff4e5);
+border:1px solid #ffd699;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+font-size:18px;
+line-height:1.9;
+text-align:center;
+color:#444;
+}
+
+@media(max-width:768px){
+
+.chalisa-intro{
+padding:20px;
+font-size:16px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+}
