@@ -179,7 +179,7 @@ margin-bottom:30px;
 
 }
 .chalisa-card{
-max-width:900px;
+max-width:750px;
 margin:40px auto;
 padding:50px 40px;
 background:#fffdf7;
@@ -239,4 +239,10 @@ font-weight:500;
 .verse-number{
 display:none;
 }
-
+.mahadev-divider{
+text-align:center;
+font-size:24px;
+margin:25px 0;
+color:#ff6600;
+letter-spacing:10px;
+}
