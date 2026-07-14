@@ -21,9 +21,30 @@ margin:auto;
 }
 
 .chalisa-container{
-max-width:1000px;
+max-width:1100px;
 margin:60px auto;
 padding:0 20px;
+position:relative;
+}
+
+.chalisa-container::before{
+content:"🕉️";
+position:absolute;
+left:-40px;
+top:150px;
+font-size:120px;
+opacity:.04;
+pointer-events:none;
+}
+
+.chalisa-container::after{
+content:"🔱";
+position:absolute;
+right:-40px;
+bottom:150px;
+font-size:120px;
+opacity:.04;
+pointer-events:none;
 }
 
 .chalisa-container h2{
