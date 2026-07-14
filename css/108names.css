@@ -304,18 +304,24 @@ font-size:18px;
 }
 
 .mahadev-divider{
-text-align:center;
-margin:50px auto;
-font-size:28px;
-color:#ff6600;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+
+margin:40px auto;
+
+font-size:22px;
+font-weight:600;
+color:#c45c00;
 }
 
-.mahadev-divider span{
-display:block;
-font-size:14px;
-letter-spacing:4px;
-color:#8B0000;
-margin-top:8px;
+.mahadev-divider::before,
+.mahadev-divider::after{
+content:"";
+width:120px;
+height:2px;
+background:linear-gradient(to right,transparent,#ff9933,transparent);
 }
 
 
