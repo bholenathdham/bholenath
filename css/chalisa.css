@@ -101,18 +101,36 @@ justify-content:center;
 flex-wrap:wrap;
 gap:25px;
 margin-top:40px;
+ grid-template-columns:repeat(4,1fr);
+  max-width:1400px; 
+}
+
+@media (max-width:1100px){
+
+.related-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:700px){
+
+.related-grid{
+    grid-template-columns:1fr;
+}
+
 }
 
 .related-card{
 background:linear-gradient(135deg,#fffdf8,#fff5e8);
-width:320px;
+
 border:2px solid #f4d19b;
 border-radius:22px;
 
-padding:35px 25px;
+padding:30px 20px;
 
 text-decoration:none;
-color:inherit;
+color:#222;
 
 box-shadow:0 10px 25px rgba(0,0,0,.08);
 
