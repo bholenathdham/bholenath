@@ -495,28 +495,120 @@ section h2::after{
     0 8px 25px rgba(0,0,0,0.08);
 }
 
-/* FUTURE VISION */
+/* =========================
+   FUTURE VISION SECTION
+========================= */
 
-.transparency-box{
-    background:
-    linear-gradient(
-    135deg,
-    #fff8e7,
-    #fff1c6
+.future-vision{
+    padding:90px 20px;
+}
+
+.future-vision h2{
+    text-align:center;
+    font-size:2.8rem;
+    color:#b85d00;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.future-vision h2::after{
+    content:"";
+    display:block;
+    width:90px;
+    height:4px;
+    background:#ff7b00;
+    margin:15px auto 0;
+    border-radius:20px;
+}
+
+.vision-intro{
+    max-width:1000px;
+    margin:0 auto 50px;
+    text-align:center;
+    font-size:1.1rem;
+    line-height:1.9;
+    color:#444;
+}
+
+/* Grid */
+
+.vision-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+}
+
+/* Cards */
+
+.vision-card{
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff4d8
     );
+
+    padding:35px 25px;
 
     border-radius:20px;
 
-    max-width:1200px;
-
-    margin:auto;
+    border:1px solid #f2c76a;
 
     box-shadow:
-    0 8px 25px rgba(0,0,0,0.08);
+        0 8px 25px rgba(0,0,0,0.08);
+
+    text-align:center;
+
+    transition:0.35s;
 }
 
 .vision-card:hover{
     transform:translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(255,123,0,0.18);
+}
+
+.vision-icon{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.vision-card h3{
+    color:#b85d00;
+    font-size:1.4rem;
+    margin-bottom:15px;
+}
+
+.vision-card p{
+    color:#444;
+    line-height:1.8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.future-vision{
+    padding:70px 15px;
+}
+
+.future-vision h2{
+    font-size:2rem;
+}
+
+.vision-intro{
+    font-size:1rem;
+}
+
+.vision-card{
+    padding:30px 20px;
+}
+
 }
 
 /* DIVIDER */
