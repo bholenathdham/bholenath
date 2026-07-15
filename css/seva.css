@@ -884,3 +884,123 @@ section h2::after{
 
     color:#333;
 }
+
+/* =========================
+   ONLINE SEVA
+========================= */
+
+.online-seva{
+    max-width:1200px;
+    margin:80px auto;
+    padding:70px 25px;
+    text-align:center;
+}
+
+.online-seva h2{
+    color:#c46300;
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+.online-seva h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#ff7b00;
+    margin:15px auto;
+    border-radius:20px;
+}
+
+.seva-support-text{
+    max-width:850px;
+    margin:0 auto 40px;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.online-seva-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.seva-method-card{
+    background:white;
+    border-radius:20px;
+    padding:35px 25px;
+    border:1px solid #f1c26d;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    transition:0.3s;
+}
+
+.seva-method-card:hover{
+    transform:translateY(-8px);
+}
+
+.method-icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.seva-method-card h3{
+    color:#b85d00;
+    margin-bottom:20px;
+}
+
+.qr-image{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    margin:15px auto;
+    display:block;
+    border-radius:12px;
+    border:4px solid #f5e2b4;
+}
+
+.payment-box{
+    background:#fff4da;
+    border:2px dashed #ff9800;
+    padding:15px;
+    border-radius:12px;
+    font-weight:700;
+    font-size:1.1rem;
+    margin-bottom:15px;
+    word-break:break-all;
+}
+
+.bank-details{
+    text-align:left;
+    line-height:2;
+    margin-top:10px;
+}
+
+.bank-details p{
+    margin-bottom:8px;
+}
+
+.donation-note{
+    margin-top:40px;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff1c8
+    );
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border-left:5px solid #ff7b00;
+}
+
+.donation-note p{
+    margin:0;
+    font-size:1.05rem;
+    font-weight:500;
+}
