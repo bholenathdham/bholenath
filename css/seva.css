@@ -36,6 +36,10 @@
     padding: 70px 20px;
 }
 
+.story-section{
+    padding: 70px 20px;
+}
+
 .story-section h2{
     text-align:center;
     color:#b85d00;
@@ -44,7 +48,25 @@
 }
 
 .story-card{
-    position:relative;
+    max-width: 950px;
+    margin: 40px auto 0;
+
+    background: linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff5dc
+    );
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    border-left: 6px solid #ff7b00;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.08);
+
+    line-height: 1.9;
 }
 
 .story-card::before{
