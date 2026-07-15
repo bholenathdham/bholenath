@@ -1080,82 +1080,130 @@ font-size:18px;
 }
 
 #temple-bell{
-padding:80px 10%;
-background:linear-gradient(135deg,#fff8f0,#fff);
+padding:80px 20px;
 }
 
 .bell-container{
-max-width:1200px;
+max-width:850px;
 margin:auto;
+
+padding:50px 35px;
+
 text-align:center;
-background:white;
-padding:50px 30px;
-border-radius:20px;
+
+background:linear-gradient(135deg,#fffdf8,#fff3e0);
+
+border:2px solid #f4d19b;
+border-radius:30px;
+
 box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+position:relative;
+overflow:hidden;
+}
+
+.bell-container::before{
+content:"🕉️";
+position:absolute;
+top:20px;
+left:25px;
+font-size:50px;
+opacity:.08;
+}
+
+.bell-container::after{
+content:"🔱";
+position:absolute;
+bottom:20px;
+right:25px;
+font-size:50px;
+opacity:.08;
+}
+
+.bell-decoration{
+font-size:24px;
+margin-bottom:20px;
+color:#c45c00;
 }
 
 .bell-icon{
 font-size:70px;
-margin-bottom:20px;
-animation:swing 3s infinite;
+margin-bottom:15px;
+animation:swing 2s infinite;
 }
 
 @keyframes swing{
-0%{transform:rotate(0deg);}
-25%{transform:rotate(12deg);}
-50%{transform:rotate(0deg);}
-75%{transform:rotate(-12deg);}
-100%{transform:rotate(0deg);}
+0%,100%{transform:rotate(0deg);}
+25%{transform:rotate(10deg);}
+75%{transform:rotate(-10deg);}
 }
 
 .bell-container h2{
 color:#8B0000;
+font-size:42px;
 margin-bottom:15px;
 }
 
-.bell-container p{
-color:#555;
+.bell-text{
+font-size:18px;
 line-height:1.8;
-margin-bottom:20px;
+color:#555;
+max-width:600px;
+margin:0 auto 30px;
 }
 
 #bellBtn{
-background:#c45c00;
-color:white;
+padding:16px 35px;
+
 border:none;
-padding:15px 30px;
+border-radius:50px;
+
+background:linear-gradient(135deg,#ff9933,#c45c00);
+
+color:#fff;
 font-size:18px;
-font-weight:600;
-border-radius:12px;
+font-weight:700;
+
 cursor:pointer;
 transition:.3s;
 }
 
 #bellBtn:hover{
-transform:translateY(-3px);
-background:#a94d00;
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(196,92,0,.3);
+}
+
+.bell-divider{
+margin-top:25px;
+font-size:18px;
+font-weight:600;
+color:#c45c00;
 }
 
 #blessingMessage{
-margin-top:25px;
-font-size:20px;
-font-weight:600;
+margin-top:30px;
+font-size:18px;
+line-height:1.8;
 color:#8B0000;
+font-weight:600;
 }
 
 @media(max-width:768px){
+
+.bell-container{
+padding:35px 20px;
+}
+
+.bell-container h2{
+font-size:30px;
+}
 
 .bell-icon{
 font-size:55px;
 }
 
-#bellBtn{
-width:100%;
+.bell-text{
 font-size:16px;
-}
-
-#blessingMessage{
-font-size:17px;
 }
 
 }
