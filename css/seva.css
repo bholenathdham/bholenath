@@ -32,24 +32,64 @@
 
 /* COMMON SECTIONS */
 
-.story-section,
-.seva-timeline,
-.inauguration-details,
-.ritual-grid-section,
-.future-vision,
-.why-seva,
-.transparency-box,
-.humble-appeal,
-.related-links{
-    padding:60px 20px;
+.story-section{
+    padding: 70px 20px;
 }
 
-.story-card,
-.transparency-box,
-.humble-appeal{
-    max-width:1000px;
-    margin:auto;
-    line-height:1.9;
+.story-section h2{
+    text-align:center;
+    color:#b85d00;
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+.story-card{
+    position:relative;
+}
+
+.story-card::before{
+    content:"🔱";
+
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+
+    background:#fff5dc;
+
+    padding:5px 10px;
+
+    border-radius:50%;
+}
+
+.story-icon{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.story-card p{
+    margin-bottom:18px;
+    font-size:1.05rem;
+}
+
+.story-highlight{
+    display:inline-block;
+
+    background:#ff7b00;
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
 }
 
 /* QUOTE */
