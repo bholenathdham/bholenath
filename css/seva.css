@@ -1,1 +1,184 @@
+.hidden{
+    display:none;
+}
 
+/* HERO */
+
+.hero-small{
+    background:#fff8ef;
+    padding:70px 20px;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+.hero-subtitle{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* COMMON SECTIONS */
+
+.story-section,
+.seva-timeline,
+.inauguration-details,
+.ritual-grid-section,
+.future-vision,
+.why-seva,
+.transparency-box,
+.humble-appeal,
+.related-links{
+    padding:60px 20px;
+}
+
+.story-card,
+.transparency-box,
+.humble-appeal{
+    max-width:1000px;
+    margin:auto;
+    line-height:1.9;
+}
+
+/* QUOTE */
+
+.seva-quote{
+    text-align:center;
+    padding:40px 20px;
+    background:#f8f8f8;
+    font-style:italic;
+    font-size:1.1rem;
+}
+
+/* TIMELINE */
+
+.timeline{
+    max-width:1000px;
+    margin:auto;
+}
+
+.timeline-item{
+    display:flex;
+    gap:20px;
+    margin-bottom:30px;
+    padding:20px;
+    border-radius:12px;
+    background:#fafafa;
+}
+
+.timeline-icon{
+    font-size:30px;
+}
+
+.timeline-year{
+    font-weight:bold;
+    color:#e67e22;
+    margin-bottom:10px;
+}
+
+/* CARDS */
+
+.ritual-grid,
+.vision-grid,
+.seva-grid,
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.ritual-card,
+.vision-card,
+.seva-card,
+.related-card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.ritual-icon,
+.vision-icon,
+.seva-icon,
+.related-icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+/* COMING SOON */
+
+.coming-soon-seva{
+    text-align:center;
+    padding:60px 20px;
+    background:#fff8ef;
+}
+
+.coming-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+/* BLESSING */
+
+.seva-blessing{
+    text-align:center;
+    padding:70px 20px;
+}
+
+.seva-blessing h2{
+    margin-bottom:20px;
+}
+
+/* QUICK NAV */
+
+.quick-nav{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.quick-nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+}
+
+.quick-nav-links a{
+    text-decoration:none;
+    background:#f3f3f3;
+    padding:12px 18px;
+    border-radius:10px;
+    color:#222;
+}
+
+/* RELATED LINKS */
+
+.related-card{
+    text-decoration:none;
+    color:#222;
+    transition:.3s;
+}
+
+.related-card:hover{
+    transform:translateY(-5px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .timeline-item{
+        flex-direction:column;
+    }
+
+    .hero-content h1{
+        font-size:2rem;
+    }
+
+}
