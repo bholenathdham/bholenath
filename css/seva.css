@@ -555,12 +555,87 @@
 /* BLESSING */
 
 .seva-blessing{
+    max-width:1000px;
+    margin:80px auto;
+    padding:50px 40px;
+
+    background:linear-gradient(
+        135deg,
+        #fff8ef,
+        #fff3d9
+    );
+
+    border:2px solid #f2d19b;
+    border-top:6px solid #ff7b00;
+
+    border-radius:22px;
+
     text-align:center;
-    padding:70px 20px;
+    animation:blessingGlow 4s ease-in-out infinite;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.seva-blessing::before{
+    content:"🔱";
+
+    position:absolute;
+
+    top:15px;
+    left:25px;
+
+    font-size:2rem;
+    opacity:.15;
+}
+
+.seva-blessing::after{
+    content:"🕉️";
+
+    position:absolute;
+
+    bottom:15px;
+    right:25px;
+
+    font-size:2rem;
+    opacity:.15;
 }
 
 .seva-blessing h2{
+    color:#8B0000;
+    font-size:2.4rem;
     margin-bottom:20px;
+}
+
+.seva-blessing p{
+    max-width:750px;
+    margin:0 auto;
+
+    font-size:1.15rem;
+    line-height:2;
+
+    color:#444;
+}
+
+@media(max-width:768px){
+
+.seva-blessing{
+    padding:35px 25px;
+    margin:60px 20px;
+}
+
+.seva-blessing h2{
+    font-size:1.8rem;
+}
+
+.seva-blessing p{
+    font-size:1rem;
+    line-height:1.8;
+}
+
 }
 
 /* QUICK NAV */
@@ -1226,4 +1301,21 @@ section h2::after{
     font-size:0.9rem;
 
     font-weight:600;
+}
+
+@keyframes blessingGlow{
+
+0%,100%{
+    box-shadow:
+    0 0 15px rgba(255,123,0,.15),
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+50%{
+    box-shadow:
+    0 0 35px rgba(255,123,0,.40),
+    0 0 60px rgba(255,180,0,.20),
+    0 10px 30px rgba(0,0,0,.08);
+}
+
 }
