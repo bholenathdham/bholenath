@@ -748,11 +748,10 @@ section h2::after{
 /* TRANSPARENCY */
 
 .transparency-box{
-    background:
-    linear-gradient(
-    135deg,
-    #fff8e7,
-    #fff1c6
+     background:linear-gradient(
+        135deg,
+        #fffdf8,
+        #fff4db
     );
 
     border-radius:20px;
