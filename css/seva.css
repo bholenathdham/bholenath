@@ -33,11 +33,8 @@
 /* COMMON SECTIONS */
 
 .story-section{
-    padding: 70px 20px;
-}
-
-.story-section{
-    padding: 70px 20px;
+    padding:70px 20px;
+    background:#f8f5ef;
 }
 
 .story-section h2{
