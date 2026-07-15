@@ -166,11 +166,53 @@
 }
 
 .seva-intro{
-    max-width:1000px;
-    margin:0 auto 50px;
+    max-width:850px;
+
+    margin:0 auto 55px;
+
     text-align:center;
-    line-height:1.9;
-    font-size:1.1rem;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    color:#555;
+
+    padding:25px 40px;
+
+    position:relative;
+
+    font-style:italic;
+}
+
+.seva-intro::before{
+    content:"❝";
+
+    position:absolute;
+
+    left:0;
+    top:-10px;
+
+    font-size:3rem;
+
+    color:#ff7b00;
+
+    opacity:.4;
+}
+
+.seva-intro::after{
+    content:"❞";
+
+    position:absolute;
+
+    right:0;
+    bottom:-35px;
+
+    font-size:3rem;
+
+    color:#ff7b00;
+
+    opacity:.4;
 }
 
 .seva-grid{
