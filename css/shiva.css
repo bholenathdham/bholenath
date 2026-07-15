@@ -98,20 +98,89 @@ margin-top:30px;
 }
 
 .shiva-card{
-background:white;
-padding:25px;
-border-radius:18px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+background:linear-gradient(135deg,#fffdf8,#fff5e8);
+border:2px solid #f3d5a0;
+border-radius:22px;
+
+padding:30px 25px;
 text-align:center;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+transition:.35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.shiva-card::before{
+content:"🕉️";
+position:absolute;
+top:10px;
+right:15px;
+font-size:28px;
+opacity:.08;
+}
+
+.shiva-card:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(196,92,0,.15);
+border-color:#ff9933;
+}
+
+.symbol-icon{
+font-size:48px;
+margin-bottom:10px;
+}
+
+.symbol-divider{
+font-size:18px;
+color:#c45c00;
+margin-bottom:12px;
 }
 
 .shiva-card h3{
 color:#8B0000;
-margin-bottom:12px;
+font-size:26px;
+margin-bottom:15px;
 }
 
 .shiva-card p{
-text-align:center;
+line-height:1.9;
+color:#555;
+font-size:16px;
+margin-bottom:20px;
+}
+
+.symbol-tag{
+display:inline-block;
+
+padding:8px 18px;
+
+background:#fff;
+border:1px solid #f3d5a0;
+
+border-radius:50px;
+
+font-size:14px;
+font-weight:600;
+
+color:#c45c00;
+}
+
+@media(max-width:768px){
+
+.shiva-card{
+padding:25px 20px;
+}
+
+.symbol-icon{
+font-size:40px;
+}
+
+.shiva-card h3{
+font-size:22px;
+}
+
 }
 
 /* WORSHIP */
