@@ -5,9 +5,18 @@
 /* HERO */
 
 .hero-small{
-    background:#fff8ef;
-    padding:70px 20px;
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+    ),
+    url("../assets/temple-banner.webp");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
     text-align:center;
+    padding:100px 20px;
 }
 
 .hero-content h1{
@@ -46,11 +55,28 @@
 /* QUOTE */
 
 .seva-quote{
+    max-width:1000px;
+
+    margin:60px auto;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff6d9,
+    #ffe9b5
+    );
+
+    border-left:6px solid #ff8c00;
+
+    border-radius:15px;
+
+    padding:30px;
+
     text-align:center;
-    padding:40px 20px;
-    background:#f8f8f8;
+
+    font-size:1.2rem;
+
     font-style:italic;
-    font-size:1.1rem;
 }
 
 /* TIMELINE */
@@ -61,16 +87,33 @@
 }
 
 .timeline-item{
-    display:flex;
-    gap:20px;
-    margin-bottom:30px;
-    padding:20px;
-    border-radius:12px;
-    background:#fafafa;
+    background:white;
+    border-left:5px solid #ff8c00;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0 6px 18px rgba(0,0,0,0.08);
 }
 
 .timeline-icon{
-    font-size:30px;
+    width:60px;
+    height:60px;
+
+    background:#ff8c00;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
 }
 
 .timeline-year{
@@ -91,15 +134,28 @@
     margin-top:40px;
 }
 
-.ritual-card,
-.vision-card,
-.seva-card,
-.related-card{
-    background:white;
-    border-radius:15px;
+.ritual-card{
+    background:linear-gradient(
+    135deg,
+    #fffaf0,
+    #fff4d6
+    );
+
+    border:1px solid #f3c25c;
+    border-radius:18px;
+
     padding:25px;
-    text-align:center;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.08);
+
+    transition:0.35s;
+}
+
+.ritual-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.15);
 }
 
 .ritual-icon,
@@ -181,4 +237,89 @@
         font-size:2rem;
     }
 
+}
+
+/* Section */
+
+section h2{
+    text-align:center;
+
+    color:#c96f00;
+
+    font-size:2.1rem;
+
+    margin-bottom:40px;
+
+    position:relative;
+}
+
+section h2::after{
+    content:"";
+
+    width:90px;
+    height:4px;
+
+    background:#ff8c00;
+
+    display:block;
+
+    margin:12px auto 0;
+
+    border-radius:50px;
+}
+
+/* TRANSPARENCY */
+
+.transparency-box{
+    background:
+    linear-gradient(
+    135deg,
+    #fff8e7,
+    #fff1c6
+    );
+
+    border-radius:20px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* FUTURE VISION */
+
+.transparency-box{
+    background:
+    linear-gradient(
+    135deg,
+    #fff8e7,
+    #fff1c6
+    );
+
+    border-radius:20px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.08);
+}
+
+.vision-card:hover{
+    transform:translateY(-8px);
+}
+
+/* DIVIDER */
+
+.mahadev-divider{
+    text-align:center;
+
+    font-size:2rem;
+
+    color:#ff8c00;
+
+    margin:50px 0;
 }
