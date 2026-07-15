@@ -1004,3 +1004,128 @@ section h2::after{
     font-size:1.05rem;
     font-weight:500;
 }
+
+/* =========================
+   COMING SOON SEVA
+========================= */
+
+.coming-soon-seva{
+    max-width:900px;
+
+    margin:80px auto 40px;
+
+    padding:50px 35px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff1c8
+    );
+
+    border-radius:25px;
+
+    border:1px solid #f2d38a;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.08);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* Decorative glow */
+
+.coming-soon-seva::before{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:rgba(255,165,0,0.08);
+
+    border-radius:50%;
+
+    top:-100px;
+    left:-100px;
+}
+
+.coming-soon-seva::after{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:rgba(255,165,0,0.08);
+
+    border-radius:50%;
+
+    bottom:-120px;
+    right:-120px;
+}
+
+.coming-icon{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.coming-soon-seva h3{
+    color:#c46300;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+}
+
+.coming-soon-seva h3::after{
+    content:"";
+
+    display:block;
+
+    width:70px;
+    height:4px;
+
+    background:#ff7b00;
+
+    margin:15px auto 0;
+
+    border-radius:20px;
+}
+
+.coming-soon-seva p{
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:1.08rem;
+
+    color:#444;
+}
+
+/* Optional small badge */
+
+.coming-soon-seva .coming-badge{
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#ff7b00;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:0.9rem;
+
+    font-weight:600;
+}
