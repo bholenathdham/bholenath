@@ -533,3 +533,37 @@ font-size:20px;
 }
 
 }
+
+/* Name */
+
+.name-lang{
+display:none;
+}
+
+.name-lang.active{
+display:block;
+}
+
+.language-switcher{
+display:flex;
+justify-content:center;
+gap:12px;
+margin:40px 0;
+flex-wrap:wrap;
+}
+
+.lang-btn{
+padding:12px 24px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:600;
+background:#eee;
+transition:.3s;
+}
+
+.lang-btn.active{
+background:#ff6600;
+color:white;
+}
+
