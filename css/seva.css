@@ -1005,6 +1005,24 @@ section h2::after{
     font-weight:500;
 }
 
+.online-seva-intro{
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    text-align:center;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:#555;
+
+    padding:0 15px;
+
+    font-style:italic;
+}
+
 /* =========================
    COMING SOON SEVA
 ========================= */
