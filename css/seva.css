@@ -32,40 +32,42 @@
 
 /* COMMON SECTIONS */
 
-.story-section{
-    padding:70px 20px;
-    background:#f8f5ef;
-}
-
 .story-section h2{
     text-align:center;
     color:#b85d00;
     font-size:2.4rem;
-    margin-bottom:15px;
+    margin-bottom:35px;
+}
+
+.story-section{
+    padding:80px 20px;
+    background:#f8f5ef;
 }
 
 .story-card{
-    max-width: 950px;
-    margin: 40px auto 0;
+    position:relative;
 
-    background: linear-gradient(
-        135deg,
-        #fffdf7,
-        #fff5dc
-    );
+    max-width:800px;
+    margin:auto;
 
-    padding: 40px;
+    background:#fff;
 
-    border-radius: 20px;
+    padding:45px;
 
-    border-left: 6px solid #ff7b00;
+    border-radius:20px;
+
+    border-top:5px solid #ff7b00;
+    border:1px solid #f0d9a5;
 
     box-shadow:
         0 10px 30px rgba(0,0,0,0.08);
 
-    line-height: 1.9;
+    transition:0.3s;
 }
 
+.story-card:hover{
+    transform:translateY(-5px);
+}
 .story-card::before{
     content:"🔱";
 
