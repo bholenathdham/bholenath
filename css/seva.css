@@ -56,7 +56,10 @@
 
     border-radius:20px;
 
-    border-top:6px solid #ff7b00;
+    border-top: 6px solid #ff8c00;
+    border-right: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
+    border-left: 1px solid #ff8c00;
 
     box-shadow:
         0 10px 30px rgba(0,0,0,0.08);
