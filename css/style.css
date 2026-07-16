@@ -1033,25 +1033,47 @@ font-size:17px;
     padding:0 20px;
 }
 
-.festival-grid{
+.festival-container{
+    max-width:1100px;
+    margin:50px auto;
+    padding:0 20px;
+
     display:grid;
-    grid-template-columns:repeat(4, minmax(220px, 240px));
-    justify-content:center;
+    grid-template-columns:repeat(4,1fr);
     gap:25px;
 }
 
 .festival-card{
-background:white;
-padding:30px 20px;
-border-radius:20px;
-text-align:center;
- box-shadow:0 12px 30px rgba(0,0,0,.08);
-transition:.3s;
-border-top:4px solid #ff8c00;    
+    background:#fff;
+    border:2px solid #ff7b00;
+    border-radius:25px;
+
+    padding:35px 25px;
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
 }
 
 .festival-card:hover{
-transform:translateY(-8px);
+    transform:translateY(-8px);
+}
+
+@media(max-width:1000px){
+
+.festival-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:700px){
+
+.festival-container{
+    grid-template-columns:1fr;
+}
+
 }
 
 .festival-icon{
