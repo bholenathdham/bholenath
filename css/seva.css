@@ -359,9 +359,12 @@ border-radius:50px;
 }
 
 .timeline-year{
-    font-weight:bold;
-    color:#e67e22;
-    margin-bottom:10px;
+display:inline-block;
+background:#ff7b00;
+color:white;
+padding:8px 18px;
+border-radius:50px;
+font-weight:600;
 }
 
 /* CARDS */
