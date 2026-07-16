@@ -339,7 +339,11 @@ margin:40px 15px;
 }
 
 .blessings-box h2{
-font-size:26px;
+font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
 }
 
 .blessings-box li{
