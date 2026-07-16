@@ -998,10 +998,21 @@ padding:80px 10%;
 }
 
 #festivals h2{
+font-size:2.5rem;
+color:#8B0000;
 text-align:center;
-font-size:38px;
-color:#c45c00;
 margin-bottom:15px;
+position:relative;
+}
+
+#festivals h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#ff9933;
+margin:15px auto;
+border-radius:50px;
 }
 
 .festival-subtitle{
