@@ -1064,41 +1064,51 @@ line-height:1.8;
 }
 
 .festival-quote{
-max-width:850px;
-margin:50px auto 20px;
-padding:25px 35px;
+    max-width:800px;
+    margin:50px auto 0;
 
-background:linear-gradient(135deg,#fff8ef,#fff3dd);
+    padding:35px 30px;
 
-border:2px solid #f4d19b;
-border-radius:60px;
+    background:linear-gradient(
+        135deg,
+        #fff8ea,
+        #fff0d0
+    );
 
-text-align:center;
+    border:2px solid #f0c27b;
+    border-radius:35px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+    text-align:center;
 
-position:relative;
-overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    position:relative;
+    overflow:hidden;
 }
 
-.festival-quote::before{
-content:"🕉️";
-position:absolute;
-left:25px;
-top:50%;
-transform:translateY(-50%);
-font-size:32px;
-opacity:.15;
+.festival-quote p{
+    margin:0;
+
+    font-size:2rem;
+    font-style:italic;
+    font-weight:700;
+
+    color:#b44d00;
+
+    line-height:1.6;
 }
 
-.festival-quote::after{
-content:"🔱";
-position:absolute;
-right:25px;
-top:50%;
-transform:translateY(-50%);
-font-size:32px;
-opacity:.15;
+.festival-quote span{
+    display:block;
+
+    margin-top:18px;
+
+    font-size:14px;
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    color:#8B0000;
 }
 
 .festival-quote p{
