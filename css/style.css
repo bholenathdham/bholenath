@@ -402,6 +402,10 @@ font-weight:600;
 
 .story{
     max-width:1000px;
+border-top:5px solid #ff7b00;
+border-bottom:2px solid #ff7b00;
+border-left:2px solid #ff7b00;
+border-right:2px solid #ff7b00;
     margin:0 auto;
     background:white;
     padding:35px;
