@@ -380,9 +380,10 @@ border-radius:50px;
 display:inline-block;
 background:#ff7b00;
 color:white;
-padding:8px 18px;
+padding:1px 18px;
 border-radius:50px;
-font-weight:600;
+font-weight:500;
+margin-top:8px;    
 }
 
 /* CARDS */
