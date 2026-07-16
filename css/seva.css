@@ -73,7 +73,8 @@ border-radius:50px;
     border-left: 1px solid #ff8c00;
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,0.08);
+    0 10px 30px rgba(0,0,0,.08),
+    0 0 20px rgba(255,153,51,.15);
 
     transition:0.3s;
 }
