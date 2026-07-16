@@ -341,7 +341,7 @@ border-radius:50px;
     border-radius:15px;
     padding:25px;
     position:relative;
-    padding-top:55px;
+    padding-top:24px;
     margin-bottom:25px;
     box-shadow:
     0 6px 18px rgba(0,0,0,0.08);
@@ -369,35 +369,32 @@ border-radius:50px;
 
 .timeline-year{
     position:absolute;
-
     top:-18px;
     left:50%;
-
     transform:translateX(-50%);
 
-    background:linear-gradient(
-        135deg,
-        #ff8c00,
-        #ffb347
-    );
+    background:linear-gradient(135deg,#ff8c00,#ff6600);
 
-    color:white;
+    color:#fff8dc;
 
-    padding:10px 22px;
+    padding:8px 20px;
 
-    border-radius:50px;
+    border-radius:30px;
 
     font-weight:700;
     font-size:15px;
 
-    white-space:nowrap;
+    box-shadow:0 6px 18px rgba(255,102,0,.35);
 
-    box-shadow:
-        0 6px 18px rgba(255,140,0,.35);
+    border:2px solid rgba(255,255,255,.3);
 
-    z-index:5;
+    /* Text Border */
+    text-shadow:
+        0 1px 0 #8b5a00,
+        0 2px 3px rgba(0,0,0,.3);
+
+    border:2px solid #ffd27f;
 }
-
 .timeline-item:hover{
     transform:translateY(-5px);
 }
