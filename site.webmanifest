@@ -1,0 +1,22 @@
+{
+  "name": "Bhoolenath Dham",
+  "short_name": "BholenathDham",
+  "description": "Bholenath Dham is a sacred Shiva Temple located in Digha, Chandpara, Dhakuria-Ramchandrapur Road, West Bengal.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/logo.webp",
+      "sizes": "1536x1024",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/temple1",
+      "sizes": "1536x1024",
+      "type": "image/webp"
+    }
+  ]
+}
