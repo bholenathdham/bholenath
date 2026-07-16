@@ -747,30 +747,21 @@ border-radius:50px;
 /* Section */
 
 section h2{
-    text-align:center;
-
-    color:#c96f00;
-
-    font-size:2.1rem;
-
-    margin-bottom:40px;
-
-    position:relative;
+   font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
 }
 
 section h2::after{
-    content:"";
-
-    width:90px;
-    height:4px;
-
-    background:#ff8c00;
-
-    display:block;
-
-    margin:12px auto 0;
-
-    border-radius:50px;
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#ff9933;
+margin:15px auto;
+border-radius:50px;
 }
 
 /* TRANSPARENCY */
