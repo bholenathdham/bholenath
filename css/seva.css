@@ -1078,22 +1078,21 @@ border-radius:50px;
 }
 
 .humble-appeal h2{
-    color:#c46300;
-    font-size:2.5rem;
-    margin-bottom:35px;
+   font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
 }
 
 .humble-appeal h2::after{
-    content:"";
-    display:block;
-
-    width:80px;
-    height:4px;
-
-    background:#ff7b00;
-
-    margin:15px auto 0;
-    border-radius:20px;
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#ff9933;
+margin:15px auto;
+border-radius:50px;
 }
 
 .humble-appeal p{
