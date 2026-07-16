@@ -19,6 +19,24 @@
     padding:100px 20px;
 }
 
+.hero-content{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
 .hero-content h1{
     font-size:2.4rem;
     margin-bottom:15px;
