@@ -374,10 +374,21 @@ border-radius:50px;
 }
 
 .ritual-grid-section h2{
-    color:#b85d00;
-    font-size:2.6rem;
-    margin-bottom:15px;
-    position:relative;
+    font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.ritual-grid-section h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#ff9933;
+margin:15px auto;
+border-radius:50px;
 }
 
 .ritual-grid-section h2::after{
