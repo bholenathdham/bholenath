@@ -959,24 +959,6 @@ transform:translateY(-3px);
     overflow:hidden;
 }
 
-.quote-card::before{
-    content:"🕉️";
-    position:absolute;
-    top:15px;
-    left:25px;
-    font-size:40px;
-    opacity:.15;
-}
-
-.quote-card::after{
-    content:"🔱";
-    position:absolute;
-    bottom:15px;
-    right:25px;
-    font-size:40px;
-    opacity:.15;
-}
-
 #quoteTextEn,
 #quoteTextBn{
     font-size:30px;
