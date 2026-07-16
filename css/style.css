@@ -645,19 +645,28 @@ border-radius:50px;
 }
 
 .visitor-container{
-    max-width:auto;
-    margin:auto;
+   max-width:1100px;
+    margin:50px auto;
+    padding:0 20px;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
 }
 
 .visitor-card{
-    background:white;
-    padding:25px;
-    border-radius:20px;
+    background:#fff;
+    border-top:px solid #ff7b00;
+    border-left:5px solid #ff7b00;
+    border-right:2px solid #ff7b00;
+    border-bottom:2px solid #ff7b00;
+    border-radius:25px;
+
+    padding:35px 25px;
     text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
     transition:.3s;
 }
 
