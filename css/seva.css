@@ -200,23 +200,42 @@ border-radius:50px;
 }
 
 .seva-intro{
-    max-width:850px;
+    max-width:900px;
+    margin:0 auto 50px;
 
-    margin:0 auto 55px;
+    padding:25px 30px;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff4dc
+    );
+
+    border:1px solid #f4d19b;
+    border-left:6px solid #ff7b00;
+
+    border-radius:16px;
 
     text-align:center;
 
     font-size:1.15rem;
+    line-height:1.9;
+    color:#444;
 
-    line-height:2;
-
-    color:#555;
-
-    padding:25px 40px;
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
 
     position:relative;
+}
 
-    font-style:italic;
+@media(max-width:768px){
+
+.seva-intro{
+    padding:20px;
+    font-size:1rem;
+    line-height:1.8;
+}
+
 }
 
 .seva-intro::before{
@@ -224,12 +243,11 @@ border-radius:50px;
 
     position:absolute;
 
-    left:0;
-    top:-10px;
+    top:-15px;
+    left:20px;
 
-    font-size:3rem;
-
-    color:#ff7b00;
+    font-size:4rem;
+    color:#ffb347;
 
     opacity:.4;
 }
