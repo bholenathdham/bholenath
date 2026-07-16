@@ -338,13 +338,11 @@ border-radius:50px;
     border-right: 1px solid #ff8c00;
     border-bottom: 1px solid #ff8c00;
     border-left: 5px solid #ff8c00;
-
     border-radius:15px;
-
     padding:25px;
-
+    position:relative;
+    padding-top:55px;
     margin-bottom:25px;
-
     box-shadow:
     0 6px 18px rgba(0,0,0,0.08);
 }
@@ -370,13 +368,34 @@ border-radius:50px;
 }
 
 .timeline-year{
-display:inline-block;
-background:#ff7b00;
-color:white;
-padding:2px 18px;
-border-radius:50px;
-font-weight:600;
-margin-top:8px;    
+    position:absolute;
+
+    top:-18px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:linear-gradient(
+        135deg,
+        #ff8c00,
+        #ffb347
+    );
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    font-weight:700;
+    font-size:15px;
+
+    white-space:nowrap;
+
+    box-shadow:
+        0 6px 18px rgba(255,140,0,.35);
+
+    z-index:5;
 }
 
 .timeline-item:hover{
