@@ -783,8 +783,8 @@ border-radius:50px;
 
     margin:auto;
 
-    box-shadow:
-    0 8px 25px rgba(0,0,0,0.08);
+    0 10px 30px rgba(0,0,0,.08),
+    0 0 20px rgba(255,153,51,.15);
 }
 
 /* =========================
