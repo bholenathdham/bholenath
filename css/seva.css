@@ -33,10 +33,21 @@
 /* COMMON SECTIONS */
 
 .story-section h2{
-    text-align:center;
-    color:#b85d00;
-    font-size:2.4rem;
-    margin-bottom:35px;
+font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.story-section h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#ff9933;
+margin:15px auto;
+border-radius:50px;
 }
 
 .story-section{
