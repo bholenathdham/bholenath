@@ -238,35 +238,6 @@ border-radius:50px;
 
 }
 
-.seva-intro::before{
-    content:"❝";
-
-    position:absolute;
-
-    top:-15px;
-    left:20px;
-
-    font-size:4rem;
-    color:#ffb347;
-
-    opacity:.4;
-}
-
-.seva-intro::after{
-    content:"❞";
-
-    position:absolute;
-
-    right:0;
-    bottom:-35px;
-
-    font-size:3rem;
-
-    color:#ff7b00;
-
-    opacity:.4;
-}
-
 .seva-grid{
     display:grid;
     grid-template-columns:
