@@ -353,7 +353,11 @@ border-radius:50px;
     width:60px;
     height:60px;
 
-    background:#ff8c00;
+     background:linear-gradient(
+        135deg,
+        #fff0d0,
+        #ffe0a1
+    );
     color:white;
 
     border-radius:50%;
