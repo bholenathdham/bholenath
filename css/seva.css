@@ -392,16 +392,6 @@ margin:15px auto;
 border-radius:50px;
 }
 
-.ritual-grid-section h2::after{
-    content:"";
-    display:block;
-    width:90px;
-    height:4px;
-    background:#ff7b00;
-    margin:15px auto 0;
-    border-radius:50px;
-}
-
 /* ==========================
    GRID
 ========================== */
