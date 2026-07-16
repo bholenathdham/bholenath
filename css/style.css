@@ -994,8 +994,11 @@ transform:translateY(-3px);
 }
 
 #festivals{
-background:#fffaf2;
 padding:80px 10%;
+}
+
+.festival-section{
+background:#fffaf2;
 }
 
 #festivals h2{
@@ -1037,6 +1040,7 @@ border-radius:20px;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
 transition:.3s;
+border-top:4px solid #ff8c00;    
 }
 
 .festival-card:hover{
