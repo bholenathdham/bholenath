@@ -1448,7 +1448,11 @@ color:#c45c00;
 flex-direction:column;
 align-items:center;
 }
-
+    
+.location-section{
+background:#fffaf2;
+}
+    
 .location-btn{
 width:100%;
 max-width:320px;
