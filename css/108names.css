@@ -525,7 +525,10 @@ line-height:1.8;
 .related-card{
 background:linear-gradient(135deg,#fffdf8,#fff5e8);
 
-border:2px solid #f4d19b;
+border-top:5px solid #ff7b00;
+border-bottom:2px solid #ff7b00;
+border-left:2px solid #ff7b00;
+border-right:2px solid #ff7b00;
 border-radius:22px;
 
 padding:30px 20px;
