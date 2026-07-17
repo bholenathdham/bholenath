@@ -1556,6 +1556,17 @@ text-transform:uppercase;
     text-align:center;
 }
 
+.quick-nav h3{
+    font-size:30px;
+    color:#8B0000;
+    text-align:center;
+}
+
+.quick-nav p{
+    font-size:18px;
+    text-align:center;
+}
+
 .quick-nav-links{
     display:flex;
     justify-content:center;
