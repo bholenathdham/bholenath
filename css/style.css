@@ -1549,6 +1549,13 @@ text-transform:uppercase;
 
 /* QUICK NAVIGATION */
 
+.quick-nav{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
 .quick-nav-links{
     display:flex;
     justify-content:center;
