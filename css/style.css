@@ -1688,3 +1688,112 @@ background:#fff;
     transform:translateY(-3px);
     box-shadow:0 10px 20px rgba(255,123,0,.25);
 }
+
+/* POP-UP*/
+
+.popup-card{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    width:320px;
+
+    background:#fff;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    border:2px solid #ff7b00;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    z-index:9999;
+
+    animation:popupSlide .5s ease;
+}
+
+.popup-card h3{
+    color:#8B0000;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.popup-card p{
+    text-align:center;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+.popup-btn{
+    display:block;
+    text-align:center;
+
+    background:#ff7b00;
+    color:white;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+}
+
+#closePopup{
+    position:absolute;
+    top:10px;
+    right:12px;
+
+    border:none;
+    background:none;
+
+    cursor:pointer;
+    font-size:20px;
+}
+
+.popup-launcher{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff7b00;
+
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:9999;
+}
+
+@keyframes popupSlide{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:768px){
+
+.popup-card{
+    width:280px;
+    right:10px;
+    bottom:10px;
+}
+
+}
