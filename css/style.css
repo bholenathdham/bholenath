@@ -1657,3 +1657,34 @@ background:#fff;
 
     transform:translateY(-2px);
 }
+
+.explore-more-box{
+    text-align:center;
+    margin:35px 0 10px;
+}
+
+.explore-more-btn{
+    display:inline-block;
+    padding:12px 28px;
+
+    background:#fff;
+    color:#8B0000;
+
+    border:2px solid #ff7b00;
+    border-radius:50px;
+
+    font-size:1rem;
+    font-weight:600;
+    text-decoration:none;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:all .3s ease;
+}
+
+.explore-more-btn:hover{
+    background:#ff7b00;
+    color:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(255,123,0,.25);
+}
