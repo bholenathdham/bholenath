@@ -158,3 +158,43 @@ padding:20px;
 }
 
 }
+
+.photo-gallery{
+    max-width:1400px;
+    margin:70px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.photo-gallery h2{
+    color:#8B0000;
+    font-size:2.3rem;
+    margin-bottom:15px;
+}
+
+.photo-gallery p{
+    color:#555;
+    max-width:900px;
+    margin:0 auto 40px;
+    line-height:1.8;
+}
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.photo-grid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:20px;
+    border:2px solid #ff7b00;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.photo-grid img:hover{
+    transform:scale(1.03);
+}
