@@ -105,49 +105,82 @@ margin-bottom:20px;
 color:#555;
 }
 
-/* Temple Journey Videos */
-.video-grid{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin-top:20px;
+.media-grid{
+    max-width:1400px;
+    margin:50px auto;
+    padding:0 20px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:30px;
 }
 
-.video-item{
-    flex:1 1 250px;
-    max-width:260px;
+.media-card{
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    border-top:2px solid #ff7b00;
+    border-left:5px solid #ff7b00;
+    border-right:2px solid #ff7b00;
+    border-bottom:2px solid #ff7b00;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.media-card:hover{
+    transform:translateY(-5px);
+}
+
+.media-card h3{
     text-align:center;
-}
-
-.video-item iframe{
-    width:100%;
-    aspect-ratio:9/16;
-    height:auto;
-    border-radius:15px;
-    border:none;
-}
-
-.video-item p{
-    margin-top:10px;
-    font-weight:600;
     color:#8B0000;
+    margin-bottom:15px;
 }
 
-/* Mobile */
-@media (max-width:768px){
-
-.video-grid{
-    flex-direction:column;
-    align-items:center;
+.media-card p{
+    text-align:center;
+    line-height:1.8;
+    color:#555;
+    margin-bottom:20px;
 }
 
-.video-item{
+.video-wrapper{
+    display:flex;
+    justify-content:center;
+}
+
+.video-wrapper iframe{
     width:100%;
+    max-width:360px;
+
+    aspect-ratio:9/16;
+
+    border:none;
+    border-radius:15px;
+}
+
+@media(max-width:768px){
+
+.media-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.media-card{
+    padding:20px;
+}
+
+.video-wrapper iframe{
     max-width:320px;
 }
 
 }
+
 .gallery{
     max-width:1400px;
     margin:50px auto;
