@@ -190,3 +190,43 @@ padding:20px;
     box-shadow:
     0 15px 35px rgba(255,123,0,.25);
 }
+
+.media-intro{
+    max-width:1000px;
+    margin:60px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.media-intro h2{
+    font-size:2.4rem;
+    color:#8B0000;
+    margin-bottom:15px;
+}
+
+.media-intro h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#ff7b00;
+    margin:15px auto;
+    border-radius:50px;
+}
+
+.media-intro p{
+    font-size:1.1rem;
+    line-height:1.9;
+    color:#555;
+}
+
+@media(max-width:768px){
+    .media-intro h2{
+        font-size:2rem;
+    }
+
+    .media-intro p{
+        font-size:1rem;
+        line-height:1.8;
+    }
+}
