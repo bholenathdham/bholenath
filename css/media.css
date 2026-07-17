@@ -169,9 +169,14 @@ padding:20px;
 }
 
 .gallery p{
-text-align:center;
-font-size: 18px;    
-}   
+    grid-column:1 / -1;   /* span all columns */
+    text-align:center;
+    font-size:18px;
+    max-width:900px;
+    margin:0 auto 30px;
+    color:#555;
+    line-height:1.8;
+}  
 
 .gallery img{
     width:100%;
