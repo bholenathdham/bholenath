@@ -292,11 +292,6 @@ flex-direction:column;
 gap:15px;
 }
 
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
 .hero h2{
 font-size:2rem;
 }
