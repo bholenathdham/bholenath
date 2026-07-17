@@ -1,15 +1,54 @@
-.hero{
-    position:relative;
-    width:100%;
-    height:70vh;
-    overflow:hidden;
+/* HERO SECTION */
+
+.names-hero{
+height:55vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px 80px;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url('../images/temple2.webp');
+
+background-size:cover;
+background-position:center;
+
+color:#fff;
 }
 
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+.names-hero h1{
+font-size:52px;
+margin-bottom:20px;
+
+text-shadow:
+0 0 10px rgba(255,255,255,.3),
+0 0 20px rgba(255,153,51,.3);
+}
+
+.names-hero p{
+max-width:750px;
+font-size:20px;
+line-height:1.8;
+}
+
+@media(max-width:768px){
+
+.names-hero{
+height:45vh;
+padding:100px 20px 60px;
+}
+
+.names-hero h1{
+font-size:34px;
+}
+
+.names-hero p{
+font-size:16px;
+}
+
 }
 
 .media-intro{
