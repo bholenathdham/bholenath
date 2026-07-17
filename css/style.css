@@ -711,19 +711,23 @@ border-radius:50px;
 }
 
 .visitor-grid{
-    grid-template-columns:1fr;
+    display:grid !important;
+    grid-template-columns:1fr !important;
     gap:20px;
-}    
+}
+
+.visitor-card{
+    width:100%;
+    max-width:450px;
+    margin:0 auto;
+    padding:25px;
+    height:auto;
+    min-height:auto;
+}
 
 .visitor-card p{
     font-size:1rem;
     line-height:1.8;
-}    
-
-.visitor-card{
-    padding:25px;
-    height:auto;
-    min-height:unset;
 }
 
 }
