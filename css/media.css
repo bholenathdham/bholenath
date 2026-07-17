@@ -229,4 +229,14 @@ padding:20px;
         font-size:1rem;
         line-height:1.8;
     }
+
+  .gallery{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .gallery img{
+        height:auto;
+        aspect-ratio:16/10;
+    }  
 }
