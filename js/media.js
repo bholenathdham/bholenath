@@ -1,3 +1,4 @@
+console.log("media.js loaded");
 const galleryImages = document.querySelectorAll('.photo-grid img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
