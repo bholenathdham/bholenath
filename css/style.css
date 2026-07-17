@@ -1607,6 +1607,10 @@ text-transform:uppercase;
     text-align:center;
 }
 
+ .quick-nav{
+   text-align:center;
+}   
+
 }
 
 /* ABOUT */
