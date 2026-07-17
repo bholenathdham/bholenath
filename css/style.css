@@ -11,6 +11,18 @@ color:#222;
 line-height:1.6;
 }
 
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
 #langToggle{
 background:#ff6f00;
 color:white;
@@ -108,7 +120,7 @@ overflow:hidden;
 }
 
 .card::before{
-content:"🕉️";
+content:"ðŸ•‰ï¸";
 position:absolute;
 top:15px;
 left:20px;
@@ -117,7 +129,7 @@ opacity:.08;
 }
 
 .card::after{
-content:"🔱";
+content:"ðŸ”±";
 position:absolute;
 bottom:15px;
 right:20px;
@@ -290,6 +302,11 @@ font-size:12px;
 header{
 flex-direction:column;
 gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .hero h2{
@@ -555,7 +572,7 @@ overflow:hidden;
 }
 
 .mantra-quote::before{
-content:"🕉️";
+content:"ðŸ•‰ï¸";
 position:absolute;
 top:15px;
 left:20px;
@@ -564,7 +581,7 @@ opacity:.1;
 }
 
 .mantra-quote::after{
-content:"🔱";
+content:"ðŸ”±";
 position:absolute;
 bottom:15px;
 right:20px;
@@ -747,6 +764,22 @@ font-size:12px;
 color:#c45c00;
 }
 
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:600;
+}
+
+nav a:hover{
+color:#c45c00;
+}
+
 .menu-toggle{
 display:none;
 }
@@ -775,6 +808,23 @@ font-size:28px;
 background:none;
 border:none;
 cursor:pointer;
+}
+
+nav{
+display:none;
+width:100%;
+margin-top:10px;
+}
+
+nav.active{
+display:block;
+}
+
+nav ul{
+flex-direction:column;
+text-align:center;
+gap:10px;
+padding:10px 0;
 }
 
 #langToggle{
@@ -1167,7 +1217,7 @@ overflow:hidden;
 }
 
 .bell-container::before{
-content:"🕉️";
+content:"ðŸ•‰ï¸";
 position:absolute;
 top:20px;
 left:25px;
@@ -1176,7 +1226,7 @@ opacity:.08;
 }
 
 .bell-container::after{
-content:"🔱";
+content:"ðŸ”±";
 position:absolute;
 bottom:20px;
 right:25px;
