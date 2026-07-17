@@ -240,3 +240,17 @@ padding:20px;
         aspect-ratio:16/10;
     }  
 }
+
+.gallery{
+    margin-bottom:30px !important;
+}
+
+.photo-gallery{
+    margin-bottom:30px !important;
+    padding-bottom:0 !important;
+}
+
+.related-links{
+    margin-top:20px !important;
+    padding-top:20px !important;
+}
