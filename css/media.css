@@ -210,9 +210,21 @@ padding:20px;
 
 @media(max-width:768px){
 
+@media(max-width:768px){
+
+.photo-gallery{
+    margin:50px auto;
+}
+
+.photo-gallery h2{
+    font-size:2rem;
+}
+
 .photo-grid{
     grid-template-columns:1fr;
-    gap:15px;
+    gap:18px;
+}
+
 }
 
 .photo-grid img{
