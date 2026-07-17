@@ -710,8 +710,20 @@ border-radius:50px;
     font-size:30px;
 }
 
+.visitor-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}    
+
+.visitor-card p{
+    font-size:1rem;
+    line-height:1.8;
+}    
+
 .visitor-card{
     padding:25px;
+    height:auto;
+    min-height:unset;
 }
 
 }
