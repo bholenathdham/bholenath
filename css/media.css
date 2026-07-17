@@ -223,3 +223,45 @@ padding:20px;
 .photo-grid img{
     will-change:transform;
 }
+
+.lightbox img{
+    max-width:95%;
+    max-height:90%;
+    border-radius:12px;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:20px;
+    right:35px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+    font-weight:bold;
+}
+#backToTop{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#c45c00;
+    color:white;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:none;
+
+    z-index:999;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
