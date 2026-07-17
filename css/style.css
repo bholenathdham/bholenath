@@ -626,47 +626,53 @@ font-size:18px;
 }
 
 #visit{
-padding:50px 6%;
-background:#fafafa;
+    padding:50px 6%;
+    background:#fafafa;
 }
 
 #visit h2{
-   font-size:2.5rem;
-color:#8B0000;
-text-align:center;
-margin-bottom:15px;
-position:relative;
+    font-size:2.5rem;
+    color:#8B0000;
+    text-align:center;
+    margin-bottom:15px;
+    position:relative;
 }
 
 #visit h2::after{
-content:"";
-display:block;
-width:80px;
-height:4px;
-background:#ff9933;
-margin:15px auto;
-border-radius:50px;
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#ff9933;
+    margin:15px auto;
+    border-radius:50px;
 }
 
+/* Cards Container */
+
 .visitor-container{
-   max-width:1400px;
+    max-width:1400px;
     margin:50px auto;
-    padding:0 20px;
 
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
 }
 
+/* Cards */
+
 .visitor-card{
     background:#fff;
+
     border-top:2px solid #ff7b00;
     border-left:5px solid #ff7b00;
     border-right:2px solid #ff7b00;
     border-bottom:2px solid #ff7b00;
+
     border-radius:25px;
 
     padding:35px 25px;
+
     text-align:center;
 
     box-shadow:0 10px 25px rgba(0,0,0,.08);
@@ -686,11 +692,13 @@ border-radius:50px;
 .visitor-card h3{
     color:#8B0000;
     margin-bottom:15px;
+    font-size:1.5rem;
 }
 
 .visitor-card p{
     line-height:1.8;
     color:#555;
+    font-size:1rem;
 }
 
 .visit-list{
@@ -704,43 +712,42 @@ border-radius:50px;
     margin-bottom:10px;
 }
 
+/* Tablet */
+
+@media(max-width:992px){
+
+.visitor-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
 @media(max-width:768px){
 
 #visit h2{
     font-size:30px;
 }
 
-.visitor-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-    max-width:1100px;
-    margin:40px auto 0;
-}
-
-@media(max-width:768px){
-
-.visitor-grid{
+.visitor-container{
     grid-template-columns:1fr;
     gap:20px;
 }
 
 .visitor-card{
-    max-width:450px;
+    max-width:500px;
     width:100%;
     margin:0 auto;
+    padding:25px;
 }
 
-}    
-
-@media(max-width:768px){
-
-.visitor-card{
-    max-width:450px;
-    width:100%;
-    margin:0 auto;
+.visitor-icon{
+    font-size:42px;
 }
 
+.visitor-card h3{
+    font-size:1.8rem;
 }
 
 .visitor-card p{
@@ -748,14 +755,6 @@ border-radius:50px;
     line-height:1.8;
 }
 
-}
-
-.visitor-quote{
-    text-align:center;
-    font-size:22px;
-    color:#8B0000;
-    margin-bottom:40px;
-    font-style:italic;
 }
 
 header{
