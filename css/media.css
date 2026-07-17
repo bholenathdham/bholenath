@@ -52,6 +52,29 @@ margin-bottom:20px;
 color:#555;
 }
 
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.video-item p{
+    text-align:center;
+    margin-top:10px;
+    font-size:.95rem;
+    color:#8B0000;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.video-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
 .video-wrapper{
 position:relative;
 padding-bottom:56.25%;
