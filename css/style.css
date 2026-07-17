@@ -1343,14 +1343,13 @@ font-size:16px;
         #fff6e7
     );
 
-    border:2px solid #f4d19b;
-
-    border-radius:20px;
-
+    border-top:5px solid #ff7b00;
+    border-left:2px solid #ff7b00;
+    border-right:2px solid #ff7b00;
+    border-bottom:2px solid #ff7b00;
+    border-radius:25px;
     padding:25px;
-
     text-decoration:none;
-
     color:#222;
 
     box-shadow:
