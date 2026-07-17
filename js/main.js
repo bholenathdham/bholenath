@@ -218,3 +218,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const popup = document.getElementById("popupCard");
+const closeBtn = document.getElementById("closePopup");
+const launcher = document.getElementById("popupLauncher");
+
+const lastClosed = localStorage.getItem("popupClosedTime");
+
+const DAY = 24 * 60 * 60 * 1000;
+
+if(lastClosed){
+
+    const now = Date.now();
+
+    if(now - parseInt(lastClosed) < DAY){
+
+        popup.style.display = "none";
+        launcher.style.display = "block";
+    }
+
+}
+
+closeBtn.addEventListener("click", () => {
+
+    popup.style.display = "none";
+
+    launcher.style.display = "block";
+
+    localStorage.setItem(
+        "popupClosedTime",
+        Date.now()
+    );
+
+});
+
+launcher.addEventListener("click", () => {
+
+    popup.style.display = "block";
+
+    launcher.style.display = "none";
+
+});
