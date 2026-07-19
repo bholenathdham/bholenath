@@ -1223,24 +1223,6 @@ position:relative;
 overflow:hidden;
 }
 
-.bell-container::before{
-content:"ðŸ•‰ï¸";
-position:absolute;
-top:20px;
-left:25px;
-font-size:50px;
-opacity:.08;
-}
-
-.bell-container::after{
-content:"ðŸ”±";
-position:absolute;
-bottom:20px;
-right:25px;
-font-size:50px;
-opacity:.08;
-}
-
 .bell-container::before,
 .bell-container::after{
 display:none;
