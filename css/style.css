@@ -119,22 +119,9 @@ position:relative;
 overflow:hidden;
 }
 
-.card::before{
-content:"ðŸ•‰ï¸";
-position:absolute;
-top:15px;
-left:20px;
-font-size:45px;
-opacity:.08;
-}
-
+.card::before,
 .card::after{
-content:"ðŸ”±";
-position:absolute;
-bottom:15px;
-right:20px;
-font-size:45px;
-opacity:.08;
+display:none;
 }
 
 .card p{
