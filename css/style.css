@@ -1241,6 +1241,11 @@ font-size:50px;
 opacity:.08;
 }
 
+.bell-container::before,
+.bell-container::after{
+display:none;
+}
+
 .bell-decoration{
 font-size:24px;
 margin-bottom:20px;
