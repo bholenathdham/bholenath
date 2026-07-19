@@ -571,22 +571,9 @@ position:relative;
 overflow:hidden;
 }
 
-.mantra-quote::before{
-content:"ðŸ•‰ï¸";
-position:absolute;
-top:15px;
-left:20px;
-font-size:40px;
-opacity:.1;
-}
-
+.mantra-quote::before,
 .mantra-quote::after{
-content:"ðŸ”±";
-position:absolute;
-bottom:15px;
-right:20px;
-font-size:40px;
-opacity:.1;
+display:none;
 }
 
 .quote-symbol{
