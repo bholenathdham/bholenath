@@ -290,17 +290,35 @@
 
 @media(max-width:480px){
 
-    .festival-cards{
-         grid-template-columns:1fr 1fr !important;
-    }
+   @media (max-width:768px){
 
-    .festival-overlay h2{
-        font-size:28px;
-    }
+.festival-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
 
-    .festival-overlay p{
-        font-size:22px;
-    }
+.festival-card{
+    padding:20px 12px;
+    min-height:auto;
+    height:auto;
+}
+
+.festival-icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.festival-card h3{
+    font-size:28px;
+    margin:10px 0;
+}
+
+.festival-card p{
+    font-size:18px;
+    line-height:1.5;
+}
+
+}
 
 }
 
