@@ -96,7 +96,7 @@
 }
 
 .shivaratri-card h3{
-    font-size:26px;
+    font-size:22px;
     color:#7a0000;
     margin:12px 0;
 }
@@ -247,10 +247,13 @@
 .shivaratri-cards{
     grid-template-columns:1fr;
     gap:15px;
+    margin:40px auto;
+    padding:0 15px;
 }
 
 .shivaratri-card{
     padding:20px;
+    border-radius:16px;
 }
 
 .shivaratri-icon{
