@@ -26,19 +26,21 @@
 }
 
 .festival-badge{
-    background:rgba(0,0,0,.75);
-    backdrop-filter:blur(8px);
-    color:#fff;
-    padding:14px 22px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.15);
-}
+    position:absolute;
+    bottom:20px;
+    right:20px;
 
-.festival-badge p{
-    margin:0;
-    font-size:22px;
-    font-weight:600;
+    background:rgba(0,0,0,.75);
     color:#fff;
+
+    padding:12px 22px;
+    border-radius:14px;
+
+    font-size:20px;
+    font-weight:600;
+
+    max-width:90%;
+    text-align:center;
 }
 
 @media(max-width:768px){
@@ -52,9 +54,25 @@
         text-align:center;
     }
 
-    .festival-badge p{
-        font-size:16px;
-    }
+  .festival-badge{
+
+    left:50%;
+    right:auto;
+
+    transform:translateX(-50%);
+
+    bottom:12px;
+
+    width:85%;
+
+    padding:10px 15px;
+
+    font-size:15px;
+
+    line-height:1.4;
+
+    border-radius:12px;
+}
 
 }
 
