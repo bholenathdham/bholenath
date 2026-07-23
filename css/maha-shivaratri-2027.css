@@ -257,12 +257,22 @@
 }
 
 .shivaratri-icon{
-    font-size:36px;
+    font-size:52px;
 }
 
-.shivaratri-card h3{
-    font-size:18px;
-    margin:10px 0;
+.shivaratri-card{
+    background:linear-gradient(
+        180deg,
+        #fffdf7,
+        #ffffff
+    );
+
+    border:2px solid #e58b14;
+    border-radius:24px;
+
+    padding:25px 20px;
+
+    box-shadow:0 12px 30px rgba(196,92,0,.12);
 }
 
 .shivaratri-card p{
