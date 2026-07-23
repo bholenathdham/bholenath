@@ -1,1 +1,224 @@
+/* =========================
+   SHIVA PURANA HERO
+========================= */
 
+.sp-hero{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+    position:relative;
+}
+
+.sp-hero img{
+    width:100%;
+    display:block;
+    border-radius:20px;
+}
+
+.sp-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.sp-badge{
+    background:rgba(0,0,0,.55);
+    padding:30px 40px;
+    border-radius:20px;
+    color:#fff;
+    backdrop-filter:blur(3px);
+}
+
+.sp-badge h1{
+    font-size:56px;
+    margin-bottom:15px;
+}
+
+.sp-badge p{
+    font-size:22px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.sp-intro{
+    max-width:1200px;
+    margin:80px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.sp-intro h2{
+    font-size:42px;
+    color:#c45c00;
+    margin-bottom:25px;
+}
+
+.sp-intro p{
+    font-size:20px;
+    line-height:2;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* =========================
+   SAMHITA SECTION
+========================= */
+
+.sp-samhitas{
+    max-width:1300px;
+    margin:80px auto;
+    padding:0 20px;
+}
+
+.sp-samhitas h2{
+    text-align:center;
+    font-size:42px;
+    color:#c45c00;
+    margin-bottom:40px;
+}
+
+.sp-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.sp-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    text-decoration:none;
+    color:#222;
+    border-top:5px solid #c45c00;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    font-size:22px;
+    font-weight:600;
+}
+
+.sp-card:hover{
+    transform:translateY(-6px);
+}
+
+/* =========================
+   BENEFITS
+========================= */
+
+.sp-benefits{
+    max-width:1200px;
+    margin:80px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.sp-benefits h2{
+    font-size:42px;
+    color:#c45c00;
+    margin-bottom:25px;
+}
+
+.sp-benefit-box{
+    background:#fff;
+    border-radius:24px;
+    padding:50px;
+    border-top:5px solid #c45c00;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.sp-benefit-box p{
+    font-size:20px;
+    line-height:2;
+}
+
+/* =========================
+   INVITATION
+========================= */
+
+.sp-invitation{
+    max-width:1200px;
+    margin:80px auto;
+    padding:60px 30px;
+    text-align:center;
+    border-radius:25px;
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #c45c00,
+        #f4c542
+    );
+}
+
+.sp-invitation h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.sp-invitation p{
+    font-size:22px;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .sp-hero{
+        padding:0 12px;
+        margin:20px auto;
+    }
+
+    .sp-badge{
+        padding:18px;
+        width:85%;
+    }
+
+    .sp-badge h1{
+        font-size:28px;
+    }
+
+    .sp-badge p{
+        font-size:15px;
+    }
+
+    .sp-intro h2,
+    .sp-samhitas h2,
+    .sp-benefits h2,
+    .sp-invitation h2{
+        font-size:30px;
+    }
+
+    .sp-intro p,
+    .sp-benefit-box p,
+    .sp-invitation p{
+        font-size:18px;
+        line-height:1.8;
+    }
+
+    .sp-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sp-card{
+        padding:22px;
+        font-size:20px;
+    }
+
+    .sp-benefit-box{
+        padding:30px 20px;
+    }
+
+    .sp-invitation{
+        padding:40px 20px;
+    }
+}
