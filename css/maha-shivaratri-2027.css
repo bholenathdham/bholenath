@@ -90,7 +90,7 @@
     transform:translateY(-5px);
 }
 
-.festival-icon{
+.shivaratri-icon{
     font-size:52px;
     margin-bottom:15px;
 }
@@ -256,7 +256,7 @@
     min-height:220px !important;
 }
 
-.festival-icon{
+.shivaratri-icon{
     font-size:36px;
 }
 
@@ -303,7 +303,7 @@
     height:auto;
 }
 
-.festival-icon{
+.shivaratri-icon{
     font-size:40px;
     margin-bottom:10px;
 }
@@ -371,17 +371,4 @@
 
 }
 
-@media (max-width:768px){
 
-.shivaratri-card{
-    display:block !important;
-    height:auto !important;
-    min-height:auto !important;
-    max-height:none !important;
-}
-
-.shivaratri-card *{
-    flex:none !important;
-}
-
-}
