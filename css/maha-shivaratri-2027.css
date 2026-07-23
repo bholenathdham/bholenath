@@ -314,3 +314,34 @@
 
 }
 
+/* MOBILE CARDS */
+
+@media (max-width:768px){
+
+.festival-cards{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    padding:0 15px;
+}
+
+.festival-card{
+    padding:20px 12px;
+    border-radius:16px;
+}
+
+.festival-icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.festival-card h3{
+    font-size:20px;
+    margin:10px 0;
+}
+
+.festival-card p{
+    font-size:16px;
+    line-height:1.4;
+}
+
+}
