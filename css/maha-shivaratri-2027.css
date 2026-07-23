@@ -1,11 +1,9 @@
-/* =========================
-   HERO SECTION
-========================= */
+/* HERO */
 
 .festival-hero{
-    position:relative;
-    max-width:1400px;
-    margin:0 auto;
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
 }
 
 .festival-hero img{
@@ -15,64 +13,19 @@
     border-radius:20px;
 }
 
-.festival-overlay{
-    position:absolute;
-    inset:0;
-    display:flex;
-    justify-content:flex-end;
-    align-items:flex-end;
-    padding:30px;
-    pointer-events:none;
-}
 
-.festival-badge{
-    position:absolute;
-    bottom:20px;
-    right:20px;
-
-    background:rgba(0,0,0,.75);
-    color:#fff;
-
-    padding:12px 22px;
-    border-radius:14px;
-
-    font-size:20px;
-    font-weight:600;
-
-    max-width:90%;
-    text-align:center;
-}
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .festival-overlay{
-        padding:15px;
+    .festival-hero{
+        margin:20px auto 40px;
+        padding:0 12px;
     }
 
-    .festival-badge{
-        width:100%;
-        text-align:center;
+    .festival-hero img{
+        border-radius:14px;
     }
-
-  .festival-badge{
-
-    left:50%;
-    right:auto;
-
-    transform:translateX(-50%);
-
-    bottom:12px;
-
-    width:85%;
-
-    padding:10px 15px;
-
-    font-size:15px;
-
-    line-height:1.4;
-
-    border-radius:12px;
-}
 
 }
 
