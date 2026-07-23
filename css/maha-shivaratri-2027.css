@@ -311,7 +311,7 @@
 @media(max-width:480px){
 
     .festival-cards{
-        grid-template-columns:1fr;
+         grid-template-columns:1fr 1fr !important;
     }
 
     .festival-overlay h2{
