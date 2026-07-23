@@ -1,15 +1,20 @@
+/* =========================
+   HERO SECTION
+========================= */
 
-.shivaratri-hero{
+.festival-hero{
     position:relative;
+    max-width:1400px;
+    margin:0 auto;
 }
 
-.shivaratri-hero img{
+.festival-hero img{
     width:100%;
     display:block;
     border-radius:20px;
 }
 
-.hero-overlay{
+.festival-overlay{
     position:absolute;
     inset:0;
     background:rgba(0,0,0,.45);
@@ -22,195 +27,69 @@
     border-radius:20px;
 }
 
-.hero-overlay h1{
-    font-size:54px;
-    margin-bottom:10px;
+.festival-overlay h2{
+    font-size:56px;
+    margin-bottom:15px;
+    color:#fff;
 }
 
-.hero-overlay p{
-    font-size:20px;
+.festival-overlay p{
+    font-size:24px;
+    font-weight:600;
 }
 
-.festival-intro,
-.schedule-section,
-.spiritual-section{
-    max-width:1100px;
+
+/* =========================
+   INTRO SECTION
+========================= */
+
+.festival-intro{
+    max-width:1200px;
     margin:70px auto;
     padding:0 20px;
-}
-
-.festival-intro h2,
-.schedule-section h2,
-.spiritual-section h2{
-    color:#c89b00;
-    margin-bottom:20px;
     text-align:center;
 }
 
-.festival-intro p,
-.festival-significance p{
+.festival-intro h2{
+    font-size:42px;
+    color:#c45c00;
+    margin-bottom:25px;
+}
 
-    font-size:21px;
+.festival-intro p{
+    font-size:22px;
     line-height:2;
     max-width:1000px;
     margin:auto;
 }
 
-@media(max-width:768px){
 
-    .festival-intro p,
-    .festival-significance p{
+/* =========================
+   EVENT CARDS
+========================= */
 
-        font-size:18px;
-        line-height:1.8;
-    }
-
-}
-
-.event-grid{
-    max-width:1200px;
+.festival-cards{
+    max-width:1300px;
     margin:60px auto;
     padding:0 20px;
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(4,1fr);
     gap:25px;
-}
-
-.event-card{
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.event-card .icon{
-    font-size:40px;
-    margin-bottom:15px;
-}
-
-.event-card h3{
-    color:#c89b00;
-    margin-bottom:10px;
-}
-
-.schedule-item{
-
-    background:#fff;
-
-    border-left:6px solid #c89b00;
-
-    padding:25px;
-
-    margin-bottom:20px;
-
-    border-radius:15px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.schedule-item span{
-
-    font-size:22px;
-
-    font-weight:700;
-
-    color:#c89b00;
-
-    display:block;
-
-    margin-bottom:10px;
-}
-
-@media(max-width:768px){
-
-    .festival-card h3{
-        font-size:22px;
-    }
-
-    .festival-card p{
-        font-size:17px;
-    }
-
-    .schedule-item span{
-        font-size:18px;
-    }
-
-    .schedule-item{
-        font-size:17px;
-    }
-
-}
-
-.festival-invitation{
-
-    background:linear-gradient(
-        135deg,
-        #c45c00,
-        #f4c542
-    );
-
-    color:white;
-
-    padding:60px 30px;
-
-    border-radius:25px;
-
-    text-align:center;
-
-    margin:80px auto;
-}
-
-.invitation-box{
-    max-width:1000px;
-    margin:80px auto;
-    padding:50px 30px;
-    text-align:center;
-    background:linear-gradient(135deg,#c89b00,#f4c542);
-    border-radius:24px;
-    color:#111;
-}
-
-.invitation-box h2{
-    margin-bottom:15px;
-}
-
-.mahadev{
-    margin-top:25px;
-    font-size:28px;
-    font-weight:700;
-}
-
-@media(max-width:768px){
-
-    .hero-overlay h1{
-        font-size:32px;
-    }
-
-    .hero-overlay p{
-        font-size:16px;
-    }
-
-    .festival-intro,
-    .schedule-section,
-    .spiritual-section{
-        margin:50px auto;
-    }
-
-    .mahadev{
-        font-size:22px;
-    }
 }
 
 .festival-card{
     background:#fff;
-    border-radius:18px;
-    padding:25px 20px;
+
+    border-radius:20px;
+
+    padding:30px 20px;
+
     text-align:center;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-top:5px solid #c45c00;
 
-    border-top:4px solid #c45c00;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 
     transition:.3s;
 }
@@ -219,48 +98,214 @@
     transform:translateY(-5px);
 }
 
+.festival-icon{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
 .festival-card h3{
-    font-size:24px;
-    margin:15px 0;
+    font-size:26px;
     color:#7a0000;
+    margin-bottom:12px;
 }
 
 .festival-card p{
     font-size:18px;
-    line-height:1.7;
+    line-height:1.6;
 }
 
-.festival-icon{
-    font-size:48px;
+
+/* =========================
+   SCHEDULE
+========================= */
+
+.festival-schedule{
+    max-width:1100px;
+    margin:80px auto;
+    padding:0 20px;
 }
+
+.festival-schedule h2{
+    text-align:center;
+    font-size:42px;
+    color:#c45c00;
+    margin-bottom:40px;
+}
+
+.schedule-item{
+
+    background:#fff;
+
+    border-left:6px solid #c89b00;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.schedule-item span{
+    display:block;
+    color:#c89b00;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+
+/* =========================
+   SIGNIFICANCE
+========================= */
+
+.festival-significance{
+    max-width:1200px;
+    margin:80px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.festival-significance h2{
+    font-size:42px;
+    color:#c45c00;
+    margin-bottom:25px;
+}
+
+.festival-significance p{
+    font-size:22px;
+    line-height:2;
+    max-width:1000px;
+    margin:auto;
+}
+
+
+/* =========================
+   INVITATION
+========================= */
+
+.festival-invitation{
+
+    max-width:1200px;
+
+    margin:80px auto;
+
+    padding:60px 30px;
+
+    background:linear-gradient(
+        135deg,
+        #c45c00,
+        #f4c542
+    );
+
+    color:#fff;
+
+    border-radius:25px;
+
+    text-align:center;
+}
+
+.festival-invitation h2{
+    color:#fff;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.festival-invitation p{
+    font-size:22px;
+    line-height:1.8;
+    max-width:900px;
+    margin:auto;
+}
+
+.mahadev-message{
+    margin-top:30px;
+    font-size:32px;
+    font-weight:700;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:768px){
+
+    .festival-overlay h2{
+        font-size:34px;
+    }
+
+    .festival-overlay p{
+        font-size:18px;
+    }
+
+    .festival-intro h2,
+    .festival-schedule h2,
+    .festival-significance h2,
+    .festival-invitation h2{
+        font-size:32px;
+    }
+
+    .festival-intro p,
+    .festival-significance p,
+    .festival-invitation p{
+        font-size:18px;
+        line-height:1.8;
+    }
 
     .festival-cards{
         grid-template-columns:repeat(2,1fr);
         gap:15px;
     }
 
+    .festival-card{
+        padding:25px 15px;
+    }
+
+    .festival-icon{
+        font-size:42px;
+    }
+
+    .festival-card h3{
+        font-size:22px;
+    }
+
+    .festival-card p{
+        font-size:16px;
+    }
+
+    .schedule-item{
+        padding:20px;
+        font-size:17px;
+    }
+
+    .schedule-item span{
+        font-size:18px;
+    }
+
+    .mahadev-message{
+        font-size:24px;
+    }
 }
 
-.festival-intro h2,
-.festival-schedule h2,
-.festival-significance h2,
-.festival-invitation h2{
 
-    font-size:42px;
-    margin-bottom:25px;
-    color:#c89b00;
-}
+/* =========================
+   SMALL PHONES
+========================= */
 
-@media(max-width:768px){
+@media(max-width:480px){
 
-    .festival-intro h2,
-    .festival-schedule h2,
-    .festival-significance h2,
-    .festival-invitation h2{
+    .festival-cards{
+        grid-template-columns:1fr;
+    }
 
-        font-size:32px;
+    .festival-overlay h2{
+        font-size:28px;
+    }
+
+    .festival-overlay p{
+        font-size:16px;
     }
 
 }
