@@ -289,36 +289,6 @@
    SMALL PHONES
 ========================= */
 
-@media(max-width:480px){
-
-  
-.shivaratri-cards{
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.shivaratri-card{
-    padding:20px 12px;
-    min-height:auto;
-    height:auto;
-}
-
-.shivaratri-icon{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-.shivaratri-card h3{
-    font-size:28px;
-    margin:10px 0;
-}
-
-.shivaratri-card p{
-    font-size:18px;
-    line-height:1.5;
-}
-
-}
 
 .festival-message{
     max-width:1200px;
