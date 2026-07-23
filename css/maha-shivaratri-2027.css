@@ -48,9 +48,23 @@
 }
 
 .festival-intro p,
-.spiritual-section p{
-    line-height:1.8;
-    text-align:center;
+.festival-significance p{
+
+    font-size:21px;
+    line-height:2;
+    max-width:1000px;
+    margin:auto;
+}
+
+@media(max-width:768px){
+
+    .festival-intro p,
+    .festival-significance p{
+
+        font-size:18px;
+        line-height:1.8;
+    }
+
 }
 
 .event-grid{
@@ -81,19 +95,70 @@
 }
 
 .schedule-item{
+
     background:#fff;
-    margin-bottom:15px;
-    padding:18px 20px;
-    border-left:5px solid #c89b00;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    border-left:6px solid #c89b00;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .schedule-item span{
-    display:block;
-    color:#c89b00;
+
+    font-size:22px;
+
     font-weight:700;
-    margin-bottom:5px;
+
+    color:#c89b00;
+
+    display:block;
+
+    margin-bottom:10px;
+}
+
+@media(max-width:768px){
+
+    .festival-card h3{
+        font-size:22px;
+    }
+
+    .festival-card p{
+        font-size:17px;
+    }
+
+    .schedule-item span{
+        font-size:18px;
+    }
+
+    .schedule-item{
+        font-size:17px;
+    }
+
+}
+
+.festival-invitation{
+
+    background:linear-gradient(
+        135deg,
+        #c45c00,
+        #f4c542
+    );
+
+    color:white;
+
+    padding:60px 30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    margin:80px auto;
 }
 
 .invitation-box{
@@ -135,4 +200,67 @@
     .mahadev{
         font-size:22px;
     }
+}
+
+.festival-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px 20px;
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    border-top:4px solid #c45c00;
+
+    transition:.3s;
+}
+
+.festival-card:hover{
+    transform:translateY(-5px);
+}
+
+.festival-card h3{
+    font-size:24px;
+    margin:15px 0;
+    color:#7a0000;
+}
+
+.festival-card p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+.festival-icon{
+    font-size:48px;
+}
+
+@media(max-width:768px){
+
+    .festival-cards{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+    }
+
+}
+
+.festival-intro h2,
+.festival-schedule h2,
+.festival-significance h2,
+.festival-invitation h2{
+
+    font-size:42px;
+    margin-bottom:25px;
+    color:#c89b00;
+}
+
+@media(max-width:768px){
+
+    .festival-intro h2,
+    .festival-schedule h2,
+    .festival-significance h2,
+    .festival-invitation h2{
+
+        font-size:32px;
+    }
+
 }
