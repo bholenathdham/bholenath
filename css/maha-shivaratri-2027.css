@@ -245,15 +245,12 @@
 @media (max-width:768px){
 
 .shivaratri-cards{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr;
     gap:15px;
-    align-items:start;
 }
 
 .shivaratri-card{
-    padding:20px 12px;
-    height:auto !important;
-    min-height:220px !important;
+    padding:20px;
 }
 
 .shivaratri-icon{
