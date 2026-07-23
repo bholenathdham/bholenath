@@ -307,7 +307,7 @@
 }
 
 .festival-message{
-    max-width:1200px;
+    max-width:1000px;
     margin:80px auto;
     padding:0 20px;
     text-align:center;
@@ -315,26 +315,46 @@
 
 .festival-message h2{
     font-size:42px;
-    color:#c45c00;
-    margin-bottom:25px;
+    color:#7a0000;
+    margin-bottom:20px;
 }
 
-.festival-message p{
-    font-size:22px;
+.festival-message-card{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-top:5px solid #c45c00;
+}
+
+.festival-message-card p{
+    font-size:20px;
     line-height:2;
-    max-width:1000px;
+    max-width:750px;
     margin:auto;
+}
+
+.message-icon{
+    font-size:48px;
+    margin-bottom:20px;
 }
 
 @media(max-width:768px){
 
     .festival-message h2{
-        font-size:28px;
+        font-size:30px;
     }
 
-    .festival-message p{
+    .festival-message-card{
+        padding:25px;
+    }
+
+    .festival-message-card p{
         font-size:18px;
         line-height:1.8;
     }
 
+    .message-icon{
+        font-size:40px;
+    }
 }
