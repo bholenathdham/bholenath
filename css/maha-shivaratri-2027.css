@@ -338,28 +338,4 @@
 
 }
 
-@media (max-width:768px){
 
-.festival-card,
-.event-card,
-.shivaratri-card{
-    height:auto !important;
-    min-height:0 !important;
-    padding:20px 10px !important;
-}
-
-.festival-card h3,
-.event-card h3,
-.shivaratri-card h3{
-    font-size:22px !important;
-    line-height:1.3 !important;
-}
-
-.festival-card p,
-.event-card p,
-.shivaratri-card p{
-    font-size:16px !important;
-    line-height:1.5 !important;
-}
-
-}
