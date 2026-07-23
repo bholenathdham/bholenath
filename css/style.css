@@ -1758,3 +1758,39 @@ background:#fff;
 }
 
 }
+
+/* Festival Announcement Bar */
+
+.festival-bar {
+    background: linear-gradient(90deg, #f4c542, #ffd700, #f4c542);
+    color: #1a1a1a;
+    text-align: center;
+    padding: 12px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    z-index: 9999;
+}
+
+.festival-bar a {
+    color: #1a1a1a;
+    text-decoration: none;
+    display: block;
+}
+
+.festival-bar a:hover {
+    opacity: 0.85;
+}
+
+.festival-bar .arrow {
+    margin-left: 6px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .festival-bar {
+        font-size: 13px;
+        padding: 10px;
+        line-height: 1.4;
+    }
+}
