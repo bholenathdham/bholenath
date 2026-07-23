@@ -76,7 +76,10 @@
     padding:30px 20px;
     text-align:center;
 
-    border:2px solid #e58b14;
+    border-top: 6px solid #ff8c00;
+    border-right: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
+    border-left: 1px solid #ff8c00;
 
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 
@@ -262,7 +265,10 @@
         #ffffff
     );
 
-    border:2px solid #e58b14;
+    border-top: 6px solid #ff8c00;
+    border-right: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
+    border-left: 1px solid #ff8c00;
     border-radius:24px;
 
     padding:25px 20px;
