@@ -66,22 +66,24 @@
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
+
+    align-items:start;
 }
 
 .festival-card{
     background:#fff;
-
     border-radius:20px;
-
     padding:30px 20px;
-
     text-align:center;
 
-    border-top:5px solid #c45c00;
+    border:2px solid #e58b14;
 
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 
     transition:.3s;
+
+    height:auto;
+    min-height:unset;
 }
 
 .festival-card:hover{
@@ -96,14 +98,14 @@
 .festival-card h3{
     font-size:26px;
     color:#7a0000;
-    margin-bottom:12px;
+    margin:12px 0;
 }
 
 .festival-card p{
     font-size:18px;
-    line-height:1.6;
+    line-height:1.5;
+    margin:0;
 }
-
 
 /* =========================
    SCHEDULE
