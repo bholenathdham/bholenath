@@ -1,1 +1,138 @@
 
+.shivaratri-hero{
+    position:relative;
+}
+
+.shivaratri-hero img{
+    width:100%;
+    display:block;
+    border-radius:20px;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    border-radius:20px;
+}
+
+.hero-overlay h1{
+    font-size:54px;
+    margin-bottom:10px;
+}
+
+.hero-overlay p{
+    font-size:20px;
+}
+
+.festival-intro,
+.schedule-section,
+.spiritual-section{
+    max-width:1100px;
+    margin:70px auto;
+    padding:0 20px;
+}
+
+.festival-intro h2,
+.schedule-section h2,
+.spiritual-section h2{
+    color:#c89b00;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.festival-intro p,
+.spiritual-section p{
+    line-height:1.8;
+    text-align:center;
+}
+
+.event-grid{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.event-card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.event-card .icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.event-card h3{
+    color:#c89b00;
+    margin-bottom:10px;
+}
+
+.schedule-item{
+    background:#fff;
+    margin-bottom:15px;
+    padding:18px 20px;
+    border-left:5px solid #c89b00;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.schedule-item span{
+    display:block;
+    color:#c89b00;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.invitation-box{
+    max-width:1000px;
+    margin:80px auto;
+    padding:50px 30px;
+    text-align:center;
+    background:linear-gradient(135deg,#c89b00,#f4c542);
+    border-radius:24px;
+    color:#111;
+}
+
+.invitation-box h2{
+    margin-bottom:15px;
+}
+
+.mahadev{
+    margin-top:25px;
+    font-size:28px;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+
+    .hero-overlay h1{
+        font-size:32px;
+    }
+
+    .hero-overlay p{
+        font-size:16px;
+    }
+
+    .festival-intro,
+    .schedule-section,
+    .spiritual-section{
+        margin:50px auto;
+    }
+
+    .mahadev{
+        font-size:22px;
+    }
+}
