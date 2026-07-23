@@ -305,3 +305,36 @@
     }
 
 }
+
+.festival-message{
+    max-width:1200px;
+    margin:80px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.festival-message h2{
+    font-size:42px;
+    color:#c45c00;
+    margin-bottom:25px;
+}
+
+.festival-message p{
+    font-size:22px;
+    line-height:2;
+    max-width:1000px;
+    margin:auto;
+}
+
+@media(max-width:768px){
+
+    .festival-message h2{
+        font-size:28px;
+    }
+
+    .festival-message p{
+        font-size:18px;
+        line-height:1.8;
+    }
+
+}
