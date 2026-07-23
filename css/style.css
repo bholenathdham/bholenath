@@ -1770,6 +1770,7 @@ background:#fff;
     font-weight: 600;
     position: relative;
     z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .festival-bar a {
@@ -1787,10 +1788,31 @@ background:#fff;
     font-weight: bold;
 }
 
+/* Mobile Design */
+
 @media (max-width: 768px) {
+
     .festival-bar {
         font-size: 13px;
-        padding: 10px;
-        line-height: 1.4;
+        line-height: 1.5;
+        padding: 12px 16px;
+        border-radius: 0 0 12px 12px;
     }
+
+    .festival-bar a {
+        display: block;
+    }
+
+}
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+
+    .festival-bar {
+        font-size: 12px;
+        padding: 10px 12px;
+        line-height: 1.6;
+    }
+
 }
