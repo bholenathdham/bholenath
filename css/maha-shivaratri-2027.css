@@ -240,36 +240,35 @@
         line-height:1.8;
     }
 
-   @media (max-width:768px){
+@media (max-width:768px){
 
 .festival-cards{
     grid-template-columns:repeat(2,1fr);
     gap:15px;
+    align-items:start;
 }
 
 .festival-card{
     padding:20px 12px;
-    min-height:auto;
-    height:auto;
+    height:auto !important;
+    min-height:220px !important;
 }
 
 .festival-icon{
-    font-size:40px;
-    margin-bottom:10px;
+    font-size:36px;
 }
 
 .festival-card h3{
-    font-size:28px;
+    font-size:18px;
     margin:10px 0;
 }
 
 .festival-card p{
-    font-size:18px;
-    line-height:1.5;
+    font-size:15px;
+    line-height:1.4;
 }
 
-}
-    .schedule-item{
+   .schedule-item{
         padding:20px;
         font-size:17px;
     }
