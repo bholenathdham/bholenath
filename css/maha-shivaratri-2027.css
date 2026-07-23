@@ -17,27 +17,45 @@
 .festival-overlay{
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.45);
     display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#fff;
-    border-radius:20px;
+    justify-content:flex-end;
+    align-items:flex-end;
+    padding:30px;
+    pointer-events:none;
 }
 
-.festival-overlay h2{
-    font-size:56px;
-    margin-bottom:15px;
+.festival-badge{
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(8px);
     color:#fff;
+    padding:14px 22px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.15);
 }
 
-.festival-overlay p{
-    font-size:24px;
+.festival-badge p{
+    margin:0;
+    font-size:22px;
     font-weight:600;
+    color:#fff;
 }
 
+@media(max-width:768px){
+
+    .festival-overlay{
+        padding:15px;
+    }
+
+    .festival-badge{
+        width:100%;
+        text-align:center;
+    }
+
+    .festival-badge p{
+        font-size:16px;
+    }
+
+}
 
 /* =========================
    INTRO SECTION
