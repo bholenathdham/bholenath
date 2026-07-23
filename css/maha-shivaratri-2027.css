@@ -371,3 +371,17 @@
 
 }
 
+@media (max-width:768px){
+
+.festival-card{
+    display:block !important;
+    height:auto !important;
+    min-height:auto !important;
+    max-height:none !important;
+}
+
+.festival-card *{
+    flex:none !important;
+}
+
+}
