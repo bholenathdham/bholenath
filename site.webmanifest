@@ -1,0 +1,22 @@
+{
+  "name": "Bholenath Dham",
+  "short_name": "BholenathDham",
+  "description": "Official website of Bholenath Dham, a sacred Shiva temple in Digha, Chandpara, West Bengal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf8f0",
+  "theme_color": "#c45c00",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/assets/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
