@@ -1,0 +1,453 @@
+/* =========================
+   SHIVA GLOSSARY PAGE
+========================= */
+
+.glossary-hero{
+    text-align:center;
+    padding:80px 20px 50px;
+    background:linear-gradient(
+        135deg,
+        #fffdf8,
+        #fff5e8
+    );
+}
+
+.glossary-hero h1{
+    font-size:3rem;
+    color:#8B0000;
+    margin-bottom:15px;
+}
+
+.glossary-hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.glossary-search{
+    max-width:700px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.glossary-search input{
+    width:100%;
+    padding:18px 20px;
+
+    border:2px solid #f4d19b;
+    border-radius:50px;
+
+    font-size:17px;
+
+    outline:none;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.glossary-search input:focus{
+    border-color:#ff9933;
+}
+
+/* =========================
+   ALPHABET NAV
+========================= */
+
+.alphabet-nav{
+    max-width:1200px;
+    margin:20px auto 50px;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+
+    padding:0 20px;
+}
+
+.alphabet-nav a{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:2px solid #f4d19b;
+
+    color:#8B0000;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.alphabet-nav a:hover{
+    background:#ff7b00;
+    color:white;
+}
+
+/* =========================
+   GLOSSARY GRID
+========================= */
+
+.glossary-grid{
+    max-width:1400px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+    padding:0 20px 80px;
+}
+
+.glossary-card{
+
+    background:white;
+
+    border-top:5px solid #ff7b00;
+    border-left:2px solid #ff7b00;
+    border-right:2px solid #ff7b00;
+    border-bottom:2px solid #ff7b00;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.glossary-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 15px 30px rgba(196,92,0,.15);
+}
+
+.glossary-card h3{
+    color:#8B0000;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.glossary-card .sanskrit{
+    display:inline-block;
+
+    padding:5px 12px;
+
+    background:#fff4e8;
+
+    border-radius:20px;
+
+    font-size:14px;
+    font-weight:600;
+
+    color:#c45c00;
+
+    margin-bottom:15px;
+}
+
+.glossary-card p{
+    color:#555;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.glossary-card .meaning{
+    margin-top:15px;
+
+    padding-top:15px;
+
+    border-top:1px dashed #ddd;
+}
+
+/* =========================
+   FEATURED TERMS
+========================= */
+
+.featured-terms{
+    max-width:1200px;
+    margin:60px auto;
+    padding:0 20px;
+}
+
+.featured-terms h2{
+    text-align:center;
+    color:#8B0000;
+    margin-bottom:30px;
+}
+
+.featured-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.featured-item{
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.featured-item h4{
+    color:#8B0000;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.glossary-quote{
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding:40px;
+
+    background:linear-gradient(
+        135deg,
+        #fff8ef,
+        #fff0d0
+    );
+
+    border-radius:25px;
+
+    text-align:center;
+}
+
+.glossary-quote p{
+    font-size:24px;
+    color:#8B0000;
+    font-style:italic;
+    line-height:1.8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.glossary-hero{
+    padding:60px 15px 40px;
+}
+
+.glossary-hero h1{
+    font-size:2rem;
+}
+
+.glossary-hero p{
+    font-size:16px;
+}
+
+.glossary-card{
+    padding:25px;
+}
+
+.glossary-card h3{
+    font-size:22px;
+}
+
+.featured-grid{
+    grid-template-columns:1fr;
+}
+
+.glossary-quote{
+    padding:25px;
+    margin:40px 15px;
+}
+
+.glossary-quote p{
+    font-size:18px;
+}
+
+.alphabet-nav a{
+    width:38px;
+    height:38px;
+    font-size:14px;
+}
+
+}
+
+/* ==========================
+   BACK TO TOP BUTTON
+========================== */
+
+#backToTop{
+position:fixed;
+bottom:25px;
+right:25px;
+
+width:50px;
+height:50px;
+
+border:none;
+border-radius:50%;
+
+background:#ff9933;
+color:#fff;
+
+font-size:22px;
+font-weight:bold;
+
+cursor:pointer;
+
+box-shadow:0 4px 12px rgba(0,0,0,.25);
+
+display:none;
+
+z-index:9999;
+
+transition:.3s ease;
+}
+
+#backToTop:hover{
+background:#c45c00;
+transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+#backToTop{
+width:45px;
+height:45px;
+font-size:20px;
+right:15px;
+bottom:15px;
+}
+
+}
+
+.glossary-stats{
+text-align:center;
+font-size:18px;
+font-weight:600;
+color:#c45c00;
+margin:25px auto;
+}
+
+.faq-section{
+max-width:1100px;
+margin:60px auto;
+padding:0 20px;
+}
+
+.faq-section h2{
+text-align:center;
+font-size:32px;
+color:#c45c00;
+margin-bottom:30px;
+}
+
+.faq-container{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.faq-item{
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.faq-question{
+width:100%;
+background:white;
+border:none;
+padding:18px 20px;
+font-size:18px;
+font-weight:600;
+text-align:left;
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.faq-question span{
+font-size:22px;
+color:#c45c00;
+}
+
+.faq-answer{
+display:none;
+padding:0 20px 20px;
+line-height:1.8;
+color:#444;
+}
+
+.faq-item.active .faq-answer{
+display:block;
+}
+
+.faq-item.active .faq-question span{
+transform:rotate(45deg);
+}
+
+@media(max-width:768px){
+
+.faq-section h2{
+font-size:26px;
+}
+
+.faq-question{
+font-size:16px;
+}
+
+}
+
+.breadcrumb{
+max-width:1100px;
+margin:25px auto 15px;
+padding:0 20px;
+font-size:18px;
+color:#777;
+}
+
+.breadcrumb a{
+color:#c45c00;
+text-decoration:none;
+font-weight:500;
+}
+
+.breadcrumb a:hover{
+text-decoration:underline;
+}
+
+.breadcrumb span{
+margin:0 5px;
+}
+
+@media(max-width:768px){
+
+.breadcrumb{
+font-size:14px;
+padding:0 15px;
+}
+
+}
