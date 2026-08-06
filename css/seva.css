@@ -1,0 +1,1538 @@
+.hidden{
+    display:none;
+}
+
+/* HERO */
+
+.hero-small{
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.55)
+    ),
+    url("../images/temple3.webp");
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero-content{
+animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero-content h1{
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+.hero-subtitle{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* COMMON SECTIONS */
+
+.story-section h2{
+font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:25px;
+position:relative;
+}
+
+.story-section h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#7a0000;
+margin:15px auto;
+border-radius:50px;
+}
+
+.story-section{
+    padding:0px 20px;
+    background:#fff;
+}
+
+.story-card{
+    position:relative;
+
+    max-width:800px;
+    margin:auto;
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    border-top: 6px solid #ff8c00;
+    border-right: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
+    border-left: 1px solid #ff8c00;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08),
+    0 0 20px rgba(255,153,51,.15);
+
+    transition:0.3s;
+}
+
+.story-card:hover{
+    transform:translateY(-5px);
+}
+.story-card::before{
+    content:"🔱";
+
+    position:absolute;
+
+    top:-20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+
+    background:#fff5dc;
+
+    padding:5px 10px;
+
+    border-radius:50%;
+}
+
+.story-icon{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.story-card p{
+    margin-bottom:18px;
+    font-size:1.05rem;
+}
+
+.story-highlight{
+    display:inline-block;
+
+    background:#ff7b00;
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+}
+
+/* QUOTE */
+
+.seva-quote{
+    max-width:1000px;
+
+    margin:30px auto;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fff6d9,
+    #ffe9b5
+    );
+
+    border-left:6px solid #ff8c00;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    font-size:1.2rem;
+
+    font-style:italic;
+}
+
+/* ==========================
+   WHY SEVA MATTERS
+========================== */
+
+.why-seva{
+    padding:0 20px;
+    position:relative;
+}
+
+.why-seva h2{
+font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.why-seva h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#7a0000;
+margin:15px auto;
+border-radius:50px;
+}
+
+.seva-intro{
+    max-width:900px;
+    margin:0 auto 50px;
+
+    padding:25px 30px;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff4dc
+    );
+
+    border:1px solid #f4d19b;
+    border-left:6px solid #ff7b00;
+
+    border-radius:16px;
+
+    text-align:center;
+
+    font-size:1.15rem;
+    line-height:1.9;
+    color:#444;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+
+    position:relative;
+}
+
+@media(max-width:768px){
+
+.seva-intro{
+    padding:20px;
+    font-size:1rem;
+    line-height:1.8;
+}
+
+}
+
+.seva-grid{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.seva-card{
+    background:linear-gradient(
+        135deg,
+        #fffdf8,
+        #fff4db
+    );
+
+    border:1px solid #f1bf63;
+    border-radius:22px;
+
+    padding:35px 28px;
+
+    text-align:center;
+
+    transition:0.4s;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.seva-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #ff7b00,
+        #ffb347
+    );
+}
+
+.seva-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.12);
+}
+
+.seva-icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.seva-card h3{
+    color:#c46600;
+    font-size:1.35rem;
+    margin-bottom:15px;
+}
+
+.seva-card p{
+    line-height:1.8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .why-seva{
+        padding:60px 15px;
+    }
+
+    .why-seva h2{
+        font-size:2rem;
+    }
+
+    .seva-card{
+        padding:28px 20px;
+    }
+
+}
+
+/* TIMELINE */
+
+.timeline{
+    max-width:1000px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    border-top: 1px solid #ff8c00;
+    border-right: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
+    border-left: 5px solid #ff8c00;
+    border-radius:15px;
+    padding:25px;
+    position:relative;
+    padding-top:24px;
+    margin-bottom:25px;
+    box-shadow:
+    0 6px 18px rgba(0,0,0,0.08);
+}
+
+.timeline-icon{
+    width:60px;
+    height:60px;
+
+     background:linear-gradient(
+        135deg,
+        #fff0d0,
+        #ffe0a1
+    );
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:28px;
+}
+
+.timeline-year{
+    position:absolute;
+    top:-18px;
+    left:50%;
+    transform:translateX(-50%);
+
+    background:linear-gradient(135deg,#ff8c00,#ff6600);
+
+    color:#fff8dc;
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    font-weight:700;
+    font-size:15px;
+
+    box-shadow:0 6px 18px rgba(255,102,0,.35);
+
+    border:2px solid rgba(255,255,255,.3);
+
+    /* Text Border */
+    text-shadow:
+        0 1px 0 #8b5a00,
+        0 2px 3px rgba(0,0,0,.3);
+
+    border:2px solid #ffd27f;
+}
+.timeline-item:hover{
+    transform:translateY(-5px);
+}
+
+/* CARDS */
+
+/* ==========================
+   RITUAL SECTION
+========================== */
+
+.ritual-grid-section{
+    padding:90px 20px;
+    text-align:center;
+}
+
+.ritual-grid-section h2{
+    font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.ritual-grid-section h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#7a0000;
+margin:15px auto;
+border-radius:50px;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.ritual-grid{
+    max-width:1400px;
+    margin:25px auto 0;
+
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.ritual-card{
+
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff4da
+    );
+
+    border:1px solid rgba(255,123,0,.35);
+
+    border-radius:24px;
+
+    padding:35px 28px;
+
+    text-align:left;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.05);
+}
+
+/* top glowing line */
+
+.ritual-card::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #ff7b00,
+        #ffb347
+    );
+}
+
+/* decorative symbol */
+
+.ritual-card::after{
+    content:"🕉️";
+
+    position:absolute;
+
+    right:15px;
+    top:10px;
+
+    font-size:1.2rem;
+    opacity:.08;
+}
+
+.ritual-card:hover{
+
+    transform:
+    translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(255,123,0,.15);
+
+    border-color:#ff7b00;
+}
+
+/* ==========================
+   ICON
+========================== */
+
+.ritual-icon{
+
+    width:70px;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:3rem;
+
+    background:linear-gradient(
+        135deg,
+        #fff0d0,
+        #ffe0a1
+    );
+
+    border-radius:18px;
+
+    margin-bottom:15px;
+
+    box-shadow:
+        0 6px 15px rgba(255,123,0,.12);
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.ritual-card h3{
+    color:#8b4500;
+    font-size:1.35rem;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+.ritual-card p{
+    color:#444;
+    line-height:1.9;
+    font-size:1rem;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .ritual-grid-section{
+        padding:70px 15px;
+    }
+
+    .ritual-grid-section h2{
+        font-size:2rem;
+    }
+
+    .ritual-card{
+        padding:28px 22px;
+    }
+
+    .ritual-icon{
+        width:60px;
+        height:60px;
+        font-size:1.9rem;
+    }
+}
+/* COMING SOON */
+
+.coming-soon-seva{
+    text-align:center;
+    padding:60px 20px;
+    background:#fff8ef;
+}
+
+.coming-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+/* BLESSING */
+
+.seva-blessing{
+    max-width:1000px;
+    margin:40px auto;
+    padding:50px 40px;
+
+    background:linear-gradient(
+        135deg,
+        #fff8ef,
+        #fff3d9
+    );
+
+    border:2px solid #f2d19b;
+    border-top:6px solid #ff7b00;
+
+    border-radius:22px;
+
+    text-align:center;
+    animation:blessingGlow 4s ease-in-out infinite;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.seva-blessing::before{
+    content:"🔱";
+
+    position:absolute;
+
+    top:15px;
+    left:25px;
+
+    font-size:2rem;
+    opacity:.15;
+}
+
+.seva-blessing::after{
+    content:"🕉️";
+
+    position:absolute;
+
+    bottom:15px;
+    right:25px;
+
+    font-size:2rem;
+    opacity:.15;
+}
+
+.seva-blessing h2{
+    font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.seva-blessing h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#ff9933;
+margin:15px auto;
+border-radius:50px;
+}
+
+.seva-blessing p{
+    max-width:750px;
+    margin:0 auto;
+
+    font-size:1.15rem;
+    line-height:2;
+
+    color:#444;
+}
+
+@media(max-width:768px){
+
+.seva-blessing{
+    padding:35px 25px;
+    margin:60px 20px;
+}
+
+.seva-blessing h2{
+    font-size:1.8rem;
+}
+
+.seva-blessing p{
+    font-size:1rem;
+    line-height:1.8;
+}
+
+}
+
+/* QUICK NAV */
+
+/* QUICK NAVIGATION */
+
+.quick-nav{
+    max-width:1200px;
+    margin:30px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.quick-nav h3{
+    font-size:30px;
+    color:#8B0000;
+    text-align:center;
+}
+
+.quick-nav p{
+    font-size:18px;
+    text-align:center;
+}
+
+.quick-nav-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+.quick-nav-links a{
+    display:inline-block;
+
+    padding:10px 16px;
+
+    background:linear-gradient(135deg,#fffdf8,#fff5e8);
+
+    border:2px solid #f4d19b;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#8B0000;
+
+    font-weight:600;
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.quick-nav-links a:hover{
+    transform:translateY(-3px);
+
+    border-color:#ff9933;
+
+    box-shadow:0 8px 20px rgba(196,92,0,.12);
+}
+
+@media(max-width:768px){
+
+.quick-nav-links{
+    flex-direction:column;
+    align-items:center;
+}
+
+.quick-nav-links a{
+    width:100%;
+    max-width:350px;
+    text-align:center;
+}
+
+ .quick-nav{
+   text-align:center;
+}   
+
+}
+
+/* RELATED LINKS */
+
+.related-links{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+    text-align:center;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:40px;
+}
+
+.related-card{
+    background:linear-gradient(
+        135deg,
+        #fffdf8,
+        #fff6e7
+    );
+
+    border-top:5px solid #ff7b00;
+    border-left:2px solid #ff7b00;
+    border-right:2px solid #ff7b00;
+    border-bottom:2px solid #ff7b00;
+    border-radius:25px;
+    border-radius:20px;
+    padding:25px;
+    text-decoration:none;
+    color:#222;
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.related-card:hover{
+    transform:translateY(-6px);
+    border-color:#ff9933;
+    box-shadow:
+    0 15px 30px rgba(196,92,0,.15);
+}
+
+.related-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.related-card h3{
+    color:#8B0000;
+    font-size:1.4rem;
+    margin-bottom:10px;
+}
+
+.related-card p{
+    color:#555;
+    line-height:1.8;
+    font-size:.95rem;
+}
+
+@media(max-width:900px){
+.related-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+.related-grid{
+    grid-template-columns:1fr;
+}
+
+}
+/* Section */
+
+section h2{
+   font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:25px;
+position:relative;
+}
+
+section h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#7a0000;
+margin:15px auto;
+border-radius:50px;
+}
+
+/* TRANSPARENCY */
+
+.transparency-box{
+     background:linear-gradient(
+        135deg,
+        #fffdf8,
+        #fff4db
+    );
+
+    border-radius:20px;
+    border-top: 1px solid #ff8c00;
+    border-right: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
+    border-left: 5px solid #ff8c00;
+    max-width:1200px;
+
+    margin:auto;
+
+    0 10px 30px rgba(0,0,0,.08),
+    0 0 20px rgba(255,153,51,.15);
+}
+
+/* =========================
+   FUTURE VISION SECTION
+========================= */
+
+.future-vision{
+    padding:90px 20px;
+}
+
+.future-vision h2{
+    text-align:center;
+    font-size:2.8rem;
+    color:#8b0000;
+    margin-bottom:15px;
+    position:relative;
+}
+
+.future-vision h2::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#7a0000;
+    margin:15px auto 0;
+    border-radius:50px;
+}
+
+.vision-intro{
+    max-width:900px;
+    margin:0 auto 55px;
+
+    padding:30px 35px;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf8,
+        #fff2d5
+    );
+
+    border:1px solid #f2d19b;
+    border-left:6px solid #ff7b00;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:1.08rem;
+    line-height:1.9;
+
+    color:#444;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.07);
+
+    position:relative;
+}
+
+.vision-intro::before{
+    content:"🌟";
+
+    position:absolute;
+
+    top:-18px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:1.8rem;
+
+    background:#fff4dc;
+
+    padding:5px 10px;
+
+    border-radius:50%;
+}
+
+@media(max-width:768px){
+
+.vision-intro{
+    padding:22px;
+    font-size:1rem;
+    line-height:1.8;
+}
+
+}
+
+/* Grid */
+
+.vision-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+}
+
+/* Cards */
+
+.vision-card{
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff4d8
+    );
+
+    padding:35px 25px;
+
+    border-radius:20px;
+
+    border:1px solid #f2c76a;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+
+    text-align:center;
+
+    transition:0.35s;
+}
+
+.vision-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(255,123,0,0.18);
+}
+
+.vision-icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.vision-card h3{
+    color:#b85d00;
+    font-size:1.4rem;
+    margin-bottom:15px;
+}
+
+.vision-card p{
+    color:#444;
+    line-height:1.8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.future-vision{
+    padding:70px 15px;
+}
+
+.future-vision h2{
+    font-size:2rem;
+}
+
+.vision-intro{
+    font-size:1rem;
+}
+
+.vision-card{
+    padding:30px 20px;
+}
+
+}
+
+/* DIVIDER */
+
+.mahadev-divider{
+    text-align:center;
+    font-size:2rem;
+    color:#ff8c00;
+    margin:10px 0;
+}
+
+/* =========================
+   TRANSPARENCY SECTION
+========================= */
+
+.transparency-box{
+    max-width:1100px;
+    margin:80px auto;
+    padding:60px 50px;
+
+    background:linear-gradient(
+        135deg,
+        #fff9e8,
+        #f7e2a1
+    );
+
+    border-radius:25px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.08);
+
+    position:relative;
+}
+
+.transparency-box::before{
+    content:"📖";
+
+    position:absolute;
+
+    top:-22px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+
+    background:#fff9e8;
+
+    padding:10px 14px;
+
+    border-radius:50%;
+}
+
+.transparency-box h2{
+   font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.transparency-box h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#7a0000;
+margin:15px auto;
+border-radius:50px;
+}
+
+.transparency-box p{
+    max-width:900px;
+    margin:0 auto 18px;
+
+    line-height:1.9;
+    font-size:1.08rem;
+
+    color:#333;
+}
+
+/* =========================
+   HUMBLE APPEAL
+========================= */
+
+.humble-appeal{
+    max-width:1100px;
+    margin:80px auto;
+    padding:70px 40px;
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:25px;
+    border-top: 1px solid #ff8c00;
+    border-right: 1px solid #ff8c00;
+    border-bottom: 1px solid #ff8c00;
+    border-left: 5px solid #ff8c00; 
+     box-shadow:
+    0 10px 30px rgba(0,0,0,.08),
+    0 0 20px rgba(255,153,51,.15);
+
+    position:relative;
+}
+
+.humble-appeal::before{
+    content:"🙏";
+
+    position:absolute;
+
+    top:-22px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:2rem;
+
+    background:white;
+
+    padding:10px 14px;
+
+    border-radius:50%;
+}
+
+.humble-appeal h2{
+   font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.humble-appeal h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#7a0000;
+margin:15px auto;
+border-radius:50px;
+}
+
+.humble-appeal p{
+    max-width:900px;
+    margin:0 auto 18px;
+
+    line-height:1.9;
+    font-size:1.08rem;
+
+    color:#333;
+}
+
+/* =========================
+   ONLINE SEVA
+========================= */
+
+.online-seva{
+    max-width:1200px;
+    margin:80px auto;
+    padding:70px 25px;
+    text-align:center;
+}
+
+.online-seva h2{
+    font-size:2.5rem;
+color:#8B0000;
+text-align:center;
+margin-bottom:15px;
+position:relative;
+}
+
+.online-seva h2::after{
+content:"";
+display:block;
+width:80px;
+height:4px;
+background:#ff9933;
+margin:15px auto;
+border-radius:50px;
+}
+
+.seva-support-text{
+    max-width:850px;
+    margin:0 auto 40px;
+    line-height:1.8;
+    font-size:1.05rem;
+}
+
+.online-seva-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.seva-method-card{
+    background:white;
+    border-radius:20px;
+    padding:35px 25px;
+    border:1px solid #f1c26d;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    transition:0.3s;
+}
+
+.seva-method-card:hover{
+    transform:translateY(-8px);
+}
+
+.method-icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.seva-method-card h3{
+    color:#b85d00;
+    margin-bottom:20px;
+}
+
+.qr-image{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    margin:15px auto;
+    display:block;
+    border-radius:12px;
+    border:4px solid #f5e2b4;
+}
+
+.payment-box{
+    background:#fff4da;
+    border:2px dashed #ff9800;
+    padding:15px;
+    border-radius:12px;
+    font-weight:700;
+    font-size:1.1rem;
+    margin-bottom:15px;
+    word-break:break-all;
+}
+
+.bank-details{
+    text-align:left;
+    line-height:2;
+    margin-top:10px;
+}
+
+.bank-details p{
+    margin-bottom:8px;
+}
+
+.donation-note{
+    margin-top:40px;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff1c8
+    );
+
+    padding:25px;
+
+    border-radius:20px;
+
+    border-left:5px solid #ff7b00;
+}
+
+.donation-note p{
+    margin:0;
+    font-size:1.05rem;
+    font-weight:500;
+}
+
+.online-seva-intro{
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    text-align:center;
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    color:#555;
+
+    padding:0 15px;
+
+    font-style:italic;
+}
+
+/* =========================
+   COMING SOON SEVA
+========================= */
+
+.coming-soon-seva{
+    max-width:900px;
+
+    margin:80px auto 40px;
+
+    padding:50px 35px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        #fffdf7,
+        #fff1c8
+    );
+
+    border-radius:25px;
+
+    border:1px solid #f2d38a;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.08);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* Decorative glow */
+
+.coming-soon-seva::before{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:rgba(255,165,0,0.08);
+
+    border-radius:50%;
+
+    top:-100px;
+    left:-100px;
+}
+
+.coming-soon-seva::after{
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:rgba(255,165,0,0.08);
+
+    border-radius:50%;
+
+    bottom:-120px;
+    right:-120px;
+}
+
+.coming-icon{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.coming-soon-seva h3{
+    color:#c46300;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+}
+
+.coming-soon-seva h3::after{
+    content:"";
+
+    display:block;
+
+    width:70px;
+    height:4px;
+
+    background:#ff7b00;
+
+    margin:15px auto 0;
+
+    border-radius:20px;
+}
+
+.coming-soon-seva p{
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:1.08rem;
+
+    color:#444;
+}
+
+/* Optional small badge */
+
+.coming-soon-seva .coming-badge{
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#ff7b00;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:0.9rem;
+
+    font-weight:600;
+}
+
+@keyframes blessingGlow{
+
+0%,100%{
+    box-shadow:
+    0 0 15px rgba(255,123,0,.15),
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+50%{
+    box-shadow:
+    0 0 35px rgba(255,123,0,.40),
+    0 0 60px rgba(255,180,0,.20),
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+}
+
+.privacy-link{
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:6px 14px;
+
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:30px;
+
+    color:#f5f5f5;
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.privacy-link:hover{
+    background:rgba(255,204,102,.12);
+    border-color:#ffcc66;
+    color:#ffcc66;
+
+    transform:translateY(-2px);
+}
+
+section{
+    margin:0;
+}
+
+.story-section,
+.why-seva,
+.future-vision,
+.ritual-grid-section,
+.related-links,
+.quick-nav{
+    padding-top:40px;
+    padding-bottom:40px;
+}
