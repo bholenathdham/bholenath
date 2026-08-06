@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 64 64"
+fill="none"
+stroke="currentColor"
+stroke-width="2.4"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<path d="M16 40
+Q20 26 34 26
+Q46 26 50 38"/>
+
+<path d="M20 28L16 20"/>
+
+<path d="M44 28L48 20"/>
+
+<circle cx="23" cy="36" r="1.5"/>
+
+<path d="M34 30
+Q38 32 40 36"/>
+
+<path d="M20 42L18 50"/>
+
+<path d="M44 42L46 50"/>
+
+<path d="M24 22
+Q32 16 40 22"/>
+
+<path d="M26 48H40"/>
+
+</svg>

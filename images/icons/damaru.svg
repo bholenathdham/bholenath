@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 64 64"
+fill="none"
+stroke="currentColor"
+stroke-width="2.4"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<!-- Left Drum -->
+<path d="M20 14
+C28 18 28 28 20 32
+C28 36 28 46 20 50"/>
+
+<!-- Right Drum -->
+<path d="M44 14
+C36 18 36 28 44 32
+C36 36 36 46 44 50"/>
+
+<!-- Center -->
+<path d="M20 14H44"/>
+<path d="M20 50H44"/>
+
+<!-- Waist -->
+<path d="M28 26H36"/>
+<path d="M28 38H36"/>
+
+<!-- Strings -->
+<path d="M24 22L40 42"/>
+<path d="M40 22L24 42"/>
+
+<!-- Beads -->
+<circle cx="18" cy="32" r="2"/>
+<circle cx="46" cy="32" r="2"/>
+
+<!-- Hanging Strings -->
+<path d="M20 30L18 32"/>
+<path d="M44 30L46 32"/>
+
+</svg>

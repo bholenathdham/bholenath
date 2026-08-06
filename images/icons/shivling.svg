@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 64 64"
+fill="none"
+stroke="currentColor"
+stroke-width="2.4"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<path d="M32 10
+C24 10 18 16 18 24
+C18 34 24 40 32 40
+C40 40 46 34 46 24
+C46 16 40 10 32 10Z"/>
+
+<path d="M18 40H46"/>
+
+<path d="M22 40
+C22 48 42 48 42 40"/>
+
+<path d="M14 48H50"/>
+
+<path d="M50 48
+Q56 48 56 52"/>
+
+<path d="M28 18H36"/>
+
+</svg>

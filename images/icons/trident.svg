@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 64 64"
+     fill="none"
+     stroke="currentColor"
+     stroke-width="2.6"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <!-- Center Shaft -->
+  <path d="M32 8 V56"/>
+
+  <!-- Left Prong -->
+  <path d="M22 10
+           C20 16 21 22 28 27
+           M22 10
+           C22 6 25 4 28 2"/>
+
+  <!-- Right Prong -->
+  <path d="M42 10
+           C44 16 43 22 36 27
+           M42 10
+           C42 6 39 4 36 2"/>
+
+  <!-- Center Prong -->
+  <path d="M32 2 V24"/>
+
+  <!-- Base Curve -->
+  <path d="M24 34
+           C28 38 36 38 40 34"/>
+
+  <!-- Decorative Ring -->
+  <circle cx="32" cy="42" r="4"/>
+
+  <!-- Bottom Ornament -->
+  <path d="M32 46
+           L28 52
+           L32 56
+           L36 52
+           Z"/>
+
+</svg>
