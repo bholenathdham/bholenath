@@ -5,34 +5,44 @@ console.log("Glossary JS Loaded");
 ========================= */
 const searchInput = document.getElementById("glossarySearch");
 
-searchInput.addEventListener("keyup", function(){
+searchInput.addEventListener("keyup", function () {
 
 const filter = this.value.toLowerCase();
 
 const cards = document.querySelectorAll(".glossary-card");
+const headings = document.querySelectorAll(".glossary-grid h2");
 
 cards.forEach(card => {
 
-const title =
-card.querySelector("h3")?.innerText.toLowerCase() || "";
-
-const sanskrit =
-card.querySelector(".sanskrit")?.innerText.toLowerCase() || "";
-
-const description =
-card.querySelector("p")?.innerText.toLowerCase() || "";
-
-const meaning =
-card.querySelector(".meaning")?.innerText.toLowerCase() || "";
-
-const text =
-title + " " + sanskrit + " " + description + " " + meaning;
+const text = card.innerText.toLowerCase();
 
 if(text.includes(filter)){
 card.style.display = "block";
 }else{
 card.style.display = "none";
 }
+
+});
+
+headings.forEach(heading => {
+
+let next = heading.nextElementSibling;
+let hasVisibleCards = false;
+
+while(next && next.tagName !== "H2"){
+
+if(
+next.classList.contains("glossary-card") &&
+next.style.display !== "none"
+){
+hasVisibleCards = true;
+}
+
+next = next.nextElementSibling;
+
+}
+
+heading.style.display = hasVisibleCards ? "block" : "none";
 
 });
 
