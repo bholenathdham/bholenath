@@ -3,27 +3,34 @@ console.log("Glossary JS Loaded");
 /* =========================
    SHIVA GLOSSARY SEARCH
 ========================= */
-document.addEventListener("DOMContentLoaded", function(){
+// Glossary Search
 
 const searchInput = document.getElementById("glossarySearch");
+
+searchInput.addEventListener("keyup", function () {
+
+const filter = this.value.toLowerCase();
+
 const cards = document.querySelectorAll(".glossary-card");
-
-searchInput.addEventListener("keyup", function(){
-
-const value = this.value.toLowerCase();
 
 cards.forEach(card => {
 
-const text = card.innerText.toLowerCase();
+const text = card.textContent.toLowerCase();
 
-card.style.display =
-text.includes(value) ? "block" : "none";
+if(text.includes(filter)){
+
+card.style.display = "block";
+
+}else{
+
+card.style.display = "none";
+
+}
 
 });
 
 });
 
-});
 
 
 /* =========================
