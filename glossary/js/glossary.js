@@ -3,28 +3,50 @@ console.log("Glossary JS Loaded");
 /* =========================
    SHIVA GLOSSARY SEARCH
 ========================= */
-document.addEventListener("DOMContentLoaded", function(){
-
 const searchInput = document.getElementById("glossarySearch");
+
+searchInput.addEventListener("keyup", function () {
+
+const filter = this.value.toLowerCase();
+
 const cards = document.querySelectorAll(".glossary-card");
-
-searchInput.addEventListener("keyup", function(){
-
-const value = this.value.toLowerCase();
+const headings = document.querySelectorAll(".glossary-grid h2");
 
 cards.forEach(card => {
 
 const text = card.innerText.toLowerCase();
 
-card.style.display =
-text.includes(value) ? "block" : "none";
+if(text.includes(filter)){
+card.style.display = "block";
+}else{
+card.style.display = "none";
+}
+
+});
+
+headings.forEach(heading => {
+
+let next = heading.nextElementSibling;
+let hasVisibleCards = false;
+
+while(next && next.tagName !== "H2"){
+
+if(
+next.classList.contains("glossary-card") &&
+next.style.display !== "none"
+){
+hasVisibleCards = true;
+}
+
+next = next.nextElementSibling;
+
+}
+
+heading.style.display = hasVisibleCards ? "block" : "none";
 
 });
 
 });
-
-});
-
 
 /* =========================
    ALPHABET NAVIGATION
