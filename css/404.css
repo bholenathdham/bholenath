@@ -1,60 +1,243 @@
-.error-page{
-    min-height:80vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:40px 20px;
+.error-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+padding:15px 25px 0;
+
+
 }
+
+
+.error-header .logo{
+
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+
+.error-header img{
+
+width:70px;
+height:70px;
+
+}
+
+
+
+.error-page{
+
+min-height:75vh;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+
+background-image:url("../images/shiva-404-bg.webp");
+background-size:cover;
+background-position:center;
+padding:40px 20px;
+
+}
+
+
+
+.error-overlay{
+
+position:absolute;
+inset:0;
+
+background:rgba(0,0,0,0.55);
+
+}
+
+
 
 .error-card{
-    max-width:600px;
-    text-align:center;
 
-    background:#fffdf8;
+position:relative;
+z-index:2;
 
-    padding:50px 35px;
+max-width:550px;
 
-    border-radius:20px;
+background:rgba(255,255,255,0.12);
 
-    border:2px solid #f4d19b;
+backdrop-filter:blur(12px);
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+border-radius:25px;
+
+padding:45px 35px;
+
+text-align:center;
+
+box-shadow:0 10px 35px rgba(0,0,0,0.35);
+
+border:1px solid rgba(255,255,255,0.25);
+
 }
+
+
 
 .error-icon{
-    font-size:4rem;
-    margin-bottom:20px;
+
+font-size:70px;
+
+margin-bottom:10px;
+
 }
+
+
 
 .error-card h1{
-    font-size:5rem;
-    color:#c45c00;
-    margin:0;
+
+font-size:110px;
+
+margin:0;
+
+font-weight:700;
+
+color:#ffb300;
+
+line-height:1;
+
+text-shadow:0 0 20px rgba(255,179,0,0.7);
+
 }
+
+
 
 .error-card h2{
-    color:#8B0000;
-    margin:15px 0;
+
+font-size:32px;
+
+color:#fff;
+
+margin:20px 0;
+
 }
+
+
 
 .error-card p{
-    line-height:1.8;
-    margin-bottom:30px;
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#fff;
+
 }
+
+
+
+.error-actions{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+}
+
+
 
 .error-btn{
-    display:inline-block;
 
-    padding:12px 25px;
+background:#c45c00;
 
-    background:#c45c00;
-    color:white;
+color:white;
 
-    text-decoration:none;
+padding:13px 25px;
 
-    border-radius:50px;
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
 }
 
+
+
 .error-btn:hover{
-    background:#8B0000;
+
+background:#ff8c00;
+
+transform:translateY(-3px);
+
+}
+
+
+
+.error-quote{
+
+margin-top:35px;
+
+padding-top:20px;
+
+border-top:1px solid rgba(255,255,255,.3);
+
+}
+
+
+
+.error-quote p{
+
+font-style:italic;
+
+font-size:18px;
+
+}
+
+
+
+@media(max-width:600px){
+
+
+.error-card{
+
+padding:35px 20px;
+
+}
+
+
+.error-card h1{
+
+font-size:80px;
+
+}
+
+
+.error-card h2{
+
+font-size:25px;
+
+}
+
+
+.error-actions{
+
+flex-direction:column;
+
+}
+
+
+.error-btn{
+
+width:100%;
+
+}
+
+
 }
