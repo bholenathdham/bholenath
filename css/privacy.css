@@ -121,13 +121,13 @@ padding:8px 12px;
 .policy-section h2{
     color:#8B0000;
     font-size:2rem;
-    margin-bottom:25px;
+    margin-bottom:20px;
     text-align:center;
 }
 
 .policy-section p{
     background:#fffdf8;
-
+    font-size:18px;
     padding:18px 22px;
     margin-bottom:15px;
 
@@ -294,3 +294,68 @@ padding:8px 12px;
 }
 
 }
+
+/* ==========================
+   TABLE OF CONTENTS
+========================== */
+
+.toc-section {
+    text-align: center;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.toc-grid a {
+    display: block;
+    padding: 14px 18px;
+    background: #fff;
+    border: 1px solid rgba(196, 92, 0, 0.15);
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.toc-grid a:hover {
+    transform: translateY(-3px);
+    border-color: #c45c00;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* ==========================
+   POLICY META INFO
+========================== */
+
+.policy-meta {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.meta-card {
+    background:rgba(255,255,255,0.9);
+    color:#7a0000;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(196, 92, 0, 0.15);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.meta-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+}
+
