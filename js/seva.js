@@ -1,31 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const page = document.querySelector(".seva-page");
+  const languageButton = document.getElementById("langToggle");
+  const menuButton = document.getElementById("menuToggle");
+  const navigation = document.getElementById("navbar");
 
-    const langBtn = document.getElementById("langToggle");
-
-    let currentLang = "en";
-
-    langBtn.addEventListener("click", () => {
-
-        const enElements = document.querySelectorAll(".en");
-        const bnElements = document.querySelectorAll(".bn");
-
-        if (currentLang === "en") {
-
-            enElements.forEach(el => el.classList.add("hidden"));
-            bnElements.forEach(el => el.classList.remove("hidden"));
-
-            langBtn.textContent = "English";
-            currentLang = "bn";
-
-        } else {
-
-            bnElements.forEach(el => el.classList.add("hidden"));
-            enElements.forEach(el => el.classList.remove("hidden"));
-
-            langBtn.textContent = "বাংলা";
-            currentLang = "en";
-        }
-
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("active");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
     });
 
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  if (page && languageButton) {
+    languageButton.addEventListener("click", () => {
+      const showBengali = !page.classList.contains("lang-bn");
+      page.classList.toggle("lang-bn", showBengali);
+      page.classList.toggle("lang-en", !showBengali);
+      document.documentElement.lang = showBengali ? "bn" : "en";
+      languageButton.textContent = showBengali ? "English" : "বাংলা";
+      languageButton.setAttribute(
+        "aria-label",
+        showBengali ? "Switch to English" : "বাংলায় দেখুন"
+      );
+    });
+  }
 });
+
