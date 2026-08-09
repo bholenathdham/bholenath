@@ -146,7 +146,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .festival-invitation::before { top: -150px; left: -120px; }
 .festival-invitation::after { right: -130px; bottom: -170px; }
 .invitation-ring { position: relative; z-index: 1; display: grid; width: 76px; height: 76px; place-items: center; margin: 0 auto 16px; border: 2px solid #ffd78a; border-radius: 50%; background: rgba(255,255,255,.12); font-size: 37px; }
-.festival-invitation h2 { position: relative; z-index: 1; margin: 0 0 20px; font-size: 37px; }
+.festival-invitation h2 { position: relative; z-index: 1; margin: 0 0 20px; font-size: 37px; color:#fff; }
 .festival-invitation p { position: relative; z-index: 1; max-width: 880px; margin: auto; font-size: 20px; line-height: 1.9; }
 .mahadev-message { position: relative; z-index: 1; margin-top: 28px; color: #ffe0a0; font-size: 29px; font-weight: 700; }
 
