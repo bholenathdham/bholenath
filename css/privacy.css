@@ -1,361 +1,968 @@
+/* =========================================================
+   BHOLENATH DHAM - PRIVACY PAGE
+   FINAL PRIVACY.CSS
+   Designed for the ORIGINAL privacy.html
+   ========================================================= */
 
-/* Privacy Hero */
 
-.privacy-hero{
-position:relative;
-width:100%;
-height:380px;
+/* =========================================================
+   HERO IMAGE
+   IMPORTANT:
+   The HTML contains only:
+   <section class="privacy-hero"></section>
+   ========================================================= */
 
-background-image:url('../images/privacy-hero.webp');
-background-size:cover;
-background-position:center center;
-background-repeat:no-repeat;
+.privacy-hero {
+    display: block !important;
 
-display:flex;
-align-items:center;
-justify-content:center;
+    position: relative !important;
 
-overflow:hidden;
+    width: 100% !important;
+    height: 380px !important;
+    min-height: 380px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-image: url("../images/privacy-hero.webp") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    overflow: hidden !important;
+
+    box-sizing: border-box;
 }
 
-/* Dark overlay for readability */
 
-.privacy-hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+/* Gentle devotional image overlay */
+.privacy-hero::before {
+    content: "";
 
-background:rgba(0,0,0,0.30);
-backdrop-filter:blur(1px);
+    position: absolute;
 
-z-index:1;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(35, 12, 0, 0.04),
+            rgba(35, 12, 0, 0.18)
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
 }
 
-.privacy-overlay{
-position:relative;
-z-index:2;
 
-text-align:center;
-color:#fff;
+/* =========================================================
+   POLICY META
+   ========================================================= */
 
-padding:20px;
-max-width:900px;
+.policy-meta {
+    width: auto;
+    max-width: 1180px;
+
+    margin: 30px auto 48px;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    box-sizing: border-box;
 }
 
-.privacy-overlay h1{
-font-size:3.5rem;
-font-weight:700;
-margin-bottom:20px;
+.meta-card {
+    position: relative;
 
-text-shadow:
-2px 2px 8px rgba(0,0,0,0.6);
-}
+    box-sizing: border-box;
 
-.privacy-overlay p{
-font-size:1.3rem;
-margin-bottom:20px;
+    padding: 18px 20px;
 
-text-shadow:
-1px 1px 6px rgba(0,0,0,0.6);
-}
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8 0%,
+            #fff8eb 55%,
+            #fff1d5 100%
+        );
 
-.privacy-date{
-position:absolute;
-top:20px;
-right:20px;
+    color: #762000;
 
-background:rgba(255,255,255,0.9);
-color:#7a0000;
+    border: 1px solid #e6c58d;
 
-padding:10px 18px;
+    border-top: 3px solid #c45c00;
 
-border-radius:25px;
+    border-radius: 14px;
 
-font-size:0.95rem;
-font-weight:600;
+    text-align: center;
 
-box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    font-size: 16px;
 
-z-index:10;
-}
+    font-weight: 600;
 
-/* Mobile */
-
-@media(max-width:768px){
-
-.privacy-hero{
-height:220px;
-}
-
-.privacy-overlay h1{
-font-size:2rem;
-line-height:1.3;
-}
-
-.privacy-overlay p{
-font-size:1rem;
-}
-
-.privacy-date{
-top:10px;
-right:10px;
-
-font-size:0.75rem;
-padding:8px 12px;
-}
-}
-
-/* ==========================
-   CONTENT SECTIONS
-========================== */
-
-.policy-section{
-    max-width:1000px;
-    margin:50px auto;
-    padding:0 20px;
-}
-
-.policy-section h2{
-    color:#8B0000;
-    font-size:2rem;
-    margin-bottom:20px;
-    text-align:center;
-}
-
-.policy-section p{
-    background:#fffdf8;
-    font-size:18px;
-    padding:18px 22px;
-    margin-bottom:15px;
-
-    border:1px solid #f2d6a2;
-    border-left:6px solid #ff9933;
-
-    border-radius:12px;
-
-    line-height:1.9;
-    color:#444;
+    line-height: 1.55;
 
     box-shadow:
-        0 5px 15px rgba(0,0,0,.04);
+        0 5px 18px rgba(92, 43, 8, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-/* ==========================
-   BLESSING SECTION
-========================== */
+.meta-card::after {
+    content: "";
 
-.policy-blessing{
+    position: absolute;
 
-    max-width:900px;
+    left: 50%;
 
-    margin:80px auto;
-    padding:40px 30px;
+    bottom: -5px;
 
-    text-align:center;
+    width: 34px;
+    height: 2px;
 
-    background:linear-gradient(
-        135deg,
-        #fff7e6,
-        #fff1cc
-    );
+    transform: translateX(-50%);
 
-    border:2px solid #f4d19b;
-    border-radius:25px;
+    background: #d48a27;
+
+    opacity: 0.65;
+}
+
+.meta-card:hover {
+    transform: translateY(-3px);
 
     box-shadow:
-        0 10px 30px rgba(0,0,0,.08);
-}
-
-.policy-blessing h2{
-    color:#8B0000;
-    margin-bottom:15px;
-    font-size:2rem;
-}
-
-.policy-blessing p{
-    font-size:1.1rem;
-    color:#555;
-    line-height:1.8;
+        0 10px 25px rgba(92, 43, 8, 0.11);
 }
 
 
-/* ==========================
-   HOVER EFFECT
-========================== */
+/* =========================================================
+   MAIN POLICY SECTIONS
+   ========================================================= */
 
-.policy-section p:hover{
-    transform:translateY(-2px);
+.policy-section {
+    width: auto;
+
+    max-width: 1080px;
+
+    margin: 48px auto;
+
+    padding: 0 22px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   DEVOTIONAL SECTION HEADINGS
+   ========================================================= */
+
+.policy-section h2 {
+    position: relative;
+
+    margin: 0 0 26px;
+
+    padding: 0 0 15px;
+
+    color: #7d1700;
+
+    text-align: center;
+
+    font-size: 2.15rem;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* Main ornamental divider */
+.policy-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 110px;
+
+    height: 2px;
+
+    margin: 12px auto 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            #c45c00 20%,
+            #e2a24d 50%,
+            #c45c00 80%,
+            transparent 100%
+        );
+
+    border-radius: 50%;
+}
+
+
+/* Small central devotional point */
+.policy-section h2::before {
+    content: "✦";
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #c45c00;
+
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   POLICY TEXT
+   ========================================================= */
+
+.policy-section p {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    margin: 0 0 17px;
+
+    padding: 20px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffefb 0%,
+            #fffaf1 100%
+        );
+
+    border: 1px solid #ecd4a8;
+
+    border-left: 5px solid #e38a25;
+
+    border-radius: 12px;
+
+    color: #403a36;
+
+    font-size: 19px;
+
+    font-weight: 400;
+
+    line-height: 1.9;
 
     box-shadow:
-        0 8px 20px rgba(196,92,0,.10);
+        0 5px 16px rgba(80, 35, 0, 0.045);
 
-    transition:.3s;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
+.policy-section p:hover {
+    transform: translateY(-2px);
 
-/* ==========================
-   MOBILE
-========================== */
+    border-left-color: #c45c00;
 
-@media(max-width:768px){
-
-.policy-hero h1{
-    font-size:2.2rem;
-}
-
-.policy-section h2{
-    font-size:1.6rem;
-}
-
-.policy-section p{
-    padding:16px;
-    font-size:15px;
-}
-
-.policy-blessing{
-    margin:60px 15px;
-    padding:30px 20px;
-}
-
-}
-
-.related-links{
-    max-width:1200px;
-    margin:80px auto;
-    padding:0 20px;
-    text-align:center;
-}
-
-.related-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-    margin-top:40px;
-}
-
-.related-card{
-    background:linear-gradient(
-        135deg,
-        #fffdf8,
-        #fff6e7
-    );
-
-    border-top:5px solid #ff7b00;
-    border-left:2px solid #ff7b00;
-    border-right:2px solid #ff7b00;
-    border-bottom:2px solid #ff7b00;
-    border-radius:25px;
-    border-radius:20px;
-    padding:25px;
-    text-decoration:none;
-    color:#222;
     box-shadow:
-    0 8px 20px rgba(0,0,0,.08);
-    transition:.3s;
+        0 9px 23px rgba(120, 55, 0, 0.09);
 }
 
-.related-card:hover{
-    transform:translateY(-6px);
-    border-color:#ff9933;
-    box-shadow:
-    0 15px 30px rgba(196,92,0,.15);
+.policy-section strong {
+    color: #851d00;
+
+    font-weight: 700;
 }
 
-.related-icon{
-    font-size:42px;
-    margin-bottom:12px;
-}
 
-.related-card h3{
-    color:#8B0000;
-    font-size:1.4rem;
-    margin-bottom:10px;
-}
-
-.related-card p{
-    color:#555;
-    line-height:1.8;
-    font-size:.95rem;
-}
-
-@media(max-width:900px){
-.related-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:600px){
-.related-grid{
-    grid-template-columns:1fr;
-}
-
-}
-
-/* ==========================
+/* =========================================================
    TABLE OF CONTENTS
-========================== */
+   ========================================================= */
 
 .toc-section {
     text-align: center;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .toc-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
     gap: 15px;
-    margin-top: 25px;
+
+    margin-top: 28px;
 }
 
 .toc-grid a {
-    display: block;
-    padding: 14px 18px;
-    background: #fff;
-    border: 1px solid rgba(196, 92, 0, 0.15);
-    border-radius: 10px;
+    position: relative;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 58px;
+
+    padding: 13px 17px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffefb,
+            #fff6e6
+        );
+
+    border: 1px solid #e3c38e;
+
+    border-radius: 12px;
+
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: 0.3s ease;
+
+    color: #51382b;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+
+    text-align: left;
+
+    box-shadow:
+        0 3px 10px rgba(90, 40, 0, 0.035);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Fine sacred accent */
+.toc-grid a::before {
+    content: "";
+
+    flex: 0 0 auto;
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 11px;
+
+    background: #c45c00;
+
+    border-radius: 50%;
 }
 
 .toc-grid a:hover {
     transform: translateY(-3px);
+
     border-color: #c45c00;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0,
+            #ffefd0
+        );
+
+    color: #7d1700;
+
+    box-shadow:
+        0 8px 20px rgba(120, 50, 0, 0.10);
 }
 
-/* ==========================
-   POLICY META INFO
-========================== */
 
-.policy-meta {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
+/* =========================================================
+   BLESSING SECTION
+   ========================================================= */
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
+.policy-blessing {
+    position: relative;
 
-.meta-card {
-    background:rgba(255,255,255,0.9);
-    color:#7a0000;
-    border-radius: 12px;
-    padding: 20px;
+    box-sizing: border-box;
+
+    width: auto;
+
+    max-width: 920px;
+
+    margin: 70px auto 75px;
+
+    padding: 38px 32px;
+
     text-align: center;
-    border: 1px solid rgba(196, 92, 0, 0.15);
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf0 0%,
+            #fff1d3 50%,
+            #fff8e8 100%
+        );
+
+    border: 1px solid #dfbd7b;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(95, 43, 0, 0.08);
+}
+
+
+/* Top ornamental line */
+.policy-blessing::before {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 2px;
+
+    margin: 0 auto 18px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c45c00,
+            #e0a04c,
+            #c45c00,
+            transparent
+        );
+}
+
+
+/* Bottom ornamental line */
+.policy-blessing::after {
+    content: "";
+
+    display: block;
+
+    width: 100px;
+    height: 2px;
+
+    margin: 18px auto 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #c45c00,
+            #e0a04c,
+            #c45c00,
+            transparent
+        );
+}
+
+.policy-blessing p {
+    margin: 0;
+
+    color: #683d27;
+
+    font-size: 20px;
+
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: 0.3s ease;
+
+    line-height: 1.85;
 }
 
-.meta-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+
+/* =========================================================
+   RELATED SPIRITUAL JOURNEY
+   ========================================================= */
+
+.related-links {
+    width: auto;
+
+    max-width: 1220px;
+
+    margin: 72px auto 85px;
+
+    padding: 0 22px;
+
+    text-align: center;
+
+    box-sizing: border-box;
 }
 
+.related-links h2 {
+    margin: 0 0 12px;
+
+    color: #7d1700;
+
+    font-size: 2.15rem;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.related-subtitle {
+    margin: 0 0 36px;
+
+    color: #655349;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   RELATED CARDS
+   ========================================================= */
+
+.related-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin-top: 32px;
+}
+
+.related-card {
+    position: relative;
+
+    box-sizing: border-box;
+
+    display: block;
+
+    min-height: 220px;
+
+    padding: 27px 23px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffefb 0%,
+            #fff8ea 60%,
+            #fff2dc 100%
+        );
+
+    border: 1px solid #dfc18d;
+
+    border-top: 4px solid #dc7620;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    box-shadow:
+        0 7px 20px rgba(80, 35, 0, 0.065);
+
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease;
+}
+
+
+/* Subtle corner detail */
+.related-card::after {
+    content: "✦";
+
+    position: absolute;
+
+    right: 16px;
+    top: 10px;
+
+    color: #d28a35;
+
+    font-size: 13px;
+
+    opacity: 0.65;
+}
+
+.related-card:hover {
+    transform: translateY(-6px);
+
+    border-top-color: #8b1e00;
+
+    box-shadow:
+        0 15px 32px rgba(100, 40, 0, 0.12);
+}
+
+.related-icon {
+    font-size: 40px;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+.related-card h3 {
+    margin: 0 0 11px;
+
+    color: #831c00;
+
+    font-size: 1.38rem;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+.related-card p {
+    margin: 0;
+
+    color: #574d46;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   BANGLA TEXT
+   Helps Bengali remain comfortable without affecting
+   English layout.
+   ========================================================= */
+
+.bn {
+    line-height: 1.95;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .policy-meta {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .toc-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .related-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .policy-section {
+        max-width: 950px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HERO MUST REMAIN VISIBLE */
+    .privacy-hero {
+        display: block !important;
+
+        width: 100% !important;
+
+        height: 250px !important;
+        min-height: 250px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        background-image: url("../images/privacy-hero.webp") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .policy-meta {
+        margin: 24px auto 38px;
+
+        padding: 0 15px;
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .meta-card {
+        padding: 15px;
+
+        font-size: 15px;
+    }
+
+    .policy-section {
+        margin: 38px auto;
+
+        padding: 0 15px;
+    }
+
+    .policy-section h2 {
+        font-size: 1.72rem;
+
+        margin-bottom: 21px;
+
+        padding-bottom: 12px;
+    }
+
+    .policy-section h2::before {
+        font-size: 11px;
+
+        margin-bottom: 2px;
+    }
+
+    .policy-section h2::after {
+        width: 85px;
+
+        margin-top: 9px;
+    }
+
+    .policy-section p {
+        padding: 18px 18px;
+
+        font-size: 18px;
+
+        line-height: 1.9;
+    }
+
+    .toc-grid {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+
+        margin-top: 22px;
+    }
+
+    .toc-grid a {
+        min-height: 52px;
+
+        padding: 12px 14px;
+
+        font-size: 15.5px;
+    }
+
+    .policy-blessing {
+        margin: 55px 15px 60px;
+
+        padding: 30px 20px;
+
+        border-radius: 17px;
+    }
+
+    .policy-blessing p {
+        font-size: 18px;
+
+        line-height: 1.85;
+    }
+
+    .related-links {
+        margin: 58px auto 68px;
+
+        padding: 0 15px;
+    }
+
+    .related-links h2 {
+        font-size: 1.72rem;
+    }
+
+    .related-subtitle {
+        margin-bottom: 28px;
+
+        font-size: 16px;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+
+        margin-top: 25px;
+    }
+
+    .related-card {
+        min-height: auto;
+
+        padding: 24px 20px;
+    }
+
+    .related-card h3 {
+        font-size: 1.28rem;
+    }
+
+    .related-card p {
+        font-size: 16.5px;
+
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .privacy-hero {
+        height: 215px !important;
+        min-height: 215px !important;
+
+        background-position: center center !important;
+    }
+
+    .policy-section {
+        margin: 34px auto;
+    }
+
+    .policy-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .policy-section p {
+        padding: 16px;
+
+        font-size: 17px;
+
+        line-height: 1.85;
+    }
+
+    .toc-grid a {
+        font-size: 15px;
+    }
+
+    .policy-blessing {
+        margin: 48px 15px 55px;
+
+        padding: 27px 17px;
+
+        border-radius: 15px;
+    }
+
+    .policy-blessing p {
+        font-size: 17px;
+    }
+
+    .related-links h2 {
+        font-size: 1.5rem;
+    }
+
+    .related-card {
+        padding: 22px 18px;
+    }
+
+    .related-card p {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .meta-card,
+    .policy-section p,
+    .toc-grid a,
+    .related-card {
+        transition: none;
+    }
+
+    .meta-card:hover,
+    .policy-section p:hover,
+    .toc-grid a:hover,
+    .related-card:hover {
+        transform: none;
+    }
+}
+
+/* =========================================================
+   CONTACT EMAIL BOX
+   ========================================================= */
+
+#contact-information h3 {
+    width: fit-content;
+    max-width: 100%;
+    margin: 25px auto 5px;
+    padding: 16px 30px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #fff8e8,
+        #ffedcc
+    );
+
+    border: 1px solid #e3bd78;
+    border-top: 4px solid #c45c00;
+    border-radius: 14px;
+
+    color: #7a1e00;
+
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    box-shadow:
+        0 6px 18px rgba(100, 45, 0, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+#contact-information h3:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(100, 45, 0, 0.15);
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    #contact-information h3 {
+        width: auto;
+        margin: 22px 10px 5px;
+        padding: 14px 18px;
+
+        font-size: 18px;
+
+        word-break: break-word;
+    }
+}
