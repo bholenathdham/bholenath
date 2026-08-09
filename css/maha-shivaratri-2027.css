@@ -260,3 +260,73 @@ footer > small { color: #aaa; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
+
+
+/* =========================================================
+   DARSHAN CARDS - DESKTOP TEXT FIX
+   Fixes heading/paragraph overlap without changing
+   the rest of the page
+   ========================================================= */
+
+@media (min-width: 821px) {
+
+    .darshan-card {
+        display: block !important;
+        position: relative;
+    }
+
+    .darshan-card .step-number {
+        position: absolute;
+        top: 15px;
+        left: 18px;
+    }
+
+    .darshan-card .icon-medallion {
+        display: grid !important;
+        width: 72px;
+        height: 72px;
+        place-items: center;
+        margin: 0 auto 18px;
+    }
+
+    .darshan-card h3 {
+        display: block !important;
+        width: 100% !important;
+        margin: 0 0 10px !important;
+        padding: 0 !important;
+        text-align: center;
+        clear: both;
+    }
+
+    .darshan-card p {
+        display: block !important;
+        width: 100% !important;
+        margin: 12px 0 0 !important;
+        padding: 0 !important;
+        text-align: center;
+        clear: both;
+    }
+
+    .darshan-card h3 .en,
+    .darshan-card h3 .bn,
+    .darshan-card p .en,
+    .darshan-card p .bn {
+        display: inline;
+    }
+
+    .darshan-card h3 .bn,
+    .darshan-card p .bn {
+        display: none;
+    }
+
+    .lang-bn .darshan-card h3 .en,
+    .lang-bn .darshan-card p .en {
+        display: none !important;
+    }
+
+    .lang-bn .darshan-card h3 .bn,
+    .lang-bn .darshan-card p .bn {
+        display: inline !important;
+    }
+}
+
