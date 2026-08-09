@@ -1,1522 +1,1842 @@
-/* =========================
-   SHIVA PURANA HERO
-========================= */
+/* ==================================================
+   SHIVA PURANA — CLEAN CONSOLIDATED STYLESHEET
+   Drop-in replacement for the supplied page CSS
+   Existing HTML and class names remain unchanged
+================================================== */
 
-.sp-hero{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-    position:relative;
+:root {
+  --sp-maroon: #7a0000;
+  --sp-maroon-dark: #650000;
+  --sp-maroon-soft: #9b1c0f;
+  --sp-saffron: #c45c00;
+  --sp-orange: #d67a15;
+  --sp-gold: #f1bd54;
+  --sp-gold-deep: #d49a21;
+  --sp-gold-pale: #f8e1a8;
+  --sp-ivory: #fffaf4;
+  --sp-cream: #fff7ea;
+  --sp-surface: #fffdf8;
+  --sp-surface-warm: #fff5e4;
+  --sp-text: #333;
+  --sp-muted: #555;
+  --sp-border: #e7d8c6;
+  --sp-sacred-border: rgba(185, 101, 16, 0.3);
+  --sp-shadow-soft: 0 10px 25px rgba(91, 48, 13, 0.08);
+  --sp-shadow-medium: 0 16px 36px rgba(91, 48, 13, 0.12);
+  --sp-shadow-hover: 0 22px 46px rgba(91, 48, 13, 0.17);
+  --sp-sacred-surface:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.16) 0,
+      rgba(232, 171, 67, 0) 35%
+    ),
+    linear-gradient(145deg, #ffffff 0%, #fffaf1 60%, #fff5e4 100%);
+  --sp-sacred-line: linear-gradient(
+    90deg,
+    var(--sp-maroon) 0%,
+    var(--sp-saffron) 34%,
+    var(--sp-gold) 50%,
+    var(--sp-saffron) 66%,
+    var(--sp-maroon) 100%
+  );
 }
 
-.sp-hero img{
-    width:100%;
-    display:block;
-    border-radius:20px;
+body {
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(241, 189, 84, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(circle at 92% 45%, rgba(122, 0, 0, 0.035), transparent 32%),
+    #fffaf4;
 }
 
+/* ==================================================
+   HERO
+================================================== */
 
-/* =========================
-   INTRO
-========================= */
-
-.sp-intro{
-    max-width:1200px;
-    margin:20px auto;
-    padding:0 20px;
-    text-align:center;
-    background:#fffaf4;
-    border-radius:18px;
-    box-shadow:0 6px 18px rgba(0,0,0,.05);
+.sp-hero {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
 }
 
-.sp-intro h1{
-    color:#7a0000;
-    font-size:2.4rem;
-    font-weight:700;
-    text-align:center;
-    margin-bottom:25px;
-    margin-top:0;
-    line-height:1.3;
+.sp-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  border: 2px solid rgba(212, 154, 33, 0.52);
+  box-shadow:
+    0 18px 42px rgba(91, 48, 13, 0.16),
+    0 0 0 5px rgba(255, 250, 238, 0.92);
 }
 
-.sp-intro h2{
-    font-size:42px;
-    color:#7a0000;
-   margin-top:0px;
-   margin-bottom:-20px;
+/* ==================================================
+   INTRODUCTION
+================================================== */
+
+.sp-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 36px 28px 10px;
+  text-align: center;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-radius: 24px;
+  box-shadow: var(--sp-shadow-medium);
 }
 
-.sp-intro h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #7a0000;
-    margin: 5px auto;
-    border-radius: 50px;
+.sp-intro::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--sp-sacred-line);
 }
 
-.sp-intro p{
-    font-size:20px;
-    font-weight:normal;
-    line-height:2;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px 30px;
-    background:#fff;
-    border-radius:25px;
-    border-left:5px solid #c45c00;
-    border-right:1px solid #c45c00;
-    border-top:1px solid #c45c00;
-    border-bottom:1px solid #c45c00;
+.sp-intro::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -95px;
+  right: -85px;
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(196, 92, 0, 0.08);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 28px rgba(196, 92, 0, 0.025),
+    0 0 0 58px rgba(196, 92, 0, 0.018);
+  pointer-events: none;
 }
 
-@media(max-width:768px){
-
-.sp-intro p{
-margin:30px auto;
-padding:25px 18px;
-font-size:18px;
-line-height:1.8;
+.sp-intro h1 {
+  margin: 0 0 25px;
+  color: var(--sp-maroon);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
 }
 
+.sp-intro h2 {
+  margin: 0 0 -20px;
+  color: var(--sp-maroon);
+  font-size: 42px;
+  line-height: 1.3;
+  text-align: center;
 }
 
-/* =========================
-   SAMHITA SECTION
-========================= */
-
-.sp-samhitas{
-    max-width:1300px;
-    margin:80px auto;
-    padding:0 20px;
-}
-
-.sp-samhitas h2{
-    text-align:center;
-    font-size:42px;
-    color:#7a0000;
-    margin-bottom:40px;
-}
-
-.sp-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-}
-
-.sp-card{
-    background:#fff;
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-    text-decoration:none;
-    color:#222;
-    border-top:5px solid #c45c00;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-    font-size:22px;
-    font-weight:normal;
-}
-
-.sp-card:hover{
-    transform:translateY(-6px);
-}
-
-.sp-samhitas p{
-    text-align:center;
-    font-weight:normal;
-    font-size:20px;
-}
-
-/* =========================
-   BENEFITS
-========================= */
-
-.sp-benefits{
-    max-width:1200px;
-    margin:30px auto;
-    padding:0 20px;
-    text-align:center;
-}
-
-.sp-benefits h2{
-    font-size:42px;
-    color:#7a0000;
-    margin-bottom:25px;
-}
-
-.sp-benefits h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #7a0000;
-    margin: 5px auto;
-    border-radius: 50px;
-}
-
-.sp-benefit-box{
-    max-width:1200px;
-    background:#fff;
-    border-radius:24px;
-    padding:50px;
-    border-top:5px solid #c45c00;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.sp-benefit-box p{
-    font-size:20px;
-    line-height:2;
-}
-
-/* =========================
-   INVITATION
-========================= */
-
-.sp-invitation{
-    max-width:1200px;
-    margin:80px auto;
-    padding:60px 30px;
-    text-align:center;
-    border-radius:25px;
-    color:#fff;
-
-    background:linear-gradient(
-        135deg,
-        #c45c00,
-        #f4c542
-    );
-}
-
-.sp-invitation h2{
-    font-size:42px;
-    margin-bottom:20px;
-}
-
-.sp-invitation p{
-    font-size:22px;
-    line-height:1.8;
-    max-width:900px;
-    margin:auto;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-   .sp-hero{
-        padding:0 12px;
-        margin:20px auto;
-    }
-
-    .sp-badge{
-        padding:18px;
-        width:85%;
-    }
-
-    .sp-badge h1{
-        font-size:28px;
-    }
-
-    .sp-badge p{
-        font-size:15px;
-    }
-
-    .sp-intro h2,
-    .sp-samhitas h2,
-    .sp-benefits h2,
-    .sp-invitation h2{
-        font-size:30px;
-    }
-
-    .sp-intro p,
-    .sp-benefit-box p,
-    .sp-invitation p{
-        font-size:18px;
-        line-height:1.8;
-    }
-
-    .sp-grid{
-        grid-template-columns:1fr;
-    }
-
-    .sp-card{
-        padding:22px;
-        font-size:20px;
-    }
-
-    .sp-benefit-box{
-        padding:30px 20px;
-    }
-
-    .sp-invitation{
-        padding:40px 20px;
-    }
-}
-
-.sp-section{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-.sp-section h2{
-    text-align:center;
-    color:#7a0000;
-    font-size:37px;
-     margin-top:0;
-    margin-bottom:15px;
-}
-
-.sp-section h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #7a0000;
-    margin: 5px auto;
-    border-radius: 50px;
-}
-
-.sp-section p{
-    font-size:20px;
-    line-height:2;
-    text-align:center;
-    max-width:1000px;
-    margin:auto;
-
- }
-
-.sp-samhita-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin:40px 0;
-}
-
-.sp-samhita-list div{
-    background:#fff;
-    padding:18px;
-    border-radius:14px;
-    border: 1px solid #c45c00;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.sp-benefits li{
-    margin-bottom:15px;
-    font-size:20px;
-}
-
-.sp-cta{
-    max-width:1200px;
-    margin:80px auto;
-    padding:60px 30px;
-    text-align:center;
-    border-radius:25px;
-    background:linear-gradient(135deg,#c45c00,#f4c542);
-    color:#fff;
-}
-
-.sp-button{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 30px;
-    background:#fff;
-    color:#c45c00;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:700;
-}
-
-.sp-info-card{
-
-    max-width:900px;
-    margin:25px auto 0;
-
-    background:#fff;
-
-    padding:40px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    border-top:4px solid #c45c00;
-}
-
-.sp-info-icon{
-
-    font-size:60px;
-
-    margin-bottom:15px;
-}
-
-.sp-feature-card{
-
-    background:#fff;
-
-    padding:25px 20px;
-
-    border-radius:20px;
-
-    border:1px solid #c45c00;
-
-    text-align:center;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.sp-feature-card h3{
-    font-size:18px;
-    margin-bottom:10px;
-}
-
-.sp-feature-card p{
-    font-size:16px;
-    line-height:1.7;
-}
-
-.sp-feature-card:hover{
-
-transform:translateY(-6px);
-
-border-color:#c78b00;
-
-}
-
-.sp-feature-icon{
-
-    font-size:50px;
-
-    margin-bottom:15px;
-}
-
-.sp-structure-box{
-
-    max-width:900px;
-
-    margin:40px auto;
-
-    background:#fff;
-
-    border-left:5px solid #c45c00;
-    border-top:1px solid #c45c00;
-    border-right:1px solid #c45c00;
-    border-bottom:1px solid #c45c00;
-
-    padding:30px;
-
-    border-radius:15px;
-
-    text-align:center;
-}
-
-.sp-benefit-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:20px;
-
-    margin-top:40px;
-}
-
-.sp-benefit-card{
-
-    background:#fff;
-
-    padding:30px 20px;
-
-    border-radius:18px;
-
-    border:1px solid #c45c00;
-
-    text-align:center;
-
-    font-size:40px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-    transition:.3s;
-}
-
-.sp-benefit-card:hover{
-
-    transform:translateY(-5px);
-}
-
-.sp-benefit-card h3{
-
-    font-size:20px;
-
-    margin-top:15px;
-}
-
-@media(max-width:768px){
-
-    .sp-feature-grid,
-    .sp-benefit-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .sp-info-card{
-
-        padding:25px;
-    }
-}
-
-/* ==========================
-PREMIUM FAQ
-========================== */
-
-.sp-faq-item{
-
-background:#fff;
-
-padding:35px;
-
-margin:30px auto;
-
-border-radius:22px;
-
-border:1px solid #edd9ba;
-
-border-left:6px solid #c45c00;
-
-box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-transition:.35s;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.sp-faq-item:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 18px 40px rgba(0,0,0,.12);
-
-border-left-color:#8b0000;
-
-}
-
-.sp-faq-item h3{
-
-    color:#7a0000;
-
-    font-size:24px;
-
-    margin-bottom:15px;
-
-    border-left:5px solid #d4a017;
-
-    padding-left:15px;
-
-}
-
-.sp-faq-item p{
-
-font-size:19px;
-
-line-height:2;
-
-color:#555;
-
-margin:0;
-
-text-align:left;
-
-max-width:100%;
-
-}
-
-.sp-faq-item::after{
-
-content:"";
-
-display:block;
-
-width:70px;
-
-height:3px;
-
-background:#c45c00;
-
-margin-top:22px;
-
-border-radius:5px;
-
-}
-
-@media(max-width:768px){
-
-.sp-faq-item{
-
-padding:25px;
-
-}
-
-.sp-faq-item h3{
-
-font-size:22px;
-
-}
-
-.sp-faq-item p{
-
-font-size:17px;
-
-line-height:1.9;
-
-}
-
-}
-
-/* ===================================
-CHAPTER NAVIGATION
-=================================== */
-
-.sp-chapter-nav{
-
-    max-width:1200px;
-
-    margin:80px auto;
-
-    padding:45px;
-
-    background:#fff;
-
-   border:1px solid #c45c00;
-
-    border-radius:25px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-    text-align:center;
-}
-
-.sp-chapter-nav h2{
-
-    color:#8b0000;
-
-    font-size:34px;
-
-    margin-bottom:10px;
-}
-
+.sp-intro h2::after,
+.sp-benefits h2::after,
+.sp-section h2::after,
 .sp-chapter-nav h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 4px;
-    background: #7a0000;
-    margin: 5px auto;
-    border-radius: 50px;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 9px auto 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--sp-saffron),
+    var(--sp-gold),
+    var(--sp-saffron),
+    transparent
+  );
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(196, 92, 0, 0.18);
 }
 
-.sp-chapter-nav p{
-
-    max-width:700px;
-
-    margin:0 auto 40px;
-
-    font-size:18px;
-
-    line-height:1.8;
-}
-
-.sp-nav-grid{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:25px;
-}
-
-.sp-nav-card{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    text-decoration:none;
-
-    background:#fff8ef;
-
-    border:2px solid #f0d6b6;
-
-    border-radius:20px;
-
-    padding:28px;
-
-    transition:.35s;
-}
-
-.sp-nav-card:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:0 15px 30px rgba(0,0,0,.12);
-
-    border-color:#c45c00;
-}
-
-.sp-nav-card h3{
-
-    color:#8b0000;
-
-    margin-bottom:8px;
-
-    font-size:22px;
-}
-
-.sp-nav-card p{
-
-    margin:0;
-
-    font-size:17px;
-
-    color:#444;
-}
-
-.sp-nav-arrow{
-
-    font-size:38px;
-
-    color:#c45c00;
-
-    flex-shrink:0;
-}
-
-.sp-prev{
-
-    text-align:left;
-}
-
-.sp-next{
-
-    text-align:right;
-}
-
-@media(max-width:768px){
-
-.sp-nav-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.sp-nav-card{
-
-padding:22px;
-
-}
-
-.sp-nav-arrow{
-
-font-size:32px;
-
-}
-
-.sp-chapter-nav{
-
-padding:30px 20px;
-
-}
-
+.sp-intro p {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(196, 92, 0, 0.36);
+  border-left-width: 5px;
+  border-radius: 25px;
+  box-shadow:
+    0 10px 24px rgba(91, 48, 13, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2;
 }
 
 /* ==================================================
-SACRED CHAPTERS
+   SAMHITA CARDS
 ================================================== */
 
-.sp-chapter-grid{
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    margin-top:40px;
-
+.sp-samhitas {
+  max-width: 1300px;
+  margin: 80px auto;
+  padding: 0 20px;
 }
 
-.sp-chapter-card{
-    background:#fff;
-    border:1px solid #d67a15;
-    border-radius:18px;
-    padding:28px 24px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.06);
-    transition:.3s ease;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-    min-height:280px;
-    position:relative;
+.sp-samhitas h2 {
+  margin-bottom: 40px;
+  color: var(--sp-maroon);
+  font-size: 42px;
+  text-align: center;
 }
 
-.sp-chapter-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 30px rgba(0,0,0,.12);
+.sp-samhitas p {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
 }
 
-/* Badge */
-
-.chapter-status{
-    display:inline-block;
-    padding:8px 16px;
-    border-radius:30px;
-    font-size:14px;
-    font-weight:600;
-    margin-bottom:15px;
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
 }
 
-.completed{
-    background:#e7f8ec;
-    color:#198754;
+.sp-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 30px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-radius: 22px;
+  box-shadow:
+    var(--sp-shadow-soft),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.86);
+  color: #222;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.coming-soon{
-    background:#fff4df;
-    color:#c56a00;
+.sp-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--sp-sacred-line);
 }
 
-/* Chapter Number */
-
-.sp-chapter-card h3{
-    font-size:2rem;
-    color:#7a0000;
-    margin:10px 0 15px;
-    font-weight:700;
+.sp-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -52px;
+  right: -52px;
+  width: 125px;
+  height: 125px;
+  border: 1px solid rgba(196, 92, 0, 0.09);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 18px rgba(196, 92, 0, 0.026),
+    0 0 0 38px rgba(196, 92, 0, 0.018);
+  pointer-events: none;
 }
 
-/* Chapter Title */
-
-.sp-chapter-card p{
-    font-size:1.15rem;
-    line-height:1.7;
-    color:#333;
-    margin-bottom:25px;
-    flex-grow:1;
+.sp-card > * {
+  position: relative;
+  z-index: 1;
 }
 
-/* Read Button */
-
-.sp-chapter-card a{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:12px 22px;
-
-    background:linear-gradient(
-        135deg,
-        #b85c00,
-        #d67a15
-    );
-
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    font-size:15px;
-
-    border-radius:50px;
-
-    transition:.3s ease;
+.sp-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(196, 92, 0, 0.62);
+  box-shadow:
+    var(--sp-shadow-hover),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.92);
 }
 
-.sp-chapter-card a:hover{
-    color:#fff;
-    transform:scale(1.05);
-    background:linear-gradient(
-        135deg,
-        #9a4c00,
-        #c76800
-    );
+.sp-grid .sp-card h3 {
+  margin: 18px 0 0;
+  color: var(--sp-maroon);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
 }
 
-/* Decorative Top Line */
-
-.sp-chapter-card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-
-    background:linear-gradient(
-        90deg,
-        #d67a15,
-        #ffb347,
-        #d67a15
-    );
+.sp-card > .sp-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 16px;
+  background: radial-gradient(
+    circle,
+    rgba(248, 225, 168, 0.68),
+    rgba(255, 250, 238, 0.48) 65%,
+    transparent 66%
+  );
+  border: 1px solid rgba(212, 154, 33, 0.3);
+  border-radius: 50%;
+  box-shadow:
+    0 8px 20px rgba(91, 48, 13, 0.08),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.5);
 }
-
-.sp-chapter-card::after{
-    content:"ॐ";
-    position:absolute;
-    right:15px;
-    top:50px;
-    font-size:70px;
-    opacity:.05;
-    pointer-events:none;
-}
-
-.sp-corner-icon{
-
-    position:absolute;
-
-    top:18px;
-
-    right:18px;
-
-    width:64px;
-
-    height:64px;
-
-    color:#c88b00;
-
-    font-size:22px;
-
-    opacity:.18;
-
-    pointer-events:none;
-
-}
-
-.sp-chapter-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#d48a00;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-
-}
-
-.sp-chapter-number{
-
-    width:65px;
-
-    height:65px;
-
-    border-radius:50%;
-
-    background:#8b0000;
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:30px;
-
-    font-weight:bold;
-
-    margin-bottom:20px;
-
-}
-
-.sp-chapter-card h3{
-
-    color:#8b0000;
-
-    font-size:26px;
-
-    margin-bottom:15px;
-
-}
-
-.sp-chapter-card p{
-
-    color:#555;
-
-    font-size:17px;
-
-    line-height:1.8;
-
-    flex-grow:1;
-
-}
-
-.sp-read{
-
-    margin-top:25px;
-
-    display:inline-block;
-
-    font-size:17px;
-
-    font-weight:600;
-
-    color:#c96d00;
-
-    transition:.3s;
-
-}
-
-.sp-chapter-card:hover .sp-read{
-
-    color:#8b0000;
-
-    transform:translateX(6px);
-
-}
-
-.sp-section-intro{
-
-    max-width:850px;
-
-    margin:0 auto 45px;
-
-    text-align:center;
-
-    font-size:18px;
-
-    line-height:1.9;
-
-    color:#555;
-
-}
-
-
 
 /* ==================================================
-PHONE
+   GENERAL CONTENT SECTION
 ================================================== */
 
-@media(max-width:768px){
-
-.sp-chapter-grid{
-
-grid-template-columns:1fr;
-
-gap:22px;
-
-}
-
-.sp-chapter-card{
-
-padding:24px;
-
-}
-
-.sp-chapter-number{
-
-width:55px;
-
-height:55px;
-
-font-size:24px;
-
-}
-
-.sp-chapter-card h3{
-
-font-size:22px;
-
-}
-
-.sp-chapter-card p{
-
-font-size:16px;
-
-}
-
-}
-
-.sp-next-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:30px;
-
-margin-top:35px;
-
-}
-
-.sp-next-card{
-
-background:#fff;
-
-padding:28px;
-
-border-radius:18px;
-
-border:2px solid #efe4c8;
-
-text-decoration:none;
-
-transition:.35s;
-
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-.sp-next-card:hover{
-
-transform:translateY(-6px);
-
-border-color:#c78b00;
-
-}
-
-.sp-next-card h3{
-
-color:#8b0000;
-
-margin-bottom:12px;
-
-font-size:22px;
-
-}
-
-.sp-next-card p{
-
-color:#555;
-
-line-height:1.8;
-
-}
-
-@media(max-width:768px){
-
-.sp-next-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-/* ===================================
-SACRED QUOTE
-=================================== */
-
-.sp-quote{
-
-max-width:1100px;
-
-margin:80px auto;
-
-padding:0 20px;
-
-}
-
-.sp-quote-box{
-
-background:linear-gradient(135deg,#8b0000,#c45c00);
-
-padding:60px 40px;
-
-border-radius:25px;
-
-text-align:center;
-
-color:#fff;
-
-box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-}
-
-.sp-quote-box p{
-
-font-size:28px;
-
-line-height:1.8;
-
-font-style:italic;
-
-margin:0;
-
-color:#fff;
-
-}
-
-@media(max-width:768px){
-
-.sp-quote-box{
-
-padding:35px 22px;
-
-}
-
-.sp-quote-box p{
-
-font-size:21px;
-
-}
-
-}
-
-/* ===================================
-NEXT READING
-=================================== */
-
-.sp-next-reading{
-
-max-width:1200px;
-
-margin:90px auto;
-
-padding:0 20px;
-
-text-align:center;
-
-}
-
-.sp-next-reading h2{
-
-font-size:42px;
-
-color:#7a0000;
-
-margin-bottom:18px;
-
-}
-
-/*==================================
-CHAPTER CONTENTS (BOOK STYLE)
-==================================*/
-
-.chapter-list{
-    list-style:none;
-    max-width:700px;
-    margin:35px auto 10px;
-    padding:0;
-}
-
-.chapter-list li{
-    border-bottom:1px solid rgba(196,92,0,.15);
-    padding:16px 0;
-    font-size:1.15rem;
-    font-weight:500;
-    line-height:1.6;
-    transition:.25s;
-}
-
-.chapter-list li:last-child{
-    border-bottom:none;
-}
-
-.chapter-list a{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    text-decoration:none;
-    color:#222;
-    transition:.25s;
-}
-
-.chapter-list a:hover{
-    color:#c45c00;
-    padding-left:8px;
-}
-
-.chapter-list .chapter-number{
-    color:#c45c00;
-    font-weight:700;
-    min-width:38px;
-}
-
-.chapter-list .chapter-title{
-    flex:1;
-    padding-left:14px;
-}
-
-.chapter-list .chapter-arrow{
-    color:#c45c00;
-    font-size:18px;
-    opacity:.6;
-}
-
-.chapter-list a:hover .chapter-arrow{
-    opacity:1;
-    transform:translateX(4px);
-}
-
-/* Mobile */
-
-@media (max-width:768px){
-
-.chapter-list{
-    margin:25px auto;
-}
-
-.chapter-list li{
-    font-size:16px;
-    padding:14px 0;
-}
-
-.chapter-list .chapter-number{
-    min-width:28px;
-}
-
-.chapter-list .chapter-title{
-    padding-left:10px;
-}
-
-.chapter-list .chapter-arrow{
-    font-size:16px;
-}
-
-}
-
-.sp-chapter-text{
-    max-width:1200px;
-    background:#fff;
-    border:1px solid #e7d8c6;
-    border-left:5px solid #c45c00;
-    border-radius:12px;
-
-    padding:30px;
-    margin:0 auto;
-
-    box-shadow:0 6px 18px rgba(0,0,0,.05);
-
-    color:#4d4d4d;
-    font-size:1.05rem;
-    font-weight:400;
-    line-height:2;
-    text-align:justify;
-}
-
-.sp-chapter-text .bn{
-    font-size:1.08rem;
-    line-height:2.1;
-}
-
-@media(max-width:768px){
-
-.sp-chapter-text{
-    padding:20px;
-    font-size:1rem;
-    line-height:1.9;
-}
-
-.sp-chapter-text .bn{
-    font-size:1.03rem;
-}
-
-}
-
-@media(max-width:900px){
-.sp-main-grid{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:600px){
-.sp-main-grid{
-grid-template-columns:1fr;
-}
-}
-
-/* ===================================
-CHAPTER SUB SECTIONS
-=================================== */
-
-.sp-chapter-section{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-.sp-chapter-section h2{
-    text-align:center;
-    font-size:42px;
-    color:#8b0000;
-    margin:0 0 25px;
-    line-height:1.3;
-}
-
-.sp-chapter-section p{
-    font-size:18px;
-    line-height:1.9;
-}
-
-.sp-chapter-section .sp-chapter-text{
-    margin-top:0;
-}
-
-@media(max-width:768px){
-
-.sp-chapter-section{
-    margin:30px auto;
-    padding:0 15px;
-}
-
-.sp-chapter-section h2{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-}
-
-.sp-four-goals-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-    margin-top:40px;
-}
-
-@media(max-width:900px){
-
-.sp-four-goals-grid{
-    grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:600px){
-
-.sp-four-goals-grid{
-    grid-template-columns:1fr;
-}
-
-}
-
-.sp-feature-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-    margin:30px 0;
-}
-
-.sp-feature-card{
-    background:#fff;
-    border-radius:12px;
-    padding:24px;
-    box-shadow:0 4px 12px rgba(0,0,0,.06);
-    transition:.3s;
-}
-
-.sp-feature-card:hover{
-    transform:translateY(-4px);
-}
-
-.sp-feature-card h3{
-    margin:0 0 12px;
-    color:var(--primary-color);
-    font-size:1.2rem;
-}
-
-.sp-feature-card p{
-    margin:0;
-    line-height:1.7;
-}
-
-@media(max-width:768px){
-
-.sp-intro,
-.sp-samhitas,
-.sp-benefits,
-.sp-quote,
-.sp-chapter-nav,
-.sp-next-reading,
-.sp-section,
-.sp-chapter-section{
-margin:35px auto !important;
-}
-
-}
-
-.sp-placeholder-card{
-    opacity:0.85;
-}
-
-/* INFO CARD SECTION */
-
-.sp-info-card-section{
-    padding: 40px 20px;
-}
-
-.sp-info-card{
-    max-width: 1000px;
-    margin: 0 auto;
-    background: linear-gradient(
-        135deg,
-        #fff7ea,
-        #fffdf8
-    );
-    border: 2px solid #e8c48f;
-    border-radius: 18px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-}
-
-.sp-info-icon{
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.sp-info-card h3{
-    color: #c45c00;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-}
-
-.sp-info-card p{
-    max-width: 850px;
-    margin: 0 auto;
+.sp-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.sp-section h2 {
+  margin: 0 0 15px;
+  color: var(--sp-maroon);
+  font-size: 37px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.sp-section p {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+}
+
+.sp-section > .sp-section-intro {
+  max-width: 900px;
+  margin: 0 auto 45px;
+  color: var(--sp-muted);
+  font-size: 18px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.sp-samhita-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.sp-samhita-list div {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-left: 4px solid var(--sp-saffron);
+  border-radius: 16px;
+  box-shadow: var(--sp-shadow-soft);
+  text-align: center;
+}
+
+/* ==================================================
+   INFORMATION, FEATURE AND STRUCTURE CARDS
+================================================== */
+
+.sp-info-card-section {
+  padding: 40px 20px;
+}
+
+.sp-info-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 25px auto 0;
+  padding: 38px 34px 34px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-radius: 24px;
+  box-shadow:
+    var(--sp-shadow-medium),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.86);
+  text-align: center;
+}
+
+.sp-info-card::before,
+.sp-feature-card::before,
+.sp-structure-box::before,
+.sp-benefit-box::before,
+.sp-benefit-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--sp-sacred-line);
+}
+
+.sp-info-card::after,
+.sp-feature-card::after,
+.sp-structure-box::after,
+.sp-benefit-box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -62px;
+  right: -62px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(196, 92, 0, 0.085);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 21px rgba(196, 92, 0, 0.024),
+    0 0 0 44px rgba(196, 92, 0, 0.016);
+  pointer-events: none;
+}
+
+.sp-info-card > *,
+.sp-feature-card > *,
+.sp-structure-box > *,
+.sp-benefit-box > *,
+.sp-benefit-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sp-info-card-section .sp-info-card {
+  margin: 0 auto;
+}
+
+.sp-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 18px;
+  background: radial-gradient(
+    circle,
+    rgba(248, 225, 168, 0.76),
+    rgba(255, 250, 238, 0.44) 67%,
+    transparent 68%
+  );
+  border: 1px solid rgba(212, 154, 33, 0.34);
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(91, 48, 13, 0.1);
+  font-size: 46px;
+  line-height: 1;
+}
+
+.sp-info-card h3 {
+  margin: 0 0 15px;
+  color: var(--sp-maroon);
+  font-size: 1.8rem;
+}
+
+.sp-info-card p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.sp-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.sp-feature-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 32px 26px 28px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-radius: 22px;
+  box-shadow:
+    var(--sp-shadow-soft),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.84);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sp-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(196, 92, 0, 0.62);
+  box-shadow: var(--sp-shadow-hover);
+}
+
+.sp-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  background: radial-gradient(
+    circle,
+    rgba(248, 225, 168, 0.72),
+    rgba(255, 250, 238, 0.46) 66%,
+    transparent 67%
+  );
+  border: 1px solid rgba(212, 154, 33, 0.32);
+  border-radius: 50%;
+  box-shadow: 0 9px 20px rgba(91, 48, 13, 0.09);
+  font-size: 46px;
+  line-height: 1;
+}
+
+.sp-feature-card h3 {
+  margin: 0 0 14px;
+  color: var(--sp-maroon);
+  font-size: 1.25rem;
+}
+
+.sp-feature-card p {
+  max-width: none;
+  margin: 0;
+  color: var(--sp-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.sp-structure-box {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 36px 32px 32px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-left: 5px solid var(--sp-saffron);
+  border-radius: 20px;
+  box-shadow: var(--sp-shadow-soft);
+  text-align: center;
+}
+
+/* ==================================================
+   SPIRITUAL BENEFITS
+================================================== */
+
+.sp-benefits {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.sp-benefits h2 {
+  margin-bottom: 25px;
+  color: var(--sp-maroon);
+  font-size: 42px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.sp-benefits li {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.sp-benefit-box {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1200px;
+  padding: 50px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-radius: 24px;
+  box-shadow: var(--sp-shadow-medium);
+}
+
+.sp-benefit-box p {
+  font-size: 20px;
+  line-height: 2;
+}
+
+.sp-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+.sp-four-goals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+.sp-benefit-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  min-height: 245px;
+  padding: 36px 20px 28px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-radius: 22px;
+  box-shadow: var(--sp-shadow-soft);
+  font-size: 44px;
+  line-height: 1;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sp-benefit-card::after {
+  content: "";
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  width: 110px;
+  height: 110px;
+  border: 1px solid rgba(196, 92, 0, 0.08);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(196, 92, 0, 0.025);
+  pointer-events: none;
+}
+
+.sp-benefit-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(196, 92, 0, 0.6);
+  box-shadow: var(--sp-shadow-hover);
+}
+
+.sp-benefit-card h3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 64px;
+  margin: 28px 0 0;
+  color: var(--sp-maroon);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.sp-benefit-card p {
+  max-width: none;
+  margin: 8px 0 0;
+  color: var(--sp-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/*
+   The Māhātmya landing page uses .sp-grid and .sp-card for
+   the four spiritual-benefit cards. These scoped rules give
+   their icons and one-line/two-line titles equal layout rows.
+*/
+
+.sp-benefits .sp-grid {
+  align-items: stretch;
+}
+
+.sp-benefits .sp-grid .sp-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 92px minmax(64px, auto);
+  align-content: center;
+  align-items: start;
+  justify-items: center;
+  min-width: 0;
+  min-height: 245px;
+  padding: 32px 22px 27px;
+}
+
+.sp-benefits .sp-grid .sp-card .sp-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 16px;
+  font-size: 46px;
+  line-height: 1;
+}
+
+.sp-benefits .sp-grid .sp-card h3 {
+  width: 100%;
+  min-height: 64px;
+  margin: 0;
+  color: var(--sp-maroon);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.sp-benefits .sp-grid .sp-card h3:not(.hidden) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ==================================================
+   INVITATION AND CALL TO ACTION
+================================================== */
+
+.sp-invitation,
+.sp-cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 60px 30px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 225, 151, 0.24),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(255, 198, 85, 0.18),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #5b0000 0%, #8b1600 44%, #c45c00 100%);
+  border: 1px solid rgba(241, 189, 84, 0.68);
+  border-radius: 25px;
+  box-shadow:
+    0 22px 48px rgba(91, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 233, 183, 0.16);
+  color: #fff;
+  text-align: center;
+}
+
+.sp-invitation::before,
+.sp-cta::before,
+.sp-quote-box::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 225, 151, 0.14);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 34px rgba(255, 225, 151, 0.04),
+    0 0 0 72px rgba(255, 225, 151, 0.026);
+  pointer-events: none;
+}
+
+.sp-invitation h2 {
+  margin-bottom: 20px;
+  font-size: 42px;
+}
+
+.sp-invitation p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+.sp-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #fffdf8, #ffe5aa);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50px;
+  box-shadow: 0 10px 24px rgba(69, 0, 0, 0.22);
+  color: var(--sp-maroon);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sp-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(69, 0, 0, 0.28);
+}
+
+/* ==================================================
+   PREMIUM FAQ
+================================================== */
+
+.sp-faq-item {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin: 30px auto;
+  padding: 35px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.13),
+      transparent 31%
+    ),
+    linear-gradient(145deg, #fff 0%, #fffaf2 100%);
+  border: 1px solid var(--sp-sacred-border);
+  border-left: 6px solid var(--sp-saffron);
+  border-radius: 22px;
+  box-shadow: var(--sp-shadow-soft);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.sp-faq-item:hover {
+  transform: translateY(-7px);
+  border-left-color: #8b0000;
+  box-shadow: var(--sp-shadow-hover);
+}
+
+.sp-faq-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--sp-sacred-line);
+}
+
+.sp-faq-item h3 {
+  margin: 0 0 15px;
+  padding-left: 15px;
+  border-left: 5px solid var(--sp-gold-deep);
+  color: var(--sp-maroon);
+  font-size: 24px;
+}
+
+.sp-faq-item p {
+  max-width: 100%;
+  margin: 0;
+  color: var(--sp-muted);
+  font-size: 19px;
+  line-height: 2;
+  text-align: left;
+}
+
+.sp-faq-item::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-top: 22px;
+  background: linear-gradient(
+    90deg,
+    var(--sp-maroon),
+    var(--sp-saffron),
+    var(--sp-gold)
+  );
+  border-radius: 5px;
+}
+
+/* ==================================================
+   CHAPTER NAVIGATION
+================================================== */
+
+.sp-chapter-nav {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 45px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-radius: 25px;
+  box-shadow: var(--sp-shadow-medium);
+  text-align: center;
+}
+
+.sp-chapter-nav::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--sp-sacred-line);
+}
+
+.sp-chapter-nav::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -105px;
+  right: -95px;
+  width: 235px;
+  height: 235px;
+  border: 1px solid rgba(196, 92, 0, 0.085);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 30px rgba(196, 92, 0, 0.022),
+    0 0 0 64px rgba(196, 92, 0, 0.014);
+  pointer-events: none;
+}
+
+.sp-chapter-nav h2 {
+  margin: 0 0 10px;
+  color: #8b0000;
+  font-size: 34px;
+  text-align: center;
+}
+
+.sp-chapter-nav > p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.sp-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.sp-nav-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-left: 5px solid var(--sp-saffron);
+  border-radius: 20px;
+  box-shadow: var(--sp-shadow-soft);
+  text-decoration: none;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.sp-nav-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(196, 92, 0, 0.62);
+  border-left-color: var(--sp-maroon);
+  box-shadow: var(--sp-shadow-hover);
+}
+
+.sp-nav-card::before,
+.sp-next-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--sp-sacred-line);
+}
+
+.sp-nav-card::after,
+.sp-next-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -46px;
+  right: -46px;
+  width: 112px;
+  height: 112px;
+  border: 1px solid rgba(196, 92, 0, 0.08);
+  border-radius: 50%;
+  box-shadow: 0 0 0 17px rgba(196, 92, 0, 0.02);
+  pointer-events: none;
+}
+
+.sp-nav-card > *,
+.sp-next-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sp-nav-card h3 {
+  margin: 0 0 8px;
+  color: #8b0000;
+  font-size: 22px;
+}
+
+.sp-nav-card p {
+  margin: 0;
+  color: #444;
+  font-size: 17px;
+}
+
+.sp-nav-arrow {
+  flex-shrink: 0;
+  color: var(--sp-saffron);
+  font-size: 38px;
+}
+
+.sp-prev {
+  text-align: left;
+}
+
+.sp-next {
+  text-align: right;
+}
+
+.sp-nav-grid .sp-nav-card:first-child {
+  text-align: left;
+}
+
+.sp-nav-grid .sp-nav-card:last-child {
+  text-align: right;
+}
+
+/* ==================================================
+   PREMIUM CHAPTER CARDS
+================================================== */
+
+.sp-chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+  align-items: stretch;
+}
+
+.sp-chapter-grid .sp-chapter-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  align-items: start;
+  justify-items: stretch;
+  justify-content: stretch;
+  min-width: 0;
+  min-height: 320px;
+  padding: 28px 26px 26px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.18) 0,
+      rgba(232, 171, 67, 0) 36%
+    ),
+    linear-gradient(145deg, #fff 0%, #fffaf1 58%, #fff5e4 100%);
+  border: 1px solid rgba(185, 101, 16, 0.28);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 30px rgba(91, 48, 13, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+  text-align: center;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.sp-chapter-grid .sp-chapter-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--sp-maroon) 0%,
+    var(--sp-saffron) 35%,
+    var(--sp-gold) 50%,
+    var(--sp-saffron) 65%,
+    var(--sp-maroon) 100%
+  );
+}
+
+.sp-chapter-grid .sp-chapter-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -48px;
+  right: -56px;
+  width: 135px;
+  height: 135px;
+  border: 1px solid rgba(196, 92, 0, 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 18px rgba(196, 92, 0, 0.035),
+    0 0 0 38px rgba(196, 92, 0, 0.025);
+  pointer-events: none;
+}
+
+.sp-chapter-grid .sp-chapter-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(196, 92, 0, 0.65);
+  box-shadow:
+    0 24px 50px rgba(91, 48, 13, 0.16),
+    0 8px 18px rgba(196, 92, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+
+.sp-chapter-grid .chapter-status {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  width: auto;
+  margin: 0 0 25px;
+  padding: 7px 13px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+.sp-chapter-grid .chapter-status.completed {
+  color: #13733e;
+  background: linear-gradient(135deg, #effbf3, #ddf4e5);
+  border: 1px solid rgba(25, 135, 84, 0.2);
+}
+
+.sp-chapter-grid .chapter-status.coming-soon {
+  color: #a55200;
+  background: linear-gradient(135deg, #fff9eb, #ffedca);
+  border: 1px solid rgba(197, 106, 0, 0.22);
+}
+
+.sp-chapter-grid .sp-chapter-card h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 18px;
+  padding: 0;
+  color: #8b0000;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.sp-chapter-grid .sp-chapter-card h3::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: linear-gradient(
+    90deg,
+    var(--sp-saffron),
+    var(--sp-gold),
+    var(--sp-saffron)
+  );
+  border-radius: 20px;
+}
+
+.sp-chapter-grid .sp-chapter-card > p {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: none;
+  margin: 0 0 26px;
+  padding: 0 5px;
+  color: #3f352d;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.65;
+  text-align: center;
+}
+
+.sp-chapter-grid .sp-chapter-card > a {
+  position: relative;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: stretch;
+  gap: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 20px;
+  background: linear-gradient(
+    135deg,
+    var(--sp-maroon) 0%,
+    #a32900 48%,
+    var(--sp-saffron) 100%
+  );
+  border: 1px solid rgba(122, 0, 0, 0.15);
+  border-radius: 14px;
+  box-shadow:
+    0 8px 18px rgba(122, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.sp-chapter-grid .sp-chapter-card > a::after {
+  content: "→";
+  display: inline-block;
+  font-size: 19px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.sp-chapter-grid .sp-chapter-card > a:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    var(--sp-maroon-dark) 0%,
+    #921f00 45%,
+    #b95300 100%
+  );
+  box-shadow:
+    0 12px 24px rgba(122, 0, 0, 0.23),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.sp-chapter-grid .sp-chapter-card > a:hover::after {
+  transform: translateX(5px);
+}
+
+.sp-chapter-grid .sp-chapter-card > a:focus-visible {
+  outline: 3px solid rgba(212, 160, 23, 0.55);
+  outline-offset: 4px;
+}
+
+.sp-corner-icon {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 64px;
+  height: 64px;
+  color: #c88b00;
+  font-size: 22px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.sp-chapter-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 20px;
+  background: #8b0000;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.sp-read {
+  display: inline-block;
+  margin-top: 25px;
+  color: #c96d00;
+  font-size: 17px;
+  font-weight: 600;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.sp-chapter-card:hover .sp-read {
+  transform: translateX(6px);
+  color: #8b0000;
+}
+
+.sp-placeholder-card {
+  opacity: 0.85;
+}
+
+/* ==================================================
+   NEXT CARDS
+================================================== */
+
+.sp-next-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.sp-next-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 28px;
+  background: var(--sp-sacred-surface);
+  border: 1px solid var(--sp-sacred-border);
+  border-left: 5px solid var(--sp-saffron);
+  border-radius: 20px;
+  box-shadow: var(--sp-shadow-soft);
+  text-decoration: none;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.sp-next-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(196, 92, 0, 0.62);
+  border-left-color: var(--sp-maroon);
+  box-shadow: var(--sp-shadow-hover);
+}
+
+.sp-next-card h3 {
+  margin: 0 0 12px;
+  color: #8b0000;
+  font-size: 22px;
+}
+
+.sp-next-card p {
+  margin: 0;
+  color: var(--sp-muted);
+  line-height: 1.8;
+}
+
+/* ==================================================
+   SACRED QUOTE
+================================================== */
+
+.sp-quote {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.sp-quote-box {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 60px 40px;
+  background:
+    radial-gradient(
+      circle at 12% 24%,
+      rgba(255, 225, 151, 0.2),
+      transparent 27%
+    ),
+    linear-gradient(135deg, #560000 0%, #8b1200 48%, #c45c00 100%);
+  border: 1px solid rgba(241, 189, 84, 0.66);
+  border-radius: 25px;
+  box-shadow:
+    0 20px 44px rgba(91, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 233, 183, 0.14);
+  color: #fff;
+  text-align: center;
+}
+
+.sp-quote-box p {
+  margin: 0;
+  color: #fff;
+  font-size: 28px;
+  font-style: italic;
+  line-height: 1.8;
+}
+
+/* ==================================================
+   NEXT READING
+================================================== */
+
+.sp-next-reading {
+  max-width: 1200px;
+  margin: 90px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.sp-next-reading h2 {
+  margin-bottom: 18px;
+  color: var(--sp-maroon);
+  font-size: 42px;
+  text-align: center;
+}
+
+/* ==================================================
+   CHAPTER CONTENT LIST
+================================================== */
+
+.chapter-list {
+  max-width: 700px;
+  margin: 35px auto 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.chapter-list li {
+  margin-bottom: 10px;
+  padding: 15px 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.88),
+    rgba(255, 247, 232, 0.88)
+  );
+  border: 1px solid rgba(196, 92, 0, 0.16);
+  border-left: 4px solid rgba(196, 92, 0, 0.62);
+  border-radius: 12px;
+  box-shadow: 0 5px 14px rgba(91, 48, 13, 0.045);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+  transition:
+    padding 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.chapter-list li:last-child {
+  margin-bottom: 0;
+}
+
+.chapter-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #222;
+  text-decoration: none;
+  transition:
+    color 0.25s ease,
+    padding 0.25s ease;
+}
+
+.chapter-list a:hover {
+  padding-left: 6px;
+  color: var(--sp-saffron);
+}
+
+.chapter-list li:hover {
+  border-color: rgba(196, 92, 0, 0.4);
+  border-left-color: var(--sp-maroon);
+  box-shadow: 0 9px 20px rgba(91, 48, 13, 0.08);
+}
+
+.chapter-list .chapter-number {
+  min-width: 38px;
+  color: var(--sp-saffron);
+  font-weight: 700;
+}
+
+.chapter-list .chapter-title {
+  flex: 1;
+  padding-left: 14px;
+}
+
+.chapter-list .chapter-arrow {
+  color: var(--sp-saffron);
+  font-size: 18px;
+  opacity: 0.6;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.chapter-list a:hover .chapter-arrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+/* ==================================================
+   CHAPTER TEXT AND SUBSECTIONS
+================================================== */
+
+.sp-chapter-text {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 34px 32px 30px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.1),
+      transparent 28%
+    ),
+    linear-gradient(145deg, #fff 0%, #fffdf9 65%, #fff9ef 100%);
+  border: 1px solid var(--sp-sacred-border);
+  border-left: 5px solid var(--sp-saffron);
+  border-radius: 18px;
+  box-shadow:
+    var(--sp-shadow-soft),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.78);
+  color: #4d4d4d;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 2;
+  text-align: justify;
+}
+
+.sp-chapter-text::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--sp-sacred-line);
+}
+
+.sp-chapter-text::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -66px;
+  right: -60px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(196, 92, 0, 0.07);
+  border-radius: 50%;
+  box-shadow: 0 0 0 22px rgba(196, 92, 0, 0.018);
+  pointer-events: none;
+}
+
+.sp-chapter-text > * {
+  position: relative;
+  z-index: 1;
+}
+
+.sp-section .sp-chapter-text > p,
+.sp-chapter-section .sp-chapter-text > p {
+  max-width: none;
+  margin: 0 0 1.35em;
+  text-align: left;
+}
+
+.sp-section .sp-chapter-text > p:last-child,
+.sp-chapter-section .sp-chapter-text > p:last-child {
+  margin-bottom: 0;
+}
+
+.sp-chapter-text .bn {
+  font-size: 1.08rem;
+  line-height: 2.1;
+}
+
+.sp-chapter-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.sp-chapter-section h2 {
+  margin: 0 0 25px;
+  color: #8b0000;
+  font-size: 42px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.sp-chapter-section p {
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.sp-chapter-section .sp-chapter-text {
+  margin-top: 0;
+}
+
+/* ==================================================
+   RESPONSIVE — TABLET
+================================================== */
+
+@media (max-width: 1024px) {
+  .sp-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sp-chapter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sp-four-goals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sp-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==================================================
+   RESPONSIVE — MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+  .sp-hero {
+    margin: 20px auto;
+    padding: 0 12px;
+  }
+
+  .sp-badge {
+    width: 85%;
+    padding: 18px;
+  }
+
+  .sp-badge h1 {
+    font-size: 28px;
+  }
+
+  .sp-badge p {
+    font-size: 15px;
+  }
+
+  .sp-intro,
+  .sp-samhitas,
+  .sp-benefits,
+  .sp-quote,
+  .sp-chapter-nav,
+  .sp-next-reading,
+  .sp-section,
+  .sp-chapter-section {
+    margin: 35px auto !important;
+  }
+
+  .sp-intro h2,
+  .sp-samhitas h2,
+  .sp-benefits h2,
+  .sp-invitation h2,
+  .sp-next-reading h2 {
+    font-size: 30px;
+  }
+
+  .sp-intro p {
+    margin: 30px auto;
+    padding: 25px 18px;
+    font-size: 18px;
     line-height: 1.8;
+  }
+
+  .sp-benefit-box p,
+  .sp-invitation p {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .sp-grid,
+  .sp-feature-grid,
+  .sp-benefit-grid,
+  .sp-nav-grid,
+  .sp-next-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-card {
+    padding: 22px;
     font-size: 20px;
+  }
+
+  .sp-benefit-box {
+    padding: 30px 20px;
+  }
+
+  .sp-invitation,
+  .sp-cta {
+    padding: 40px 20px;
+  }
+
+  .sp-info-card {
+    padding: 20px;
+  }
+
+  .sp-info-icon {
+    font-size: 36px;
+  }
+
+  .sp-info-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .sp-info-card p {
+    font-size: 18px;
+  }
+
+  .sp-faq-item {
+    padding: 25px;
+  }
+
+  .sp-faq-item h3 {
+    font-size: 22px;
+  }
+
+  .sp-faq-item p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
+  .sp-chapter-nav {
+    padding: 30px 20px;
+  }
+
+  .sp-nav-card {
+    padding: 22px;
+  }
+
+  .sp-nav-arrow {
+    font-size: 32px;
+  }
+
+  .sp-quote-box {
+    padding: 35px 22px;
+  }
+
+  .sp-quote-box p {
+    font-size: 21px;
+  }
+
+  .sp-chapter-text {
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .sp-chapter-text .bn {
+    font-size: 1.03rem;
+  }
+
+  .sp-chapter-section {
+    padding: 0 15px;
+  }
+
+  .sp-chapter-section h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  .chapter-list {
+    margin: 25px auto;
+  }
+
+  .chapter-list li {
+    padding: 14px 0;
+    font-size: 16px;
+  }
+
+  .chapter-list .chapter-number {
+    min-width: 28px;
+  }
+
+  .chapter-list .chapter-title {
+    padding-left: 10px;
+  }
+
+  .chapter-list .chapter-arrow {
+    font-size: 16px;
+  }
 }
 
-/* Mobile */
+@media (max-width: 680px) {
+  .sp-chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 34px;
+  }
 
-@media (max-width:768px){
+  .sp-chapter-grid .sp-chapter-card {
+    min-height: 285px;
+    padding: 25px 21px 22px;
+    border-radius: 20px;
+  }
 
-    .sp-info-card{
-        padding:20px;
-    }
+  .sp-chapter-grid .chapter-status {
+    margin-bottom: 21px;
+    font-size: 12px;
+  }
 
-    .sp-info-icon{
-        font-size:36px;
-    }
+  .sp-chapter-grid .sp-chapter-card h3 {
+    margin-bottom: 16px;
+    font-size: 1.35rem;
+  }
 
-    .sp-info-card h3{
-        font-size:1.4rem;
-    }
+  .sp-chapter-grid .sp-chapter-card > p {
+    margin-bottom: 22px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
-    .sp-info-card p{
-        font-size:20px;
-    }
+  .sp-chapter-grid .sp-chapter-card > a {
+    min-height: 46px;
+    font-size: 14px;
+  }
 }
 
-footer{
-    position:relative;
+@media (max-width: 600px) {
+  .sp-samhita-list,
+  .sp-four-goals-grid,
+  .sp-main-grid {
+    grid-template-columns: 1fr;
+  }
 
-    width:100vw !important;
-    max-width:none !important;
+  .sp-benefit-card {
+    min-height: 220px;
+  }
+}
 
-    left:50%;
-    right:50%;
-   
-    margin-left:-50vw !important;
-    margin-right:-50vw !important;
-    
+/* ==================================================
+   REDUCED MOTION ACCESSIBILITY
+================================================== */
 
-    background:linear-gradient(135deg,#111,#1a1a1a);
+@media (prefers-reduced-motion: reduce) {
+  .sp-card,
+  .sp-feature-card,
+  .sp-benefit-card,
+  .sp-faq-item,
+  .sp-nav-card,
+  .sp-chapter-card,
+  .sp-chapter-card > a,
+  .sp-chapter-card > a::after,
+  .sp-next-card,
+  .chapter-list a,
+  .chapter-list .chapter-arrow {
+    transition: none;
+  }
 }
