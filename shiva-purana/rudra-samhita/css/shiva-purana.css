@@ -1841,6 +1841,7 @@ body {
   }
 }
 
+
 /* ===================================
    LANDING CARD STATUS BADGES
 =================================== */
@@ -1887,4 +1888,111 @@ body {
 .sp-card > a:hover .chapter-status {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(139, 69, 0, 0.12);
+}
+/* ==================================================
+   FINAL ALIGNMENT & LANGUAGE VISIBILITY FIXES
+   Added for Rudra Samhita landing page
+================================================== */
+
+/* --------------------------------------------------
+   1. LANGUAGE VISIBILITY
+   The JavaScript toggles the .hidden class when the
+   language button is used. This rule ensures hidden
+   English/Bengali content is actually removed from
+   the layout.
+-------------------------------------------------- */
+
+.hidden {
+  display: none !important;
+}
+
+/* --------------------------------------------------
+   2. EXPLORE THE FIVE KHANDAS
+   The section contains five .sp-card elements.
+   Desktop: 4 columns, with the fifth card spanning
+   the two available columns on the second row.
+-------------------------------------------------- */
+
+.sp-grid:has(.chapter-status) {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.sp-grid:has(.chapter-status) .sp-card {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-grid:has(.chapter-status) .sp-card p {
+  flex: 1;
+}
+
+.sp-grid:has(.chapter-status) .sp-card > a {
+  margin-top: auto;
+}
+
+.sp-grid:has(.chapter-status) .sp-card:last-child {
+  grid-column: span 4;
+}
+
+/* --------------------------------------------------
+   3. BHAKTI / JNANA / VAIRAGYA
+   This is the only three-card .sp-grid on the page.
+   Give the three cards equal-width columns instead of
+   inheriting the global four-column layout.
+-------------------------------------------------- */
+
+.sp-grid:has(.sp-card:nth-child(3):last-child) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.sp-grid:has(.sp-card:nth-child(3):last-child) .sp-card {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+   4. GENERAL CARD ALIGNMENT
+   Keep card content consistent without changing the
+   existing visual design.
+-------------------------------------------------- */
+
+.sp-grid .sp-card {
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------
+   5. TABLET
+-------------------------------------------------- */
+
+@media (max-width: 1024px) {
+  .sp-grid:has(.chapter-status) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sp-grid:has(.chapter-status) .sp-card:last-child {
+    grid-column: span 2;
+  }
+
+  .sp-grid:has(.sp-card:nth-child(3):last-child) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* --------------------------------------------------
+   6. MOBILE
+-------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .sp-grid:has(.chapter-status),
+  .sp-grid:has(.sp-card:nth-child(3):last-child) {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-grid:has(.chapter-status) .sp-card:last-child {
+    grid-column: auto;
+  }
 }
