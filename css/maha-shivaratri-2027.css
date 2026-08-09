@@ -1,355 +1,262 @@
-/* HERO */
 
-.festival-hero{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
+:root {
+  --maroon: #8b0000;
+  --maroon-deep: #590000;
+  --maroon-soft: #a22a08;
+  --saffron: #ff7b00;
+  --saffron-deep: #c45c00;
+  --gold: #e3ae48;
+  --gold-light: #f7d992;
+  --cream: #ffedc4;
+  --cream-soft: #fff7e3;
+  --ink: #2b211d;
+  --muted: #62534b;
+  --shadow: 0 15px 36px rgba(91, 38, 0, .12);
 }
 
-.festival-hero img{
-    width:100%;
-    height:auto;
-    display:block;
-    border-radius:20px;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; background: linear-gradient(180deg,#fff9e9,#ffebc3); color: var(--ink); font-family: "Poppins", sans-serif; line-height: 1.7; }
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+.bn { display: none; }
+.lang-bn .en { display: none !important; }
+.lang-bn .bn { display: revert; }
+
+.site-header { position: sticky; top: 0; z-index: 1000; padding: 10px 6%; border-bottom: 1px solid rgba(196,92,0,.14); background: rgba(255,255,255,.97); box-shadow: 0 3px 16px rgba(0,0,0,.08); backdrop-filter: blur(12px); }
+.header-container { display: flex; align-items: center; justify-content: space-between; gap: 18px; max-width: 1450px; margin: auto; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand img { width: auto; height: 60px; }
+.brand-copy { display: grid; }
+.brand-copy strong { color: var(--maroon); font-size: 24px; line-height: 1.25; }
+.brand-copy small { color: var(--saffron-deep); font-size: 12px; }
+.site-nav { display: flex; align-items: center; gap: 18px; }
+.site-nav a { position: relative; color: #333; font-size: 15px; font-weight: 600; text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--saffron-deep); }
+.site-nav a[aria-current="page"]::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 3px; border-radius: 10px; background: var(--saffron); content: ""; }
+.menu-toggle { display: none; border: 0; background: none; color: var(--maroon); cursor: pointer; font-size: 28px; }
+.language-toggle { border: 0; border-radius: 8px; background: var(--saffron); color: white; cursor: pointer; padding: 10px 15px; font: inherit; font-weight: 600; }
+.top-bar { background: var(--maroon); color: white; padding: 8px 20px; font-size: 14px; text-align: center; }
+.sr-only { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; }
+
+.festival-hero { position: relative; max-width: 1500px; margin: 0 auto; overflow: hidden; background: var(--maroon-deep); }
+.festival-hero img { width: 100%; height: auto; display: block; }
+.festival-action-bar { display: flex; align-items: center; justify-content: space-between; gap: 25px; max-width: 1200px; margin: -24px auto 0; position: relative; z-index: 3; border: 2px solid var(--gold); border-radius: 24px 12px; background: linear-gradient(135deg,#6a0000,#950d00 60%,#bc4a00); color: white; padding: 22px 26px; box-shadow: 0 16px 36px rgba(89,0,0,.2); }
+.festival-action-bar > div { display: flex; align-items: center; gap: 15px; }
+.festival-action-bar > div > span { display: grid; width: 58px; height: 58px; flex: 0 0 58px; place-items: center; border: 1px solid #ffd88c; border-radius: 50%; background: rgba(255,255,255,.1); font-size: 28px; }
+.festival-action-bar p { display: grid; margin: 0; }
+.festival-action-bar strong { color: #ffd88c; font-size: 20px; }
+.festival-action-bar small { color: #fff0d2; }
+.hero-actions { display: flex; gap: 12px; margin: 0; flex-wrap: wrap; }
+.hero-actions a, .visit-actions a { border: 2px solid var(--saffron); border-radius: 50px; padding: 12px 24px; font-weight: 600; text-align: center; text-decoration: none; transition: .3s ease; }
+.primary-action { background: var(--saffron); color: white; }
+.secondary-action { background: rgba(255,255,255,.1); color: white; backdrop-filter: blur(8px); }
+.hero-actions a:hover, .visit-actions a:hover { transform: translateY(-3px); box-shadow: 0 12px 24px rgba(0,0,0,.2); }
+
+.countdown-section { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(280px,1fr) minmax(520px,1.15fr); gap: 30px; max-width: 1200px; margin: 22px auto 35px; border: 2px solid var(--gold); border-radius: 26px 12px 26px 12px; background: linear-gradient(140deg,#fff8df,#ffd987); padding: 27px 30px; box-shadow: var(--shadow); }
+.countdown-section::before { position: absolute; top: 0; right: 0; left: 0; height: 6px; border-radius: 26px 12px 0 0; background: linear-gradient(90deg,var(--maroon),var(--saffron),#f8c64a,var(--maroon)); content: ""; }
+.countdown-copy { display: flex; align-items: center; gap: 16px; }
+.countdown-copy > span { display: grid; width: 62px; height: 62px; flex: 0 0 62px; place-items: center; border: 2px solid var(--gold); border-radius: 50%; background: #fff6da; font-size: 29px; }
+.countdown-copy div { display: grid; }
+.countdown-copy strong { color: var(--maroon); font-size: 19px; }
+.countdown-copy small { color: var(--muted); line-height: 1.5; }
+.countdown-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+.countdown-grid > div { display: grid; place-items: center; border: 1px solid rgba(139,0,0,.18); border-radius: 14px; background: rgba(255,255,255,.62); padding: 9px; }
+.countdown-grid strong { color: var(--maroon); font-size: 27px; line-height: 1.2; }
+.countdown-grid span { color: var(--muted); font-size: 12px; font-weight: 600; }
+.event-day { align-self: center; color: var(--maroon); font-weight: 600; text-align: center; }
+
+.content-section { padding: 62px 6%; }
+.section-heading { max-width: 950px; margin: 0 auto 32px; text-align: center; }
+.section-heading > span { display: grid; width: 64px; height: 64px; place-items: center; margin: 0 auto 12px; border: 2px solid var(--gold); border-radius: 50%; background: radial-gradient(circle,#fff,#ffe6ab); box-shadow: 0 6px 16px rgba(139,62,0,.11); font-size: 30px; }
+.section-heading > p { margin: 0 0 7px; color: var(--saffron-deep); font-size: 14px; font-weight: 600; letter-spacing: 1.1px; text-transform: uppercase; }
+.section-heading h2 { margin: 0; color: var(--maroon); font-size: 37px; line-height: 1.3; }
+.section-heading h2::after { display: block; width: 80px; height: 4px; margin: 15px auto 0; border-radius: 50px; background: var(--maroon); content: ""; }
+.section-intro { max-width: 900px; margin: -8px auto 36px; color: var(--muted); font-size: 17px; line-height: 1.9; text-align: center; }
+
+.intro-section { padding-top: 38px; background: rgba(255,248,229,.8); }
+.significance-section { background: #ffedc5; }
+.prose-card { position: relative; max-width: 1050px; margin: auto; overflow: hidden; border: 2px solid var(--gold); border-left: 7px solid var(--maroon); border-radius: 26px 12px 26px 12px; background: linear-gradient(145deg,#fff9e8,#ffe2a3); padding: 38px 42px; box-shadow: var(--shadow); }
+.prose-card::after { position: absolute; top: -85px; right: -75px; width: 170px; height: 170px; border: 16px double rgba(139,0,0,.055); border-radius: 50%; content: ""; }
+.prose-card p { position: relative; z-index: 1; margin: 0; color: #42362f; font-size: 19px; line-height: 2; text-align: center; }
+
+.highlight-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; max-width: 1300px; margin: 60px auto; padding: 0 24px; }
+.sacred-card { position: relative; overflow: hidden; border: 2px solid var(--gold); border-radius: 26px 12px 26px 12px; background: linear-gradient(145deg,#fff8df 0%,#ffe3a3 100%); box-shadow: inset 0 0 0 1px rgba(255,255,255,.65),0 12px 28px rgba(111,55,0,.11); }
+.sacred-card::before { position: absolute; top: 0; right: 0; left: 0; height: 6px; background: linear-gradient(90deg,var(--maroon),var(--saffron),#f6bd40,var(--maroon)); content: ""; }
+.sacred-card::after { position: absolute; top: -78px; right: -72px; width: 155px; height: 155px; border: 14px double rgba(139,0,0,.055); border-radius: 50%; content: ""; pointer-events: none; }
+.sacred-card > * { position: relative; z-index: 1; }
+.highlight-card, .prahar-card, .observance-card, .darshan-card, .visitor-card { transition: transform .3s,box-shadow .3s,border-color .3s; }
+.highlight-card:hover, .prahar-card:hover, .observance-card:hover, .darshan-card:hover, .visitor-card:hover, .related-grid a:hover { border-color: var(--saffron); transform: translateY(-7px); box-shadow: inset 0 0 0 1px rgba(255,255,255,.7),0 20px 38px rgba(139,62,0,.17); }
+.highlight-card { min-height: 310px; padding: 32px 23px; text-align: center; }
+.icon-medallion { display: grid; width: 72px; height: 72px; place-items: center; margin: 0 auto 18px; border: 2px solid var(--gold); border-radius: 50% 50% 50% 18px; background: radial-gradient(circle,#fff,#ffca67); box-shadow: 0 7px 18px rgba(139,62,0,.13); font-size: 34px; }
+.highlight-card h3, .prahar-card h3, .observance-card h3, .darshan-card h3, .visitor-card h3 { margin: 0 0 8px; color: var(--maroon); font-size: 21px; }
+.highlight-card > strong, .prahar-card > strong { display: block; color: var(--saffron-deep); font-size: 17px; }
+.highlight-card p, .prahar-card p, .observance-card p, .darshan-card p, .visitor-card p { margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.8; }
+
+.mahadev-divider { display: flex; align-items: center; justify-content: center; gap: 20px; padding: 18px 20px; color: var(--saffron-deep); font-size: 25px; }
+.mahadev-divider::before, .mahadev-divider::after { width: min(28vw,260px); height: 1px; background: linear-gradient(90deg,transparent,var(--saffron)); content: ""; }
+.mahadev-divider::after { transform: rotate(180deg); }
+
+.schedule-section { background: linear-gradient(135deg,#590000,#8b0000 55%,#a43a00); color: white; }
+.light-heading > p { color: #ffd582; }
+.light-heading h2 { color: white; }
+.light-heading h2::after { background: #ffc052; }
+.light-text { color: #ffebc5; }
+.schedule-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; max-width: 1150px; margin: auto; }
+.schedule-item { position: relative; display: grid; grid-template-columns: 135px minmax(0,1fr); min-height: 165px; overflow: hidden; border: 1px solid rgba(255,213,139,.55); border-radius: 24px 12px; background: rgba(255,255,255,.1); box-shadow: 0 16px 35px rgba(0,0,0,.17); backdrop-filter: blur(8px); }
+.schedule-time { display: grid; place-content: center; border-right: 1px solid rgba(255,255,255,.18); background: linear-gradient(145deg,#f5b933,#cf6900); color: white; padding: 18px; text-align: center; }
+.schedule-time span { font-size: 18px; font-weight: 700; }
+.schedule-time small { color: rgba(255,255,255,.72); font-size: 32px; font-weight: 700; line-height: 1.2; }
+.schedule-item > div:last-child { align-self: center; padding: 25px; }
+.schedule-item h3 { margin: 0 0 7px; font-size: 20px; }
+.schedule-item p { margin: 0; color: #ffeac2; font-size: 14px; line-height: 1.75; }
+.schedule-note { max-width: 950px; margin: 30px auto 0; border: 1px solid rgba(255,213,139,.55); border-radius: 16px; background: rgba(255,255,255,.08); padding: 18px 22px; color: #ffeac2; font-size: 14px; text-align: center; }
+
+.prahar-section { background: #fff0cd; }
+.prahar-grid, .observance-grid, .visitor-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; max-width: 1300px; margin: auto; }
+.prahar-card { min-height: 310px; padding: 31px 24px; text-align: center; }
+.prahar-number, .step-number { position: absolute; top: 15px; left: 18px; color: rgba(139,0,0,.2); font-size: 34px; font-weight: 700; }
+
+.observe-section { background: linear-gradient(180deg,#fff8e2,#ffe2a4); }
+.observe-section .prose-card { margin-bottom: 36px; }
+.observance-card { min-height: 275px; padding: 30px 22px; text-align: center; }
+
+.spiritual-section { background: linear-gradient(135deg,#5a0000,#8b0000); color: white; }
+.spiritual-copy { display: grid; grid-template-columns: 1.15fr .85fr; gap: 25px; max-width: 1150px; margin: auto; }
+.spiritual-copy > p, .spiritual-copy blockquote { margin: 0; border: 1px solid rgba(255,215,144,.5); border-radius: 26px 12px; background: rgba(255,255,255,.09); padding: 36px; font-size: 17px; line-height: 1.9; }
+.spiritual-copy blockquote { border-left: 6px solid #ffc04a; color: #ffe7b6; font-style: italic; }
+
+.darshan-section { background: #ffedc2; }
+.darshan-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; max-width: 1200px; margin: auto; }
+.darshan-card { min-height: 285px; padding: 31px 24px; text-align: center; }
+
+.visitor-section { background: linear-gradient(180deg,#fff7df,#ffdfa0); }
+.visitor-card { min-height: 290px; padding: 30px 22px; text-align: center; }
+.visit-actions { display: flex; justify-content: center; gap: 15px; margin-top: 35px; flex-wrap: wrap; }
+.visit-actions a { min-width: 230px; background: var(--maroon); color: white; }
+.visit-actions a:last-child { background: transparent; color: var(--maroon); }
+
+.message-section { background: #fff2d0; }
+.festival-message-card { position: relative; max-width: 1050px; margin: auto; overflow: hidden; border: 2px solid var(--gold); border-top: 7px solid var(--maroon); border-radius: 28px 14px; background: linear-gradient(145deg,#fff8df,#ffd888); padding: 48px 52px; box-shadow: var(--shadow); text-align: center; }
+.message-symbol { position: absolute; top: -50px; right: -20px; color: rgba(139,0,0,.055); font-size: 190px; line-height: 1; }
+.festival-message-card p { position: relative; z-index: 1; margin: 0; color: #42332c; font-size: 19px; font-weight: 500; line-height: 2; }
+
+.festival-invitation { position: relative; max-width: 1200px; margin: 70px auto; overflow: hidden; border: 2px solid #f0bb55; border-radius: 30px 14px; background: linear-gradient(135deg,#8b0000,#c45c00 55%,#e5a72e); color: white; padding: 65px 35px; box-shadow: 0 20px 45px rgba(98,0,0,.2); text-align: center; }
+.festival-invitation::before, .festival-invitation::after { position: absolute; width: 270px; height: 270px; border: 25px double rgba(255,255,255,.07); border-radius: 50%; content: ""; }
+.festival-invitation::before { top: -150px; left: -120px; }
+.festival-invitation::after { right: -130px; bottom: -170px; }
+.invitation-ring { position: relative; z-index: 1; display: grid; width: 76px; height: 76px; place-items: center; margin: 0 auto 16px; border: 2px solid #ffd78a; border-radius: 50%; background: rgba(255,255,255,.12); font-size: 37px; }
+.festival-invitation h2 { position: relative; z-index: 1; margin: 0 0 20px; font-size: 37px; }
+.festival-invitation p { position: relative; z-index: 1; max-width: 880px; margin: auto; font-size: 20px; line-height: 1.9; }
+.mahadev-message { position: relative; z-index: 1; margin-top: 28px; color: #ffe0a0; font-size: 29px; font-weight: 700; }
+
+.faq-section { background: #ffedc2; }
+.faq-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; max-width: 1100px; margin: auto; }
+.faq-grid details { padding: 0 25px; }
+.faq-grid summary { position: relative; cursor: pointer; list-style: none; color: var(--maroon); padding: 25px 35px 25px 0; font-size: 17px; font-weight: 600; }
+.faq-grid summary::-webkit-details-marker { display: none; }
+.faq-grid summary::after { position: absolute; top: 22px; right: 0; content: "+"; font-size: 25px; }
+.faq-grid details[open] summary::after { content: "−"; }
+.faq-grid details p { margin: 0 0 25px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+
+.quick-nav-section { padding: 48px 6%; background: #fff7e2; text-align: center; }
+.quick-nav-section h2 { margin: 0; color: var(--maroon); font-size: 30px; }
+.quick-nav-section > p { margin: 10px auto 0; color: var(--muted); font-size: 17px; }
+.quick-links { display: flex; justify-content: center; gap: 12px; max-width: 1150px; margin: 25px auto 0; flex-wrap: wrap; }
+.quick-links a { border: 2px solid var(--gold); border-radius: 50px; background: #ffedc6; color: var(--maroon); padding: 10px 18px; font-size: 15px; font-weight: 600; text-decoration: none; transition: .25s; }
+.quick-links a:hover { border-color: var(--saffron); transform: translateY(-2px); }
+
+.related-section { background: #ffe4aa; }
+.related-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; max-width: 1200px; margin: auto; }
+.related-grid a { display: grid; min-height: 235px; place-items: center; align-content: center; padding: 28px; text-align: center; text-decoration: none; transition: .3s; }
+.related-grid a > span { font-size: 40px; }
+.related-grid strong { margin-top: 8px; color: var(--maroon); font-size: 20px; }
+.related-grid small { margin-top: 8px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+footer { padding: 48px 20px 30px; background: linear-gradient(135deg,#111,#1d0b06); color: white; text-align: center; }
+footer > img { width: auto; height: 76px; filter: drop-shadow(0 0 8px rgba(255,153,51,.4)); }
+footer h2 { margin: 9px 0; color: #ffad42; font-size: 24px; }
+footer p { max-width: 800px; margin: 6px auto; color: #ddd; font-size: 14px; }
+footer nav { display: flex; justify-content: center; gap: 10px; margin: 22px auto; flex-wrap: wrap; }
+footer nav a { border: 1px solid rgba(255,255,255,.18); border-radius: 30px; padding: 8px 15px; color: #f5f5f5; font-size: 14px; text-decoration: none; }
+footer nav a:hover { border-color: #ffb34e; color: #ffcc7a; }
+.footer-divider { width: 120px; height: 2px; margin: 18px auto; border-radius: 10px; background: #ff9933; }
+footer > strong { color: #ffad42; font-size: 18px; letter-spacing: 1px; }
+footer > small { color: #aaa; }
+
+@media (max-width: 1100px) {
+  .site-nav { gap: 11px; }
+  .site-nav a { font-size: 13px; }
+  .brand-copy strong { font-size: 20px; }
+  .highlight-grid, .prahar-grid, .observance-grid, .visitor-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .countdown-section { margin-right: 20px; margin-left: 20px; }
 }
 
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-    .festival-hero{
-        margin:20px auto 40px;
-        padding:0 12px;
-    }
-
-    .festival-hero img{
-        border-radius:14px;
-    }
-
+@media (max-width: 820px) {
+  .header-container { flex-wrap: wrap; }
+  .menu-toggle { display: block; margin-left: auto; }
+  .site-nav { display: none; order: 4; width: 100%; flex-direction: column; padding: 15px; border-top: 1px solid var(--gold); }
+  .site-nav.open, .site-nav.active { display: flex; }
+  .site-nav a { font-size: 15px; }
+  .site-nav a[aria-current="page"]::after { display: none; }
+  .countdown-section { grid-template-columns: 1fr; }
+  .festival-action-bar { margin-right: 20px; margin-left: 20px; flex-direction: column; align-items: stretch; }
+  .festival-action-bar .hero-actions { justify-content: center; }
+  .schedule-list { grid-template-columns: 1fr; }
+  .spiritual-copy { grid-template-columns: 1fr; }
+  .darshan-grid, .related-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .faq-grid { grid-template-columns: 1fr; }
 }
 
-/* =========================
-   INTRO SECTION
-========================= */
-
-.festival-intro{
-    max-width:1200px;
-    margin:70px auto;
-    padding:0 20px;
-    text-align:center;
+@media (max-width: 600px) {
+  .site-header { padding: 8px 16px; }
+  .brand img { height: 50px; }
+  .brand-copy strong { font-size: 18px; }
+  .brand-copy small { display: none; }
+  .language-toggle { padding: 8px 11px; font-size: 13px; }
+  .top-bar { font-size: 13px; line-height: 1.55; }
+  .festival-hero { margin: 0; }
+  .festival-hero img { min-height: 330px; object-fit: cover; object-position: center; }
+  .festival-action-bar { margin-top: 18px; padding: 21px 18px; }
+  .festival-action-bar > div { justify-content: center; text-align: left; }
+  .festival-action-bar strong { font-size: 18px; }
+  .festival-action-bar small { font-size: 12px; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions a { width: min(100%,320px); }
+  .countdown-section { margin-top: 20px; padding: 26px 18px 20px; }
+  .countdown-copy { align-items: flex-start; }
+  .countdown-grid strong { font-size: 23px; }
+  .countdown-grid span { font-size: 10px; }
+  .content-section { padding: 48px 20px; }
+  .section-heading h2 { font-size: 30px; }
+  .section-heading > p { font-size: 12px; }
+  .prose-card { padding: 30px 24px; }
+  .prose-card p, .festival-message-card p { font-size: 17px; line-height: 1.9; }
+  .highlight-grid { grid-template-columns: 1fr; margin: 45px auto; padding: 0 20px; }
+  .highlight-card { min-height: 0; }
+  .schedule-item { grid-template-columns: 105px minmax(0,1fr); }
+  .schedule-time { padding: 12px; }
+  .schedule-time span { font-size: 15px; }
+  .schedule-item > div:last-child { padding: 21px 18px; }
+  .prahar-grid, .observance-grid, .darshan-grid, .visitor-grid, .related-grid { grid-template-columns: 1fr; }
+  .prahar-card, .observance-card, .darshan-card, .visitor-card { min-height: 0; }
+  .spiritual-copy > p, .spiritual-copy blockquote { padding: 28px 23px; }
+  .visit-actions { flex-direction: column; align-items: center; }
+  .visit-actions a { width: min(100%,320px); }
+  .festival-message-card { padding: 38px 24px; }
+  .festival-invitation { margin: 50px 20px; padding: 50px 22px; }
+  .festival-invitation h2 { font-size: 29px; }
+  .festival-invitation p { font-size: 17px; }
+  .mahadev-message { font-size: 24px; }
+  .faq-grid details { padding: 0 20px; }
+  .quick-nav-section h2 { font-size: 26px; }
+  .quick-links { flex-direction: column; align-items: center; }
+  .quick-links a { width: min(100%,350px); }
+  .related-grid a { min-height: 0; }
+  footer nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 
-.festival-intro h2{
-    font-size:37px;
-    color:#7a0000;
-    margin-bottom:25px;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
-
-.festival-intro p{
-    font-size:20px;
-    line-height:2;
-    max-width:1000px;
-    margin:auto;
-}
-
-
-/* =========================
-   EVENT CARDS
-========================= */
-
-.shivaratri-cards{
-    max-width:1300px;
-    margin:60px auto;
-    padding:0 20px;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-
-    align-items:start;
-}
-
-.shivaratri-card{
-    background:#fff;
-    border-radius:20px;
-    padding:30px 20px;
-    text-align:center;
-
-    border-top: 6px solid #ff8c00;
-    border-right: 1px solid #ff8c00;
-    border-bottom: 1px solid #ff8c00;
-    border-left: 1px solid #ff8c00;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-    height:auto;
-    min-height:unset;
-}
-
-.shivaratri-card:hover{
-    transform:translateY(-5px);
-}
-
-.shivaratri-icon{
-    font-size:52px;
-    margin-bottom:15px;
-}
-
-.shivaratri-card h3{
-    font-size:22px;
-    color:#7a0000;
-    margin:12px 0;
-}
-
-.shivaratri-card p{
-    font-size:18px;
-    line-height:1.5;
-    margin:0;
-}
-
-/* =========================
-   SCHEDULE
-========================= */
-
-.festival-schedule{
-    max-width:1100px;
-    margin:80px auto;
-    padding:0 20px;
-}
-
-.festival-schedule h2{
-    text-align:center;
-    font-size:37px;
-    color:#7a0000;
-    margin-bottom:40px;
-}
-
-.schedule-item{
-
-    background:#fff;
-    font-size:18px;
-    border-left:6px solid #ff8c00;
-    border-radius:16px;
-    padding:25px;
-    margin-bottom:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-}
-
-.schedule-item span{
-    display:block;
-    color:#c89b00;
-    font-size:22px;
-    font-weight:700;
-    margin-bottom:8px;
-}
-
-
-/* =========================
-   SIGNIFICANCE
-========================= */
-
-.festival-significance{
-    max-width:1200px;
-    margin:80px auto;
-    padding:0 20px;
-    text-align:center;
-}
-
-.festival-significance h2{
-    font-size:37px;
-    color:#7a0000;
-    margin-bottom:25px;
-}
-
-.festival-significance p{
-    font-size:20px;
-    line-height:2;
-    max-width:1000px;
-    margin:auto;
-}
-
-
-/* =========================
-   INVITATION
-========================= */
-
-.festival-invitation{
-
-    max-width:1200px;
-
-    margin:80px auto;
-
-    padding:60px 30px;
-
-    background:linear-gradient(
-        135deg,
-        #c45c00,
-        #f4c542
-    );
-
-    color:#fff;
-
-    border-radius:25px;
-
-    text-align:center;
-}
-
-.festival-invitation h2{
-    color:#fff;
-    font-size:37px;
-    margin-bottom:20px;
-}
-
-.festival-invitation p{
-    font-size:22px;
-    line-height:1.8;
-    max-width:900px;
-    margin:auto;
-}
-
-.mahadev-message{
-    margin-top:30px;
-    font-size:32px;
-    font-weight:700;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:768px){
-
-    .festival-overlay h2{
-        font-size:34px;
-    }
-
-    .festival-overlay p{
-        font-size:18px;
-    }
-
-    .festival-intro h2,
-    .festival-schedule h2,
-    .festival-significance h2,
-    .festival-invitation h2{
-        font-size:32px;
-    }
-
-    .festival-intro p,
-    .festival-significance p,
-    .festival-invitation p{
-        font-size:18px;
-        line-height:1.8;
-    }
-}
-@media (max-width:768px){
-
-.shivaratri-cards{
-    grid-template-columns:1fr;
-    gap:15px;
-    margin:40px auto;
-    padding:0 15px;
-}
-
-.shivaratri-icon{
-    font-size:52px;
-}
-
-.shivaratri-card{
-    background:linear-gradient(
-        180deg,
-        #fffdf7,
-        #ffffff
-    );
-
-    border-top: 6px solid #ff8c00;
-    border-right: 1px solid #ff8c00;
-    border-bottom: 1px solid #ff8c00;
-    border-left: 1px solid #ff8c00;
-    border-radius:24px;
-
-    padding:25px 20px;
-
-    box-shadow:0 12px 30px rgba(196,92,0,.12);
-}
-
-.shivaratri-card p{
-    font-size:15px;
-    line-height:1.4;
-}
-
-   .schedule-item{
-        padding:20px;
-        font-size:17px;
-    }
-
-    .schedule-item span{
-        font-size:18px;
-    }
-
-    .mahadev-message{
-        font-size:24px;
-    }
-}
-
-
-/* =========================
-   SMALL PHONES
-========================= */
-
-
-.festival-message{
-    max-width:1200px;
-    margin:90px auto;
-    padding:0 20px;
-    text-align:center;
-}
-
-.festival-message h2{
-    font-size:37px;
-    color:#7a0000;
-    margin-bottom:25px;
-}
-
-.festival-message-card{
-    background:#fff;
-    padding:50px;
-    border-radius:24px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    border-top:5px solid #c45c00;
-}
-
-.festival-message-card .festival-message-text{
-    font-size:20px !important;
-    line-height:2 !important;
-    max-width:900px;
-    margin:0 auto;
-    color:#222;
-    font-weight:500;
-}
-
-@media(max-width:768px){
-
-    .festival-message{
-        margin:70px auto;
-    }
-
-    .festival-message h2{
-        font-size:32px;
-    }
-
-    .festival-message-card{
-        padding:30px 20px;
-    }
-
-    .festival-message-card .festival-message-text{
-        font-size:18px !important;
-        line-height:1.9 !important;
-    }
-
-}
-
 
