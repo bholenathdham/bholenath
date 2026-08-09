@@ -1840,3 +1840,51 @@ body {
     transition: none;
   }
 }
+
+/* ===================================
+   LANDING CARD STATUS BADGES
+=================================== */
+
+.sp-card > a {
+    display: block;
+    width: fit-content;
+    margin: 22px auto 0;
+    text-decoration: none;
+}
+
+.sp-card > a:hover,
+.sp-card > a:focus {
+    text-decoration: none;
+}
+
+.sp-card .chapter-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    padding: 9px 18px;
+    margin: 0;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sp-card .chapter-status.completed {
+    color: #137a43;
+    background: #e6f8ed;
+    border: 1px solid #b8e5c9;
+}
+
+.sp-card .chapter-status.coming-soon {
+    color: #a55300;
+    background: #fff2dc;
+    border: 1px solid #edc98e;
+}
+
+.sp-card > a:hover .chapter-status {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(139, 69, 0, 0.12);
+}
