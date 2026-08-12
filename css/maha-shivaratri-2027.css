@@ -330,3 +330,71 @@ footer > small { color: #aaa; }
     }
 }
 
+@media (max-width: 768px) {
+  /* 1. Completely collapse the height and force block display */
+  .festival-hero {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    background: transparent !important;
+  }
+
+  /* 2. Strip any flex/grid constraints forcing blank spaces from parents */
+  .festival-hero * {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 3. Force the image to fluidly scale with no container margins */
+  .festival-hero img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Position the floating Action Bar right beneath the collapsed graphic */
+  .festival-action-bar {
+    margin: 15px 15px 0 !important; /* Resets overlapping margins smoothly */
+    flex-direction: column !important; /* Stack elements safely */
+    align-items: stretch !important;
+    gap: 16px !important;
+    padding: 16px 20px !important;
+    border-radius: 16px 8px !important;
+  }
+
+  /* 5. Tidy inner elements inside action pane */
+  .festival-action-bar > div {
+    display: flex !important;
+    gap: 12px !important;
+    justify-content: center !important;
+  }
+
+  .festival-action-bar strong {
+    font-size: 17px !important;
+  }
+
+  /* 6. Neatly block layout actionable buttons */
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .hero-actions a {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+}

@@ -788,7 +788,16 @@ nav a:hover {
   }
 
   .hero {
-    min-height: 70vh;
+    /* Reduce height so a wide photo fits nicely on a skinny phone screen */
+    height: 40vh; 
+    min-height: auto;
+
+    /* Forces the entire width of the image to show without cutting off sides */
+    background-size: contain; 
+    
+    /* Keeps the image centered and prevents it from repeating */
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .quote-en {
