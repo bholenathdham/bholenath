@@ -1,4 +1,3 @@
-
 :root {
   --maroon: #8b0000;
   --maroon-deep: #590000;
@@ -260,27 +259,20 @@ footer > small { color: #aaa; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
-
-
 /* =========================================================
    DARSHAN CARDS - DESKTOP TEXT FIX
-   Fixes heading/paragraph overlap without changing
-   the rest of the page
    ========================================================= */
 
 @media (min-width: 821px) {
-
     .darshan-card {
         display: block !important;
         position: relative;
     }
-
     .darshan-card .step-number {
         position: absolute;
         top: 15px;
         left: 18px;
     }
-
     .darshan-card .icon-medallion {
         display: grid !important;
         width: 72px;
@@ -288,7 +280,6 @@ footer > small { color: #aaa; }
         place-items: center;
         margin: 0 auto 18px;
     }
-
     .darshan-card h3 {
         display: block !important;
         width: 100% !important;
@@ -297,7 +288,6 @@ footer > small { color: #aaa; }
         text-align: center;
         clear: both;
     }
-
     .darshan-card p {
         display: block !important;
         width: 100% !important;
@@ -306,72 +296,55 @@ footer > small { color: #aaa; }
         text-align: center;
         clear: both;
     }
-
     .darshan-card h3 .en,
     .darshan-card h3 .bn,
     .darshan-card p .en,
     .darshan-card p .bn {
         display: inline;
     }
-
     .darshan-card h3 .bn,
     .darshan-card p .bn {
         display: none;
     }
-
     .lang-bn .darshan-card h3 .en,
     .lang-bn .darshan-card p .en {
         display: none !important;
     }
-
     .lang-bn .darshan-card h3 .bn,
     .lang-bn .darshan-card p .bn {
         display: inline !important;
     }
 }
 
-@media (max-width: 768px) {
-  /* 1. Completely collapse the height and force block display */
-  .festival-hero {
-    display: block !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    background: transparent !important;
-  }
+/* =========================================================
+   FESTIVAL HERO MOBILE FIX (Removes background box cleanly)
+   ========================================================= */
 
-  /* 2. Strip any flex/grid constraints forcing blank spaces from parents */
-  .festival-hero * {
-    display: block !important;
+@media (max-width: 768px) {
+  .festival-hero {
+    background: transparent !important;
+    max-height: none !important;
     height: auto !important;
-    min-height: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  /* 3. Force the image to fluidly scale with no container margins */
   .festival-hero img {
     width: 100% !important;
-    height: auto !important;
+    min-height:20vh !important;
     display: block !important;
-    object-fit: contain !important;
-    padding: 0 !important;
-    margin: 0 !important;
+    object-fit: initial !important;
   }
 
-  /* 4. Position the floating Action Bar right beneath the collapsed graphic */
   .festival-action-bar {
-    margin: 15px 15px 0 !important; /* Resets overlapping margins smoothly */
-    flex-direction: column !important; /* Stack elements safely */
+    margin: 15px 15px 0 !important;
+    flex-direction: column !important;
     align-items: stretch !important;
     gap: 16px !important;
     padding: 16px 20px !important;
     border-radius: 16px 8px !important;
   }
 
-  /* 5. Tidy inner elements inside action pane */
   .festival-action-bar > div {
     display: flex !important;
     gap: 12px !important;
@@ -382,7 +355,6 @@ footer > small { color: #aaa; }
     font-size: 17px !important;
   }
 
-  /* 6. Neatly block layout actionable buttons */
   .hero-actions {
     display: flex !important;
     flex-direction: column !important;
