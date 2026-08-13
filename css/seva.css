@@ -285,7 +285,9 @@ footer > small { color: #aaa; }
   .commitment-grid, .faq-grid { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .payment-grid { grid-template-columns: 1fr; }
+
 }
+
 @media (max-width: 600px) {
   .site-header { padding: 8px 16px; }
   .brand img { height: 50px; }
@@ -333,3 +335,60 @@ footer > small { color: #aaa; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
 
+@media (max-width: 768px) {
+  /* Shrink the brand title slightly so it fits in one line */
+ /* Force header to stay in one single row on mobile */
+header, .header, nav {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Force header to stay in one single row on mobile */
+header, .header, nav {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Force the left side items (logo, title, bangla button) into a tight single line */
+header > *, .header-left, .nav-left {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+  gap: 8px !important;
+}
+
+/* Compact the Bangla button so it doesn't take up too much space */
+header .lang-btn, 
+header a[href*="bn"], 
+header button, 
+.bangla-btn {
+  padding: 4px 8px !important;
+  font-size: 13px !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+
+/* Shrink the logo and site name slightly on mobile screens so they fit */
+@media (max-width: 768px) {
+  header img, .logo {
+    max-height: 32px !important;
+    width: auto !important;
+  }
+  
+  header h1, .brand-title, .site-title {
+    font-size: 15px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}

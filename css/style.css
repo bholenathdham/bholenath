@@ -721,7 +721,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  
 }
 
 .logo img {
@@ -751,6 +751,7 @@ nav a:hover {
 @media (max-width: 768px) {
   .header-container {
     flex-wrap: wrap;
+margin:-2px;
   }
 
   .logo img {
