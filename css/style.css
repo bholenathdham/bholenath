@@ -39,7 +39,6 @@ nav a {
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
     url("../images/temple1.webp");
-
   background-size: cover;
   background-position: center;
   display: flex;
@@ -157,32 +156,23 @@ section h2::after {
 .gallery {
   max-width: 1400px;
   margin: 25px auto;
-
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
   gap: 16px;
 }
 
 .gallery img {
   width: 100%;
   height: 270px;
-
   object-fit: cover;
-
   border-radius: 18px;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
   transition: all 0.4s ease;
-
   cursor: pointer;
 }
 
 .gallery img:hover {
   transform: scale(1.04);
-
   box-shadow: 0 15px 35px rgba(255, 123, 0, 0.25);
 }
 
@@ -273,29 +263,431 @@ footer p:last-child {
   display: none;
 }
 
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 10px 6%;
+}
+
+.header-container {
+  max-width: 1450px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.logo-text h1 {
+  font-size: 24px;
+  color: #8b0000;
+  margin: 0;
+}
+
+.logo-text span {
+  font-size: 12px;
+  color: #c45c00;
+}
+
+nav a:hover {
+  color: #c45c00;
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #8b0000;
+  cursor: pointer;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*
+   Always create the three hamburger lines with CSS.
+   This makes them visible even if the button contains
+   no visible text/icon.
+*/
+
+.menu-toggle::before,
+.menu-toggle::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  width: 26px;
+  height: 3px;
+  border-radius: 5px;
+  background: #8b0000;
+  transition: all 0.25s ease;
+}
+
+.menu-toggle::before {
+  top: 13px;
+  box-shadow: 0 8px 0 #8b0000;
+}
+
+.menu-toggle::after {
+  top: 29px;
+}
+
+/* Hover / focus */
+
+.menu-toggle:hover::before,
+.menu-toggle:hover::after {
+  background: #c45c00;
+}
+
+.menu-toggle:hover::before {
+  box-shadow: 0 8px 0 #c45c00;
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid #ff7b00;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 7px 12px;
+  }
+
+  .header-container {
+    width: 100%;
+    min-height: 50px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 50px;
+    width: auto;
+    max-width: 55px;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    min-width: 0;
+    margin-left: 5px;
+  }
+
+  .logo-text h1 {
+    font-size: 18px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .logo-text span {
+    display: none;
+  }
+
+  /*
+     Hamburger is always visible on mobile.
+  */
+
+  .menu-toggle {
+    display: flex !important;
+    width: 44px;
+    height: 44px;
+    margin-left: 6px;
+    flex: 0 0 44px;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /*
+     Language button stays compact on phones.
+  */
+
+  #langToggle {
+    margin: 0 4px 0 6px;
+    padding: 8px 11px;
+    min-height: 38px;
+    font-size: 13px;
+    line-height: 1;
+    flex: 0 0 auto;
+  }
+
+  /*
+     Navigation starts on a new row.
+  */
+
+  nav {
+    display: none;
+    width: 100%;
+    flex: 0 0 100%;
+    margin: 8px 0 0;
+    padding: 0;
+  }
+
+  nav.active {
+    display: block !important;
+  }
+
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    list-style: none;
+    padding: 6px 0 10px;
+    margin: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 11px 14px;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.08);
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  nav a:hover {
+    color: #c45c00;
+    background: rgba(255, 111, 0, 0.05);
+  }
+
+  .hero {
+    height: 70vh;
+    min-height: 430px;
+    padding: 0 15px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .footer-domain {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  header {
+    padding: 6px 8px;
+  }
+
+  .header-container {
+    min-height: 48px;
+  }
+
+  .logo img {
+    height: 44px;
+    max-width: 48px;
+  }
+
+  .logo-text h1 {
+    font-size: 18px;
+  }
+
+  #langToggle {
+    padding: 7px 9px;
+    min-height: 36px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+
+  .menu-toggle {
+    width: 42px !important;
+    height: 42px !important;
+    flex-basis: 42px !important;
+    margin-left: 3px;
+  }
+
+  .menu-toggle::before,
+  .menu-toggle::after {
+    left: 8px;
+    width: 26px;
+  }
+
+  .menu-toggle::before {
+    top: 12px;
+    box-shadow: 0 8px 0 #8b0000;
+  }
+
+  .menu-toggle::after {
+    top: 28px;
+  }
+
+  nav {
+    margin-top: 7px;
+  }
+
+  nav a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 68vh;
+    min-height: 400px;
+    padding: 0 12px;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  header {
+    padding: 5px 6px;
+  }
+
+  .logo img {
+    height: 40px;
+    max-width: 44px;
+  }
+
+  .logo-text h1 {
+    font-size: 16px;
+  }
+
+  #langToggle {
+    padding: 6px 8px;
+    min-height: 34px;
+    font-size: 11px;
+  }
+
+  .menu-toggle {
+    width: 40px !important;
+    height: 40px !important;
+    flex-basis: 40px !important;
+  }
+
+  .menu-toggle::before,
+  .menu-toggle::after {
+    left: 7px;
+    width: 25px;
+    height: 3px;
+  }
+
+  .menu-toggle::before {
+    top: 11px;
+    box-shadow: 0 8px 0 #8b0000;
+  }
+
+  .menu-toggle::after {
+    top: 27px;
+  }
+
+  nav a {
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* =========================================================
+   GENERAL MOBILE FOOTER
+   ========================================================= */
+
 @media (max-width: 768px) {
   .footer-domain {
     font-size: 12px;
   }
 
-  header {
-    flex-direction: column;
-    gap: 15px;
+  footer {
+    padding: 20px 10px;
   }
 
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-    padding: 10px 0;
+  footer h3 {
+    font-size: 20px;
   }
 
-  .hero h2 {
-    font-size: 2.4rem;
+  footer p {
+    font-size: 13px;
   }
 }
+
+/* =========================================================
+   STATUS
+   ========================================================= */
 
 .status-box {
   display: flex;
@@ -312,6 +704,10 @@ footer p:last-child {
   border-radius: 10px;
   font-weight: 600;
 }
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
 
 .quote-section {
   padding: 40px 6%;
@@ -348,6 +744,11 @@ footer p:last-child {
   font-weight: 600;
   color: #c45c00;
 }
+
+/* =========================================================
+   BLESSINGS
+   ========================================================= */
+
 .blessings-list {
   margin-top: 20px;
   font-size: 18px;
@@ -366,6 +767,10 @@ footer p:last-child {
   color: #c45c00;
   margin-top: 40px;
 }
+
+/* =========================================================
+   STORY
+   ========================================================= */
 
 .story {
   max-width: 1000px;
@@ -429,6 +834,10 @@ footer p:last-child {
     font-size: 16px;
   }
 }
+
+/* =========================================================
+   MANTRAS
+   ========================================================= */
 
 #mantras {
   background: #faf7f2;
@@ -515,18 +924,12 @@ footer p:last-child {
 .mantra-quote {
   max-width: 900px;
   margin: 25px auto;
-
   padding: 30px 40px;
-
   background: linear-gradient(135deg, #fff8ef, #fff3dd);
-
   border: 2px solid #f4d19b;
   border-radius: 20px;
-
   text-align: center;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
   position: relative;
   overflow: hidden;
 }
@@ -573,6 +976,10 @@ footer p:last-child {
   }
 }
 
+/* =========================================================
+   VISIT
+   ========================================================= */
+
 #visit {
   background: #fafafa;
   padding: 30px 6%;
@@ -596,33 +1003,23 @@ footer p:last-child {
   border-radius: 50px;
 }
 
-/* Cards Container */
-
 .visitor-container {
   max-width: 1400px;
   margin: 25px auto;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
 }
 
-/* Cards */
-
 .visitor-card {
   background: #fff;
-
   border-top: 2px solid #ff7b00;
   border-left: 5px solid #ff7b00;
   border-right: 2px solid #ff7b00;
   border-bottom: 2px solid #ff7b00;
-
   border-radius: 25px;
-
   padding: 35px 25px;
-
   text-align: center;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
@@ -659,15 +1056,11 @@ footer p:last-child {
   margin-bottom: 10px;
 }
 
-/* Tablet */
-
 @media (max-width: 992px) {
   .visitor-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* Mobile */
 
 @media (max-width: 768px) {
   #visit h2 {
@@ -700,120 +1093,10 @@ footer p:last-child {
   }
 }
 
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
-  padding: 10px 6%;
-}
+/* =========================================================
+   TOP BAR
+   ========================================================= */
 
-.header-container {
-  max-width: 1450px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  
-}
-
-.logo img {
-  height: 60px;
-  width: auto;
-}
-
-.logo-text h1 {
-  font-size: 24px;
-  color: #8b0000;
-  margin: 0;
-}
-
-.logo-text span {
-  font-size: 12px;
-  color: #c45c00;
-}
-
-nav a:hover {
-  color: #c45c00;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    flex-wrap: wrap;
-margin:-2px;
-  }
-
-  .logo img {
-    height: 50px;
-  }
-
-  .logo-text h1 {
-    font-size: 18px;
-  }
-
-  .logo-text span {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  nav {
-    display: none;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  nav.active {
-    display: block;
-  }
-
-  #langToggle {
-    margin-top: 10px;
-  }
-.hero {
-    height: 70vh; /* Adjusts height nicely for mobile screens */
-    padding: 0 15px;
-  }
-
-  .hero h2 {
-    font-size: 2rem; /* Reduces heading size so it fits neatly on smaller phones */
-    line-height: 1.3;
-  }
-
-  .hero p {
-    font-size: 1rem; /* Scales description text for better readability */
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-}
-
-.story:hover {
-  transform: translateY(-3px);
-}
 .top-bar {
   background: #8b0000;
   color: white;
@@ -821,6 +1104,11 @@ html {
   padding: 8px;
   font-size: 14px;
 }
+
+/* =========================================================
+   LIGHTBOX
+   ========================================================= */
+
 .lightbox {
   display: none;
   position: fixed;
@@ -852,30 +1140,26 @@ html {
   cursor: pointer;
   font-weight: bold;
 }
+
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
 #backToTop {
   position: fixed;
   bottom: 25px;
   right: 25px;
-
   width: 55px;
   height: 55px;
-
   border: none;
   border-radius: 50%;
-
   background: #c45c00;
   color: white;
-
   font-size: 24px;
-
   cursor: pointer;
-
   display: none;
-
   z-index: 999;
-
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
   transition: 0.3s;
 }
 
@@ -890,6 +1174,10 @@ html {
     font-size: 20px;
   }
 }
+
+/* =========================================================
+   DAILY QUOTE
+   ========================================================= */
 
 #dailyQuote {
   background: linear-gradient(135deg, #fff8f0, #fffdf8);
@@ -912,14 +1200,7 @@ html {
   overflow: hidden;
 }
 
-#quoteTextEn {
-  font-size: 30px;
-  line-height: 1.8;
-  color: #8b0000;
-  font-style: italic;
-  font-weight: 600;
-}
-
+#quoteTextEn,
 #quoteTextBn {
   font-size: 30px;
   line-height: 1.8;
@@ -937,11 +1218,7 @@ html {
 }
 
 @media (max-width: 768px) {
-  #quoteTextEn {
-    font-size: 22px;
-    line-height: 1.7;
-  }
-
+  #quoteTextEn,
   #quoteTextBn {
     font-size: 22px;
     line-height: 1.7;
@@ -951,6 +1228,10 @@ html {
     padding: 35px 25px;
   }
 }
+
+/* =========================================================
+   FESTIVALS
+   ========================================================= */
 
 #festivals {
   padding: 30px 6%;
@@ -992,7 +1273,6 @@ html {
   max-width: 1100px;
   margin: 50px auto;
   padding: 0 20px;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
@@ -1006,9 +1286,7 @@ html {
   border-bottom: 2px solid #ff7b00;
   border-radius: 25px;
   text-align: center;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-
   transition: 0.3s;
   padding: 25px;
   position: relative;
@@ -1049,18 +1327,12 @@ html {
 .festival-quote {
   max-width: 800px;
   margin: 50px auto 0;
-
   padding: 35px 30px;
-
   background: linear-gradient(135deg, #fff8ea, #fff0d0);
-
   border: 2px solid #f0c27b;
   border-radius: 35px;
-
   text-align: center;
-
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-
   position: relative;
   overflow: hidden;
   font-size: 18px;
@@ -1077,14 +1349,10 @@ html {
 
 .festival-quote span {
   display: block;
-
   margin-top: 18px;
-
   font-size: 14px;
   font-weight: 700;
-
   letter-spacing: 4px;
-
   color: #8b0000;
 }
 
@@ -1100,6 +1368,10 @@ html {
   }
 }
 
+/* =========================================================
+   TEMPLE BELL
+   ========================================================= */
+
 #temple-bell {
   padding: 30px 6%;
 }
@@ -1107,26 +1379,17 @@ html {
 .bell-container {
   max-width: 850px;
   margin: auto;
-
   padding: 50px 35px;
-
   text-align: center;
-
   background: linear-gradient(135deg, #fffdf8, #fff3e0);
-
   border: 2px solid #f4d19b;
   border-radius: 30px;
-
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-
   position: relative;
   overflow: hidden;
 }
 
-.bell-container::before {
-  display: none;
-}
-
+.bell-container::before,
 .bell-container::after {
   display: none;
 }
@@ -1148,9 +1411,11 @@ html {
   100% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(10deg);
   }
+
   75% {
     transform: rotate(-10deg);
   }
@@ -1172,16 +1437,12 @@ html {
 
 #bellBtn {
   padding: 16px 35px;
-
   border: none;
   border-radius: 50px;
-
   background: linear-gradient(135deg, #ff9933, #c45c00);
-
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-
   cursor: pointer;
   transition: 0.3s;
 }
@@ -1224,6 +1485,10 @@ html {
   }
 }
 
+/* =========================================================
+   RELATED LINKS
+   ========================================================= */
+
 .related-links {
   max-width: 1200px;
   margin: 0 auto;
@@ -1247,7 +1512,6 @@ html {
   justify-content: center;
   overflow: hidden;
   background: linear-gradient(135deg, #fffdf8, #fff6e7);
-
   border-top: 5px solid #ff7b00;
   border-left: 2px solid #ff7b00;
   border-right: 2px solid #ff7b00;
@@ -1256,17 +1520,13 @@ html {
   padding: 25px;
   text-decoration: none;
   color: #222;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
   transition: 0.3s;
 }
 
 .related-card:hover {
   transform: translateY(-6px);
-
   border-color: #ff9933;
-
   box-shadow: 0 15px 30px rgba(196, 92, 0, 0.15);
 }
 
@@ -1314,9 +1574,9 @@ html {
   }
 }
 
-/* ===== FOOTER FULL WIDTH FIX ===== */
-
-/* ===== FOOTER FIX ===== */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 #footer-placeholder {
   width: 100%;
@@ -1329,6 +1589,31 @@ html {
   margin: 0;
   max-width: none;
 }
+
+.footer-links {
+  display: flex;
+  max-width: 1000px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 22px auto;
+}
+
+.footer-links a {
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ff9933;
+}
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
 .location-buttons {
   display: flex;
   justify-content: center;
@@ -1341,17 +1626,12 @@ html {
   display: flex;
   align-items: center;
   gap: 12px;
-
   padding: 16px 28px;
-
   border-radius: 15px;
   text-decoration: none;
-
   font-size: 17px;
   font-weight: 600;
-
   transition: 0.3s;
-
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -1391,6 +1671,7 @@ html {
     justify-content: center;
   }
 }
+
 .visit-heading {
   text-align: center;
   color: #8b0000;
@@ -1407,7 +1688,9 @@ html {
   text-transform: uppercase;
 }
 
-/* QUICK NAVIGATION */
+/* =========================================================
+   QUICK NAVIGATION
+   ========================================================= */
 
 .quick-nav {
   max-width: 1200px;
@@ -1438,30 +1721,20 @@ html {
 
 .quick-nav-links a {
   display: inline-block;
-
   padding: 10px 16px;
-
   background: linear-gradient(135deg, #fffdf8, #fff5e8);
-
   border: 2px solid #f4d19b;
-
   border-radius: 50px;
-
   text-decoration: none;
-
   color: #8b0000;
-
   font-weight: 600;
   font-size: 15px;
-
   transition: 0.3s;
 }
 
 .quick-nav-links a:hover {
   transform: translateY(-3px);
-
   border-color: #ff9933;
-
   box-shadow: 0 8px 20px rgba(196, 92, 0, 0.12);
 }
 
@@ -1482,30 +1755,28 @@ html {
   }
 }
 
-/* ABOUT */
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
 .about-section {
   background: #fff;
 }
 
-/* PRIVACY */
+/* =========================================================
+   PRIVACY
+   ========================================================= */
 
 .privacy-link {
   display: inline-block;
-
   margin-top: 12px;
-
   padding: 6px 14px;
-
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 30px;
-
   color: #f5f5f5;
   text-decoration: none;
-
   font-size: 14px;
   font-weight: 500;
-
   transition: 0.3s;
 }
 
@@ -1513,7 +1784,6 @@ html {
   background: rgba(255, 204, 102, 0.12);
   border-color: #ffcc66;
   color: #ffcc66;
-
   transform: translateY(-2px);
 }
 
@@ -1525,19 +1795,14 @@ html {
 .explore-more-btn {
   display: inline-block;
   padding: 12px 28px;
-
   background: #fff;
   color: #8b0000;
-
   border: 2px solid #ff7b00;
   border-radius: 50px;
-
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
-
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-
   transition: all 0.3s ease;
 }
 
@@ -1548,27 +1813,21 @@ html {
   box-shadow: 0 10px 20px rgba(255, 123, 0, 0.25);
 }
 
-/* POP-UP*/
+/* =========================================================
+   POPUP
+   ========================================================= */
 
 .popup-card {
   position: fixed;
   bottom: 20px;
   right: 20px;
-
   width: 320px;
-
   background: #fff;
-
   padding: 20px;
-
   border-radius: 20px;
-
   border: 2px solid #ff7b00;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-
   z-index: 9999;
-
   animation: popupSlide 0.5s ease;
 }
 
@@ -1587,14 +1846,10 @@ html {
 .popup-btn {
   display: block;
   text-align: center;
-
   background: #ff7b00;
   color: white;
-
   padding: 10px;
-
   border-radius: 10px;
-
   text-decoration: none;
 }
 
@@ -1602,10 +1857,8 @@ html {
   position: absolute;
   top: 10px;
   right: 12px;
-
   border: none;
   background: none;
-
   cursor: pointer;
   font-size: 20px;
 }
@@ -1614,25 +1867,16 @@ html {
   position: fixed;
   right: 20px;
   bottom: 90px;
-
   width: 55px;
   height: 55px;
-
   border: none;
-
   border-radius: 50%;
-
   background: #ff7b00;
-
   color: white;
-
   font-size: 24px;
-
   cursor: pointer;
-
   display: grid;
   place-items: center;
-
   z-index: 9999;
 }
 
@@ -1656,7 +1900,9 @@ html {
   }
 }
 
-/* Festival Announcement Bar */
+/* =========================================================
+   FESTIVAL ANNOUNCEMENT
+   ========================================================= */
 
 .festival-bar {
   background: linear-gradient(90deg, #f4c542, #ffd700, #f4c542);
@@ -1685,8 +1931,6 @@ html {
   font-weight: bold;
 }
 
-/* Mobile Design */
-
 @media (max-width: 768px) {
   .festival-bar {
     font-size: 16px;
@@ -1700,8 +1944,6 @@ html {
   }
 }
 
-/* Small Phones */
-
 @media (max-width: 480px) {
   .festival-bar {
     font-size: 15px;
@@ -1709,6 +1951,10 @@ html {
     line-height: 1.6;
   }
 }
+
+/* =========================================================
+   BADGES
+   ========================================================= */
 
 .new-badge {
   position: absolute;
@@ -1734,6 +1980,10 @@ html {
 .hidden-section {
   display: none;
 }
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
 
 .spx-slider-section {
   margin: 0;
@@ -1867,38 +2117,26 @@ html {
 .spx-coming {
   display: inline-flex;
   align-items: center;
-
   padding: 4px 10px;
   margin-bottom: 10px;
-
   border-radius: 20px;
-
   font-size: 12px;
   font-weight: 500;
-
   background: #fff3cd;
-
   color: #851004;
-
   border: 1px solid #9c9583;
 }
 
 .spx-completed {
   display: inline-flex;
   align-items: center;
-
   padding: 4px 10px;
   margin-bottom: 10px;
-
   border-radius: 20px;
-
   font-size: 12px;
   font-weight: 500;
-
   background: #fff3cd;
-
   color: #095e0b;
-
   border: 1px solid #9c9583;
 }
 
@@ -1915,8 +2153,7 @@ html {
 }
 
 /* =========================================================
-   HOMEPAGE CONTENT EXTENSIONS
-   Uses the existing Poppins typography, sizes and palette.
+   HOMEPAGE CONTENT
    ========================================================= */
 
 .section-intro {
@@ -2319,25 +2556,9 @@ html {
   line-height: 1.8;
 }
 
-.footer-links {
-  display: flex;
-  max-width: 1000px;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-  margin: 22px auto;
-}
-
-.footer-links a {
-  color: #f5f5f5;
-  font-size: 16px;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  color: #ff9933;
-}
+/* =========================================================
+   LIGHTBOX STATES
+   ========================================================= */
 
 .lightbox.is-open {
   display: flex;
@@ -2357,9 +2578,7 @@ html {
 }
 
 /* =========================================================
-   DEVOTIONAL CARD AND BOX SYSTEM
-   Mirrors the sacred treatment used in shiva-purana.css.
-   Existing colours, Poppins typography and text sizes remain unchanged.
+   DEVOTIONAL CARD SYSTEM
    ========================================================= */
 
 :is(
@@ -2415,7 +2634,12 @@ html {
   display: block;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, #8b0000 0%, #ff9933 50%, #8b0000 100%);
+  background: linear-gradient(
+    90deg,
+    #8b0000 0%,
+    #ff9933 50%,
+    #8b0000 100%
+  );
   content: "";
   pointer-events: none;
 }
@@ -2502,6 +2726,10 @@ html {
   box-shadow: 0 10px 24px rgba(91, 48, 13, 0.1);
 }
 
+/* =========================================================
+   TABLET
+   ========================================================= */
+
 @media (max-width: 1000px) {
   .pathway-grid,
   .festival-meaning-grid,
@@ -2514,7 +2742,12 @@ html {
   }
 }
 
+/* =========================================================
+   MOBILE CONTENT
+   ========================================================= */
+
 @media (max-width: 768px) {
+
   .sacred-pathways,
   .divine-story-section,
   .darshan-section,
@@ -2603,6 +2836,7 @@ html {
 }
 
 @media (max-width: 480px) {
+
   .darshan-card {
     grid-template-columns: 1fr;
   }
