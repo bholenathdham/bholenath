@@ -317,21 +317,29 @@ nav a:hover {
 
 .menu-toggle {
   display: none;
-  position: relative;
+  flex-shrink: 0;
   width: 44px;
   height: 44px;
   padding: 0;
-  margin: 0;
-  border: 0;
-  outline: none;
-  background: transparent;
-  color: #8b0000;
+  border: 2px solid #f1d29d;
+  border-radius: 11px;
+  background: #fff9ed;
+  color: var(--maroon);
   cursor: pointer;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  z-index: 1100;
-  -webkit-tap-highlight-color: transparent;
+  font-size: 25px;
+  line-height: 1;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.menu-toggle:hover {
+  background: #fff1d9;
+  border-color: var(--saffron);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(139, 0, 0, 0.1);
 }
 
 /*
@@ -340,42 +348,26 @@ nav a:hover {
    no visible text/icon.
 */
 
-.menu-toggle::before,
-.menu-toggle::after {
-  content: "";
-  position: absolute;
-  left: 9px;
-  width: 26px;
-  height: 3px;
-  border-radius: 5px;
-  background: #8b0000;
-  transition: all 0.25s ease;
-}
+/* Hamburger */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #efd19e;
+    border-radius: 11px;
+    background: #fff9ed;
+    color: var(--maroon);
+    font-size: 24px;
+    line-height: 1;
+  }
 
-.menu-toggle::before {
-  top: 13px;
-  box-shadow: 0 8px 0 #8b0000;
-}
-
-.menu-toggle::after {
-  top: 29px;
-}
-
-/* Hover / focus */
-
-.menu-toggle:hover::before,
-.menu-toggle:hover::after {
-  background: #c45c00;
-}
-
-.menu-toggle:hover::before {
-  box-shadow: 0 8px 0 #c45c00;
-}
-
-.menu-toggle:focus-visible {
-  outline: 2px solid #ff7b00;
-  outline-offset: 2px;
-}
+  .menu-toggle:active {
+    transform: scale(0.96);
+  }
 
 /* =========================================================
    MOBILE NAVIGATION
@@ -439,6 +431,12 @@ nav a:hover {
     flex: 0 0 44px;
     visibility: visible !important;
     opacity: 1 !important;
+  }
+ .menu-toggle-shiva {
+    width: 41px;
+    height: 41px;
+    border-radius: 10px;
+    font-size: 23px;
   }
 
   /*
