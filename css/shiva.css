@@ -37,7 +37,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--saffron-deep); }
 .site-nav a[aria-current="page"]::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 3px; border-radius: 8px; background: var(--saffron); content: ""; }
 .language-toggle { border: 0; border-radius: 8px; background: var(--saffron); color: white; cursor: pointer; padding: 8px 12px; font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-.menu-toggle { display: none; border: 0; background: none; color: var(--maroon); cursor: pointer; font-size: 26px; flex-shrink: 0; padding: 0; }
+.menu-toggle { display: none; border: 0; background: none; color: var(--black); cursor: pointer; font-size: 26px; flex-shrink: 0; padding: 0; }
 
 /* HERO SECTION */
 .seva-hero { position: relative; display: grid; min-height: 620px; place-items: center; overflow: hidden; padding: 90px 20px; background: linear-gradient(rgba(28,8,0,.64), rgba(62,10,0,.72)), url("../images/temple5.webp") center/cover; color: white; text-align: center; }
