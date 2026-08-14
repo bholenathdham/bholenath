@@ -37,7 +37,47 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--saffron-deep); }
 .site-nav a[aria-current="page"]::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 3px; border-radius: 8px; background: var(--saffron); content: ""; }
 .language-toggle { border: 0; border-radius: 8px; background: var(--saffron); color: white; cursor: pointer; padding: 8px 12px; font: inherit; font-size: 13px; font-weight: 600; white-space: nowrap; flex-shrink: 0; }
-.menu-toggle { display: none; border: 0; background: none; color: var(--black); cursor: pointer; font-size: 26px; flex-shrink: 0; padding: 0; }
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  margin:0;
+  padding: 0;
+  border: 2px solid #f1d29d;
+  border-radius: 11px;
+  background: #fff9ed;
+  color: var(--maroon);
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 1;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.menu-toggle:hover {
+  background: #fff1d9;
+  border-color: var(--saffron);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(139, 0, 0, 0.1);
+}
+
+/*
+   Always create the three hamburger lines with CSS.
+   This makes them visible even if the button contains
+   no visible text/icon.
+*/
+
+
+
+  .menu-toggle:active {
+    transform: scale(0.96);
+  }
 
 /* HERO SECTION */
 .seva-hero { position: relative; display: grid; min-height: 620px; place-items: center; overflow: hidden; padding: 90px 20px; background: linear-gradient(rgba(28,8,0,.64), rgba(62,10,0,.72)), url("../images/temple5.webp") center/cover; color: white; text-align: center; }
