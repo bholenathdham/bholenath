@@ -153,7 +153,7 @@ a {
   box-shadow: 0 6px 15px rgba(196, 92, 0, 0.18);
 }
 
-.menu-toggle {
+.menu-toggle-shiva {
   display: none;
   flex-shrink: 0;
   width: 44px;
@@ -173,7 +173,7 @@ a {
     box-shadow 0.25s ease;
 }
 
-.menu-toggle:hover {
+.menu-toggle-shiva:hover {
   background: #fff1d9;
   border-color: var(--saffron);
   transform: translateY(-1px);
@@ -1644,7 +1644,7 @@ footer > small {
   }
 
   /* Hamburger */
-  .menu-toggle {
+  .menu-toggle-shiva {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1660,7 +1660,7 @@ footer > small {
     line-height: 1;
   }
 
-  .menu-toggle:active {
+  .menu-toggle-shiva:active {
     transform: scale(0.96);
   }
 
@@ -1828,7 +1828,7 @@ footer > small {
     font-size: 17px;
   }
 
-  .menu-toggle {
+  .menu-toggle-shiva {
     width: 41px;
     height: 41px;
     border-radius: 10px;
@@ -2048,7 +2048,7 @@ footer > small {
     font-size: 15px;
   }
 
-  .menu-toggle {
+  .menu-toggle-shiva {
     width: 39px;
     height: 39px;
 margin-right:10px;

@@ -33,7 +33,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-nav a { position: relative; color: #333; font-size: 15px; font-weight: 600; text-decoration: none; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--saffron-deep); }
 .site-nav a[aria-current="page"]::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 3px; border-radius: 10px; background: var(--saffron); content: ""; }
-.menu-toggle { display: none; border: 0; background: none; color: var(--maroon); cursor: pointer; font-size: 28px; }
+.menu-toggle-shiva { display: none; border: 0; background: none; color: var(--maroon); cursor: pointer; font-size: 28px; }
 .language-toggle { border: 0; border-radius: 8px; background: var(--saffron); color: white; cursor: pointer; padding: 10px 15px; font: inherit; font-weight: 600; }
 .top-bar { background: var(--maroon); color: white; padding: 8px 20px; font-size: 14px; text-align: center; }
 .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; }
@@ -232,7 +232,7 @@ footer > small { color: #aaa; }
   }
 
   /* Hamburger */
-  .menu-toggle {
+  .menu-toggle-shiva {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,7 +251,7 @@ footer > small { color: #aaa; }
     line-height: 1;
   }
 
-  .menu-toggle:active {
+  .menu-toggle-shiva:active {
     transform: scale(.96);
   }
 
@@ -385,7 +385,7 @@ footer > small { color: #aaa; }
   display: none;
 }
 
-.menu-toggle {
+.menu-toggle-shiva {
   width: 42px;
   height: 42px;
   margin-left: 5px;
@@ -459,7 +459,7 @@ footer > small { color: #aaa; }
     font-size: 15px;
   }
 
-  .menu-toggle {
+  .menu-toggle-shiva {
     width: 40px;
     height: 40px;
     margin-left: 3px;
