@@ -108,7 +108,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 /* STORY / INTRO LAYOUT */
 .story-section { background: rgba(255, 247, 226, .82); }
 .story-layout { display: grid; grid-template-columns: minmax(320px,.85fr) minmax(0,1.15fr); max-width: 1300px; margin: auto; align-items: stretch; }
-.story-image { position: relative; min-height: 560px; overflow: hidden; border-radius: 26px 0 0 26px; background: linear-gradient(rgba(40,5,0,.08), rgba(73,11,0,.5)), url("../images/temple5.webp") center/cover; }
+.story-image { position: relative; min-height: 560px; overflow: hidden; border-radius: 26px 0 0 26px; background: linear-gradient(rgba(40,5,0,.08), rgba(73,11,0,.5)), url("../images/lord-shiva.webp") center/cover; }
 .image-caption { position: absolute; right: 25px; bottom: 25px; left: 25px; border: 1px solid rgba(255,255,255,.42); border-radius: 16px; background: rgba(72,10,0,.72); color: white; padding: 18px; text-align: center; backdrop-filter: blur(8px); }
 .story-card { position: relative; overflow: hidden; border: 2px solid var(--gold); border-left: 0; border-radius: 0 26px 26px 0; background: linear-gradient(135deg,#fff9e9,#ffe8b7); padding: 42px; box-shadow: var(--shadow); }
 .story-card p { position: relative; margin: 0 0 18px; color: #443a34; font-size: 16px; line-height: 1.9; }
