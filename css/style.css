@@ -318,7 +318,7 @@ nav a:hover {
 .menu-toggle {
   display: none;
   align-items: center;
-  justify-content: center;
+ justify-content: center;
   flex-shrink: 0;
   width: 44px;
   height: 44px;
@@ -370,7 +370,7 @@ nav a:hover {
   .header-container {
     width: 100%;
     min-height: 50px;
-    margin: 0;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -379,17 +379,15 @@ nav a:hover {
   }
 
   .logo {
-    flex: 1 1 auto;
-    min-width: 0;
+    
+   gap: 12px;
     display: flex;
     align-items: center;
   }
 
   .logo img {
     height: 50px;
-    width: auto;
-    max-width: 55px;
-    object-fit: contain;
+    
   }
 
   .logo-text {
@@ -400,7 +398,7 @@ nav a:hover {
   .logo-text h1 {
     font-size: 18px;
     line-height: 1.2;
-    white-space: nowrap;
+    
   }
 
   .logo-text span {
@@ -529,12 +527,7 @@ nav a:hover {
     min-height: 48px;
   }
 
-  .logo img {
-    height: 44px;
-    max-width: 48px;
-  }
-
-  .logo-text h1 {
+    .logo-text h1 {
     font-size: 18px;
   }
 
@@ -602,13 +595,8 @@ nav a:hover {
     padding: 5px 6px;
   }
 
-  .logo img {
-    height: 40px;
-    max-width: 44px;
-  }
-
-  .logo-text h1 {
-    font-size: 16px;
+    .logo-text h1 {
+    font-size: 18px;
   }
 
   #langToggle {
