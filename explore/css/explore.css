@@ -1,0 +1,1083 @@
+/* =========================================================
+   BHOLENATH DHAM
+   EXPLORE SHIVA
+   Explore-specific stylesheet
+
+   This file intentionally uses the "explore-" prefix
+   so it does not interfere with style.css or
+   shiva-purana.css.
+
+   Structure:
+   - Explore category headings
+   - Explore topic cards
+   - Explore content sections
+   - Explore devotional closing
+   - Explore bottom navigation
+   - Responsive layouts
+========================================================= */
+
+
+/* =========================================================
+   EXPLORE VARIABLES
+========================================================= */
+
+:root {
+  --explore-maroon: #7a0000;
+  --explore-maroon-dark: #650000;
+  --explore-saffron: #c45c00;
+  --explore-orange: #d67a15;
+  --explore-gold: #f1bd54;
+  --explore-gold-deep: #d49a21;
+
+  --explore-ivory: #fffaf4;
+  --explore-cream: #fff7ea;
+  --explore-surface: #fffdf8;
+  --explore-warm: #fff5e4;
+
+  --explore-text: #333;
+  --explore-muted: #555;
+  --explore-border: rgba(185, 101, 16, 0.28);
+
+  --explore-shadow-soft:
+    0 10px 25px rgba(91, 48, 13, 0.08);
+
+  --explore-shadow-medium:
+    0 16px 36px rgba(91, 48, 13, 0.12);
+
+  --explore-shadow-hover:
+    0 22px 46px rgba(91, 48, 13, 0.17);
+
+  --explore-sacred-line:
+    linear-gradient(
+      90deg,
+      var(--explore-maroon) 0%,
+      var(--explore-saffron) 34%,
+      var(--explore-gold) 50%,
+      var(--explore-saffron) 66%,
+      var(--explore-maroon) 100%
+    );
+
+  --explore-sacred-surface:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.16) 0,
+      rgba(232, 171, 67, 0) 35%
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fffaf1 60%,
+      #fff5e4 100%
+    );
+}
+
+
+/* =========================================================
+   LANGUAGE HELPERS
+
+   main.js normally handles the language state.
+   These are deliberately scoped so Explore content
+   behaves correctly even before JavaScript initializes.
+========================================================= */
+
+.explore-topic-card .bn.hidden,
+.explore-category-heading .bn.hidden,
+.explore-content-inner .bn.hidden,
+.explore-devotion-inner .bn.hidden,
+.explore-bottom-nav .bn.hidden {
+  display: none !important;
+}
+
+
+/* =========================================================
+   CATEGORY HEADING
+========================================================= */
+
+.explore-category-heading {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 58px auto 18px;
+
+  padding: 0 20px;
+}
+
+
+.explore-category-heading::after {
+  content: "";
+
+  display: block;
+
+  width: 85px;
+  height: 3px;
+
+  margin-top: 14px;
+
+  background:
+    var(--explore-sacred-line);
+
+  border-radius: 999px;
+}
+
+
+.explore-category-heading h3 {
+  margin: 0;
+
+  color: var(--explore-maroon);
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+
+.explore-category-heading p {
+  max-width: 900px;
+
+  margin: 10px 0 0;
+
+  color: var(--explore-muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TOPIC CARD GRID
+
+   IMPORTANT:
+   Desktop = exactly 3 cards per row.
+
+   Categories contain either:
+   - 3 cards
+   - 6 cards
+
+   Therefore there will never be an orphan card
+   within a category on desktop.
+========================================================= */
+
+.explore-topic-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+
+  max-width: 1200px;
+
+  margin: 0 auto 46px;
+
+  padding: 0 20px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   TOPIC CARD
+========================================================= */
+
+.explore-topic-card {
+  position: relative;
+
+  isolation: isolate;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  min-height: 255px;
+
+  padding: 30px 25px 27px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  background:
+    var(--explore-sacred-surface);
+
+  border:
+    1px solid
+    var(--explore-border);
+
+  border-radius: 21px;
+
+  box-shadow:
+    var(--explore-shadow-soft);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* Sacred top line */
+
+.explore-topic-card::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    var(--explore-sacred-line);
+}
+
+
+/* Subtle Om decoration */
+
+.explore-topic-card::after {
+  content: "ॐ";
+
+  position: absolute;
+
+  right: 17px;
+  bottom: 7px;
+
+  color:
+    rgba(122, 0, 0, 0.045);
+
+  font-size: 76px;
+
+  line-height: 1;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+.explore-topic-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(196, 92, 0, 0.55);
+
+  box-shadow:
+    var(--explore-shadow-hover);
+}
+
+
+.explore-topic-card:focus-visible {
+  outline:
+    3px solid
+    rgba(212, 154, 33, 0.65);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.explore-topic-card-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+
+  margin-bottom: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff7df,
+      #ffe9bd
+    );
+
+  border:
+    1px solid
+    rgba(196, 92, 0, 0.20);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 7px 17px
+    rgba(91, 48, 13, 0.08);
+
+  font-size: 31px;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.explore-topic-card h4 {
+  position: relative;
+
+  margin: 0 0 10px;
+
+  color:
+    var(--explore-maroon);
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.explore-topic-card p {
+  margin: 0;
+
+  color:
+    var(--explore-muted);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CARD ARROW
+
+   Added without changing the HTML.
+========================================================= */
+
+.explore-topic-card h4::after {
+  content: "→";
+
+  display: inline-block;
+
+  margin-left: 9px;
+
+  color:
+    var(--explore-saffron);
+
+  font-size: 18px;
+
+  opacity: 0;
+
+  transform: translateX(-5px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.explore-topic-card:hover h4::after {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   CONTENT-RICH EXPLAINER
+========================================================= */
+
+.explore-content-box {
+  max-width: 1200px;
+
+  margin: 58px auto;
+
+  padding: 0 20px;
+}
+
+
+.explore-content-inner {
+  position: relative;
+
+  isolation: isolate;
+
+  overflow: hidden;
+
+  padding: 42px 36px;
+
+  background:
+    var(--explore-sacred-surface);
+
+  border:
+    1px solid
+    var(--explore-border);
+
+  border-radius: 24px;
+
+  box-shadow:
+    var(--explore-shadow-medium);
+}
+
+
+/* Sacred top border */
+
+.explore-content-inner::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background:
+    var(--explore-sacred-line);
+}
+
+
+/* Decorative Om */
+
+.explore-content-inner::after {
+  content: "ॐ";
+
+  position: absolute;
+
+  right: 30px;
+  bottom: -24px;
+
+  color:
+    rgba(122, 0, 0, 0.045);
+
+  font-size: 160px;
+
+  line-height: 1;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+.explore-content-inner h3 {
+  margin: 0 0 20px;
+
+  color:
+    var(--explore-maroon);
+
+  font-size: 28px;
+
+  line-height: 1.4;
+}
+
+
+.explore-content-inner p {
+  max-width: 1000px;
+
+  margin: 0 0 20px;
+
+  color:
+    var(--explore-text);
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+
+.explore-content-inner p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DEVOTIONAL CLOSING
+========================================================= */
+
+.explore-devotion-box {
+  max-width: 1200px;
+
+  margin: 70px auto;
+
+  padding: 0 20px;
+}
+
+
+.explore-devotion-inner {
+  position: relative;
+
+  isolation: isolate;
+
+  overflow: hidden;
+
+  padding: 50px 35px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(241, 189, 84, 0.22),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #fffaf1,
+      #fff1dc
+    );
+
+  border:
+    1px solid
+    rgba(196, 92, 0, 0.28);
+
+  border-radius: 26px;
+
+  box-shadow:
+    var(--explore-shadow-medium);
+}
+
+
+.explore-devotion-inner::before {
+  content: "";
+
+  display: block;
+
+  width: 70px;
+  height: 3px;
+
+  margin: 0 auto 20px;
+
+  background:
+    var(--explore-sacred-line);
+
+  border-radius: 999px;
+}
+
+
+.explore-devotion-inner::after {
+  content: "ॐ";
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: -55px;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    rgba(122, 0, 0, 0.045);
+
+  font-size: 190px;
+
+  line-height: 1;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+.explore-devotion-inner h2 {
+  margin: 0 0 18px;
+
+  color:
+    var(--explore-maroon);
+
+  font-size: 31px;
+
+  line-height: 1.4;
+}
+
+
+.explore-devotion-inner p {
+  position: relative;
+
+  z-index: 1;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  color:
+    #4c4035;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.explore-bottom-nav {
+  max-width: 1200px;
+
+  margin: 80px auto;
+
+  padding: 44px 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fffaf1,
+      #fff4e4
+    );
+
+  border:
+    1px solid
+    var(--explore-border);
+
+  border-radius: 25px;
+
+  box-shadow:
+    var(--explore-shadow-medium);
+
+  text-align: center;
+}
+
+
+.explore-bottom-nav h2 {
+  margin: 0 0 12px;
+
+  color:
+    var(--explore-maroon);
+
+  font-size: 31px;
+
+  line-height: 1.4;
+}
+
+
+.explore-bottom-nav > p {
+  max-width: 850px;
+
+  margin: 0 auto 30px;
+
+  color:
+    var(--explore-muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   BOTTOM NAV CARDS
+========================================================= */
+
+.explore-bottom-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+
+  align-items: stretch;
+}
+
+
+.explore-bottom-card {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  min-width: 0;
+
+  padding: 22px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  text-align: left;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+
+  border:
+    1px solid
+    rgba(185, 101, 16, 0.20);
+
+  border-radius: 17px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.explore-bottom-card:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(196, 92, 0, 0.45);
+
+  box-shadow:
+    var(--explore-shadow-soft);
+}
+
+
+.explore-bottom-card:focus-visible {
+  outline:
+    3px solid
+    rgba(212, 154, 33, 0.65);
+
+  outline-offset: 4px;
+}
+
+
+.explore-bottom-card h3 {
+  margin: 0 0 6px;
+
+  color:
+    var(--explore-maroon);
+
+  font-size: 18px;
+
+  line-height: 1.4;
+}
+
+
+.explore-bottom-card p {
+  margin: 0;
+
+  color:
+    var(--explore-muted);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+.explore-bottom-arrow {
+  flex:
+    0 0 auto;
+
+  color:
+    var(--explore-saffron);
+
+  font-size: 25px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.explore-bottom-card:hover .explore-bottom-arrow {
+  transform:
+    translateX(5px);
+}
+
+
+/* =========================================================
+   DEVOTIONAL SEPARATION
+
+   Gives each major Explore area a little breathing room.
+========================================================= */
+
+.explore-category-heading + .explore-topic-grid {
+  margin-top: 22px;
+}
+
+
+.explore-topic-grid + .explore-category-heading {
+  margin-top: 70px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .explore-topic-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+
+  .explore-bottom-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .explore-category-heading h3 {
+    font-size: 25px;
+  }
+
+
+  .explore-content-inner {
+    padding: 36px 28px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .explore-topic-grid {
+    grid-template-columns:
+      1fr;
+
+    gap: 18px;
+
+    padding:
+      0 15px;
+  }
+
+
+  .explore-category-heading {
+    margin-top: 45px;
+
+    padding:
+      0 15px;
+  }
+
+
+  .explore-category-heading h3 {
+    font-size: 23px;
+  }
+
+
+  .explore-category-heading p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  .explore-topic-card {
+    min-height: 0;
+
+    padding:
+      27px 22px 25px;
+  }
+
+
+  .explore-content-box,
+  .explore-devotion-box {
+    padding:
+      0 15px;
+  }
+
+
+  .explore-content-inner {
+    padding:
+      34px 22px;
+  }
+
+
+  .explore-content-inner h3 {
+    font-size: 24px;
+  }
+
+
+  .explore-content-inner p {
+    font-size: 15px;
+
+    line-height: 1.85;
+  }
+
+
+  .explore-devotion-inner {
+    padding:
+      42px 22px;
+  }
+
+
+  .explore-devotion-inner h2 {
+    font-size: 25px;
+  }
+
+
+  .explore-devotion-inner p {
+    font-size: 15px;
+  }
+
+
+  .explore-bottom-nav {
+    margin:
+      60px 15px;
+
+    padding:
+      38px 20px;
+  }
+
+
+  .explore-bottom-nav h2 {
+    font-size: 25px;
+  }
+
+
+  .explore-bottom-card {
+    padding:
+      20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .explore-topic-card {
+    padding:
+      25px 19px;
+  }
+
+
+  .explore-topic-card-icon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 28px;
+  }
+
+
+  .explore-topic-card h4 {
+    font-size: 18px;
+  }
+
+
+  .explore-topic-card p {
+    font-size: 13px;
+  }
+
+
+  .explore-content-inner {
+    padding:
+      30px 18px;
+  }
+
+
+  .explore-devotion-inner {
+    padding:
+      36px 18px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .explore-topic-card,
+  .explore-bottom-card,
+  .explore-bottom-arrow,
+  .explore-topic-card h4::after {
+    transition: none;
+  }
+
+
+  .explore-topic-card:hover,
+  .explore-bottom-card:hover {
+    transform: none;
+  }
+
+}
+
+
+
+/* =========================================================
+   EXPLORE FORMS - HERO IMAGE
+   ========================================================= */
+
+.explore-forms-hero {
+  width: min(1160px, calc(100% - 40px));
+  height: 600px;
+  margin: 0 auto -70px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.explore-forms-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+  .explore-forms-hero {
+    width: calc(100% - 35px);
+    height: 420px;
+    border-radius: 12px;
+  }
+
+  .explore-forms-hero img {
+    border-radius: 20px;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+  .explore-forms-hero {
+    width: 100%;
+    height: auto;
+    margin-bottom:-25px;
+    border-radius: 10px;
+  }
+
+  .explore-forms-hero img {
+    border-radius: 20px;
+  }
+
+}
+
