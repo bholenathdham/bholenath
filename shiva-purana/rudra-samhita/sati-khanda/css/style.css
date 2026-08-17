@@ -294,12 +294,13 @@ header {
 .logo img {
   height: 60px;
   width: auto;
+  margin-top:10px;
 }
 
 .logo-text h1 {
   font-size: 24px;
   color: #8b0000;
-  margin: 0;
+  margin-left: 10px;
 }
 
 .logo-text span {
@@ -529,6 +530,7 @@ nav a:hover {
 
     .logo-text h1 {
     font-size: 18px;
+    margin-left:2px;
   }
 
   #langToggle {
@@ -597,6 +599,7 @@ nav a:hover {
 
     .logo-text h1 {
     font-size: 18px;
+    margin-left:1px;
   }
 
   #langToggle {
