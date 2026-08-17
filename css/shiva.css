@@ -25,7 +25,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .lang-bn .bn { display: revert; }
 
 /* HEADER STYLES */
-.site-header { position: sticky; top: 0; z-index: 1000; padding: 10px 4%; border-bottom: 1px solid rgba(196, 92, 0, 0.12); background: rgba(255,255,255,.96); box-shadow: 0 2px 15px rgba(0,0,0,.08); backdrop-filter: blur(12px); }
+.site-header { position: sticky; top: 0; z-index: 1000;  border-bottom: 1px solid rgba(196, 92, 0, 0.12); background: rgba(255,255,255,.96); box-shadow: 0 2px 15px rgba(0,0,0,.08); backdrop-filter: blur(12px); }
 .header-container { display: flex; align-items: center; justify-content: space-between; gap: 15px; max-width: 1450px; margin: auto; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
 .brand img { width: auto; height: 50px; flex-shrink: 0; }
