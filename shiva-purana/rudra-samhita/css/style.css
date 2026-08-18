@@ -37,9 +37,8 @@ nav a {
 .hero {
   height: 85vh;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("../images/temple1.webp");
-  background-size: cover;
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55));
+    background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
