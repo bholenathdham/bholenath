@@ -1,278 +1,253 @@
-/* HERO SECTION */
+/* ==========================================
+   DEEPLY DEVOTIONAL TEMPLE BACKGROUND
+   ================================---------- */
+body {
+    background-color: #fff9ed;
+    background-image: 
+        radial-gradient(#f59e0b 0.85px, transparent 0.85px), 
+        radial-gradient(#b91c1c 0.85px, #fff9ed 0.85px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+}
 
+/* ==========================================
+   HERO SECTION (Increased Desktop Height)
+   ================================---------- */
 .names-hero{
-height:55vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:120px 20px 80px;
+    height: 70vh; /* Increased height for desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 140px 20px 80px;
 
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-url('../images/temple4.webp');
+    /* Natural clear view with balanced lighting */
+    background: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+        url('../images/temple4.webp');
 
-background-size:cover;
-background-position:center;
-
-color:#fff;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-bottom: 5px solid #f59e0b;
 }
 
 .names-hero h1{
-font-size:52px;
-margin-bottom:20px;
-
-text-shadow:
-0 0 10px rgba(255,255,255,.3),
-0 0 20px rgba(255,153,51,.3);
+    font-size: 52px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255,255,255,.3), 0 0 20px rgba(255,153,51,.3);
 }
 
 .names-hero p{
-max-width:750px;
-font-size:20px;
-line-height:1.8;
+    max-width: 750px;
+    font-size: 20px;
+    line-height: 1.8;
 }
 
 @media(max-width:768px){
-
-.names-hero{
-height:45vh;
-padding:100px 20px 60px;
-}
-
-.names-hero h1{
-font-size:34px;
-}
-
-.names-hero p{
-font-size:16px;
-}
-
+    .names-hero{
+        height: 48vh;
+        padding: 100px 20px 60px;
+    }
+    .names-hero h1{
+        font-size: 34px;
+    }
+    .names-hero p{
+        font-size: 16px;
+    }
 }
 
 .media-intro{
-text-align:center;
-max-width:900px;
-margin:40px auto;
-padding:0 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
 .media-intro p{
-font-size:1.1rem;
-line-height:1.8;
-color:#555;
-}
-
-.media-grid{
-max-width:1400px;
-margin:50px auto;
-padding:0 20px;
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
-gap:30px;
-}
-
-.media-card{
-background:#fff;
-padding:25px;
-border-radius:25px;
-
-border-top:2px solid #ff7b00;
-border-left:5px solid #ff7b00;
-border-right:2px solid #ff7b00;
-border-bottom:2px solid #ff7b00;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.media-card:hover{
-transform:translateY(-5px);
-}
-
-.media-card h3{
-text-align:center;
-color:#8B0000;
-margin-bottom:15px;
-}
-
-.media-card p{
-text-align:center;
-line-height:1.8;
-margin-bottom:20px;
-color:#555;
-}
-
-.media-grid{
-    max-width:1400px;
-    margin:50px auto;
-    padding:0 20px;
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
-    gap:30px;
-}
-
-.media-card{
-    background:#fff;
-
-    padding:25px;
-
-    border-radius:25px;
-
-    border-top:2px solid #ff7b00;
-    border-left:5px solid #ff7b00;
-    border-right:2px solid #ff7b00;
-    border-bottom:2px solid #ff7b00;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-}
-
-.media-card:hover{
-    transform:translateY(-5px);
-}
-
-.media-card h3{
-    text-align:center;
-    color:#8B0000;
-    margin-bottom:15px;
-}
-
-.media-card p{
-    text-align:center;
-    line-height:1.8;
-    color:#555;
-    margin-bottom:20px;
-}
-
-.video-wrapper{
-    display:flex;
-    justify-content:center;
-}
-
-.video-wrapper iframe{
-    width:100%;
-    max-width:360px;
-
-    aspect-ratio:9/16;
-
-    border:none;
-    border-radius:15px;
-}
-
-@media(max-width:768px){
-
-.media-grid{
-    grid-template-columns:1fr;
-    gap:20px;
-}
-
-.media-card{
-    padding:20px;
-}
-
-.video-wrapper iframe{
-    max-width:320px;
-}
-
-}
-
-.gallery{
-    max-width:1400px;
-    margin:50px auto;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:16px;
-}
-
-.gallery img{
-    width:100%;
-    height:270px;
-
-    object-fit:cover;
-
-    border-radius:18px;
-
-    box-shadow:
-    0 8px 20px rgba(0,0,0,.08);
-
-    transition:all .4s ease;
-
-    cursor:pointer;
-}
-
-.gallery img:hover{
-    transform:scale(1.04);
-
-    box-shadow:
-    0 15px 35px rgba(255,123,0,.25);
-}
-
-.media-intro{
-    max-width:1000px;
-    margin:60px auto;
-    padding:0 20px;
-    text-align:center;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
 }
 
 .media-intro h2{
-    font-size:2.4rem;
-    color:#8B0000;
-    margin-bottom:15px;
+    font-size: 2.4rem;
+    color: #8B0000;
+    margin-bottom: 15px;
 }
 
 .media-intro h2::after{
-    content:"";
-    display:block;
-    width:80px;
-    height:4px;
-    background:#7a0000;
-    margin:15px auto;
-    border-radius:50px;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #ff9933;
+    margin: 15px auto;
+    border-radius: 2px;
 }
 
-.media-intro p{
-    font-size:1.1rem;
-    line-height:1.9;
-    color:#555;
+/* ==========================================
+   VIDEO GRID - Sacred Temple Borders
+   ================================---------- */
+.media-grid{
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+}
+
+.media-card{
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    
+    /* Sacred temple pillar-style border */
+    border-top: 3px solid #f59e0b;
+    border-left: 5px solid #b91c1c;
+    border-right: 3px solid #f59e0b;
+    border-bottom: 3px solid #f59e0b;
+    
+    box-shadow: 0 10px 25px rgba(185, 28, 28, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.2);
+}
+
+.media-card h3{
+    text-align: center;
+    color: #8B0000;
+    margin-bottom: 15px;
+}
+
+.media-card p{
+    text-align: center;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.video-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper iframe{
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 9/16;
+    
+    /* Elegant inner golden border for every video */
+    border: 3px solid #fde68a;
+    border-radius: 14px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 @media(max-width:768px){
-    .media-intro h2{
-        font-size:2rem;
+    .media-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-
-    .media-intro p{
-        font-size:1rem;
-        line-height:1.8;
+    .media-card{
+        padding: 20px;
     }
-
-  .gallery{
-        grid-template-columns:1fr;
-        gap:15px;
+    .video-wrapper iframe{
+        max-width: 320px;
     }
-
-    .gallery img{
-        height:auto;
-        aspect-ratio:16/10;
-    }  
 }
 
+/* ==========================================
+   PHOTO GALLERY - Vibrant Devotional Borders
+   ================================---------- */
 .gallery{
-    margin-bottom:30px !important;
+    max-width: 1400px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.photo-gallery{
-    margin-bottom:20px !important;
-    padding-bottom:0 !important;
+.gallery img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 18px;
+    
+    /* Golden temple frame border for every picture */
+    border: 4px solid #fcd34d;
+    box-shadow: 0 8px 22px rgba(185, 28, 28, 0.1);
+    
+    transition: all .4s ease;
+    cursor: pointer;
 }
 
-.related-links{
-    margin-top:20px !important;
-    padding-top:20px !important;
+.gallery img:hover{
+    transform: scale(1.04);
+    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.35);
+    border-color: #b91c1c;
+}
+
+@media(max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .gallery img {
+        height: 200px;
+    }
+}
+
+@media(max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .gallery img {
+        height: 240px;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE LIGHTBOX FIXES (Mobile & Desktop)
+   ================================---------- */
+
+.lightbox, .lightbox-modal, #lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Use 100dvh (Dynamic Viewport Height) to properly handle mobile address bars */
+    height: 100dvh; 
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lightbox img, .lightbox-modal img, #lightbox img {
+    max-width: 95vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+    margin: auto; /* Centers the image perfectly and eliminates weird flex whitespace gaps */
+}
+
+/* Specific mobile adjustment */
+@media(max-width: 768px) {
+    .lightbox img, .lightbox-modal img, #lightbox img {
+        max-width: 98vw;
+        max-height: 75vh; /* Fits cleanly inside mobile phone height bounds */
+    }
 }
