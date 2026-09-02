@@ -1,28 +1,67 @@
-const buttons = document.querySelectorAll(".lang-btn");
-const contents = document.querySelectorAll(".lang-content");
+(function () {
+  "use strict";
 
-buttons.forEach(button => {
+  const STORAGE_KEY = "bholenathLanguage";
+  const SUPPORTED_LANGUAGES = ["hi", "en", "bn"];
 
-button.addEventListener("click", () => {
+  function validLanguage(language) {
+    return SUPPORTED_LANGUAGES.includes(language) ? language : null;
+  }
 
-const lang = button.dataset.lang;
+  function currentLanguage() {
+    const selector = document.querySelector(".site-language-select select");
+    const selectedFromControl = validLanguage(selector?.value);
 
-buttons.forEach(btn =>
-btn.classList.remove("active")
-);
+    if (selectedFromControl) {
+      return selectedFromControl;
+    }
 
-button.classList.add("active");
+    const selectedFromDocument = validLanguage(document.documentElement.lang);
 
-contents.forEach(content => {
+    if (selectedFromDocument) {
+      return selectedFromDocument;
+    }
 
-content.classList.remove("active");
+    try {
+      return validLanguage(window.localStorage.getItem(STORAGE_KEY)) || "hi";
+    } catch (error) {
+      return "hi";
+    }
+  }
 
-if(content.classList.contains(lang)){
-content.classList.add("active");
-}
+  function showChalisa(language) {
+    const selected = validLanguage(language) || currentLanguage();
 
-});
+    document.querySelectorAll(".lang-content[data-lang]").forEach((block) => {
+      const visible = block.dataset.lang === selected;
+      block.classList.toggle("active", visible);
+      block.classList.toggle("hidden", !visible);
+      block.setAttribute("aria-hidden", String(!visible));
+    });
+  }
 
-});
+  function initialize() {
+    document.addEventListener("change", (event) => {
+      const selector = event.target.closest(".site-language-select select");
+      if (selector) {
+        showChalisa(selector.value);
+      }
+    });
 
-});
+    window.addEventListener("storage", (event) => {
+      if (event.key === STORAGE_KEY && event.newValue) {
+        showChalisa(event.newValue);
+      }
+    });
+
+    // The site-wide selector is created on DOMContentLoaded. Waiting until the
+    // next task ensures that its initial language has been applied first.
+    window.setTimeout(() => showChalisa(currentLanguage()), 0);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initialize);
+  } else {
+    initialize();
+  }
+})();
