@@ -27,7 +27,7 @@ body {
     height: 75vh;  
     padding: 120px 20px 80px;
     text-align: center;
-    background: url('../images/temple6.webp');
+    background: linear-gradient(rgba(28, 8, 0, 0.64), rgba(62, 10, 0, 0.72)), url('../images/temple6.webp');
     background-size: cover;
     background-position: center;
     color: white;

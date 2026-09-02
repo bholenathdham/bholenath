@@ -24,7 +24,7 @@ body {
 
     /* Natural clear view with balanced lighting */
     background: 
-        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+        linear-gradient(rgba(28, 8, 0, 0.64), rgba(62, 10, 0, 0.72)), 
         url('../images/temple4.webp');
 
     background-size: cover;
