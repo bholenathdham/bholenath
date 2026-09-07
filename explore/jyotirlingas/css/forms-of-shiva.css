@@ -1,0 +1,1270 @@
+/* =========================================================
+   BHOLENATH DHAM
+   FORMS & NAMES OF LORD SHIVA
+   Page-specific stylesheet
+
+   IMPORTANT:
+   All rules are scoped to .explore-forms-page so this file
+   does not interfere with explore.css or other Explore pages.
+
+   TYPOGRAPHY
+   Desktop:
+   Paragraphs = 20px
+   Headings   = 24px
+
+   Phone:
+   Paragraphs = 17px
+   Headings   = 22px
+   ========================================================= */
+
+
+/* =========================================================
+   LANGUAGE VISIBILITY
+   ========================================================= */
+
+.explore-forms-page .hidden {
+  display: none !important;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+   ========================================================= */
+
+.explore-forms-page {
+  width: 100%;
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.explore-forms-page .explore-forms-hero {
+  width: min(1160px, calc(100% - 40px));
+  height: 600px;
+
+  margin: 30px auto 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+}
+
+.explore-forms-page .explore-forms-hero img {
+  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 16px;
+}
+
+
+/* =========================================================
+   GENERAL TYPOGRAPHY
+   ========================================================= */
+
+.explore-forms-page p {
+  font-size: 20px;
+  line-height: 1.85;
+}
+
+.explore-forms-page h1,
+.explore-forms-page h2,
+.explore-forms-page h3 {
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+   ========================================================= */
+
+.explore-forms-page .explore-shiva-section-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #a54f08;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+.explore-forms-page .explore-shiva-section-label::before {
+  content: "🔱";
+
+  margin-right: 7px;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.explore-forms-page .explore-forms-intro {
+  width: min(960px, calc(100% - 40px));
+
+  margin: 48px auto 30px;
+
+  text-align: center;
+}
+
+.explore-forms-page .explore-forms-intro h1 {
+  margin: 8px 0 22px;
+
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.explore-forms-page .explore-forms-intro-lead {
+  max-width: 900px;
+
+  margin: 0 auto 25px;
+
+  font-size: 20px;
+  line-height: 1.85;
+
+  font-weight: 500;
+}
+
+.explore-forms-page .explore-forms-intro p:not(.explore-forms-intro-lead) {
+  max-width: 900px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  font-size: 20px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   SACRED IDEA
+   ========================================================= */
+
+.explore-forms-page .explore-forms-sacred-box {
+  position: relative;
+
+  width: min(1040px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 40px 48px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf2 0%,
+      #fff3df 100%
+    );
+
+  border: 1px solid rgba(196, 92, 0, 0.18);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 24px rgba(90, 50, 15, 0.07);
+
+  text-align: center;
+}
+
+.explore-forms-page .explore-forms-sacred-box .sp-info-icon {
+  margin: 0 auto 15px;
+}
+
+.explore-forms-page .explore-forms-sacred-box h2 {
+  margin: 0 0 20px;
+
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.explore-forms-page .explore-forms-sacred-box p {
+  max-width: 900px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  font-size: 20px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   GENERAL FORMS CONTENT
+   ========================================================= */
+
+.explore-forms-page .explore-forms-page-text,
+.explore-forms-page .explore-forms-intro-text {
+  font-size: 20px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.explore-forms-page .sp-section h2 {
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.explore-forms-page .sp-section > p {
+  font-size: 20px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   MAJOR FORMS OF SHIVA
+   ========================================================= */
+
+/* =========================================================
+   DEVOTIONAL SHIVA FORM CARDS
+   ========================================================= */
+
+.explore-forms-page .explore-forms-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 26px;
+
+  margin-top: 34px;
+}
+
+
+/* ---------------------------------------------------------
+   CARD
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 345px;
+
+  padding: 34px 28px 30px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 218, 157, 0.34) 0%,
+      rgba(255, 250, 242, 0.95) 38%,
+      #fffaf4 100%
+    );
+
+  border: 1px solid rgba(181, 91, 20, 0.22);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 7px 22px rgba(91, 48, 15, 0.07);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+
+/* ---------------------------------------------------------
+   SUBTLE SACRED LIGHT
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -85px;
+  left: 50%;
+
+  width: 180px;
+  height: 180px;
+
+  transform: translateX(-50%);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(196, 92, 0, 0.10) 0%,
+      rgba(196, 92, 0, 0.04) 38%,
+      transparent 72%
+    );
+
+  pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   SACRED SIDE ACCENT
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 22px;
+  left: 0;
+
+  width: 3px;
+  height: 72px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      #c45c00,
+      transparent
+    );
+
+  border-radius: 0 4px 4px 0;
+
+  opacity: 0.65;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(181, 91, 20, 0.38);
+
+  box-shadow:
+    0 14px 32px rgba(91, 48, 15, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   CARD ICON
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 19px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle,
+      #fff8e9 0%,
+      #fbe5c5 100%
+    );
+
+  border:
+    1px solid rgba(196, 92, 0, 0.25);
+
+  border-radius: 50%;
+
+  color: #a64e0a;
+
+  font-size: 1.65rem;
+
+  box-shadow:
+    0 4px 13px rgba(125, 62, 12, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   CARD NUMBER
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-number {
+  position: absolute;
+
+  top: 20px;
+  right: 21px;
+
+  color:
+    rgba(137, 67, 14, 0.38);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* ---------------------------------------------------------
+   CARD HEADING
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 13px;
+
+  color: #71350e;
+
+  font-size: 24px;
+
+  line-height: 1.45;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   DEVOTIONAL DIVIDER
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card h3::after {
+  content: "ॐ";
+
+  display: block;
+
+  margin-top: 10px;
+
+  color: #c45c00;
+
+  font-size: 14px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  opacity: 0.72;
+}
+
+
+/* ---------------------------------------------------------
+   CARD DESCRIPTION
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: #695545;
+
+  font-size: 20px;
+
+  line-height: 1.82;
+
+  text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   SACRED FOOTER MARK
+   --------------------------------------------------------- */
+
+.explore-forms-page .explore-forms-card p::after {
+  content: "ॐ नमः शिवाय";
+
+  display: block;
+
+  margin-top: 20px;
+
+  color: rgba(164, 78, 10, 0.68);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SACRED NAMES
+   ========================================================= */
+
+.explore-forms-page .explore-forms-name-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+
+  margin-top: 30px;
+}
+
+.explore-forms-page .explore-forms-name-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  min-width: 0;
+
+  padding: 22px 24px;
+
+  box-sizing: border-box;
+
+  background: #fffaf3;
+
+  border-left:
+    3px solid rgba(196, 92, 0, 0.55);
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 3px 12px rgba(80, 45, 15, 0.045);
+}
+
+.explore-forms-page .explore-forms-name-item strong {
+  color: #7b3b12;
+
+  font-size: 24px;
+  line-height: 1.45;
+
+  font-weight: 600;
+}
+
+.explore-forms-page .explore-forms-name-item span {
+  color: #725e4d;
+
+  font-size: 20px;
+  line-height: 1.82;
+}
+
+
+/* =========================================================
+   SHIVA ICONOGRAPHY
+   ========================================================= */
+
+.explore-forms-page .explore-forms-symbol-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.explore-forms-page .explore-forms-symbol-card {
+  min-width: 0;
+
+  padding: 28px 22px;
+
+  box-sizing: border-box;
+
+  background: #fffaf4;
+
+  border: 1px solid rgba(196, 92, 0, 0.14);
+
+  border-radius: 13px;
+
+  text-align: center;
+
+  box-shadow:
+    0 4px 15px rgba(80, 45, 15, 0.05);
+}
+
+.explore-forms-page .explore-forms-symbol-icon {
+  width: 56px;
+  height: 56px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(196, 92, 0, 0.08);
+
+  font-size: 1.55rem;
+}
+
+.explore-forms-page .explore-forms-symbol-card h3 {
+  margin: 0 0 11px;
+
+  color: #74370f;
+
+  font-size: 24px;
+  line-height: 1.45;
+
+  font-weight: 600;
+}
+
+.explore-forms-page .explore-forms-symbol-card p {
+  margin: 0;
+
+  color: #725e4d;
+
+  font-size: 20px;
+  line-height: 1.82;
+}
+
+
+/* =========================================================
+   SHIVA AND SHAKTI / DEVOTIONAL PRACTICE
+   ========================================================= */
+
+.explore-forms-page .explore-forms-practice-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-top: 30px;
+}
+
+.explore-forms-page .explore-forms-practice-card {
+  min-width: 0;
+
+  padding: 28px 22px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf3 0%,
+      #fff6e9 100%
+    );
+
+  border: 1px solid rgba(196, 92, 0, 0.14);
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 4px 15px rgba(80, 45, 15, 0.05);
+}
+
+.explore-forms-page .explore-forms-practice-card > div:first-child {
+  margin-bottom: 14px;
+
+  font-size: 1.55rem;
+}
+
+.explore-forms-page .explore-forms-practice-card h3 {
+  margin: 0 0 11px;
+
+  color: #74370f;
+
+  font-size: 24px;
+  line-height: 1.45;
+
+  font-weight: 600;
+}
+
+.explore-forms-page .explore-forms-practice-card p {
+  margin: 0;
+
+  color: #725e4d;
+
+  font-size: 20px;
+  line-height: 1.82;
+}
+
+
+/* =========================================================
+   DEVOTIONAL QUOTE
+   ========================================================= */
+
+.explore-forms-page .explore-forms-quote {
+  width: min(900px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 40px 48px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff9ef 0%,
+      #fff1dc 100%
+    );
+
+  border: 1px solid rgba(196, 92, 0, 0.18);
+
+  border-radius: 16px;
+
+  text-align: center;
+
+  box-shadow:
+    0 7px 22px rgba(80, 45, 15, 0.06);
+}
+
+.explore-forms-page .explore-forms-quote p {
+  margin: 0 auto 18px;
+
+  color: #71350e;
+
+  font-size: 20px;
+  line-height: 1.85;
+
+  font-style: italic;
+}
+
+.explore-forms-page .explore-forms-quote small {
+  color: #a35616;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.explore-forms-page .explore-forms-faq {
+  width: 100%;
+}
+
+.explore-forms-page .explore-forms-faq .sp-faq-item {
+  position: relative;
+
+  margin: 0 0 16px;
+
+  padding: 24px 28px;
+
+  box-sizing: border-box;
+
+  background: #fffaf4;
+
+  border: 1px solid rgba(196, 92, 0, 0.14);
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 13px rgba(80, 45, 15, 0.045);
+}
+
+.explore-forms-page .explore-forms-faq .sp-faq-item h3 {
+  margin: 0 0 11px;
+
+  color: #71350e;
+
+  font-size: 24px;
+  line-height: 1.5;
+
+  font-weight: 600;
+}
+
+.explore-forms-page .explore-forms-faq .sp-faq-item p {
+  margin: 0;
+
+  color: #705c4a;
+
+  font-size: 20px;
+  line-height: 1.82;
+}
+
+
+/* =========================================================
+   FINAL DEVOTIONAL REFLECTION
+   ========================================================= */
+
+.explore-forms-page .explore-forms-ending {
+  width: min(1040px, calc(100% - 40px));
+
+  margin: 48px auto 0;
+
+  padding: 42px 48px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+.explore-forms-page .explore-forms-ending .sp-info-icon {
+  margin: 0 auto 15px;
+}
+
+.explore-forms-page .explore-forms-ending h2 {
+  margin: 0 0 20px;
+
+  font-size: 24px;
+  line-height: 1.45;
+}
+
+.explore-forms-page .explore-forms-ending p {
+  max-width: 900px;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  font-size: 20px;
+  line-height: 1.85;
+}
+
+.explore-forms-page .explore-forms-ending .mahadev-ending {
+  margin-top: 25px;
+
+  color: #c45c00;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* =========================================================
+   BOTTOM SACRED JOURNEY NAVIGATION
+   ========================================================= */
+
+.explore-forms-page .explore-bottom-nav {
+  width: min(1160px, calc(100% - 40px));
+
+  margin: 55px auto 20px;
+
+  padding-top: 34px;
+
+  border-top:
+    1px solid rgba(196, 92, 0, 0.18);
+
+  text-align: center;
+}
+
+.explore-forms-page .explore-bottom-nav > h2 {
+  margin: 0 0 14px;
+
+  color: #783b17;
+
+  font-size: 24px;
+  line-height: 1.45;
+
+  font-weight: 600;
+}
+
+.explore-forms-page .explore-bottom-nav > p {
+  max-width: 900px;
+
+  margin: 0 auto 32px;
+
+  color: #705b49;
+
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.explore-forms-page .explore-bottom-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.explore-forms-page .explore-bottom-card {
+  min-width: 0;
+  min-height: 155px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 24px 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf3 0%,
+      #fff3e2 100%
+    );
+
+  border: 1px solid rgba(196, 92, 0, 0.16);
+
+  border-radius: 13px;
+
+  color: #633718;
+
+  text-align: left;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 4px 15px rgba(80, 45, 15, 0.055);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.explore-forms-page .explore-bottom-card:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(196, 92, 0, 0.34);
+
+  box-shadow:
+    0 8px 22px rgba(80, 45, 15, 0.10);
+}
+
+.explore-forms-page .explore-bottom-card h3 {
+  margin: 0 0 9px;
+
+  color: #74370f;
+
+  font-size: 24px;
+  line-height: 1.45;
+
+  font-weight: 600;
+}
+
+.explore-forms-page .explore-bottom-card p {
+  margin: 0;
+
+  color: #725e4d;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.explore-forms-page .explore-bottom-arrow {
+  flex: 0 0 auto;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(196, 92, 0, 0.09);
+
+  color: #c45c00;
+
+  font-size: 1.25rem;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease;
+}
+
+.explore-forms-page .explore-bottom-card:hover
+.explore-bottom-arrow {
+  background:
+    rgba(196, 92, 0, 0.15);
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   BENGALI TYPOGRAPHY
+   ========================================================= */
+
+.explore-forms-page .bn {
+  line-height: 1.95;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+  .explore-forms-page .explore-forms-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .explore-forms-page .explore-forms-symbol-grid,
+  .explore-forms-page .explore-forms-practice-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .explore-forms-page .explore-bottom-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .explore-forms-page .explore-bottom-card:last-child {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 10px);
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================================
+   PHONE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Hero */
+
+  .explore-forms-page .explore-forms-hero {
+   max-width: 1200px;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 0 12px;
+        position: relative;
+  }
+
+  .explore-forms-page .explore-forms-hero img {
+    border-radius: 12px;
+  }
+
+
+  /* Widths */
+
+  .explore-forms-page .explore-forms-intro,
+  .explore-forms-page .explore-forms-sacred-box,
+  .explore-forms-page .explore-forms-ending,
+  .explore-forms-page .explore-bottom-nav {
+    width: calc(100% - 28px);
+  }
+
+  .explore-forms-page .explore-forms-quote {
+    width: calc(100% - 28px);
+  }
+
+
+  /* =======================================================
+     PHONE TYPOGRAPHY
+     Heading = 22px
+     Paragraph = 17px
+     ======================================================= */
+
+  .explore-forms-page .explore-forms-intro h1,
+  .explore-forms-page .explore-forms-sacred-box h2,
+  .explore-forms-page .sp-section h2,
+  .explore-forms-page .explore-forms-card h3,
+  .explore-forms-page .explore-forms-name-item strong,
+  .explore-forms-page .explore-forms-symbol-card h3,
+  .explore-forms-page .explore-forms-practice-card h3,
+  .explore-forms-page .explore-forms-faq .sp-faq-item h3,
+  .explore-forms-page .explore-forms-ending h2,
+  .explore-forms-page .explore-bottom-nav > h2,
+  .explore-forms-page .explore-bottom-card h3 {
+    font-size: 22px;
+  }
+
+  .explore-forms-page p,
+  .explore-forms-page .explore-forms-intro-lead,
+  .explore-forms-page .explore-forms-intro p:not(.explore-forms-intro-lead),
+  .explore-forms-page .explore-forms-sacred-box p,
+  .explore-forms-page .sp-section > p,
+  .explore-forms-page .explore-forms-card p,
+  .explore-forms-page .explore-forms-name-item span,
+  .explore-forms-page .explore-forms-symbol-card p,
+  .explore-forms-page .explore-forms-practice-card p,
+  .explore-forms-page .explore-forms-quote p,
+  .explore-forms-page .explore-forms-faq .sp-faq-item p,
+  .explore-forms-page .explore-forms-ending p,
+  .explore-forms-page .explore-bottom-nav > p,
+  .explore-forms-page .explore-bottom-card p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+
+  /* Grids */
+
+  .explore-forms-page .explore-forms-grid,
+  .explore-forms-page .explore-forms-name-grid,
+  .explore-forms-page .explore-forms-symbol-grid,
+  .explore-forms-page .explore-forms-practice-grid,
+  .explore-forms-page .explore-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Cards */
+
+  .explore-forms-page .explore-forms-card {
+    min-height: 0;
+
+    padding: 25px 21px;
+  }
+
+  .explore-forms-page .explore-forms-name-item {
+    padding: 20px 20px;
+  }
+
+  .explore-forms-page .explore-forms-symbol-card,
+  .explore-forms-page .explore-forms-practice-card {
+    padding: 24px 20px;
+  }
+
+
+  /* Sacred box */
+
+  .explore-forms-page .explore-forms-sacred-box {
+    padding: 30px 22px;
+  }
+
+
+  /* Quote */
+
+  .explore-forms-page .explore-forms-quote {
+    padding: 30px 22px;
+  }
+
+
+  /* Ending */
+
+  .explore-forms-page .explore-forms-ending {
+    padding: 32px 22px;
+  }
+
+
+  /* Bottom navigation */
+
+  .explore-forms-page .explore-bottom-card:last-child {
+    grid-column: auto;
+
+    width: 100%;
+  }
+
+  .explore-forms-page .explore-bottom-card {
+    min-height: 135px;
+
+    padding: 20px 18px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .explore-forms-page .explore-forms-hero {
+    max-width: 1200px;
+        height: auto;
+        border-radius: 10px;
+        margin: 20px auto;
+        padding: 0 12px;
+        position: relative;
+  }
+
+  .explore-forms-page .explore-forms-hero img {
+    border-radius: 10px;
+  }
+
+
+  .explore-forms-page .explore-forms-intro,
+  .explore-forms-page .explore-forms-sacred-box,
+  .explore-forms-page .explore-forms-ending,
+  .explore-forms-page .explore-forms-quote,
+  .explore-forms-page .explore-bottom-nav {
+    width: calc(100% - 20px);
+  }
+
+
+  /* Keep exact requested mobile sizes */
+
+  .explore-forms-page .explore-forms-intro h1,
+  .explore-forms-page .explore-forms-sacred-box h2,
+  .explore-forms-page .sp-section h2,
+  .explore-forms-page .explore-forms-card h3,
+  .explore-forms-page .explore-forms-name-item strong,
+  .explore-forms-page .explore-forms-symbol-card h3,
+  .explore-forms-page .explore-forms-practice-card h3,
+  .explore-forms-page .explore-forms-faq .sp-faq-item h3,
+  .explore-forms-page .explore-forms-ending h2,
+  .explore-forms-page .explore-bottom-nav > h2,
+  .explore-forms-page .explore-bottom-card h3 {
+    font-size: 22px;
+  }
+
+  .explore-forms-page p,
+  .explore-forms-page .explore-forms-intro-lead,
+  .explore-forms-page .explore-forms-intro p:not(.explore-forms-intro-lead),
+  .explore-forms-page .explore-forms-sacred-box p,
+  .explore-forms-page .sp-section > p,
+  .explore-forms-page .explore-forms-card p,
+  .explore-forms-page .explore-forms-name-item span,
+  .explore-forms-page .explore-forms-symbol-card p,
+  .explore-forms-page .explore-forms-practice-card p,
+  .explore-forms-page .explore-forms-quote p,
+  .explore-forms-page .explore-forms-faq .sp-faq-item p,
+  .explore-forms-page .explore-forms-ending p,
+  .explore-forms-page .explore-bottom-nav > p,
+  .explore-forms-page .explore-bottom-card p {
+    font-size: 17px;
+    line-height: 1.85;
+  }
+
+
+  .explore-forms-page .explore-forms-card,
+  .explore-forms-page .explore-forms-name-item,
+  .explore-forms-page .explore-forms-symbol-card,
+  .explore-forms-page .explore-forms-practice-card {
+    padding: 20px 17px;
+  }
+
+
+  .explore-forms-page .explore-bottom-card {
+    min-height: 125px;
+
+    padding: 18px 15px;
+  }
+}
