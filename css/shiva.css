@@ -256,3 +256,8 @@ footer > small { color: #aaa; }
     grid-template-columns: 1fr; 
   }
 }
+
+/* Language visibility fix */
+.bn:not(.hidden) {
+    display: revert !important;
+}
