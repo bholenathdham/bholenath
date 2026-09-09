@@ -601,7 +601,10 @@ footer > small { color: #aaa; }
   }
 }
 
-
+/* Language visibility fix */
+.bn:not(.hidden) {
+    display: revert !important;
+}
 
 
 
