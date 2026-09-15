@@ -234,8 +234,8 @@ footer > small { color: #aaa; }
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   }
   
-  .site-nav.open { 
-    display: flex; 
+  .site-nav.active {
+    display: flex;
   }
   
   .story-layout { 
