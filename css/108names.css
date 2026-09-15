@@ -1480,8 +1480,8 @@ body > .names-page > .site-header #langToggle:focus-visible {
 
     grid-template-columns:
       minmax(0, 1fr)
-      44px
-      43px;
+      43px
+      44px;
 
     column-gap: 6px;
   }
@@ -1534,7 +1534,7 @@ body > .names-page > .site-header #langToggle:focus-visible {
   body > .names-page > .site-header #menuToggle {
     display: inline-flex !important;
 
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
   }
 
@@ -1544,7 +1544,7 @@ body > .names-page > .site-header #langToggle:focus-visible {
      ======================================================= */
 
   body > .names-page > .site-header #langToggle {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
 
     width: 43px !important;
@@ -1678,6 +1678,9 @@ body > .names-page > .site-header #langToggle:focus-visible {
   }
 
   body > .names-page > .site-header #langToggle {
+    grid-column: 2;
+    grid-row: 1;
+
     width: 40px !important;
     min-width: 40px !important;
 
@@ -1688,5 +1691,110 @@ body > .names-page > .site-header #langToggle:focus-visible {
 
   body > .names-page > .site-header #navbar {
     top: 61px;
+  }
+}
+/* =========================================================
+   FINAL MOBILE HEADER ISOLATION — 108 NAMES ONLY
+   Purpose: Bholenath Dham → language → hamburger
+   No desktop/header/hero/content changes.
+   ========================================================= */
+@media (max-width: 760px) {
+  body > .names-page > .site-header .header-container {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 120px 44px !important;
+    column-gap: 8px !important;
+    align-items: center !important;
+    width: calc(100% - 16px) !important;
+    min-height: 64px !important;
+    padding: 7px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  body > .names-page > .site-header .brand {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+
+  body > .names-page > .site-header #langToggle,
+  body > .names-page > .site-header .language-toggle {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    position: relative !important;
+    inset: auto !important;
+    justify-self: center !important;
+    align-self: center !important;
+    display: inline-flex !important;
+    width: 56px !important;
+    min-width: 56px !important;
+    max-width: 56px !important;
+    height: 38px !important;
+    margin: 0 !important;
+    padding: 0 5px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: clip !important;
+    z-index: 2 !important;
+    flex: none !important;
+  }
+
+  body > .names-page > .site-header .menu-toggle,
+  body > .names-page > .site-header #menuToggle {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    position: relative !important;
+    inset: auto !important;
+    justify-self: end !important;
+    align-self: center !important;
+    display: inline-flex !important;
+    width: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    z-index: 3 !important;
+    flex: none !important;
+  }
+
+  body > .names-page > .site-header #navbar {
+    top: 64px !important;
+    z-index: 10000 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  body > .names-page > .site-header .header-container {
+    grid-template-columns: minmax(0, 1fr) 52px 40px !important;
+    column-gap: 5px !important;
+    width: calc(100% - 10px) !important;
+    min-height: 61px !important;
+  }
+
+  body > .names-page > .site-header #langToggle,
+  body > .names-page > .site-header .language-toggle {
+    width: 52px !important;
+    min-width: 52px !important;
+    max-width: 52px !important;
+    height: 36px !important;
+    padding: 0 4px !important;
+    font-size: 10px !important;
+  }
+
+  body > .names-page > .site-header .menu-toggle,
+  body > .names-page > .site-header #menuToggle {
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+  }
+
+  body > .names-page > .site-header #navbar {
+    top: 61px !important;
   }
 }
