@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-labelledby="t d">
+<title id="t">Shivling and Rudrabhishek devotional illustration</title><desc id="d">An original vector devotional illustration of a Shiva lingam receiving sacred water, with bilva leaves and a diya.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8e6"/><stop offset="1" stop-color="#ead4a5"/></linearGradient>
+ <linearGradient id="stone" x1="0" x2="1"><stop stop-color="#44334b"/><stop offset=".5" stop-color="#776072"/><stop offset="1" stop-color="#35263b"/></linearGradient>
+ <linearGradient id="water" x1="0" x2="1"><stop stop-color="#bce9ff"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#8bd0ee"/></linearGradient>
+</defs>
+<rect x="8" y="8" width="504" height="404" rx="26" fill="url(#bg)" stroke="#b98536" stroke-width="2"/>
+<circle cx="260" cy="198" r="145" fill="none" stroke="#c99542" stroke-opacity=".25" stroke-width="2"/>
+<!-- water pot -->
+<path d="M217 74 Q260 58 303 74 L295 112 Q260 126 225 112Z" fill="#d3a44e" stroke="#8d5b20" stroke-width="3"/>
+<path d="M224 77 Q260 94 296 77" fill="none" stroke="#fff0bd" stroke-width="4"/>
+<path d="M258 108 C255 147 263 147 260 192" fill="none" stroke="url(#water)" stroke-width="15" stroke-linecap="round"/>
+<!-- lingam -->
+<path d="M211 248 Q210 187 260 158 Q310 187 309 248Z" fill="url(#stone)"/>
+<ellipse cx="260" cy="249" rx="82" ry="28" fill="#3d2d43"/>
+<ellipse cx="260" cy="241" rx="58" ry="15" fill="#6f5a70" opacity=".7"/>
+<path d="M177 275 Q260 298 343 275 L362 309 Q260 345 158 309Z" fill="#4c3549" stroke="#9d7231" stroke-width="3"/>
+<!-- tilak -->
+<path d="M242 192 Q260 182 278 192" fill="none" stroke="#dcb25f" stroke-width="4"/>
+<!-- bilva leaves -->
+<g fill="#5d7134" stroke="#34451e" stroke-width="1.5">
+ <path d="M111 250 Q132 212 153 248 Q132 252 111 250Z"/><path d="M137 276 Q155 234 178 270 Q157 278 137 276Z"/><path d="M356 248 Q379 211 400 250 Q378 254 356 248Z"/><path d="M339 278 Q363 234 383 273 Q360 279 339 278Z"/>
+</g>
+<!-- diya -->
+<path d="M91 325 Q119 309 147 325 Q138 346 119 349 Q100 346 91 325Z" fill="#b46b22" stroke="#7e4518" stroke-width="2"/>
+<path d="M119 319 C110 298 129 295 119 279 C142 300 134 314 119 319Z" fill="#f1b72c"/>
+<path d="M119 313 C115 304 123 299 119 293 C130 304 126 311 119 313Z" fill="#fff3ad"/>
+<text x="260" y="386" text-anchor="middle" fill="#5a2411" font-family="Georgia,serif" font-size="17" letter-spacing="3">🔱 RUDRABHISHEK 🔱</text>
+</svg>

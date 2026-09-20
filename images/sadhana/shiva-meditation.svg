@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-labelledby="t d">
+<title id="t">Meditating Lord Shiva devotional illustration</title><desc id="d">A serene original vector illustration inspired by Shiva meditation, with a crescent moon, trident and mountain-like halo.</desc>
+<defs>
+ <radialGradient id="bg" cx="50%" cy="45%"><stop offset="0" stop-color="#fff7dc"/><stop offset="1" stop-color="#ead5a8"/></radialGradient>
+ <linearGradient id="robe" x1="0" x2="1"><stop stop-color="#3d1b3f"/><stop offset="1" stop-color="#6b2d4d"/></linearGradient>
+ <linearGradient id="gold" x1="0" x2="1"><stop stop-color="#9b641e"/><stop offset=".5" stop-color="#e6bd68"/><stop offset="1" stop-color="#9b641e"/></linearGradient>
+</defs>
+<rect x="8" y="8" width="504" height="404" rx="26" fill="url(#bg)" stroke="#b98536" stroke-width="2"/>
+<circle cx="260" cy="200" r="150" fill="none" stroke="#c99542" stroke-opacity=".35" stroke-width="2"/>
+<circle cx="260" cy="200" r="128" fill="none" stroke="#c99542" stroke-opacity=".2"/>
+<path d="M92 342 Q260 245 428 342" fill="none" stroke="#6e4321" stroke-opacity=".25" stroke-width="3"/>
+<!-- trident -->
+<g fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".8">
+ <path d="M430 320V90"/><path d="M430 98c-20 26-20 54 0 76"/><path d="M430 98c20 26 20 54 0 76"/><path d="M430 90c-6-14-17-22-28-28"/><path d="M430 90c6-14 17-22 28-28"/>
+</g>
+<!-- hair -->
+<path d="M185 170 Q170 105 215 78 Q260 49 305 78 Q350 105 335 170 Q320 137 292 126 Q260 145 228 126 Q200 137 185 170Z" fill="#281c2d"/>
+<path d="M208 89 Q260 57 312 89" fill="none" stroke="#9a6a32" stroke-width="5" opacity=".65"/>
+<!-- face -->
+<ellipse cx="260" cy="166" rx="52" ry="62" fill="#9b7158"/>
+<path d="M260 112 Q276 125 281 143" fill="none" stroke="#6d493c" stroke-width="3" opacity=".7"/>
+<path d="M244 159 Q251 153 258 159M264 159 Q271 153 278 159" fill="none" stroke="#34242a" stroke-width="3" stroke-linecap="round"/>
+<path d="M248 180 Q260 188 272 180" fill="none" stroke="#4b2f2e" stroke-width="3" stroke-linecap="round"/>
+<path d="M244 142 Q260 132 276 142" fill="none" stroke="#34242a" stroke-width="3"/>
+<path d="M251 131 L260 145 L269 131" fill="none" stroke="#e2c075" stroke-width="4"/>
+<!-- neck/torso -->
+<path d="M232 218 L288 218 L315 274 Q260 305 205 274Z" fill="#956b55"/>
+<path d="M260 215 C218 220 188 248 174 307 Q260 350 346 307 C332 248 302 220 260 215Z" fill="url(#robe)"/>
+<!-- arms meditation -->
+<path d="M206 256 Q178 286 220 318 Q247 334 260 313" fill="none" stroke="#956b55" stroke-width="19" stroke-linecap="round"/>
+<path d="M314 256 Q342 286 300 318 Q273 334 260 313" fill="none" stroke="#956b55" stroke-width="19" stroke-linecap="round"/>
+<circle cx="260" cy="315" r="14" fill="#9b641e" opacity=".9"/>
+<!-- crescent -->
+<path d="M205 102 A22 22 0 1 0 224 79 A17 17 0 1 1 205 102Z" fill="#f0cc76"/>
+<!-- rudraksha necklace -->
+<path d="M216 229 Q260 259 304 229" fill="none" stroke="#c58b35" stroke-width="5" stroke-dasharray="3 7"/>
+<text x="260" y="386" text-anchor="middle" fill="#5a2411" font-family="Georgia,serif" font-size="17" letter-spacing="4">ॐ • MAHADEV • ॐ</text>
+</svg>

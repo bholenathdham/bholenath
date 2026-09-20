@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" role="img" aria-labelledby="t d">
+<title id="t">Nama Japa devotional illustration</title><desc id="d">An original vector devotional illustration of a rudraksha mala, trident and crescent moon for mantra practice.</desc>
+<defs>
+ <radialGradient id="bg" cx="50%" cy="45%"><stop stop-color="#fff9e9"/><stop offset="1" stop-color="#ead4a5"/></radialGradient>
+ <linearGradient id="bead" x1="0" x2="1"><stop stop-color="#6a2818"/><stop offset=".5" stop-color="#a65425"/><stop offset="1" stop-color="#552014"/></linearGradient>
+</defs>
+<rect x="8" y="8" width="504" height="404" rx="26" fill="url(#bg)" stroke="#b98536" stroke-width="2"/>
+<circle cx="260" cy="202" r="150" fill="none" stroke="#c99542" stroke-opacity=".25" stroke-width="2"/>
+<!-- mala -->
+<path d="M130 110 C72 165 92 302 194 332 C299 364 403 299 388 195 C379 132 337 99 292 96" fill="none" stroke="#7b341b" stroke-width="7" opacity=".45"/>
+<g fill="url(#bead)" stroke="#4e1d12" stroke-width="1">
+ <circle cx="127" cy="116" r="10"/><circle cx="108" cy="143" r="10"/><circle cx="99" cy="175" r="10"/><circle cx="100" cy="210" r="10"/><circle cx="109" cy="244" r="10"/><circle cx="128" cy="273" r="10"/><circle cx="155" cy="298" r="10"/><circle cx="187" cy="317" r="10"/><circle cx="222" cy="326" r="10"/><circle cx="258" cy="328" r="10"/><circle cx="294" cy="323" r="10"/><circle cx="328" cy="310" r="10"/><circle cx="354" cy="286" r="10"/><circle cx="373" cy="256" r="10"/><circle cx="381" cy="222" r="10"/><circle cx="378" cy="187" r="10"/><circle cx="367" cy="154" r="10"/><circle cx="348" cy="129" r="10"/><circle cx="322" cy="110" r="10"/><circle cx="294" cy="99" r="10"/>
+</g>
+<!-- central mantra -->
+<circle cx="260" cy="198" r="76" fill="#fffdf7" stroke="#c99542" stroke-width="2"/>
+<circle cx="260" cy="198" r="63" fill="none" stroke="#c99542" stroke-opacity=".3"/>
+<text x="260" y="191" text-anchor="middle" fill="#5a2411" font-family="Georgia,'Noto Serif Devanagari',serif" font-size="31">ॐ नमः</text>
+<text x="260" y="226" text-anchor="middle" fill="#7b341b" font-family="Georgia,'Noto Serif Devanagari',serif" font-size="28">शिवाय</text>
+<!-- trishul -->
+<g fill="none" stroke="#9b641e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M421 305V118"/><path d="M421 124c-18 24-18 49 0 72"/><path d="M421 124c18 24 18 49 0 72"/><path d="M421 118c-5-12-14-20-24-27"/><path d="M421 118c5-12 14-20 24-27"/>
+</g>
+<!-- crescent -->
+<path d="M105 94 A25 25 0 1 0 128 69 A19 19 0 1 1 105 94Z" fill="#e8bf65"/>
+<text x="260" y="384" text-anchor="middle" fill="#5a2411" font-family="Georgia,serif" font-size="17" letter-spacing="4">ॐ NAMAH SHIVAYA</text>
+</svg>
