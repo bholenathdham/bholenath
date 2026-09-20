@@ -1,0 +1,1223 @@
+/* =========================================================
+   BHOLENATH DHAM — SHIVA SADHANA LANDING
+   Page-scoped CSS. Designed to sit on top of the existing
+   Bholenath Dham root-page style.css without changing it.
+   ========================================================= */
+
+.shiva-sadhana-page{
+  --sd-maroon:#651b12;
+  --sd-maroon-dark:#48100a;
+  --sd-saffron:#c45c00;
+  --sd-gold:#c98a38;
+  --sd-gold-soft:#e7c98b;
+  --sd-cream:#fffaf0;
+  --sd-paper:#fffdf8;
+  --sd-ink:#352923;
+  --sd-muted:#6d5d53;
+  --sd-line:rgba(111,55,22,.16);
+  color:var(--sd-ink);
+  background:#fffdf8;
+  font-family:"Poppins",Arial,sans-serif;
+  overflow:hidden;
+}
+.shiva-sadhana-page *{box-sizing:border-box}
+.shiva-sadhana-page img{max-width:100%;display:block}
+.shiva-sadhana-page a{color:inherit}
+.shiva-sadhana-page .hidden{display:none!important}
+
+/* =========================================================
+   HEADER — uses the established 108 Names/root-page selector
+   geometry and visual treatment, with language before hamburger
+   on mobile as requested.
+   ========================================================= */
+.shiva-sadhana-page .site-header{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  width:100%;
+  margin:0;
+  padding:0;
+  background:rgba(255,252,245,.98);
+  border-bottom:1px solid rgba(181,116,32,.20);
+  box-shadow:0 4px 18px rgba(70,35,0,.08);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.shiva-sadhana-page .header-container{
+  width:min(1240px,calc(100% - 36px));
+  min-height:76px;
+  margin:0 auto;
+  padding:8px 0;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  column-gap:22px;
+}
+.shiva-sadhana-page .brand{
+  display:flex;
+  align-items:center;
+  width:auto;
+  min-width:0;
+  margin:0;
+  padding:0;
+  text-decoration:none;
+  flex:none;
+}
+.shiva-sadhana-page .brand img{width:auto;height:60px;object-fit:contain;flex:none}
+.shiva-sadhana-page .brand-copy{display:flex;flex-direction:column;justify-content:center;min-width:0;margin-left:10px;white-space:nowrap}
+.shiva-sadhana-page .brand-copy strong{display:block;margin:0;padding:0;font-family:"Poppins",Arial,sans-serif;font-size:24px;line-height:1.15;font-weight:700;color:#4a160d}
+.shiva-sadhana-page #navbar.site-nav{
+  position:relative;
+  display:flex;
+  width:100%;
+  min-width:0;
+  margin:0;
+  padding:0;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+.shiva-sadhana-page #navbar.site-nav a{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 7px;
+  color:#4b403b;
+  background:transparent;
+  border:0;
+  font-family:"Poppins",Arial,sans-serif;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.2;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:color .2s ease;
+}
+.shiva-sadhana-page #navbar.site-nav a:hover{color:#c45c00}
+
+/* EXACT ROOT-STYLE LANGUAGE BUTTON */
+.shiva-sadhana-page #langToggle{
+  display:inline-flex!important;
+  width:auto!important;
+  min-width:48px!important;
+  height:38px!important;
+  margin:0!important;
+  padding:8px 13px!important;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #dfb66f!important;
+  border-radius:999px!important;
+  background:#fffaf0!important;
+  color:#5a2411!important;
+  font-family:"Poppins",Arial,sans-serif!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  white-space:nowrap;
+  cursor:pointer;
+  transition:background .2s ease,border-color .2s ease;
+}
+.shiva-sadhana-page #langToggle:hover,.shiva-sadhana-page #langToggle:focus-visible{
+  background:#fff0d6!important;
+  border-color:#c98a38!important;
+}
+
+.shiva-sadhana-page #menuToggle{
+  display:none!important;
+  width:44px!important;
+  height:44px!important;
+  min-width:44px!important;
+  margin:0!important;
+  padding:0!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border:1px solid #d8a85f!important;
+  border-radius:9px!important;
+  background:#fff8e9!important;
+  color:#4a160d!important;
+  font-size:25px!important;
+  line-height:1!important;
+  cursor:pointer;
+}
+
+/* =========================================================
+   HERO — warm temple atmosphere, layered rather than flat
+   ========================================================= */
+.shiva-sadhana-page .sadhana-hero{
+  position:relative;
+  isolation:isolate;
+  min-height:660px;
+  margin:0;
+  padding:100px 28px 92px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+  background:
+    linear-gradient(180deg,rgba(32,10,3,.34),rgba(45,9,2,.76)),
+    url("../images/temple5.webp") center/cover no-repeat;
+}
+.shiva-sadhana-page .sadhana-hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 50% 38%,rgba(255,226,170,.25),transparent 30%),
+    linear-gradient(90deg,rgba(25,6,1,.22),transparent 28%,transparent 72%,rgba(25,6,1,.22));
+}
+.shiva-sadhana-page .sadhana-hero:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:150px;
+  z-index:0;
+  background:linear-gradient(180deg,transparent,rgba(36,8,2,.46));
+  pointer-events:none;
+}
+.shiva-sadhana-page .sadhana-hero__content{position:relative;z-index:3;width:min(900px,100%);margin:0 auto}
+.shiva-sadhana-page .sadhana-hero__mandala{
+  position:absolute;
+  z-index:1;
+  left:50%;top:50%;
+  width:min(650px,75vw);
+  aspect-ratio:1;
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(255,222,158,.24);
+  border-radius:50%;
+  box-shadow:0 0 0 28px rgba(255,222,158,.035),0 0 0 58px rgba(255,222,158,.025),inset 0 0 70px rgba(255,222,158,.05);
+  pointer-events:none;
+}
+.shiva-sadhana-page .sadhana-hero__mandala:before,.shiva-sadhana-page .sadhana-hero__mandala:after{
+  content:"";position:absolute;inset:12%;border:1px solid rgba(255,222,158,.18);border-radius:50%;transform:rotate(45deg);
+}
+.shiva-sadhana-page .sadhana-hero__mandala:after{inset:25%;transform:rotate(-45deg)}
+.shiva-sadhana-page .sadhana-hero__om{
+  position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-51%);
+  font-family:Georgia,"Noto Serif Devanagari",serif;
+  font-size:clamp(170px,28vw,340px);font-weight:400;line-height:1;
+  color:rgba(255,223,164,.09);pointer-events:none;
+}
+.shiva-sadhana-page .eyebrow{margin:0 0 17px;color:#f7d99e;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.shiva-sadhana-page .sadhana-hero h1{margin:0;color:#fff;font-family:Georgia,"Noto Serif Devanagari",serif;font-size:clamp(48px,6vw,76px);font-weight:600;line-height:1.12;letter-spacing:-.025em;text-shadow:0 3px 20px rgba(0,0,0,.24)}
+.shiva-sadhana-page .sadhana-hero h1 em{color:#f2cf91;font-style:normal}
+.shiva-sadhana-page .sadhana-hero .hero-subtitle{max-width:760px;margin:22px auto 0;color:rgba(255,255,255,.94);font-size:18px;line-height:1.85}
+.shiva-sadhana-page .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:31px}
+.shiva-sadhana-page .hero-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease}
+.shiva-sadhana-page .primary-action{background:#c45c00;color:#fff;border:1px solid #c45c00;box-shadow:0 10px 25px rgba(0,0,0,.18)}
+.shiva-sadhana-page .secondary-action{background:rgba(255,255,255,.09);color:#fff;border:1px solid rgba(255,224,170,.58)}
+.shiva-sadhana-page .hero-actions a:hover{transform:translateY(-2px)}
+.shiva-sadhana-page .sadhana-hero__seal{position:absolute;z-index:3;left:50%;bottom:25px;transform:translateX(-50%);padding:7px 15px;border-top:1px solid rgba(255,223,164,.35);border-bottom:1px solid rgba(255,223,164,.35);color:#f4d69b;font-family:Georgia,serif;font-size:13px;letter-spacing:.25em}
+
+/* =========================================================
+   SHARED TYPOGRAPHY / ARCHITECTURAL BACKGROUNDS
+   ========================================================= */
+.shiva-sadhana-page main>section:not(.sadhana-hero){position:relative}
+.shiva-sadhana-page main>section:not(.sadhana-hero):before{
+  content:"";
+  position:absolute;inset:0;pointer-events:none;opacity:.7;
+  background-image:
+    radial-gradient(circle at 20% 20%,rgba(201,138,56,.055) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 80% 70%,rgba(111,55,22,.035) 0 1px,transparent 1.5px);
+  background-size:34px 34px,46px 46px;
+}
+.shiva-sadhana-page .sadhana-kicker{margin:0 0 10px;color:var(--sd-saffron);font-size:12px;font-weight:700;letter-spacing:.16em;line-height:1.5;text-transform:uppercase}
+.shiva-sadhana-page h2,.shiva-sadhana-page h3{font-family:"Poppins",Arial,sans-serif}
+.shiva-sadhana-page h2{margin:0;color:var(--sd-maroon);font-size:clamp(30px,4vw,44px);line-height:1.22;letter-spacing:-.02em}
+.shiva-sadhana-page p{font-size:17px;line-height:1.9}
+
+/* =========================================================
+   INTRO — temple-floor presentation
+   ========================================================= */
+.shiva-sadhana-page .sadhana-intro{max-width:1050px;margin:0 auto;padding:86px 24px 78px;text-align:center}
+.shiva-sadhana-page .sadhana-intro:after{
+  content:"";display:block;width:min(520px,80%);height:1px;margin:36px auto 0;
+  background:linear-gradient(90deg,transparent,#d6a95f,transparent);
+}
+.shiva-sadhana-page .sadhana-intro h2{font-family:Georgia,"Noto Serif Devanagari",serif;font-weight:600}
+.shiva-sadhana-page .sadhana-intro>p:not(.sadhana-kicker){max-width:820px;margin:18px auto 0;color:var(--sd-muted);font-size:18px;line-height:1.95}
+.shiva-sadhana-page .sadhana-ornament{position:relative;width:58px;height:58px;margin:34px auto 0;display:flex;align-items:center;justify-content:center;border:1px solid var(--sd-gold);border-radius:50%;color:var(--sd-saffron);font-family:Georgia,serif;font-size:26px;background:#fffaf0;box-shadow:0 0 0 8px #fffdf9,0 0 0 9px rgba(201,148,62,.25)}
+
+/* =========================================================
+   TEACHINGS — carved-panel cards, not generic rounded cards
+   ========================================================= */
+.shiva-sadhana-page .sadhana-teachings{
+  padding:92px 24px 102px;
+  background:
+    linear-gradient(rgba(255,250,240,.94),rgba(255,253,248,.96)),
+    repeating-linear-gradient(0deg,transparent 0 45px,rgba(137,91,31,.025) 46px 47px);
+  border-top:1px solid rgba(201,148,62,.15);
+  border-bottom:1px solid rgba(201,148,62,.15);
+}
+.shiva-sadhana-page .sadhana-wide-copy{position:relative;z-index:1;width:min(1180px,100%);margin:0 auto}
+.shiva-sadhana-page .sadhana-section-head--center{text-align:center;margin-bottom:46px}
+.shiva-sadhana-page .teachings-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.shiva-sadhana-page .teaching-panel{
+  position:relative;min-height:310px;padding:42px 31px 34px;
+  background:linear-gradient(180deg,#fffdf9,#fff8ea);
+  border:1px solid #d2a55d;
+  border-radius:2px;
+  box-shadow:0 14px 34px rgba(78,37,7,.09),inset 0 0 0 6px rgba(255,255,255,.62);
+  overflow:hidden;
+}
+.shiva-sadhana-page .teaching-panel:before{
+  content:"";position:absolute;inset:10px;border:1px solid rgba(201,138,56,.34);pointer-events:none;
+}
+.shiva-sadhana-page .teaching-panel:after{
+  content:"◆";position:absolute;left:50%;top:0;transform:translate(-50%,-48%);padding:0 12px;background:#fffaf0;color:#c98a38;font-size:13px;
+}
+.shiva-sadhana-page .teaching-mark{
+  position:relative;z-index:2;display:flex;width:58px;height:58px;margin:0 auto 21px;align-items:center;justify-content:center;
+  border:1px solid #c98a38;border-radius:50%;background:#fffaf0;color:#9a470c;font-family:Georgia,serif;font-size:26px;
+  box-shadow:0 0 0 5px #fffdf8;
+}
+.shiva-sadhana-page .teaching-panel h3{position:relative;z-index:2;margin:0 0 13px;text-align:center;color:var(--sd-maroon-dark);font-size:21px;line-height:1.35}
+.shiva-sadhana-page .teaching-panel p{position:relative;z-index:2;margin:0;color:var(--sd-muted);font-size:15.5px;line-height:1.85;text-align:center}
+
+/* =========================================================
+   GUIDANCE — split temple inscription layout
+   ========================================================= */
+.shiva-sadhana-page .sadhana-guidance{padding:96px 24px;background:#fffdf8}
+.shiva-sadhana-page .guidance-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:72px;align-items:center}
+.shiva-sadhana-page .guidance-copy h2{font-family:Georgia,"Noto Serif Devanagari",serif;font-weight:600}
+.shiva-sadhana-page .guidance-copy>p:not(.sadhana-kicker){margin:18px 0 0;color:var(--sd-muted);font-size:17px;line-height:1.9}
+.shiva-sadhana-page .guidance-steps{position:relative;padding:8px 0 8px 30px;border-left:1px solid #d8b36c}
+.shiva-sadhana-page .guidance-step{position:relative;padding:0 0 28px 30px}
+.shiva-sadhana-page .guidance-step:last-child{padding-bottom:0}
+.shiva-sadhana-page .guidance-step:before{content:"";position:absolute;left:-7px;top:5px;width:13px;height:13px;border:1px solid #c98a38;background:#fffaf0;transform:rotate(45deg)}
+.shiva-sadhana-page .guidance-step strong{display:block;margin-bottom:5px;color:var(--sd-maroon);font-size:17px}
+.shiva-sadhana-page .guidance-step p{margin:0;color:var(--sd-muted);font-size:15px;line-height:1.8}
+
+/* =========================================================
+   PATHWAYS — hero cards are temple portals
+   ========================================================= */
+.shiva-sadhana-page .sadhana-pathways{
+  padding:100px 24px 112px;
+  background:
+    linear-gradient(rgba(255,248,232,.94),rgba(255,251,242,.97)),
+    repeating-linear-gradient(90deg,transparent 0 78px,rgba(128,76,20,.025) 79px 80px);
+  border-top:1px solid rgba(201,148,62,.16);
+}
+.shiva-sadhana-page .sadhana-pathways>.sadhana-section-head{position:relative;z-index:1;width:min(1180px,100%);margin:0 auto 48px;display:flex;align-items:end;justify-content:space-between;gap:40px}
+.shiva-sadhana-page .sadhana-section-head>p:not(.sadhana-kicker){max-width:540px;margin:0;color:var(--sd-muted);font-size:15px;line-height:1.8;text-align:right}
+.shiva-sadhana-page .sadhana-gateways{position:relative;z-index:1;width:min(1180px,100%);margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
+
+.shiva-sadhana-page .sadhana-gateway{
+  position:relative;display:flex;flex-direction:column;min-height:455px;
+  padding:0 11px 11px;
+  background:linear-gradient(180deg,#fffdf9,#fff7e8);
+  border:1px solid #bf8b3f;
+  border-radius:180px 180px 6px 6px;
+  box-shadow:0 18px 40px rgba(78,37,7,.11),inset 0 0 0 5px rgba(255,255,255,.72);
+  overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.shiva-sadhana-page .sadhana-gateway:before{
+  content:"";position:absolute;inset:9px;border:1px solid rgba(201,138,56,.42);border-radius:170px 170px 2px 2px;pointer-events:none;z-index:2;
+}
+.shiva-sadhana-page .sadhana-gateway:after{
+  content:"✦";position:absolute;left:50%;top:8px;transform:translateX(-50%);z-index:4;color:#c98a38;font-size:15px;text-shadow:0 1px #fff;
+}
+.shiva-sadhana-page .sadhana-gateway:hover{transform:translateY(-7px);box-shadow:0 25px 50px rgba(78,37,7,.17),inset 0 0 0 5px rgba(255,255,255,.72)}
+.shiva-sadhana-page .sadhana-gateway__top{
+  position:relative;z-index:3;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;
+  min-height:82px;padding:29px 22px 17px;
+  background:linear-gradient(180deg,#fff2d7,#fffaf0);
+  border-bottom:1px solid rgba(201,138,56,.25);
+  border-radius:165px 165px 0 0;
+}
+.shiva-sadhana-page .gateway-number{font-family:Georgia,"Noto Serif Devanagari",serif;font-size:18px;color:#8b4a18}
+.shiva-sadhana-page .gateway-symbol{font-size:27px;text-align:center}
+.shiva-sadhana-page .gateway-label{color:#996323;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.shiva-sadhana-page .sadhana-gateway__body{position:relative;z-index:3;display:flex;flex:1;flex-direction:column;align-items:center;padding:32px 27px 29px;text-align:center}
+.shiva-sadhana-page .sadhana-gateway__body small{color:#a06a29;font-size:10px;font-weight:700;letter-spacing:.14em;line-height:1.5}
+.shiva-sadhana-page .sadhana-gateway__body h3{margin:13px 0 14px;color:var(--sd-maroon);font-family:Georgia,"Noto Serif Devanagari",serif;font-size:28px;line-height:1.25}
+.shiva-sadhana-page .sadhana-gateway__body p{margin:0 auto;color:var(--sd-muted);font-size:15.5px;line-height:1.82}
+.shiva-sadhana-page .sadhana-gateway__link{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:auto;padding:11px 17px;border:1px solid #c98a38;border-radius:999px;color:var(--sd-maroon);background:#fffaf0;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s ease,color .2s ease,transform .2s ease}
+.shiva-sadhana-page .sadhana-gateway__link:hover{background:#c45c00;color:#fff;border-color:#c45c00;transform:translateY(-1px)}
+
+/* =========================================================
+   SCRIPTURE BAND
+   ========================================================= */
+.shiva-sadhana-page .sadhana-scripture{position:relative;padding:76px 24px;background:linear-gradient(135deg,#4a1009,#691b10 50%,#481009);color:#fff;border-top:5px double rgba(235,198,124,.55);border-bottom:5px double rgba(235,198,124,.55)}
+.shiva-sadhana-page .scripture-inner{position:relative;z-index:1;width:min(1050px,100%);margin:0 auto;display:grid;grid-template-columns:85px 1fr;gap:28px;align-items:center}
+.shiva-sadhana-page .scripture-symbol{display:flex;width:76px;height:76px;align-items:center;justify-content:center;border:1px solid rgba(239,205,137,.48);border-radius:50%;color:#efcc88;font-family:Georgia,serif;font-size:29px;box-shadow:0 0 0 7px rgba(239,205,137,.045)}
+.shiva-sadhana-page .sadhana-scripture h2{color:#fff;font-family:Georgia,"Noto Serif Devanagari",serif;font-size:clamp(27px,4vw,42px);font-weight:500}
+.shiva-sadhana-page .sadhana-scripture .sadhana-kicker{color:#efcc88}
+.shiva-sadhana-page .sadhana-scripture p:not(.sadhana-kicker){margin:14px 0 0;color:rgba(255,255,255,.78);font-size:15px;line-height:1.8}
+
+/* =========================================================
+   MANTRA — simple shrine panel
+   ========================================================= */
+.shiva-sadhana-page .sadhana-mantra{padding:82px 24px;text-align:center;background:radial-gradient(circle at center,#fff2d4 0,#fffdf8 57%,#fffdf8 100%)}
+.shiva-sadhana-page .sadhana-mantra small{display:block;color:var(--sd-saffron);font-size:11px;font-weight:700;letter-spacing:.17em}
+.shiva-sadhana-page .sadhana-mantra strong{display:block;margin:14px 0 10px;color:var(--sd-maroon);font-family:Georgia,"Noto Serif Devanagari",serif;font-size:clamp(38px,5vw,58px);font-weight:500;line-height:1.3}
+.shiva-sadhana-page .sadhana-mantra p{margin:0;color:var(--sd-muted);font-size:14px}
+
+/* =========================================================
+   DAILY RHYTHM
+   ========================================================= */
+.shiva-sadhana-page .sadhana-daily{padding:96px 24px;background:#fffaf0;border-top:1px solid rgba(201,148,62,.12)}
+.shiva-sadhana-page .sadhana-daily>.sadhana-kicker,.shiva-sadhana-page .sadhana-daily>h2{text-align:center}
+.shiva-sadhana-page .sadhana-daily>h2{font-family:Georgia,"Noto Serif Devanagari",serif;font-weight:600}
+.shiva-sadhana-page .sadhana-steps{width:min(1000px,100%);margin:50px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.shiva-sadhana-page .sadhana-step{position:relative;padding:0 34px;text-align:center}
+.shiva-sadhana-page .sadhana-step:not(:last-child){border-right:1px solid #dfc891}
+.shiva-sadhana-page .sadhana-step>b{display:flex;width:52px;height:52px;margin:0 auto 18px;align-items:center;justify-content:center;border:1px solid #c98a38;background:#fff;border-radius:50%;color:var(--sd-maroon);font-family:Georgia,"Noto Serif Devanagari",serif;font-size:18px;box-shadow:0 0 0 6px #fffaf0}
+.shiva-sadhana-page .sadhana-step h3{margin:0 0 8px;color:var(--sd-maroon);font-size:20px}
+.shiva-sadhana-page .sadhana-step p{margin:0;color:var(--sd-muted);font-size:15px;line-height:1.8}
+
+/* =========================================================
+   NOTES / PRIVACY
+   ========================================================= */
+.shiva-sadhana-page .sadhana-notes{padding:88px 24px;background:#fffdf8}
+.shiva-sadhana-page .notes-grid{width:min(1060px,100%);margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.shiva-sadhana-page .notes-grid article{position:relative;padding:36px 31px;background:linear-gradient(180deg,#fffdf9,#fff8ea);border:1px solid #d2a55d;border-radius:2px;box-shadow:0 12px 30px rgba(68,33,10,.07),inset 0 0 0 5px rgba(255,255,255,.65)}
+.shiva-sadhana-page .notes-grid article:before{content:"";position:absolute;inset:10px;border:1px solid rgba(201,138,56,.28);pointer-events:none}
+.shiva-sadhana-page .notes-grid article>span,.shiva-sadhana-page .notes-grid h3,.shiva-sadhana-page .notes-grid p{position:relative;z-index:1}
+.shiva-sadhana-page .notes-grid article>span{display:block;margin-bottom:14px;font-size:27px}
+.shiva-sadhana-page .notes-grid h3{margin:0 0 11px;color:var(--sd-maroon);font-size:20px}
+.shiva-sadhana-page .notes-grid p{margin:0;color:var(--sd-muted);font-size:15px;line-height:1.85}
+.shiva-sadhana-page .sadhana-privacy{position:relative;z-index:1;width:min(1060px,calc(100% - 48px));margin:0 auto 85px;padding:27px 29px;display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start;background:#fff8e9;border:1px solid #dfc17f;border-radius:2px;box-shadow:0 10px 28px rgba(68,33,10,.055)}
+.shiva-sadhana-page .privacy-icon{display:flex;width:48px;height:48px;align-items:center;justify-content:center;border-radius:50%;background:#fff;border:1px solid #e0bf78;font-size:21px}
+.shiva-sadhana-page .sadhana-privacy h2{margin:0 0 7px;color:var(--sd-maroon);font-size:20px}
+.shiva-sadhana-page .sadhana-privacy p{margin:0;color:var(--sd-muted);font-size:14px;line-height:1.8}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.shiva-sadhana-page>footer{margin:0!important;padding:55px 22px 30px!important;background:#fffaf0!important;border-top:1px solid rgba(181,116,32,.18)!important;color:#5a4033!important;text-align:center}
+.shiva-sadhana-page>footer img{width:auto;height:58px;margin:0 auto 10px}
+.shiva-sadhana-page>footer h2{margin:0 0 12px!important;color:#4a160d!important;font-size:25px!important}
+.shiva-sadhana-page>footer p{max-width:760px;margin:7px auto!important;color:#6e5b4d!important;font-size:14px!important;line-height:1.8!important}
+.shiva-sadhana-page>footer nav{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin:22px auto 18px}
+.shiva-sadhana-page>footer nav a{color:#6d2b15;text-decoration:none;font-size:13px;font-weight:600}
+.shiva-sadhana-page>footer nav a:hover{color:#c46a18}
+.shiva-sadhana-page>footer .footer-divider{width:min(650px,90%);height:1px;margin:18px auto;background:rgba(181,116,32,.20)}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media(max-width:1100px){
+  .shiva-sadhana-page .header-container{width:calc(100% - 24px);column-gap:10px}
+  .shiva-sadhana-page .brand img{width:46px;height:46px;max-width:46px;max-height:46px}
+  .shiva-sadhana-page .brand-copy strong{font-size:16px}
+  .shiva-sadhana-page #navbar.site-nav{gap:0}
+  .shiva-sadhana-page #navbar.site-nav a{padding:9px 6px;font-size:10.5px}
+  .shiva-sadhana-page #langToggle{min-width:44px!important;padding-left:9px!important;padding-right:9px!important;font-size:11px!important}
+  .shiva-sadhana-page .guidance-layout{gap:42px}
+  .shiva-sadhana-page .sadhana-gateways{gap:18px}
+}
+
+/* =========================================================
+   MOBILE — ROOT-STYLE HEADER, LANGUAGE BEFORE HAMBURGER
+   ========================================================= */
+@media(max-width:760px){
+  .shiva-sadhana-page .site-header{position:sticky;top:0}
+  .shiva-sadhana-page .header-container{
+    width:calc(100% - 16px);
+    min-height:64px;
+    padding:7px 0;
+    grid-template-columns:minmax(0,1fr) 44px 43px;
+    column-gap:6px;
+  }
+  .shiva-sadhana-page .brand{min-width:0;overflow:hidden}
+  .shiva-sadhana-page .brand img{width:42px;height:42px;min-width:42px;max-width:42px;flex-shrink:0}
+  .shiva-sadhana-page .brand-copy{min-width:0;overflow:hidden;margin-left:8px}
+  .shiva-sadhana-page .brand-copy strong{max-width:100%;overflow:hidden;text-overflow:ellipsis;font-size:15px}
+  .shiva-sadhana-page #menuToggle{display:inline-flex!important;grid-column:3;grid-row:1;width:43px!important;height:43px!important;min-width:43px!important}
+  .shiva-sadhana-page #langToggle{grid-column:2;grid-row:1;width:44px!important;min-width:44px!important;height:38px!important;padding:7px 8px!important;font-size:10.5px!important}
+  .shiva-sadhana-page #navbar.site-nav{
+    display:none!important;position:absolute;top:64px;left:0;right:0;width:100%;margin:0;padding:10px 12px 14px;
+    flex-direction:column;align-items:stretch;justify-content:flex-start;gap:4px;
+    background:rgba(255,252,245,.99);border-top:1px solid rgba(196,92,0,.08);border-bottom:1px solid #ead7bb;
+    box-shadow:0 14px 28px rgba(50,20,0,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  }
+  .shiva-sadhana-page #navbar.site-nav.active,.shiva-sadhana-page #navbar.site-nav.open,.shiva-sadhana-page #navbar.site-nav.show{display:flex!important}
+  .shiva-sadhana-page #navbar.site-nav a{display:flex!important;width:100%!important;min-height:44px;padding:11px 14px!important;align-items:center;justify-content:center;border-radius:9px;font-size:13px!important}
+  .shiva-sadhana-page #navbar.site-nav a:hover{background:#fff0d8}
+
+  .shiva-sadhana-page .sadhana-hero{min-height:590px;padding:78px 20px 78px}
+  .shiva-sadhana-page .sadhana-hero__mandala{width:115vw}
+  .shiva-sadhana-page .sadhana-hero__om{font-size:58vw}
+  .shiva-sadhana-page .eyebrow{font-size:10px;letter-spacing:.13em}
+  .shiva-sadhana-page .sadhana-hero h1{font-size:clamp(39px,12vw,57px)}
+  .shiva-sadhana-page .sadhana-hero .hero-subtitle{font-size:16px;line-height:1.75}
+  .shiva-sadhana-page .hero-actions{flex-direction:column;align-items:stretch;max-width:330px;margin-inline:auto;margin-top:26px}
+  .shiva-sadhana-page .hero-actions a{width:100%}
+
+  .shiva-sadhana-page .sadhana-intro{padding:62px 20px 55px}
+  .shiva-sadhana-page .sadhana-intro>p:not(.sadhana-kicker){font-size:16px;line-height:1.85}
+  .shiva-sadhana-page .sadhana-teachings,.shiva-sadhana-page .sadhana-guidance,.shiva-sadhana-page .sadhana-pathways,.shiva-sadhana-page .sadhana-daily,.shiva-sadhana-page .sadhana-notes{padding:66px 18px}
+  .shiva-sadhana-page .teachings-grid,.shiva-sadhana-page .sadhana-gateways,.shiva-sadhana-page .notes-grid{grid-template-columns:1fr}
+  .shiva-sadhana-page .teaching-panel{min-height:0;padding:38px 25px 32px}
+  .shiva-sadhana-page .guidance-layout{grid-template-columns:1fr;gap:38px}
+  .shiva-sadhana-page .guidance-steps{padding-left:18px}
+  .shiva-sadhana-page .sadhana-pathways>.sadhana-section-head{display:block;margin-bottom:36px}
+  .shiva-sadhana-page .sadhana-section-head>p:not(.sadhana-kicker){margin-top:14px;text-align:center;font-size:14px}
+  .shiva-sadhana-page .sadhana-gateway{min-height:0;border-radius:130px 130px 5px 5px}
+  .shiva-sadhana-page .sadhana-gateway:before{border-radius:120px 120px 2px 2px}
+  .shiva-sadhana-page .sadhana-gateway__top{grid-template-columns:auto 1fr auto;padding:27px 19px 17px;border-radius:115px 115px 0 0}
+  .shiva-sadhana-page .gateway-label{font-size:9px}
+  .shiva-sadhana-page .sadhana-gateway__body{padding:28px 24px 31px}
+  .shiva-sadhana-page .sadhana-scripture{padding:55px 20px}
+  .shiva-sadhana-page .scripture-inner{grid-template-columns:1fr;text-align:center;gap:20px}
+  .shiva-sadhana-page .scripture-symbol{margin:0 auto}
+  .shiva-sadhana-page .sadhana-scripture p:not(.sadhana-kicker){font-size:14px}
+  .shiva-sadhana-page .sadhana-mantra{padding:58px 18px}
+  .shiva-sadhana-page .sadhana-mantra strong{font-size:38px}
+  .shiva-sadhana-page .sadhana-steps{grid-template-columns:1fr;gap:0;margin-top:35px}
+  .shiva-sadhana-page .sadhana-step{padding:23px 12px}
+  .shiva-sadhana-page .sadhana-step:not(:last-child){border-right:0;border-bottom:1px solid #dfc891}
+  .shiva-sadhana-page .sadhana-privacy{width:calc(100% - 36px);margin-bottom:60px;padding:22px 20px;grid-template-columns:1fr;gap:13px}
+  .shiva-sadhana-page>footer{padding:45px 18px 28px!important}
+}
+
+@media(max-width:390px){
+  .shiva-sadhana-page .header-container{width:calc(100% - 10px);min-height:61px;grid-template-columns:minmax(0,1fr) 40px 40px;column-gap:4px}
+  .shiva-sadhana-page .brand img{width:38px;height:38px;min-width:38px;max-width:38px}
+  .shiva-sadhana-page .brand-copy{margin-left:7px}
+  .shiva-sadhana-page .brand-copy strong{font-size:14px}
+  .shiva-sadhana-page #langToggle{width:40px!important;min-width:40px!important;height:36px!important;padding:7px 6px!important}
+  .shiva-sadhana-page #menuToggle{width:40px!important;height:40px!important;min-width:40px!important;font-size:22px!important}
+  .shiva-sadhana-page .sadhana-hero{min-height:560px;padding-inline:17px}
+  .shiva-sadhana-page .sadhana-hero h1{font-size:39px}
+  .shiva-sadhana-page .sadhana-hero .hero-subtitle{font-size:15px}
+  .shiva-sadhana-page h2{font-size:29px}
+  .shiva-sadhana-page .sadhana-gateway__body h3{font-size:25px}
+}
+
+@media(prefers-reduced-motion:reduce){.shiva-sadhana-page *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* =========================================================
+   DEVOTIONAL VISUAL REFINEMENT — MATCH BHOLENATH DHAM ROOT
+   ========================================================= */
+.shiva-sadhana-page{
+  --sd-maroon:#250b07;
+  --sd-maroon-mid:#4a160d;
+  --sd-saffron:#b76516;
+  --sd-gold:#c98a38;
+  --sd-gold-soft:#efcd8b;
+  --sd-cream:#fffaf0;
+  --sd-paper:#fffdf8;
+  --sd-ink:#352923;
+  background:#fffaf0;
+}
+
+/* Sacred section rhythm */
+.shiva-sadhana-page .sadhana-intro,
+.shiva-sadhana-page .sadhana-teachings,
+.shiva-sadhana-page .sadhana-guidance,
+.shiva-sadhana-page .sadhana-pathways,
+.shiva-sadhana-page .sadhana-mantra{
+  position:relative;
+}
+.shiva-sadhana-page .sadhana-intro:before,
+.shiva-sadhana-page .sadhana-teachings:before,
+.shiva-sadhana-page .sadhana-guidance:before,
+.shiva-sadhana-page .sadhana-pathways:before{
+  content:"ॐ";
+  position:absolute;
+  left:50%;top:50%;
+  transform:translate(-50%,-50%);
+  font-family:Georgia,"Noto Serif Devanagari",serif;
+  font-size:clamp(180px,24vw,330px);
+  color:rgba(117,45,15,.025);
+  pointer-events:none;
+}
+
+/* Ornamental section separators */
+.shiva-sadhana-page .sadhana-intro:after,
+.shiva-sadhana-page .sadhana-pathways:after,
+.shiva-sadhana-page .sadhana-guidance:after{
+  content:"🔱  ॐ  🔱";
+  display:block;
+  width:100%;
+  margin:35px auto 0;
+  color:#b76516;
+  font-family:Georgia,serif;
+  font-size:16px;
+  letter-spacing:.35em;
+  text-align:center;
+  background:none;
+  height:auto;
+}
+
+/* Temple-panel feel instead of plain cards */
+.shiva-sadhana-page .teaching-grid{
+  position:relative;
+  z-index:2;
+}
+.shiva-sadhana-page .teaching-grid article{
+  background:
+    linear-gradient(rgba(255,253,248,.94),rgba(255,248,232,.96)),
+    repeating-linear-gradient(0deg,rgba(120,65,20,.025) 0 1px,transparent 1px 5px);
+  border:1px solid #c99a51;
+  border-radius:4px;
+  box-shadow:0 12px 30px rgba(73,25,8,.09),inset 0 0 0 5px rgba(255,255,255,.55),inset 0 0 0 6px rgba(201,138,56,.13);
+}
+.shiva-sadhana-page .teaching-grid article:before{
+  content:"✦";
+  color:#c98a38;
+  display:block;
+  margin-bottom:8px;
+  font-size:14px;
+}
+
+/* Guidance becomes a scripture panel */
+.shiva-sadhana-page .sadhana-guidance{
+  background:#f3e2bf;
+  border-top:1px solid rgba(118,55,16,.16);
+  border-bottom:1px solid rgba(118,55,16,.16);
+}
+.shiva-sadhana-page .sadhana-guidance .guidance-layout{
+  position:relative;z-index:2;
+  background:linear-gradient(135deg,#fffaf0,#f9edd5);
+  border:1px solid #c99a51;
+  box-shadow:0 15px 35px rgba(70,30,5,.08),inset 0 0 0 5px rgba(255,255,255,.5);
+}
+
+/* Three gateways — true temple shrine panels */
+.shiva-sadhana-page .sadhana-pathways{
+  background:
+    linear-gradient(180deg,#fffaf0 0%,#f7ead0 100%);
+}
+.shiva-sadhana-page .sadhana-gateways{position:relative;z-index:2}
+.shiva-sadhana-page .sadhana-gateway{
+  position:relative;
+  min-height:480px;
+  padding:0 12px 12px;
+  overflow:hidden;
+  background:linear-gradient(180deg,#fffdf8,#fff4dc);
+  border:1px solid #b77b2d;
+  border-radius:175px 175px 5px 5px;
+  box-shadow:0 18px 42px rgba(63,26,5,.13),inset 0 0 0 5px rgba(255,255,255,.7),inset 0 0 0 6px rgba(201,138,56,.16);
+}
+.shiva-sadhana-page .sadhana-gateway:before{
+  content:"";
+  position:absolute;inset:10px;
+  border:1px solid rgba(183,123,45,.55);
+  border-radius:165px 165px 2px 2px;
+  pointer-events:none;
+}
+.shiva-sadhana-page .sadhana-gateway:after{
+  content:"ॐ";
+  position:absolute;left:50%;top:112px;transform:translateX(-50%);
+  font-family:Georgia,serif;font-size:105px;color:rgba(183,123,45,.055);pointer-events:none;
+}
+.shiva-sadhana-page .sadhana-gateway__top{
+  position:relative;z-index:2;
+  border-bottom:1px solid rgba(183,123,45,.32);
+}
+.shiva-sadhana-page .sadhana-gateway__body{position:relative;z-index:3}
+.shiva-sadhana-page .gateway-symbol{
+  text-shadow:0 2px 8px rgba(100,40,5,.12);
+}
+.shiva-sadhana-page .sadhana-gateway h3{
+  font-family:Georgia,"Noto Serif Devanagari",serif!important;
+  color:#4a160d!important;
+}
+.shiva-sadhana-page .sadhana-gateway__link{
+  border-radius:3px!important;
+  background:#4a160d!important;
+  color:#fff7e8!important;
+  border:1px solid #c98a38!important;
+  box-shadow:0 6px 15px rgba(74,22,13,.16);
+}
+
+/* Scripture band: old-site devotional maroon */
+.shiva-sadhana-page .sadhana-scripture{
+  position:relative;
+  background:
+    radial-gradient(circle at center top,rgba(212,154,58,.14),transparent 25rem),
+    #250b07!important;
+  color:#fff7e9;
+  border-top:1px solid rgba(239,205,139,.18);
+  border-bottom:1px solid rgba(239,205,139,.18);
+}
+.shiva-sadhana-page .sadhana-scripture:before{
+  content:"🔱";
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  font-size:230px;opacity:.035;pointer-events:none;
+}
+.shiva-sadhana-page .sadhana-scripture h2{color:#fff3d8!important;font-family:Georgia,"Noto Serif Devanagari",serif!important}
+.shiva-sadhana-page .sadhana-scripture p{color:rgba(255,247,233,.78)!important}
+.shiva-sadhana-page .sadhana-scripture .sadhana-kicker{color:#efcd8b!important}
+
+/* Mantra becomes a sacred plaque */
+.shiva-sadhana-page .sadhana-mantra{
+  background:#f1dfbb!important;
+  border-top:1px solid #d1aa67;
+  border-bottom:1px solid #d1aa67;
+}
+.shiva-sadhana-page .sadhana-mantra:before,
+.shiva-sadhana-page .sadhana-mantra:after{
+  content:"🔱";
+  color:#b76516;
+  font-size:22px;
+  margin:0 16px;
+}
+.shiva-sadhana-page .sadhana-mantra strong{
+  font-family:Georgia,"Noto Serif Devanagari",serif!important;
+  color:#4a160d!important;
+  text-shadow:0 1px 0 #fff;
+}
+
+/* EXACT OLD BHOLENATH DHAM FOOTER COLOUR */
+.shiva-sadhana-page footer,
+.shiva-sadhana-page #site-footer{
+  margin-top:0!important;
+  padding:70px 20px 40px!important;
+  color:rgba(255,247,233,.78)!important;
+  text-align:center;
+  background:
+    radial-gradient(circle at center top,rgba(212,154,58,.11),transparent 25rem),
+    #250b07!important;
+  border-top:1px solid rgba(239,205,139,.16);
+}
+.shiva-sadhana-page footer h2,
+.shiva-sadhana-page #site-footer h2{color:#fff3d8!important}
+.shiva-sadhana-page footer a,
+.shiva-sadhana-page #site-footer a{color:#efcd8b!important}
+.shiva-sadhana-page footer a:hover,
+.shiva-sadhana-page #site-footer a:hover{color:#fff!important}
+.shiva-sadhana-page .footer-divider{
+  background:linear-gradient(90deg,transparent,rgba(236,208,154,.45),transparent)!important;
+}
+.shiva-sadhana-page .mahadev-footer{color:#f0cf8e!important}
+.shiva-sadhana-page .footer-domain{color:rgba(255,247,233,.55)!important}
+
+@media(max-width:760px){
+  .shiva-sadhana-page .sadhana-gateways{gap:18px!important}
+  .shiva-sadhana-page .sadhana-gateway{min-height:430px;border-radius:150px 150px 5px 5px}
+  .shiva-sadhana-page .sadhana-gateway:before{border-radius:140px 140px 2px 2px}
+  .shiva-sadhana-page .sadhana-intro,
+  .shiva-sadhana-page .sadhana-pathways,
+  .shiva-sadhana-page .sadhana-guidance{padding-left:14px;padding-right:14px}
+}
+
+/* =========================================================
+   LANGUAGE CONTROL — USE EXISTING BHOLENATH DHAM JS
+   No page-specific language JavaScript. #langToggle is the
+   existing button controlled by main.js + hindi-language.js.
+   ========================================================= */
+.shiva-sadhana-page .site-header #langToggle.language-toggle{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  box-sizing:border-box!important;
+  border:1px solid #dfb66f!important;
+  border-radius:999px!important;
+  background:#fffaf0!important;
+  color:#5a2411!important;
+  font-family:"Poppins",Arial,sans-serif!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  min-width:48px!important;
+  width:auto!important;
+  height:38px!important;
+  padding:8px 13px!important;
+  margin:0!important;
+  outline:none;
+  box-shadow:none!important;
+}
+.shiva-sadhana-page .site-header #langToggle.language-toggle:hover,
+.shiva-sadhana-page .site-header #langToggle.language-toggle:focus-visible{
+  background:#fff0d6!important;
+  border-color:#c98a38!important;
+}
+
+
+/* =========================================================
+   FINAL SECTION REFINEMENT — PATHWAYS + GUIDANCE
+   Clean temple/editorial treatment; fixes Devanagari spacing
+   and the original guidance markup selectors.
+   ========================================================= */
+.shiva-sadhana-page .hi,
+.shiva-sadhana-page [lang="hi"]{
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif;
+  letter-spacing:0!important;
+  text-transform:none!important;
+}
+.shiva-sadhana-page .sadhana-pathways,
+.shiva-sadhana-page .sadhana-guidance{
+  overflow:hidden;
+}
+
+/* ---------- GUIDANCE: one proper devotional inscription panel ---------- */
+.shiva-sadhana-page .sadhana-guidance{
+  padding:82px 24px 88px!important;
+  background:
+    radial-gradient(circle at 50% 0,rgba(201,138,56,.10),transparent 34rem),
+    linear-gradient(180deg,#fffaf0 0%,#f5e6c9 100%)!important;
+}
+.shiva-sadhana-page .sadhana-guidance:before{
+  opacity:.35!important;
+}
+.shiva-sadhana-page .sadhana-guidance .guidance-layout{
+  width:min(1160px,100%);
+  margin:0 auto;
+  padding:42px 46px 44px!important;
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr);
+  gap:58px;
+  align-items:center;
+  background:
+    linear-gradient(135deg,rgba(255,253,248,.98),rgba(255,247,226,.98));
+  border:1px solid #c6954d!important;
+  border-radius:3px!important;
+  box-shadow:
+    0 18px 42px rgba(69,30,7,.10),
+    inset 0 0 0 5px rgba(255,255,255,.72),
+    inset 0 0 0 6px rgba(201,138,56,.12)!important;
+}
+.shiva-sadhana-page .guidance-copy h2{
+  margin:0!important;
+  color:#3d120b!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif!important;
+  font-size:clamp(30px,3.6vw,47px)!important;
+  font-weight:700!important;
+  line-height:1.28!important;
+  letter-spacing:-.025em!important;
+}
+.shiva-sadhana-page .guidance-copy>p:not(.sadhana-kicker){
+  max-width:690px;
+  margin:17px 0 0!important;
+  color:#635047!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif;
+  font-size:16px!important;
+  line-height:1.95!important;
+  letter-spacing:0!important;
+}
+.shiva-sadhana-page .guidance-steps{
+  padding:5px 0 5px 30px!important;
+  border-left:1px solid #d1a45e!important;
+}
+.shiva-sadhana-page .guidance-steps>div{
+  position:relative;
+  display:grid;
+  grid-template-columns:38px 1fr;
+  gap:15px;
+  align-items:start;
+  padding:12px 0 22px;
+}
+.shiva-sadhana-page .guidance-steps>div:not(:last-child){
+  border-bottom:1px solid rgba(183,123,45,.22);
+  margin-bottom:10px;
+}
+.shiva-sadhana-page .guidance-steps>div>b{
+  display:flex;
+  width:34px;
+  height:34px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #b77b2d;
+  border-radius:50%;
+  background:#fffaf0;
+  color:#4a160d;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif;
+  font-size:15px;
+  font-weight:700;
+}
+.shiva-sadhana-page .guidance-steps>div strong{
+  display:block;
+  margin:0 0 4px!important;
+  color:#4a160d!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif;
+  font-size:17px!important;
+  line-height:1.55!important;
+  letter-spacing:0!important;
+}
+.shiva-sadhana-page .guidance-steps>div small{
+  display:block;
+  color:#6c594e;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif;
+  font-size:13px;
+  line-height:1.7;
+  letter-spacing:0;
+}
+
+/* ---------- PATHWAYS: elegant temple-door cards, not oversized arches ---------- */
+.shiva-sadhana-page .sadhana-pathways{
+  padding:82px 24px 92px!important;
+  background:
+    radial-gradient(circle at 50% 0,rgba(201,138,56,.08),transparent 32rem),
+    linear-gradient(180deg,#fffdf8 0%,#f6e8ca 100%)!important;
+  border-top:1px solid rgba(181,116,32,.18);
+}
+.shiva-sadhana-page .sadhana-pathways>.sadhana-section-head{
+  width:min(1160px,100%)!important;
+  margin:0 auto 38px!important;
+  display:flex!important;
+  align-items:end!important;
+  justify-content:space-between!important;
+  gap:40px!important;
+}
+.shiva-sadhana-page .sadhana-pathways>.sadhana-section-head h2{
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif!important;
+  font-size:clamp(30px,3.8vw,46px)!important;
+  font-weight:700!important;
+  line-height:1.3!important;
+  color:#3d120b!important;
+}
+.shiva-sadhana-page .sadhana-section-head>p:not(.sadhana-kicker){
+  max-width:470px!important;
+  color:#6a584d!important;
+  font-size:15px!important;
+  line-height:1.85!important;
+  text-align:right!important;
+}
+.shiva-sadhana-page .sadhana-gateways{
+  width:min(1160px,100%)!important;
+  margin:0 auto!important;
+  gap:22px!important;
+}
+.shiva-sadhana-page .sadhana-gateway{
+  min-height:430px!important;
+  padding:0!important;
+  border:1px solid #b77b2d!important;
+  border-radius:4px!important;
+  background:linear-gradient(180deg,#fffdf8 0%,#fff5df 100%)!important;
+  box-shadow:
+    0 15px 32px rgba(63,26,5,.10),
+    inset 0 0 0 5px rgba(255,255,255,.68),
+    inset 0 0 0 6px rgba(201,138,56,.13)!important;
+  overflow:hidden!important;
+}
+.shiva-sadhana-page .sadhana-gateway:before{
+  inset:10px!important;
+  border:1px solid rgba(183,123,45,.38)!important;
+  border-radius:1px!important;
+}
+.shiva-sadhana-page .sadhana-gateway:after{
+  content:""!important;
+}
+.shiva-sadhana-page .sadhana-gateway__top{
+  min-height:94px!important;
+  padding:20px 25px!important;
+  display:grid!important;
+  grid-template-columns:48px 1fr auto!important;
+  gap:13px!important;
+  background:linear-gradient(180deg,#f7e5bf,#fff8e9)!important;
+  border-bottom:1px solid rgba(183,123,45,.28)!important;
+  border-radius:0!important;
+}
+.shiva-sadhana-page .gateway-number{
+  display:flex;
+  width:42px;
+  height:42px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #c98a38;
+  border-radius:50%;
+  background:#fffaf0;
+  color:#4a160d!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif!important;
+  font-size:14px!important;
+  font-weight:700;
+}
+.shiva-sadhana-page .gateway-symbol{
+  font-size:28px!important;
+  line-height:1!important;
+  text-align:left!important;
+  align-self:center;
+}
+.shiva-sadhana-page .gateway-label{
+  align-self:center;
+  color:#8a581c!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  letter-spacing:0!important;
+  line-height:1.5!important;
+  text-transform:none!important;
+  white-space:normal!important;
+  text-align:right;
+}
+.shiva-sadhana-page .sadhana-gateway__body{
+  padding:34px 34px 30px!important;
+  align-items:center!important;
+  text-align:center!important;
+}
+.shiva-sadhana-page .sadhana-gateway__body small{
+  color:#a26720!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+}
+.shiva-sadhana-page .sadhana-gateway__body h3{
+  margin:12px 0 14px!important;
+  color:#4a160d!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif!important;
+  font-size:27px!important;
+  font-weight:700!important;
+  line-height:1.4!important;
+  letter-spacing:0!important;
+}
+.shiva-sadhana-page .sadhana-gateway__body p{
+  max-width:300px;
+  margin:0 auto!important;
+  color:#6c594e!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif;
+  font-size:15px!important;
+  line-height:1.9!important;
+  letter-spacing:0!important;
+}
+.shiva-sadhana-page .sadhana-gateway__link{
+  margin-top:auto!important;
+  min-height:44px;
+  padding:10px 18px!important;
+  border-radius:3px!important;
+  background:#4a160d!important;
+  border:1px solid #c98a38!important;
+  color:#fff7e8!important;
+  font-family:"Noto Sans Devanagari","Nirmala UI","Mangal",sans-serif!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  line-height:1.45!important;
+  box-shadow:0 7px 16px rgba(74,22,13,.15);
+}
+.shiva-sadhana-page .sadhana-gateway__link:hover{
+  background:#651b12!important;
+  color:#fff!important;
+}
+
+/* Remove the decorative separator from the pathway/guidance box bottoms;
+   the cards themselves now provide the ornamental framing. */
+.shiva-sadhana-page .sadhana-pathways:after,
+.shiva-sadhana-page .sadhana-guidance:after{display:none!important}
+
+@media(max-width:900px){
+  .shiva-sadhana-page .sadhana-guidance .guidance-layout{
+    grid-template-columns:1fr!important;
+    gap:38px!important;
+    padding:34px 30px 36px!important;
+  }
+  .shiva-sadhana-page .sadhana-pathways>.sadhana-section-head{
+    display:block!important;
+  }
+  .shiva-sadhana-page .sadhana-section-head>p:not(.sadhana-kicker){
+    margin-top:12px!important;
+    text-align:left!important;
+  }
+}
+@media(max-width:760px){
+  .shiva-sadhana-page .sadhana-guidance{padding:58px 14px 64px!important}
+  .shiva-sadhana-page .sadhana-guidance .guidance-layout{padding:28px 20px 30px!important}
+  .shiva-sadhana-page .guidance-copy h2{font-size:30px!important}
+  .shiva-sadhana-page .guidance-copy>p:not(.sadhana-kicker){font-size:15px!important;line-height:1.9!important}
+  .shiva-sadhana-page .sadhana-pathways{padding:60px 14px 70px!important}
+  .shiva-sadhana-page .sadhana-gateways{gap:18px!important}
+  .shiva-sadhana-page .sadhana-gateway{min-height:0!important}
+  .shiva-sadhana-page .sadhana-gateway__top{grid-template-columns:44px 1fr auto!important;padding:17px 20px!important}
+  .shiva-sadhana-page .sadhana-gateway__body{padding:28px 24px 28px!important;min-height:330px}
+  .shiva-sadhana-page .sadhana-gateway__body h3{font-size:25px!important}
+  .shiva-sadhana-page .sadhana-gateway__body p{max-width:330px;font-size:15px!important}
+}
+
+/* =========================================================
+   Bholenath Dham readability refinement
+   All paragraph copy: 20px minimum as requested.
+   ========================================================= */
+.shiva-sadhana-page p,
+.shiva-sadhana-page .hero-subtitle,
+.shiva-sadhana-page .section-intro,
+.shiva-sadhana-page .sadhana-copy,
+.shiva-sadhana-page .sadhana-gateway p,
+.shiva-sadhana-page .sadhana-teaching p,
+.shiva-sadhana-page .sadhana-guidance p,
+.shiva-sadhana-page .sadhana-notes p,
+.shiva-sadhana-page .daily-rhythm p,
+.shiva-sadhana-page .scripture-band p {
+  font-size: 20px !important;
+  line-height: 1.75 !important;
+}
+
+/* Keep footer utility text and tiny UI labels readable but not oversized. */
+.shiva-sadhana-page footer p,
+.shiva-sadhana-page #site-footer p {
+  font-size: 20px !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 760px) {
+  .shiva-sadhana-page p,
+  .shiva-sadhana-page .hero-subtitle,
+  .shiva-sadhana-page .section-intro,
+  .shiva-sadhana-page .sadhana-copy,
+  .shiva-sadhana-page .sadhana-gateway p,
+  .shiva-sadhana-page .sadhana-teaching p,
+  .shiva-sadhana-page .sadhana-guidance p,
+  .shiva-sadhana-page .sadhana-notes p,
+  .shiva-sadhana-page .daily-rhythm p,
+  .shiva-sadhana-page .scripture-band p {
+    font-size: 20px !important;
+    line-height: 1.7 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE HEADER + HERO FINAL FIX
+   Match the established Bholenath Dham mobile header geometry.
+   ========================================================= */
+@media (max-width:760px){
+  .shiva-sadhana-page .header-container{
+    width:calc(100% - 16px)!important;
+    min-height:64px!important;
+    grid-template-columns:minmax(0,1fr) 58px 44px!important;
+    column-gap:6px!important;
+  }
+
+  .shiva-sadhana-page .brand{
+    min-width:0!important;
+    overflow:hidden!important;
+  }
+
+  .shiva-sadhana-page .brand-copy strong{
+    font-size:15px!important;
+  }
+
+  .shiva-sadhana-page #langToggle,
+  .shiva-sadhana-page .site-header #langToggle.language-toggle{
+    grid-column:2!important;
+    grid-row:1!important;
+    display:inline-flex!important;
+    width:58px!important;
+    min-width:58px!important;
+    max-width:58px!important;
+    height:38px!important;
+    padding:7px 8px!important;
+    margin:0!important;
+    border:1px solid #dfb66f!important;
+    border-radius:999px!important;
+    background:#fffaf0!important;
+    background-image:none!important;
+    color:#5a2411!important;
+    box-shadow:none!important;
+    font-family:"Poppins",Arial,sans-serif!important;
+    font-size:11px!important;
+    font-weight:700!important;
+    line-height:1!important;
+    appearance:none!important;
+    -webkit-appearance:none!important;
+    white-space:nowrap!important;
+    overflow:hidden!important;
+  }
+
+  .shiva-sadhana-page #menuToggle{
+    grid-column:3!important;
+    grid-row:1!important;
+    display:inline-flex!important;
+    width:44px!important;
+    min-width:44px!important;
+    max-width:44px!important;
+    height:43px!important;
+    min-height:43px!important;
+    margin:0!important;
+    padding:0!important;
+    border:1px solid #d8a85f!important;
+    border-radius:9px!important;
+    background:#fff8e9!important;
+    background-image:none!important;
+    color:#4a160d!important;
+    box-shadow:none!important;
+    font-size:24px!important;
+    line-height:1!important;
+  }
+
+  .shiva-sadhana-page .sadhana-hero{
+    min-height:610px!important;
+    padding:70px 18px 70px!important;
+  }
+
+  .shiva-sadhana-page .sadhana-hero__content{
+    width:100%!important;
+    max-width:390px!important;
+  }
+
+  .shiva-sadhana-page .sadhana-hero h1{
+    font-size:clamp(38px,11.5vw,52px)!important;
+    line-height:1.18!important;
+    letter-spacing:-.02em!important;
+  }
+
+  .shiva-sadhana-page .sadhana-hero .hero-subtitle{
+    font-size:20px!important;
+    line-height:1.65!important;
+    max-width:360px!important;
+    margin-top:20px!important;
+  }
+
+  .shiva-sadhana-page .eyebrow{
+    font-size:11px!important;
+    letter-spacing:.08em!important;
+  }
+}
+
+@media (max-width:390px){
+  .shiva-sadhana-page .header-container{
+    width:calc(100% - 10px)!important;
+    grid-template-columns:minmax(0,1fr) 54px 40px!important;
+    column-gap:4px!important;
+  }
+  .shiva-sadhana-page #langToggle,
+  .shiva-sadhana-page .site-header #langToggle.language-toggle{
+    width:54px!important;
+    min-width:54px!important;
+    max-width:54px!important;
+    height:36px!important;
+    padding:7px 6px!important;
+    font-size:10.5px!important;
+  }
+  .shiva-sadhana-page #menuToggle{
+    width:40px!important;
+    min-width:40px!important;
+    max-width:40px!important;
+    height:40px!important;
+    min-height:40px!important;
+  }
+  .shiva-sadhana-page .sadhana-hero h1{
+    font-size:38px!important;
+  }
+  .shiva-sadhana-page .sadhana-hero .hero-subtitle{
+    font-size:20px!important;
+  }
+}
+
+/* =========================================================
+   MOBILE HEADER STACKING FIX
+   Keep the language selector and hamburger above the opened
+   navigation dropdown. No JavaScript changes.
+   ========================================================= */
+@media (max-width:760px){
+  .shiva-sadhana-page .site-header{
+    position:sticky!important;
+    top:0!important;
+    z-index:9999!important;
+  }
+
+  .shiva-sadhana-page #navbar.site-nav{
+    z-index:1!important;
+  }
+
+  .shiva-sadhana-page #langToggle,
+  .shiva-sadhana-page #menuToggle{
+    position:relative!important;
+    z-index:20!important;
+  }
+
+  .shiva-sadhana-page #langToggle{
+    isolation:isolate!important;
+  }
+}
