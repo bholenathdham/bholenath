@@ -1,0 +1,742 @@
+/* ============================================================
+   Bholenath Dham — Dark Temple Footer
+   UNIVERSAL / PROTECTED VERSION
+   ============================================================ */
+
+.bd-footer {
+  --bd-bg: #100d0a;
+  --bd-surface: #17120d;
+  --bd-surface-2: #1d1711;
+  --bd-gold: #d6a84a;
+  --bd-gold-bright: #f0c96a;
+  --bd-text: #f5ead2;
+  --bd-muted: #bdaf98;
+  --bd-dim: #948873;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 42px 18px 24px !important;
+
+  display: block !important;
+
+  box-sizing: border-box !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+
+  float: none !important;
+  clear: both !important;
+
+  transform: none !important;
+
+  color: var(--bd-text) !important;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(214, 168, 74, 0.10),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      #17120d 0%,
+      var(--bd-bg) 55%,
+      #0c0907 100%
+    ) !important;
+
+  border-top: 1px solid rgba(214, 168, 74, 0.28) !important;
+
+  box-shadow:
+    0 -18px 50px rgba(0, 0, 0, 0.20) inset !important;
+
+  overflow: visible !important;
+
+  text-align: initial !important;
+}
+
+
+/* ============================================================
+   RESET FOOTER CHILDREN
+   ============================================================ */
+
+.bd-footer *,
+.bd-footer *::before,
+.bd-footer *::after {
+  box-sizing: border-box !important;
+}
+
+
+/* ============================================================
+   FOOTER INNER
+   ============================================================ */
+
+.bd-footer .bd-footer-inner {
+  width: 100% !important;
+  max-width: 1040px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+
+  gap: 28px !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+
+
+/* ============================================================
+   BRAND
+   ============================================================ */
+
+.bd-footer .bd-footer-brand {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  text-align: center !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+}
+
+
+.bd-footer .bd-footer-logo {
+  display: block !important;
+
+  width: 78px !important;
+  max-width: 78px !important;
+  height: auto !important;
+
+  margin: 0 auto 10px !important;
+  padding: 0 !important;
+
+  float: none !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+
+  filter:
+    drop-shadow(
+      0 4px 14px rgba(214, 168, 74, 0.14)
+    ) !important;
+}
+
+
+.bd-footer .bd-footer-brand h3 {
+  width: 100% !important;
+
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+
+  font-size: 20px !important;
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.2px !important;
+
+  color: var(--bd-gold-bright) !important;
+
+  text-align: center !important;
+
+  float: none !important;
+}
+
+
+.bd-footer .bd-footer-brand p {
+  width: 100% !important;
+  max-width: 350px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  color: var(--bd-muted) !important;
+
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+
+  text-align: center !important;
+
+  float: none !important;
+}
+
+
+/* ============================================================
+   FOOTER ORNAMENT
+   ============================================================ */
+
+.bd-footer .bd-footer-ornament {
+  width: 100% !important;
+  max-width: 260px !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 10px !important;
+
+  margin: 26px auto 0 !important;
+  padding: 0 !important;
+
+  color: var(--bd-gold) !important;
+
+  font-size: 13px !important;
+
+  text-align: center !important;
+
+  float: none !important;
+}
+
+
+.bd-footer .bd-footer-ornament span {
+  height: 1px !important;
+
+  flex: 1 1 auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(214, 168, 74, 0.38)
+    ) !important;
+}
+
+
+.bd-footer .bd-footer-ornament span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(214, 168, 74, 0.38),
+      transparent
+    ) !important;
+}
+
+
+.bd-footer .bd-footer-ornament b {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-weight: 400 !important;
+  font-size: 12px !important;
+}
+
+
+/* ============================================================
+   FOOTER GROUPS
+   ============================================================ */
+
+.bd-footer .bd-footer-group {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+}
+
+
+.bd-footer .bd-footer-group h4 {
+  width: 100% !important;
+
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+
+  color: var(--bd-gold) !important;
+
+  float: none !important;
+}
+
+
+/* ============================================================
+   FOOTER LINKS
+   ============================================================ */
+
+.bd-footer .bd-footer-links {
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  border: 1px solid rgba(214, 168, 74, 0.24) !important;
+  border-radius: 10px !important;
+
+  overflow: hidden !important;
+
+  background: rgba(255, 255, 255, 0.025) !important;
+
+  float: none !important;
+}
+
+
+.bd-footer .bd-footer-links a {
+  width: 100% !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  min-height: 46px !important;
+
+  margin: 0 !important;
+  padding: 12px 14px !important;
+
+  color: var(--bd-text) !important;
+
+  text-decoration: none !important;
+
+  font-size: 15px !important;
+  line-height: 20px !important;
+
+  border-bottom: 1px solid rgba(214, 168, 74, 0.13) !important;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease !important;
+
+  float: none !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+}
+
+
+.bd-footer .bd-footer-links a:last-child {
+  border-bottom: 0 !important;
+}
+
+
+.bd-footer .bd-footer-links a::before {
+  content: "›" !important;
+
+  flex: 0 0 auto !important;
+
+  margin-right: 9px !important;
+
+  color: var(--bd-gold) !important;
+
+  font-size: 18px !important;
+  line-height: 1 !important;
+}
+
+
+.bd-footer .bd-footer-links a:hover,
+.bd-footer .bd-footer-links a:focus-visible {
+  background: rgba(214, 168, 74, 0.08) !important;
+
+  color: var(--bd-gold-bright) !important;
+
+  outline: none !important;
+}
+
+
+.bd-footer .bd-footer-links a:active {
+  background: rgba(214, 168, 74, 0.12) !important;
+}
+
+
+/* ============================================================
+   LEGAL LINKS
+   ============================================================ */
+
+.bd-footer .bd-footer-legal {
+  width: 100% !important;
+  max-width: none !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 8px !important;
+
+  flex-wrap: wrap !important;
+
+  margin: 28px auto 0 !important;
+  padding: 0 !important;
+
+  min-height: 44px !important;
+
+  color: var(--bd-dim) !important;
+
+  font-size: 13px !important;
+  line-height: 20px !important;
+
+  text-align: center !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+}
+
+
+.bd-footer .bd-footer-legal a {
+  display: inline-flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  min-height: 44px !important;
+
+  margin: 0 !important;
+  padding: 8px !important;
+
+  color: var(--bd-muted) !important;
+
+  text-decoration: none !important;
+
+  float: none !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+}
+
+
+.bd-footer .bd-footer-legal a:hover,
+.bd-footer .bd-footer-legal a:focus-visible {
+  color: var(--bd-gold-bright) !important;
+  outline: none !important;
+}
+
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.bd-footer .bd-footer-divider {
+  display: block !important;
+
+  width: min(100%, 520px) !important;
+  max-width: 520px !important;
+
+  height: 1px !important;
+
+  margin: 2px auto 0 !important;
+  padding: 0 !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(214, 168, 74, 0.30),
+      transparent
+    ) !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+}
+
+
+/* ============================================================
+   HAR HAR MAHADEV
+   ============================================================ */
+
+.bd-footer .bd-footer-mahadev {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 24px 0 12px !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  color: var(--bd-gold-bright) !important;
+
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+
+  letter-spacing: 0.4px !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+
+  transform: none !important;
+}
+
+
+/* ============================================================
+   COPYRIGHT
+   ============================================================ */
+
+.bd-footer .bd-footer-copy {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  color: var(--bd-dim) !important;
+
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+
+  transform: none !important;
+}
+
+
+/* ============================================================
+   DOMAIN
+   ============================================================ */
+
+.bd-footer .bd-footer-domain {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 2px 0 0 !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+
+  color: #a99b84 !important;
+
+  font-size: 12.5px !important;
+  line-height: 1.7 !important;
+
+  letter-spacing: 0.25px !important;
+
+  float: none !important;
+  clear: both !important;
+
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+
+  transform: none !important;
+}
+
+
+/* ============================================================
+   LANGUAGE HIDDEN STATE
+   ============================================================ */
+
+.bd-footer .hidden {
+  display: none !important;
+}
+
+
+/* ============================================================
+   DESKTOP
+   ============================================================ */
+
+@media (min-width: 700px) {
+
+  .bd-footer {
+    padding: 50px 28px 28px !important;
+  }
+
+  .bd-footer .bd-footer-inner {
+    grid-template-columns:
+      minmax(260px, 1.25fr)
+      1fr
+      1fr !important;
+
+    align-items: start !important;
+
+    gap: 34px !important;
+  }
+
+  .bd-footer .bd-footer-brand {
+    text-align: left !important;
+  }
+
+  .bd-footer .bd-footer-logo {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .bd-footer .bd-footer-brand h3 {
+    text-align: left !important;
+  }
+
+  .bd-footer .bd-footer-brand p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    text-align: left !important;
+  }
+
+  .bd-footer .bd-footer-ornament {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .bd-footer .bd-footer-group h4 {
+    text-align: left !important;
+  }
+
+  .bd-footer .bd-footer-links {
+    border-radius: 9px !important;
+  }
+
+  .bd-footer .bd-footer-legal {
+    margin-top: 34px !important;
+  }
+
+  /*
+     IMPORTANT:
+     The bottom copyright area must remain centered
+     even though the upper footer becomes a desktop grid.
+  */
+
+  .bd-footer .bd-footer-divider {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .bd-footer .bd-footer-mahadev {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .bd-footer .bd-footer-copy {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .bd-footer .bd-footer-domain {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 699px) {
+
+  .bd-footer {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .bd-footer .bd-footer-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .bd-footer .bd-footer-mahadev,
+  .bd-footer .bd-footer-copy,
+  .bd-footer .bd-footer-domain {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    text-align: center !important;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .bd-footer .bd-footer-links a {
+    transition: none !important;
+  }
+}
