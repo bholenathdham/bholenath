@@ -43,6 +43,8 @@
   <link rel="icon" href="assets/favicon.ico">
 
   <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/shiva-purana.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -173,34 +175,233 @@
 
 <body>
 
-<header>
+<header class="bholenath-home-header">
   <div class="header-container">
 
     <div class="logo">
-      <img src="assets/logo.webp" alt="Bholenath Dham Logo" class="logo-img">
+      <a href="https://bholenathdham.in">
+        <img
+          alt="Bholenath Dham Logo"
+          src="https://bholenathdham.in/assets/logo.webp"
+        />
+      </a>
 
       <div class="logo-text">
         <h1>Bholenath Dham</h1>
-        </div>
+      </div>
     </div>
 
-    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-controls="navbar" aria-expanded="false">
-      ☰
+    <button class="menu-toggle" id="menuToggle" type="button">☰</button>
+
+   <nav aria-label="Primary navigation" class="site-nav bholenath-home-nav" id="navbar">
+
+  <a href="https://bholenathdham.in">Home</a>
+
+  <!-- ==================== SHIVA PURANA ==================== -->
+  <div class="bd-nav-dropdown bd-wide bd-shiva-purana">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Shiva Purana
+      <span aria-hidden="true" class="bd-chevron">▾</span>
     </button>
 
-    <nav id="navbar" aria-label="Primary navigation">
-      <ul>
-        <li><a href="https://bholenathdham.in">Home</a></li>
-        <li><a href="https://bholenathdham.in/shiva.html">About Shiva</a></li>
-        <li><a href="https://bholenathdham.in/shiva-purana/shiva-purana.html">📖 Shiv Purana</a></li>
-        <li><a href="https://bholenathdham.in/108names.html">108 Names</a></li>
-        <li><a href="https://bholenathdham.in/seva.html">Seva</a></li>
-        <li><a href="https://bholenathdham.in/media.html">Media</a></li>
-        <li><a href="https://bholenathdham.in/maha-shivaratri-2027.html">Maha Shivaratri</a></li>
-      </ul>
-    </nav>
+    <div class="bd-nav-menu">
 
-    <button id="langToggle" type="button" aria-label="Switch between Hindi, English and Bengali">
+      <a href="https://bholenathdham.in/shiva-purana/shiva-purana.html">
+        Shiva Purana
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/vidyeshvara-samhita/vidyeshvara-samhita.html">
+        Vidyeshvara Samhita
+      </a>
+
+      <!-- Rudra Samhita nested dropdown -->
+      <div class="bd-nav-subdropdown">
+
+        <button aria-expanded="false" class="bd-nav-subtrigger" type="button">
+          Rudra Samhita
+          <span aria-hidden="true" class="bd-subchevron">▸</span>
+        </button>
+
+        <div class="bd-nav-submenu">
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/rudra-samhita.html">
+            Rudra Samhita
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/srishti-khanda/srishti-khanda.html">
+            Srishti Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/sati-khanda/sati-khanda.html">
+            Sati Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/parvati-khanda/parvati-khanda.html">
+            Parvati Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/kumar-khanda/kumar-khanda.html">
+            Kumar Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/yuddha-khanda/yuddha-khanda.html">
+            Yuddha Khanda
+          </a>
+
+        </div>
+      </div>
+
+      <a href="https://bholenathdham.in/shiva-purana/shatarudra-samhita/shatarudra-samhita.html">
+        Shatarudra Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/kotirudra-samhita/kotirudra-samhita.html">
+        Kotirudra Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/uma-samhita/uma-samhita.html">
+        Uma Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/kailasa-samhita/kailasa-samhita.html">
+        Kailasa Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/vayaviya-samhita/vayaviya-samhita.html">
+        Vayaviya Samhita
+      </a>
+
+      <!-- Mahatmya nested dropdown -->
+      <div class="bd-nav-subdropdown">
+
+        <button aria-expanded="false" class="bd-nav-subtrigger" type="button">
+          Mahatmya
+          <span aria-hidden="true" class="bd-subchevron">▸</span>
+        </button>
+
+        <div class="bd-nav-submenu">
+
+          <a href="https://bholenathdham.in/shiva-purana/mahatmya/shiva-purana-mahatmya.html">
+            Shiva Purana Mahatmya
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== EXPLORE ==================== -->
+  <div class="bd-nav-dropdown bd-explore">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Explore
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/explore/explore-shiva.html">Explore Lord Shiva</a>
+      <a href="https://bholenathdham.in/explore/forms-of-shiva.html">Forms of Shiva</a>
+      <a href="https://bholenathdham.in/explore/names-of-lord-shiva.html">Names of Lord Shiva</a>
+      <a href="https://bholenathdham.in/explore/shiva-stories.html">Shiva Stories</a>
+      <a href="https://bholenathdham.in/explore/shiva-mantras.html">Shiva Mantras</a>
+      <a href="https://bholenathdham.in/explore/shiva-puja.html">Shiva Puja</a>
+      <a href="https://bholenathdham.in/explore/shiva-abhishekam.html">Shiva Abhishekam</a>
+      <a href="https://bholenathdham.in/explore/shiva-sadhana.html">Shiva Sadhana</a>
+      <a href="https://bholenathdham.in/explore/shiva-meditation.html">Shiva Meditation</a>
+      <a href="https://bholenathdham.in/explore/shiva-dhyanam.html">Shiva Dhyanam</a>
+      <a href="https://bholenathdham.in/explore/jyotirlingas.html">Jyotirlingas</a>
+      <a href="https://bholenathdham.in/explore/shiva-temples.html">Shiva Temples</a>
+      <a href="https://bholenathdham.in/explore/names-of-lord-shiva.html">1008 Names of Lord Shiva</a>
+
+    </div>
+  </div>
+
+  <!-- ==================== HANUMAN ==================== -->
+  <div class="bd-nav-dropdown bd-hanuman">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Shri Hanuman Ji
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/hanuman/index.html">Shri Hanuman Ji</a>
+      <a href="https://bholenathdham.in/hanuman/about-hanuman.html">About Hanuman</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-stories.html">Hanuman Stories</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-chalisa.html">Hanuman Chalisa</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-mantras.html">Hanuman Mantras</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-puja.html">Hanuman Puja</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-sadhana.html">Hanuman Sadhana</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-temples.html">Hanuman Temples</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-bhakti.html">Hanuman Bhakti</a>
+
+    </div>
+  </div>
+
+  <!-- ==================== SEVA ==================== -->
+  <div class="bd-nav-dropdown bd-small">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Seva
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/seva.html">Seva</a>
+      <a href="https://bholenathdham.in/shiva.html">About Shiva</a>
+      <a href="https://bholenathdham.in/chalisa.html">Read Shiva Chalisa</a>
+      <a href="https://bholenathdham.in/108names.html">108 Names of Shiva</a>
+    </div>
+  </div>
+
+  <!-- ==================== MEDIA ==================== -->
+  <div class="bd-nav-dropdown bd-small">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Media
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/media.html">Media</a>
+      <a href="https://bholenathdham.in/maha-shivaratri-2027.html">
+        Maha Shivaratri
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ==================== SADHNANA ==================== -->
+  <div class="bd-nav-dropdown bd-small">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+     Shiv Sadhana
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/shiva-sadhana.html">Shiv Sadhana</a>
+      <a href="https://bholenathdham.in/shiva-vachan.html">Shiv Vachan</a>
+      <a href="https://bholenathdham.in/nama-japa.html">Nama Japa</a>
+      <a href="https://bholenathdham.in/virtual-rudrabhishek.html">Virtual Rudrabhishek</a>
+
+    </div>
+  </div>
+
+</nav>
+
+    <button
+      aria-label="Choose language"
+      id="langToggle"
+      type="button"
+    >
       বাংলা
     </button>
 
@@ -420,49 +621,157 @@
 </section>
 </main>
 
-<footer>
+<footer class="bd-footer bd-footer-dark" aria-label="Footer">
 
-  <img src="assets/logo.webp" alt="Bholenath Dham Logo" class="footer-logo">
+  <div class="bd-footer-inner">
 
-  <h3>Bholenath Dham</h3>
+    <div class="bd-footer-brand">
 
-  <p class="en hidden">
-    A sacred abode of Lord Shiva in Digha, Chandpara, North 24 Parganas,
-    West Bengal – 743245.
-  </p>
+      <img
+        src="https://bholenathdham.in/assets/logo.webp"
+        alt="Bholenath Dham Logo"
+        class="bd-footer-logo"
+      >
 
-  <p class="bn hidden" lang="bn">
-    পশ্চিমবঙ্গের উত্তর ২৪ পরগনা জেলার দিঘা, চাঁদপাড়া
-    (পিন – ৭৪৩২৪৫)-এ অবস্থিত ভগবান শিবের এক পবিত্র ধাম।
-  </p>
+      <h3>Bholenath Dham</h3>
 
-  <p class="hi" lang="hi">
-    दीघा, चाँदपाड़ा, उत्तर 24 परगना में भगवान शिव का एक पवित्र धाम,
-    पश्चिम बंगाल - 743245।
-  </p>
+      <p class="en hidden">
+        A sacred digital home dedicated to Lord Shiva, devotion, scripture and seva.
+      </p>
 
-  <div class="footer-divider"></div>
+      <p class="bn hidden">
+        ভগবান শিব, ভক্তি, শাস্ত্র ও সেবার উদ্দেশ্যে নিবেদিত এক পবিত্র ডিজিটাল ধাম।
+      </p>
 
-  <p class="mahadev-footer">
-    🔱 Har Har Mahadev 🔱
-  </p>
+      <p class="hi" lang="hi">
+        भगवान शिव, भक्ति, शास्त्र और सेवा को समर्पित एक पवित्र डिजिटल धाम।
+      </p>
 
-  <p>
+      <div class="bd-footer-ornament" aria-hidden="true">
+        <span></span>
+        <b>◇</b>
+        <span></span>
+      </div>
+
+    </div>
+
+
+    <div class="bd-footer-group">
+
+      <h4>
+        <span class="en hidden">Sacred Library</span>
+        <span class="bn hidden">পবিত্র গ্রন্থাগার</span>
+        <span class="hi" lang="hi">पवित्र ग्रंथ</span>
+      </h4>
+
+      <nav class="bd-footer-links" aria-label="Sacred Library">
+
+        <a href="https://bholenathdham.in/shiva-purana/shiva-purana.html">
+          <span class="en hidden">Shiva Purana</span>
+          <span class="bn hidden">শিব পুরাণ</span>
+          <span class="hi" lang="hi">शिव पुराण</span>
+        </a>
+
+        <a href="https://bholenathdham.in/chalisa.html">
+          <span class="en hidden">Shiva Chalisa</span>
+          <span class="bn hidden">শিব চালিসা</span>
+          <span class="hi" lang="hi">शिव चालीसा</span>
+        </a>
+
+        <a href="https://bholenathdham.in/108names.html">
+          <span class="en hidden">108 Names of Shiva</span>
+          <span class="bn hidden">শিবের ১০৮ নাম</span>
+          <span class="hi" lang="hi">शिव के 108 नाम</span>
+        </a>
+
+        <a href="https://bholenathdham.in/explore/forms-of-shiva.html">
+          <span class="en hidden">Explore Shiva</span>
+          <span class="bn hidden">শিবকে জানুন</span>
+          <span class="hi" lang="hi">शिव को जानें</span>
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="bd-footer-group">
+
+      <h4>
+        <span class="en hidden">Devotion</span>
+        <span class="bn hidden">ভক্তি</span>
+        <span class="hi" lang="hi">भक्ति</span>
+      </h4>
+
+      <nav class="bd-footer-links" aria-label="Devotion">
+
+        <a href="https://bholenathdham.in/hanuman/index.html">
+          <span class="en hidden">Shri Hanuman</span>
+          <span class="bn hidden">শ্রী হনুমান</span>
+          <span class="hi" lang="hi">श्री हनुमान</span>
+        </a>
+
+        <a href="https://bholenathdham.in/seva.html">
+          <span class="en hidden">Seva</span>
+          <span class="bn hidden">সেবা</span>
+          <span class="hi" lang="hi">सेवा</span>
+        </a>
+
+        <a href="https://bholenathdham.in/media.html">
+          <span class="en hidden">Media</span>
+          <span class="bn hidden">মিডিয়া</span>
+          <span class="hi" lang="hi">मीडिया</span>
+        </a>
+
+        <a href="https://bholenathdham.in/maha-shivaratri-2027.html">
+          <span class="en hidden">Maha Shivaratri</span>
+          <span class="bn hidden">মহাশিবরাত্রি</span>
+          <span class="hi" lang="hi">महा शिवरात्रि</span>
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <div class="bd-footer-legal">
+
+    <a href="https://bholenathdham.in/privacy.html">
+      <span class="en hidden">Privacy &amp; Terms</span>
+      <span class="bn hidden">গোপনীয়তা ও শর্তাবলি</span>
+      <span class="hi" lang="hi">गोपनीयता एवं शर्तें</span>
+    </a>
+
+    <span aria-hidden="true">•</span>
+
+    <a href="https://bholenathdham.in/sitemap.html">
+      <span class="en hidden">Sitemap</span>
+      <span class="bn hidden">সাইটম্যাপ</span>
+      <span class="hi" lang="hi">साइट मैप</span>
+    </a>
+
+  </div>
+
+
+  <div class="bd-footer-divider"></div>
+
+  <p class="bd-footer-mahadev">✦ Har Har Mahadev ✦</p>
+
+  <p class="bd-footer-copy">
     © 2026 Bholenath Dham. All Rights Reserved.
   </p>
 
-  <p class="footer-domain">
+  <p class="bd-footer-domain">
     🌐 bholenathdham.in
   </p>
-
-  <a href="../../privacy.html" class="privacy-link">
-    📜 Privacy Policy &amp; Terms
-  </a>
 
 </footer>
 
 <script src="js/main.js"></script>
 
   <script src="js/hindi-language.js"></script>
+<script src="js/navbar.js"></script>
 </body>
 </html>
