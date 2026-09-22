@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
 
@@ -19,6 +19,11 @@
 <meta name="theme-color" content="#c45c00">
 <link rel="icon" href="assets/favicon.ico">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/footer.css">
+
 <link rel="stylesheet" href="css/shiva-purana.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,45 +32,237 @@
 
 <body>
 
-<header>
+<header class="bholenath-home-header">
+  <div class="header-container">
 
-<div class="header-container">
+    <div class="logo">
+      <a href="https://bholenathdham.in">
+        <img
+          alt="Bholenath Dham Logo"
+          src="https://bholenathdham.in/assets/logo.webp"
+        />
+      </a>
 
-<div class="logo">
+      <div class="logo-text">
+        <h1>Bholenath Dham</h1>
+      </div>
+    </div>
 
-<a href="https://bholenathdham.in">
-<img src="assets/logo.webp" alt="Bholenath Dham Logo">
-</a>
+    <button class="menu-toggle" id="menuToggle" type="button">☰</button>
 
-<div class="logo-text">
-<h1>Bholenath Dham</h1>
-</div>
+   <nav aria-label="Primary navigation" class="site-nav bholenath-home-nav" id="navbar">
 
-</div>
+  <a href="https://bholenathdham.in">Home</a>
 
-<button class="menu-toggle" id="menuToggle">☰</button>
+  <!-- ==================== SHIVA PURANA ==================== -->
+  <div class="bd-nav-dropdown bd-wide bd-shiva-purana">
 
-<nav id="navbar">
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Shiva Purana
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
 
-  <ul>
+    <div class="bd-nav-menu">
 
-            <li><a href="https://bholenathdham.in">Home</a></li>
-            <li><a href="https://bholenathdham.in/shiva.html">About Shiva</a></li>
-            <li><a href="https://bholenathdham.in/shiva-purana/shiva-purana.html">📖 Shiv Purana</a></li>
-            <li><a href="https://bholenathdham.in/chalisa.html">Shiva Chalisa</a></li>
-            <li><a href="https://bholenathdham.in/108names.html">108 Names</a></li>
-            <li><a href="https://bholenathdham.in/seva.html">Seva</a></li>
-            <li><a href="https://bholenathdham.in/media.html">Media</a></li>
-            <li><a href="https://bholenathdham.in/maha-shivaratri-2027.html">Maha Shivaratri</a></li>
+      <a href="https://bholenathdham.in/shiva-purana/shiva-purana.html">
+        Shiva Purana
+      </a>
 
-  </ul>
+      <a href="https://bholenathdham.in/shiva-purana/vidyeshvara-samhita/vidyeshvara-samhita.html">
+        Vidyeshvara Samhita
+      </a>
+
+      <!-- Rudra Samhita nested dropdown -->
+      <div class="bd-nav-subdropdown">
+
+        <button aria-expanded="false" class="bd-nav-subtrigger" type="button">
+          Rudra Samhita
+          <span aria-hidden="true" class="bd-subchevron">▸</span>
+        </button>
+
+        <div class="bd-nav-submenu">
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/rudra-samhita.html">
+            Rudra Samhita
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/srishti-khanda/srishti-khanda.html">
+            Srishti Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/sati-khanda/sati-khanda.html">
+            Sati Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/parvati-khanda/parvati-khanda.html">
+            Parvati Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/kumara-khanda/kumara-khanda.html">
+            Kumar Khanda
+          </a>
+
+          <a href="https://bholenathdham.in/shiva-purana/rudra-samhita/yuddha-khanda/yuddha-khanda.html">
+            Yuddha Khanda
+          </a>
+
+        </div>
+      </div>
+
+      <a href="https://bholenathdham.in/shiva-purana/shatarudra-samhita/shatarudra-samhita.html">
+        Shatarudra Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/kotirudra-samhita/kotirudra-samhita.html">
+        Kotirudra Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/uma-samhita/uma-samhita.html">
+        Uma Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/kailasa-samhita/kailasa-samhita.html">
+        Kailasa Samhita
+      </a>
+
+      <a href="https://bholenathdham.in/shiva-purana/vayaviya-samhita/vayaviya-samhita.html">
+        Vayaviya Samhita
+      </a>
+
+      <!-- Mahatmya nested dropdown -->
+      <div class="bd-nav-subdropdown">
+
+        <button aria-expanded="false" class="bd-nav-subtrigger" type="button">
+          Mahatmya
+          <span aria-hidden="true" class="bd-subchevron">▸</span>
+        </button>
+
+        <div class="bd-nav-submenu">
+
+          <a href="https://bholenathdham.in/shiva-purana/mahatmya/shiva-purana-mahatmya.html">
+            Shiva Purana Mahatmya
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== EXPLORE ==================== -->
+  <div class="bd-nav-dropdown bd-explore">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Explore
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/explore/explore-shiva.html">Explore Lord Shiva</a>
+      <a href="https://bholenathdham.in/explore/forms-of-shiva.html">Forms of Shiva</a>
+      <a href="https://bholenathdham.in/explore/names-of-lord-shiva.html">Names of Lord Shiva</a>
+      <a href="https://bholenathdham.in/explore/shiva-stories.html">Shiva Stories</a>
+      <a href="https://bholenathdham.in/explore/shiva-mantras.html">Shiva Mantras</a>
+      <a href="https://bholenathdham.in/explore/shiva-puja.html">Shiva Puja</a>
+      <a href="https://bholenathdham.in/explore/shiva-abhishekam.html">Shiva Abhishekam</a>
+      <a href="https://bholenathdham.in/explore/shiva-sadhana.html">Shiva Sadhana</a>
+      <a href="https://bholenathdham.in/explore/shiva-meditation.html">Shiva Meditation</a>
+      <a href="https://bholenathdham.in/explore/shiva-dhyanam.html">Shiva Dhyanam</a>
+      <a href="https://bholenathdham.in/explore/jyotirlingas.html">Jyotirlingas</a>
+      <a href="https://bholenathdham.in/explore/shiva-temples.html">Shiva Temples</a>
+      <a href="https://bholenathdham.in/explore/shiva-as-mahayogi.html">Lord Shiva as Mahayogi</a>
+
+    </div>
+  </div>
+
+  <!-- ==================== HANUMAN ==================== -->
+  <div class="bd-nav-dropdown bd-hanuman">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Shri Hanuman Ji
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/hanuman/index.html">Shri Hanuman Ji</a>
+      <a href="https://bholenathdham.in/hanuman/about-hanuman.html">About Hanuman</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-stories.html">Hanuman Stories</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-chalisa.html">Hanuman Chalisa</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-mantras.html">Hanuman Mantras</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-puja.html">Hanuman Puja</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-sadhana.html">Hanuman Sadhana</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-temples.html">Hanuman Temples</a>
+      <a href="https://bholenathdham.in/hanuman/hanuman-bhakti.html">Hanuman Bhakti</a>
+
+    </div>
+  </div>
+
+  <!-- ==================== SEVA ==================== -->
+  <div class="bd-nav-dropdown bd-small">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Seva
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/seva.html">Seva</a>
+      <a href="https://bholenathdham.in/shiva.html">About Shiva</a>
+      <a href="https://bholenathdham.in/chalisa.html">Read Shiva Chalisa</a>
+      <a href="https://bholenathdham.in/108names.html">108 Names of Shiva</a>
+    </div>
+  </div>
+
+  <!-- ==================== MEDIA ==================== -->
+  <div class="bd-nav-dropdown bd-small">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+      Media
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/media.html">Media</a>
+      <a href="https://bholenathdham.in/maha-shivaratri-2027.html">
+        Maha Shivaratri
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ==================== SADHNANA ==================== -->
+  <div class="bd-nav-dropdown bd-small">
+
+    <button aria-expanded="false" class="bd-nav-trigger" type="button">
+     Shiv Sadhana
+      <span aria-hidden="true" class="bd-chevron">▾</span>
+    </button>
+
+    <div class="bd-nav-menu">
+
+      <a href="https://bholenathdham.in/shiva-sadhana.html">Shiv Sadhana</a>
+      <a href="https://bholenathdham.in/shiva-vachan.html">Shiv Vachan</a>
+      <a href="https://bholenathdham.in/nama-japa.html">Nama Japa</a>
+      <a href="https://bholenathdham.in/virtual-rudrabhishek.html">Virtual Rudrabhishek</a>
+
+    </div>
+  </div>
 
 </nav>
 
-<button id="langToggle">বাংলা</button>
+    <button
+      aria-label="Choose language"
+      id="langToggle"
+      type="button"
+    >
+      বাংলা
+    </button>
 
-</div>
-
+  </div>
 </header>
 
 <div class="top-bar en">
@@ -74,6 +271,10 @@
 
 <div class="top-bar bn hidden">
 📖 পবিত্র শিব পুরাণ পাঠ করুন • হর হর মহাদেব 🔱
+</div>
+
+<div class="top-bar hi lang="hi">
+📖 पवित्र शिव पुराण ऑनलाइन पढ़ें • हर हर महादेव 🔱
 </div>
 
 <section class="sp-hero">
@@ -99,6 +300,10 @@ The Sacred Beginning of Creation
 সৃষ্টির পবিত্র সূচনা
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि का पवित्र आरम्भ
+</span>
+
 </h1>
 
 <p>
@@ -111,6 +316,10 @@ The first chapter of Srishti Khanda opens the divine account of creation accordi
 সৃষ্টি খণ্ডের প্রথম অধ্যায়ে শিব পুরাণ অনুসারে মহাবিশ্বের সৃষ্টির পবিত্র কাহিনি শুরু হয়। জগত, কাল, দেবতা কিংবা জীবের অস্তিত্বের পূর্বে কেবল পরম সত্য—ভগবান শিব—তাঁর অনন্ত, নিরাকার ও চিরন্তন স্বরূপে বিরাজমান ছিলেন। তাঁর অসীম দিব্য শক্তি থেকেই মহাজাগতিক সৃষ্টির সূচনা হয় এবং সেই শক্তির মাধ্যমে মহাবিশ্ব, দেবতা ও সকল জীবের আবির্ভাব ঘটে। এই পবিত্র অধ্যায় আমাদের শিক্ষা দেয় যে সৃষ্টি কেবল একটি ভৌতিক ঘটনা নয়, বরং সমগ্র জগতের প্রতি শিবের চিরন্তন ইচ্ছা, জ্ঞান ও করুণারই প্রকাশ।
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि खण्ड का प्रथम अध्याय शिव पुराण के अनुसार सृष्टि की दिव्य कथा का आरम्भ करता है। लोकों, काल, देवताओं और जीवों के अस्तित्व से पहले केवल परम सत्य—भगवान शिव—अपने शाश्वत, अनंत और निराकार स्वरूप में विद्यमान थे। उनकी असीम दिव्य शक्ति से वह ब्रह्मांडीय प्रक्रिया प्रकट हुई जिसके माध्यम से ब्रह्मांड, देवताओं और समस्त जीवन का प्राकट्य हुआ। यह पवित्र अध्याय बताता है कि सृष्टि केवल एक भौतिक घटना नहीं, बल्कि सभी प्राणियों के प्रति शिव की शाश्वत इच्छा, ज्ञान और करुणा की अभिव्यक्ति है।
+</span>
+
 </p>
 
 <p>
@@ -121,6 +330,10 @@ As this sacred journey begins, devotees are invited to understand the deeper spi
 
 <span class="bn hidden">
 এই পবিত্র যাত্রার সূচনায় ভক্তদের আহ্বান জানানো হয়েছে সৃষ্টির অন্তর্নিহিত আধ্যাত্মিক সত্য উপলব্ধি করতে এবং ভগবান শিবকে সমগ্র মহাবিশ্বের চিরন্তন উৎস, পালনকর্তা ও পরম আশ্রয় হিসেবে গ্রহণ করতে। প্রতিটি শ্লোক ভক্তি, বিনয় ও সেই উপলব্ধির শিক্ষা দেয় যে সমগ্র সৃষ্টি মহাদেব থেকেই উৎপন্ন হয়েছে এবং শেষ পর্যন্ত তাঁর মধ্যেই লীন হয়ে যায়।
+</span>
+
+<span class="hi" lang="hi">
+इस पवित्र यात्रा के आरम्भ में भक्तों को सृष्टि के गहरे आध्यात्मिक अर्थ को समझने और भगवान शिव को सम्पूर्ण ब्रह्मांड के शाश्वत स्रोत, पालनकर्ता और परम आश्रय के रूप में पहचानने के लिए प्रेरित किया जाता है। प्रत्येक वचन विनम्रता, भक्ति और इस अनुभूति को जगाता है कि समस्त अस्तित्व महादेव से उत्पन्न होता है और अंततः उन्हीं में विलीन हो जाता है।
 </span>
 
 </p>
@@ -143,6 +356,10 @@ Before the Beginning of Creation
 সৃষ্টির সূচনার পূর্বে
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि के आरम्भ से पहले
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -156,6 +373,10 @@ Before the creation of the universe, there was no earth, no sky, no oceans, no m
 <span class="bn hidden">
 মহাবিশ্বের সৃষ্টির পূর্বে ছিল না পৃথিবী, না আকাশ, না সমুদ্র, না পর্বত, না কোনো জীব। দিন-রাত্রিরও অস্তিত্ব ছিল না এবং সময়কেও তখন পরিমাপ করা যেত না। বেদ এই অবস্থাকে সমস্ত জাগতিক অস্তিত্বের অতীত এক রহস্যময় অবস্থা হিসেবে বর্ণনা করে। সেই কালাতীত নীরবতায় কেবল পরমেশ্বর ভগবান শিবই স্বপ্রকাশ, অনন্ত ও চিরন্তন রূপে বিরাজমান ছিলেন। তিনি কারও উপর নির্ভরশীল নন, বরং সমগ্র ভবিষ্যৎ সৃষ্টি তাঁরই দিব্য চেতনার মধ্যে সুপ্ত অবস্থায় ছিল।
 
+</span>
+
+<span class="hi" lang="hi">
+ब्रह्मांड की सृष्टि से पहले न पृथ्वी थी, न आकाश, न महासागर, न पर्वत और न ही कोई जीवित प्राणी। न दिन था, न रात और न ही समय को मापा जा सकता था। वेद इस रहस्यमय अवस्था को समस्त भौतिक अस्तित्व से परे बताते हैं। उस कालातीत मौन में केवल परमेश्वर भगवान शिव ही स्वयंप्रकाशित, शाश्वत और अनंत रूप में विद्यमान थे। वे किसी पर निर्भर नहीं थे, फिर भी जो कुछ भविष्य में अस्तित्व में आने वाला था, वह सब उनकी दिव्य चेतना में स्थित था।
 </span>
 
 </p>
@@ -181,6 +402,10 @@ Lord Shiva — The Eternal Reality
 ভগবান শিব — চিরন্তন পরম সত্য
 </span>
 
+<span class="hi" lang="hi">
+भगवान शिव — शाश्वत सत्य
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -194,6 +419,10 @@ The Shiva Purana proclaims that Lord Shiva is not merely a deity among many but 
 <span class="bn hidden">
 শিব পুরাণ ঘোষণা করে যে ভগবান শিব কেবল বহু দেবতার একজন নন, বরং জন্ম ও মৃত্যুর অতীত চিরন্তন পরম সত্য। তাঁর কোনো আদি নেই, অন্তও নেই; তিনি স্থান, কাল ও পদার্থের সীমার ঊর্ধ্বে অবস্থান করেন। তাঁরই দিব্য ইচ্ছায় অসংখ্য মহাবিশ্বের আবির্ভাব ঘটে এবং শেষ পর্যন্ত সবকিছু তাঁর মধ্যেই লীন হয়ে যায়। অসীম সৃষ্টি ও প্রলয়ের মধ্যেও তিনি চিরকাল অপরিবর্তিত থাকেন।
 
+</span>
+
+<span class="hi" lang="hi">
+शिव पुराण उद्घोष करता है कि भगवान शिव केवल अनेक देवताओं में से एक नहीं, बल्कि जन्म और मृत्यु से परे परम सत्य हैं। उनका न आदि है, न अंत; वे देश, काल और पदार्थ से परे विद्यमान हैं। प्रत्येक ब्रह्मांड उनकी दिव्य इच्छा से प्रकट होता है और अंततः उन्हीं में विलीन हो जाता है। शाश्वत होने के कारण वे अनंत ब्रह्मांडीय चक्रों में असंख्य सृष्टियों के प्रकट और विलीन होने पर भी अपरिवर्तित रहते हैं।
 </span>
 
 </p>
@@ -219,6 +448,10 @@ The Divine Will to Create
 সৃষ্টির দিব্য সংকল্প
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि की दिव्य इच्छा
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -232,6 +465,10 @@ Although Lord Shiva is complete in Himself and lacks nothing, He chose to manife
 <span class="bn hidden">
 ভগবান শিব নিজেই পরিপূর্ণ এবং তাঁর কোনো কিছুর অভাব নেই। তবুও অসীম করুণা ও দিব্য লীলার মাধ্যমে তিনি সৃষ্টিকে প্রকাশ করার সংকল্প গ্রহণ করেন। প্রয়োজনের কারণে নয়, বরং তাঁর অসীম জ্ঞান ও অনুগ্রহের প্রকাশ হিসেবেই মহাবিশ্বের সৃষ্টি হয়। এই পবিত্র সৃষ্টির মাধ্যমে অসংখ্য জীব আত্মপ্রকাশের সুযোগ লাভ করে, ধর্মাচরণ করতে পারে, ভক্তি অর্জন করতে পারে এবং শেষ পর্যন্ত মহাদেবের সঙ্গে নিজের চিরন্তন সম্পর্ক উপলব্ধি করে মুক্তি লাভ করতে পারে।
 
+</span>
+
+<span class="hi" lang="hi">
+यद्यपि भगवान शिव स्वयं में पूर्ण हैं और उन्हें किसी वस्तु की आवश्यकता नहीं, फिर भी उन्होंने अपनी असीम करुणा और दिव्य लीला से सृष्टि को प्रकट करना स्वीकार किया। ब्रह्मांड किसी आवश्यकता के कारण नहीं, बल्कि उनके अनंत ज्ञान और अनुग्रह की अभिव्यक्ति के रूप में प्रकट हुआ। इस पवित्र कार्य के माध्यम से असंख्य जीवों को जीवन का अनुभव करने, धर्मपूर्ण कर्म करने, भक्ति विकसित करने और अंततः महादेव के साथ अपने शाश्वत संबंध को पहचानकर मुक्ति प्राप्त करने का अवसर मिला।
 </span>
 
 </p>
@@ -257,6 +494,10 @@ The Spiritual Meaning of Creation
 সৃষ্টির আধ্যাত্মিক তাৎপর্য
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि का आध्यात्मिक अर्थ
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -270,6 +511,10 @@ The opening chapter of Srishti Khanda teaches that creation is far more than the
 <span class="bn hidden">
 সৃষ্টি খণ্ডের প্রথম অধ্যায় আমাদের শিক্ষা দেয় যে সৃষ্টি কেবল দৃশ্যমান জগতের উদ্ভব নয়; এর অন্তরে নিহিত রয়েছে এক চিরন্তন আধ্যাত্মিক সত্য। যখন ভক্ত উপলব্ধি করেন যে সমস্ত অস্তিত্বের উৎস ভগবান শিব, তখন তাঁর হৃদয়ে বিনয়, কৃতজ্ঞতা ও অটল ভক্তির জন্ম হয়। এই উপলব্ধিই রুদ্র সংহিতার পরবর্তী সমস্ত পবিত্র কাহিনির ভিত্তি স্থাপন করে।
 
+</span>
+
+<span class="hi" lang="hi">
+सृष्टि खण्ड का आरम्भिक अध्याय सिखाता है कि सृष्टि केवल भौतिक ब्रह्मांड के प्रकट होने से कहीं अधिक है। यह प्रत्येक साधक को स्मरण कराता है कि दृश्य जगत एक शाश्वत आध्यात्मिक सत्य पर आधारित है। यह समझकर कि समस्त अस्तित्व भगवान शिव से उत्पन्न होता है, भक्तों में विनम्रता, कृतज्ञता और अटूट भक्ति विकसित होती है। यही ज्ञान रुद्र संहिता में आगे आने वाली प्रत्येक पवित्र कथा की आधारशिला बनता है।
 </span>
 
 </p>
@@ -294,6 +539,10 @@ The Eternal Silence Before Creation
 সৃষ্টির পূর্বের চিরন্তন নীরবতা
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि से पहले का शाश्वत मौन
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -306,6 +555,10 @@ Before the appearance of the worlds, there was neither earth nor sky, neither da
 
 <span class="bn hidden">
 জগতের আবির্ভাবের পূর্বে ছিল না পৃথিবী, না আকাশ, না দিন, না রাত্রি, না জীবন, না মৃত্যু। সময়ও তখন তার চিরন্তন গতি শুরু করেনি। সমগ্র অস্তিত্ব ছিল এক পরম নিস্তব্ধতায়, যা চিন্তা ও কল্পনারও অতীত। এটি শূন্যতা ছিল না, বরং অসীম ঐশ্বরিক সম্ভাবনার অবস্থা, যেখানে কেবল নিরাকার ও অনন্ত পরমেশ্বর শিবই বিরাজমান ছিলেন।
+</span>
+
+<span class="hi" lang="hi">
+लोकों के प्रकट होने से पहले न पृथ्वी थी, न आकाश; न दिन था, न रात; न जीवन था, न मृत्यु। समय ने स्वयं अपनी शाश्वत यात्रा आरम्भ नहीं की थी। समस्त अस्तित्व विचार और कल्पना से परे पूर्ण स्थिरता में स्थित था। यह अवस्था शून्यता नहीं, बल्कि अनंत दिव्य संभावना थी, जहाँ केवल परमेश्वर भगवान शिव अपने निराकार और शाश्वत सत्य स्वरूप में विद्यमान थे।
 </span>
 
 </p>
@@ -332,6 +585,10 @@ The Divine Nature of Lord Shiva
 ভগবান শিবের পরম স্বরূপ
 </span>
 
+<span class="hi" lang="hi">
+भगवान शिव का दिव्य स्वरूप
+</span>
+
 </h2>
 
 <div class="sp-feature-grid">
@@ -344,6 +601,10 @@ The Divine Nature of Lord Shiva
 
 <span class="bn hidden">অনন্ত</span>
 
+<span class="hi" lang="hi">
+शाश्वत
+</span>
+
 </h3>
 
 <p>
@@ -354,6 +615,10 @@ Lord Shiva exists beyond birth, death and time itself.
 
 <span class="bn hidden">
 ভগবান শিব জন্ম, মৃত্যু এবং সময়েরও অতীত।
+</span>
+
+<span class="hi" lang="hi">
+भगवान शिव जन्म, मृत्यु और स्वयं समय से भी परे विद्यमान हैं।
 </span>
 
 </p>
@@ -368,6 +633,10 @@ Lord Shiva exists beyond birth, death and time itself.
 
 <span class="bn hidden">নিরাকার</span>
 
+<span class="hi" lang="hi">
+निराकार
+</span>
+
 </h3>
 
 <p>
@@ -378,6 +647,10 @@ His true nature cannot be limited by any physical form.
 
 <span class="bn hidden">
 তাঁর প্রকৃত স্বরূপ কোনো দৃশ্যমান রূপে সীমাবদ্ধ নয়।
+</span>
+
+<span class="hi" lang="hi">
+उनके वास्तविक स्वरूप को किसी भौतिक रूप की सीमा में बाँधा नहीं जा सकता।
 </span>
 
 </p>
@@ -392,6 +665,10 @@ His true nature cannot be limited by any physical form.
 
 <span class="bn hidden">সমস্ত সৃষ্টির উৎস</span>
 
+<span class="hi" lang="hi">
+सबके स्रोत
+</span>
+
 </h3>
 
 <p>
@@ -402,6 +679,10 @@ Every universe originates, exists and dissolves through His divine will.
 
 <span class="bn hidden">
 সমস্ত সৃষ্টি তাঁর ঐশ্বরিক ইচ্ছা থেকেই জন্মায়, স্থিতি লাভ করে এবং লয়প্রাপ্ত হয়।
+</span>
+
+<span class="hi" lang="hi">
+प्रत्येक ब्रह्मांड उनकी दिव्य इच्छा से उत्पन्न होता है, स्थित रहता है और उसी में विलीन हो जाता है।
 </span>
 
 </p>
@@ -430,6 +711,10 @@ Why Creation Was Necessary
 কেন সৃষ্টির প্রয়োজন হল
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि क्यों आवश्यक थी
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -442,6 +727,10 @@ Although the Supreme Lord is complete in Himself, creation manifests through His
 
 <span class="bn hidden">
 পরমেশ্বর নিজেই সম্পূর্ণ হলেও তাঁর ঐশ্বরিক লীলার মাধ্যমেই সৃষ্টি প্রকাশিত হয়। এই সৃষ্টির মাধ্যমে অসংখ্য জীব সৎকর্ম করার, আধ্যাত্মিক জ্ঞান অর্জনের, অজ্ঞতা দূর করার এবং শেষ পর্যন্ত শিবের সঙ্গে নিজের চিরন্তন ঐক্য উপলব্ধি করার সুযোগ লাভ করে। তাই সৃষ্টি কোনো আকস্মিক ঘটনা নয়, বরং ঈশ্বরের অসীম করুণার প্রকাশ।
+</span>
+
+<span class="hi" lang="hi">
+यद्यपि परमेश्वर स्वयं में पूर्ण हैं, सृष्टि उनकी दिव्य लीला के माध्यम से प्रकट होती है। सृष्टि के द्वारा असंख्य जीवों को धर्मपूर्ण कर्म करने, आध्यात्मिक ज्ञान प्राप्त करने, अज्ञान को दूर करने और अंततः शिव के साथ अपनी शाश्वत एकता को पहचानने के अवसर मिलते हैं। इसलिए सृष्टि कोई आकस्मिक घटना नहीं, बल्कि दिव्य अनुग्रह की करुणामयी अभिव्यक्ति है।
 </span>
 
 </p>
@@ -468,6 +757,10 @@ Spiritual Lessons from the Beginning of Creation
 সৃষ্টির সূচনা থেকে আধ্যাত্মিক শিক্ষা
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि के आरम्भ से आध्यात्मिक शिक्षाएँ
+</span>
+
 </h2>
 
 <div class="sp-feature-grid">
@@ -480,6 +773,10 @@ Spiritual Lessons from the Beginning of Creation
 
 <span class="bn hidden">সবকিছুর সূচনা শিব থেকে</span>
 
+<span class="hi" lang="hi">
+सब कुछ शिव से आरम्भ होता है
+</span>
+
 </h3>
 
 <p>
@@ -490,6 +787,10 @@ Every form of existence ultimately traces its origin back to the Supreme Lord.
 
 <span class="bn hidden">
 সমস্ত অস্তিত্বের চূড়ান্ত উৎস হলেন পরমেশ্বর শিব।
+</span>
+
+<span class="hi" lang="hi">
+अस्तित्व का प्रत्येक रूप अंततः परमेश्वर से ही अपनी उत्पत्ति प्राप्त करता है।
 </span>
 
 </p>
@@ -504,6 +805,10 @@ Every form of existence ultimately traces its origin back to the Supreme Lord.
 
 <span class="bn hidden">সৃষ্টির একটি উদ্দেশ্য আছে</span>
 
+<span class="hi" lang="hi">
+सृष्टि का एक उद्देश्य है
+</span>
+
 </h3>
 
 <p>
@@ -514,6 +819,10 @@ Life is an opportunity for spiritual growth rather than mere worldly enjoyment.
 
 <span class="bn hidden">
 জীবন কেবল ভোগের জন্য নয়, আত্মিক উন্নতির জন্য এক মহামূল্যবান সুযোগ।
+</span>
+
+<span class="hi" lang="hi">
+जीवन केवल सांसारिक भोग के लिए नहीं, बल्कि आध्यात्मिक विकास का अवसर है।
 </span>
 
 </p>
@@ -528,6 +837,10 @@ Life is an opportunity for spiritual growth rather than mere worldly enjoyment.
 
 <span class="bn hidden">চিরন্তন সত্যের অনুসন্ধান</span>
 
+<span class="hi" lang="hi">
+शाश्वत सत्य की खोज करें
+</span>
+
 </h3>
 
 <p>
@@ -538,6 +851,10 @@ The highest goal of every soul is to rediscover its eternal relationship with Sh
 
 <span class="bn hidden">
 প্রত্যেক আত্মার সর্বোচ্চ লক্ষ্য হল শিবের সঙ্গে তার চিরন্তন সম্পর্ক পুনরায় উপলব্ধি করা।
+</span>
+
+<span class="hi" lang="hi">
+प्रत्येक आत्मा का सर्वोच्च लक्ष्य शिव के साथ अपने शाश्वत संबंध को पुनः पहचानना है।
 </span>
 
 </p>
@@ -564,6 +881,10 @@ The Divine Will to Create
 সৃষ্টির জন্য ভগবানের ঐশ্বরিক ইচ্ছা
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि की दिव्य इच्छा
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -576,6 +897,10 @@ When the proper cosmic time arrived, the Supreme Lord Shiva desired to manifest 
 
 <span class="bn hidden">
 যখন উপযুক্ত মহাজাগতিক সময় উপস্থিত হল, তখন পরমেশ্বর শিব তাঁর নিজস্ব ঐশ্বরিক শক্তির মাধ্যমে বিশ্বসৃষ্টির ইচ্ছা প্রকাশ করলেন। এই ইচ্ছা কোনো অভাব থেকে জন্ম নেয়নি, কারণ শিব চিরকালই পূর্ণ ও পরিপূর্ণ। বরং অসীম করুণাবশত তিনি সৃষ্টি প্রকাশ করলেন, যাতে অগণিত জীব জীবন লাভ করে, ধর্ম পালন করে, আধ্যাত্মিক জ্ঞান অর্জন করে এবং শেষ পর্যন্ত তাঁর কাছেই ফিরে যেতে পারে। তাই সৃষ্টি ভগবানের অসীম কৃপাশক্তিরই প্রকাশ।
+</span>
+
+<span class="hi" lang="hi">
+जब उचित ब्रह्मांडीय समय आया, तब परमेश्वर भगवान शिव ने अपनी दिव्य शक्ति के माध्यम से ब्रह्मांड को प्रकट करने की इच्छा की। यह इच्छा किसी आवश्यकता से उत्पन्न नहीं हुई, क्योंकि शिव शाश्वत रूप से पूर्ण और परिपूर्ण हैं। बल्कि यह उनकी अनंत करुणा से उत्पन्न हुई, ताकि असंख्य जीव जीवन का अनुभव कर सकें, धर्मपूर्ण कर्म कर सकें, आध्यात्मिक ज्ञान प्राप्त कर सकें और अंततः उन्हीं के पास लौट सकें। इस प्रकार सृष्टि स्वयं उनके असीम अनुग्रह की अभिव्यक्ति बन गई।
 </span>
 
 </p>
@@ -602,6 +927,10 @@ The Emergence of Divine Energy
 দিব্য শক্তির প্রকাশ
 </span>
 
+<span class="hi" lang="hi">
+दिव्य ऊर्जा का प्राकट्य
+</span>
+
 </h2>
 
 <div class="sp-feature-grid">
@@ -618,6 +947,10 @@ Shiva
 শিব
 </span>
 
+<span class="hi" lang="hi">
+शिव
+</span>
+
 </h3>
 
 <p>
@@ -628,6 +961,10 @@ The eternal, formless Supreme Reality from whom all existence begins.
 
 <span class="bn hidden">
 চিরন্তন নিরাকার পরম সত্য, যাঁর থেকেই সমস্ত অস্তিত্বের সূচনা।
+</span>
+
+<span class="hi" lang="hi">
+वह शाश्वत, निराकार परम सत्य, जिससे समस्त अस्तित्व का आरम्भ होता है।
 </span>
 
 </p>
@@ -646,6 +983,10 @@ Shakti
 শক্তি
 </span>
 
+<span class="hi" lang="hi">
+शक्ति
+</span>
+
 </h3>
 
 <p>
@@ -656,6 +997,10 @@ The divine energy through which the Lord performs creation, preservation and dis
 
 <span class="bn hidden">
 ঐশ্বরিক শক্তি যার মাধ্যমে ভগবান সৃষ্টি, পালন ও সংহার সম্পন্ন করেন।
+</span>
+
+<span class="hi" lang="hi">
+वह दिव्य ऊर्जा जिसके माध्यम से भगवान सृष्टि, पालन और संहार करते हैं।
 </span>
 
 </p>
@@ -674,6 +1019,10 @@ Cosmic Creation
 মহাজাগতিক সৃষ্টি
 </span>
 
+<span class="hi" lang="hi">
+ब्रह्मांडीय सृष्टि
+</span>
+
 </h3>
 
 <p>
@@ -684,6 +1033,10 @@ The universe unfolds when Shiva and Shakti act together in perfect harmony.
 
 <span class="bn hidden">
 শিব ও শক্তির ঐক্যবদ্ধ লীলার মাধ্যমেই সমগ্র বিশ্বজগতের প্রকাশ ঘটে।
+</span>
+
+<span class="hi" lang="hi">
+जब शिव और शक्ति पूर्ण सामंजस्य में साथ कार्य करते हैं, तब ब्रह्मांड प्रकट होता है।
 </span>
 
 </p>
@@ -712,6 +1065,10 @@ The Infinite Cosmic Waters
 অনন্ত মহাজাগতিক জলরাশি
 </span>
 
+<span class="hi" lang="hi">
+अनंत ब्रह्मांडीय जलराशि
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -724,6 +1081,10 @@ As creation began to unfold, limitless cosmic waters spread throughout the unive
 
 <span class="bn hidden">
 সৃষ্টির সূচনার সঙ্গে সঙ্গে অসীম মহাজাগতিক জলরাশি সর্বত্র বিস্তৃত হল। এই পবিত্র জলরাশি সেই অব্যক্ত অবস্থার প্রতীক, যেখান থেকে ধীরে ধীরে সমস্ত সৃষ্টি প্রকাশিত হবে। এই অনন্ত মহাসমুদ্রের মধ্যেই বিশ্ব, জীবজগৎ এবং দেবলোকের আবির্ভাবের ঐশ্বরিক রহস্য সুপ্ত অবস্থায় বিরাজ করছিল।
+</span>
+
+<span class="hi" lang="hi">
+जब सृष्टि का प्राकट्य आरम्भ हुआ, तब अनंत ब्रह्मांडीय जलराशि पूरे ब्रह्मांड में फैल गई। ये पवित्र जल उस अव्यक्त अवस्था के प्रतीक थे, जिससे धीरे-धीरे अस्तित्व के सभी रूप प्रकट होने वाले थे। इस असीम महासागर में सृष्टि का दिव्य रहस्य स्थित था और भगवान की आज्ञा की प्रतीक्षा कर रहा था, ताकि लोकों, प्राणियों और दिव्य क्षेत्रों का प्राकट्य हो सके।
 </span>
 
 </p>
@@ -750,6 +1111,10 @@ The Foundation of the Universe
 মহাবিশ্বের ভিত্তি
 </span>
 
+<span class="hi" lang="hi">
+ब्रह्मांड की आधारशिला
+</span>
+
 </h2>
 
 <div class="sp-feature-grid">
@@ -766,6 +1131,10 @@ Divine Order
 ঐশ্বরিক নিয়ম
 </span>
 
+<span class="hi" lang="hi">
+दिव्य व्यवस्था
+</span>
+
 </h3>
 
 <p>
@@ -776,6 +1145,10 @@ The universe operates according to the eternal law established by Lord Shiva.
 
 <span class="bn hidden">
 ভগবান শিব প্রতিষ্ঠিত চিরন্তন নিয়ম অনুযায়ী সমগ্র বিশ্ব পরিচালিত হয়।
+</span>
+
+<span class="hi" lang="hi">
+ब्रह्मांड भगवान शिव द्वारा स्थापित शाश्वत नियम के अनुसार संचालित होता है।
 </span>
 
 </p>
@@ -794,6 +1167,10 @@ Sacred Purpose
 পবিত্র উদ্দেশ্য
 </span>
 
+<span class="hi" lang="hi">
+पवित्र उद्देश्य
+</span>
+
 </h3>
 
 <p>
@@ -804,6 +1181,10 @@ Every creation has a meaningful place within the Lord's divine plan.
 
 <span class="bn hidden">
 ভগবানের ঐশ্বরিক পরিকল্পনায় প্রতিটি সৃষ্টিরই একটি অর্থপূর্ণ স্থান রয়েছে।
+</span>
+
+<span class="hi" lang="hi">
+भगवान की दिव्य योजना में प्रत्येक सृष्टि का एक अर्थपूर्ण स्थान है।
 </span>
 
 </p>
@@ -822,6 +1203,10 @@ Spiritual Journey
 আধ্যাত্মিক যাত্রা
 </span>
 
+<span class="hi" lang="hi">
+आध्यात्मिक यात्रा
+</span>
+
 </h3>
 
 <p>
@@ -832,6 +1217,10 @@ Every soul is created to progress toward eternal union with Lord Shiva.
 
 <span class="bn hidden">
 প্রত্যেক আত্মাই শেষ পর্যন্ত ভগবান শিবের সঙ্গে চিরন্তন মিলনের জন্য সৃষ্টি হয়েছে।
+</span>
+
+<span class="hi" lang="hi">
+प्रत्येक आत्मा भगवान शिव के साथ शाश्वत एकत्व की ओर आगे बढ़ने के लिए सृजित हुई है।
 </span>
 
 </p>
@@ -858,6 +1247,10 @@ The Manifestation of Lord Vishnu
 ভগবান বিষ্ণুর আবির্ভাব
 </span>
 
+<span class="hi" lang="hi">
+भगवान विष्णु का प्राकट्य
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -870,6 +1263,10 @@ Desiring the orderly manifestation of the universe, Lord Shiva first revealed th
 
 <span class="bn hidden">
 সৃষ্টিকে সুশৃঙ্খলভাবে প্রকাশ করার উদ্দেশ্যে ভগবান শিব প্রথমে তাঁর নিজস্ব অসীম শক্তি থেকে ভগবান বিষ্ণুর দিব্য রূপ প্রকাশ করলেন। বিষ্ণুকে অসীম জ্ঞান, সীমাহীন করুণা এবং সমগ্র সৃষ্টিকে রক্ষা করার পবিত্র দায়িত্ব প্রদান করা হল। তিনি লক্ষ লক্ষ সূর্যের ন্যায় দীপ্তিমান হলেও অনন্ত সাগরের শান্ত জলের মতো প্রশান্ত ছিলেন। গভীর বিনয়ের সঙ্গে তিনি পরমেশ্বর শিবকে প্রণাম করে তাঁর ঐশ্বরিক নির্দেশের প্রতীক্ষা করতে লাগলেন।
+</span>
+
+<span class="hi" lang="hi">
+ब्रह्मांड के सुव्यवस्थित प्राकट्य की इच्छा से भगवान शिव ने सर्वप्रथम अपनी अनंत शक्ति से भगवान विष्णु के दिव्य स्वरूप को प्रकट किया। विष्णु को असीम ज्ञान, अनंत करुणा और सृष्टि के संरक्षण की पवित्र जिम्मेदारी प्रदान की गई। वे करोड़ों सूर्यों के समान तेजस्वी, फिर भी अनंत काल के शांत जल के समान सौम्य दिखाई दिए। हाथ जोड़कर और गहरी विनम्रता के साथ भगवान विष्णु ने परमेश्वर को प्रणाम किया और उनकी दिव्य आज्ञा की प्रतीक्षा करने लगे।
 </span>
 
 </p>
@@ -896,6 +1293,10 @@ The Sacred Command of Lord Shiva
 ভগবান শিবের পবিত্র নির্দেশ
 </span>
 
+<span class="hi" lang="hi">
+भगवान शिव की पवित्र आज्ञा
+</span>
+
 </h2>
 
 <div class="sp-feature-grid">
@@ -912,6 +1313,10 @@ Preserve Dharma
 ধর্ম রক্ষা
 </span>
 
+<span class="hi" lang="hi">
+धर्म की रक्षा करें
+</span>
+
 </h3>
 
 <p>
@@ -922,6 +1327,10 @@ Lord Vishnu was entrusted with protecting righteousness throughout every age.
 
 <span class="bn hidden">
 প্রত্যেক যুগে ধর্ম রক্ষার দায়িত্ব ভগবান বিষ্ণুর উপর অর্পিত হল।
+</span>
+
+<span class="hi" lang="hi">
+प्रत्येक युग में धर्म और righteousness की रक्षा का दायित्व भगवान विष्णु को सौंपा गया।
 </span>
 
 </p>
@@ -940,6 +1349,10 @@ Protect Creation
 সৃষ্টি রক্ষা
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि की रक्षा करें
+</span>
+
 </h3>
 
 <p>
@@ -950,6 +1363,10 @@ He would preserve the balance of the universe through divine compassion.
 
 <span class="bn hidden">
 ঐশ্বরিক করুণার মাধ্যমে তিনি সমগ্র বিশ্বব্রহ্মাণ্ডের ভারসাম্য রক্ষা করবেন।
+</span>
+
+<span class="hi" lang="hi">
+वे दिव्य करुणा के माध्यम से ब्रह्मांड के संतुलन को बनाए रखेंगे।
 </span>
 
 </p>
@@ -968,6 +1385,10 @@ Serve the Supreme
 পরমেশ্বরের সেবা
 </span>
 
+<span class="hi" lang="hi">
+परमेश्वर की सेवा करें
+</span>
+
 </h3>
 
 <p>
@@ -978,6 +1399,10 @@ Every divine action of Vishnu would ultimately fulfill the will of Lord Shiva.
 
 <span class="bn hidden">
 ভগবান বিষ্ণুর প্রতিটি ঐশ্বরিক কর্ম শেষ পর্যন্ত পরমেশ্বর শিবের ইচ্ছাকেই পূর্ণ করবে।
+</span>
+
+<span class="hi" lang="hi">
+भगवान विष्णु का प्रत्येक दिव्य कार्य अंततः भगवान शिव की इच्छा को पूर्ण करेगा।
 </span>
 
 </p>
@@ -1006,6 +1431,10 @@ The Beginning of Divine Creation
 দিব্য সৃষ্টির সূচনা
 </span>
 
+<span class="hi" lang="hi">
+दिव्य सृष्टि का आरम्भ
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -1018,6 +1447,10 @@ Having received the blessings of Lord Shiva, Vishnu entered deep meditation upon
 
 <span class="bn hidden">
 ভগবান শিবের আশীর্বাদ লাভ করে ভগবান বিষ্ণু পরমেশ্বরের ধ্যানে নিমগ্ন হলেন। তাঁর সেই ধ্যানের মাধ্যমে ঐশ্বরিক শক্তি মহাজাগতিক জলরাশিতে বিস্তার লাভ করল এবং ব্রহ্মার আবির্ভাব ও বিশ্বসৃষ্টির প্রস্তুতি সম্পন্ন হল। সৃষ্টির প্রতিটি ধাপ কোনো আকস্মিক ঘটনা নয়, বরং মহাদেবের চিরন্তন জ্ঞান ও সর্বোচ্চ ইচ্ছার দ্বারা পরিচালিত।
+</span>
+
+<span class="hi" lang="hi">
+भगवान शिव का आशीर्वाद प्राप्त करने के बाद विष्णु परमेश्वर के गहन ध्यान में लीन हो गए। इस ध्यान के माध्यम से दिव्य ऊर्जा ब्रह्मांडीय जलराशि में फैल गई और ब्रह्मा के प्राकट्य तथा सृष्टि के विस्तार के लिए ब्रह्मांड तैयार होने लगा। सृष्टि का प्रत्येक चरण संयोग से नहीं, बल्कि महादेव के शाश्वत ज्ञान और सर्वोच्च इच्छा से निर्देशित था।
 </span>
 
 </p>
@@ -1044,6 +1477,10 @@ The Eternal Lesson
 চিরন্তন শিক্ষা
 </span>
 
+<span class="hi" lang="hi">
+शाश्वत शिक्षा
+</span>
+
 </h2>
 
 <div class="sp-info-card">
@@ -1058,6 +1495,10 @@ The appearance of Lord Vishnu teaches that every divine responsibility begins wi
 
 <span class="bn hidden">
 ভগবান বিষ্ণুর আবির্ভাব আমাদের শিক্ষা দেয় যে প্রত্যেক ঐশ্বরিক দায়িত্ব বিনয়, ভক্তি এবং পরমেশ্বর শিবের প্রতি সম্পূর্ণ আত্মসমর্পণের মাধ্যমেই শুরু হয়। সৃষ্টি তখনই বিকশিত হয়, যখন তা ভগবানের প্রতিষ্ঠিত চিরন্তন নিয়ম অনুসরণ করে।
+</span>
+
+<span class="hi" lang="hi">
+भगवान विष्णु का प्राकट्य सिखाता है कि प्रत्येक दिव्य जिम्मेदारी विनम्रता, भक्ति और परमेश्वर भगवान शिव के प्रति पूर्ण समर्पण से आरम्भ होती है। सृष्टि तभी फलती-फूलती है जब वह भगवान द्वारा स्थापित शाश्वत व्यवस्था का पालन करती है।
 </span>
 
 </p>
@@ -1082,6 +1523,10 @@ The Divine Silence Before Creation
 সৃষ্টির পূর্বের ঐশ্বরিক নীরবতা
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि से पहले का दिव्य मौन
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -1094,6 +1539,10 @@ Before the first breath of creation, the universe rested in absolute silence. Th
 
 <span class="bn hidden">
 সৃষ্টির প্রথম স্পন্দনের পূর্বে সমগ্র বিশ্বব্রহ্মাণ্ড পরম নীরবতায় নিমগ্ন ছিল। তখন কোনো শব্দ ছিল না, কোনো গতি ছিল না, আলো কিংবা অন্ধকারও ছিল না। স্থান তখনও বিস্তৃত হয়নি, সময় তার অনন্ত যাত্রা শুরু করেনি, এবং অসংখ্য জগৎ অপ্রকাশিত অবস্থায় বিরাজ করছিল। এই পবিত্র নীরবতা শূন্যতা ছিল না; বরং এটি ছিল পরম সত্যের নিখুঁত শান্তি, যেখানে সমগ্র সৃষ্টি প্রকাশের পূর্বে সম্পূর্ণ সামঞ্জস্যে অবস্থান করছিল।
+</span>
+
+<span class="hi" lang="hi">
+सृष्टि की पहली श्वास से पहले ब्रह्मांड पूर्ण मौन में स्थित था। वहाँ कोई ध्वनि, कोई गति, कोई प्रकाश और कोई अंधकार नहीं था। अंतरिक्ष का विस्तार अभी नहीं हुआ था, समय ने अपनी अनंत यात्रा आरम्भ नहीं की थी और असंख्य लोक अव्यक्त अवस्था में थे। यह पवित्र स्थिरता शून्यता नहीं, बल्कि परम सत्य की पूर्ण शांति थी, जहाँ सृष्टि के प्रकट होने से पहले समस्त अस्तित्व पूर्ण सामंजस्य में स्थित था।
 </span>
 
 </p>
@@ -1120,6 +1569,10 @@ The Universe Hidden Within the Supreme
 পরম সত্যের অন্তরে সুপ্ত বিশ্বব্রহ্মাণ্ড
 </span>
 
+<span class="hi" lang="hi">
+परम सत्य में छिपा ब्रह्मांड
+</span>
+
 </h2>
 
 <div class="sp-info-card">
@@ -1134,6 +1587,10 @@ The mountains, rivers, stars, planets, living beings, sages, gods, and even the 
 
 <span class="bn hidden">
 পর্বত, নদী, নক্ষত্র, গ্রহ, জীবজগৎ, ঋষি, দেবতা এবং এমনকি পবিত্র শাস্ত্রসমূহও তখন পরম সত্যের অন্তরে অদৃশ্য সম্ভাবনা হিসেবে অবস্থান করছিল। কিছুই তখন প্রকাশিত হয়নি, তবুও সবকিছুই অসীম দিব্য চৈতন্যে বিদ্যমান ছিল। শিব পুরাণ শিক্ষা দেয় যে সৃষ্টি কখনও শূন্য থেকে জন্ম নেয় না; বরং তা সেই চিরন্তন উৎস থেকেই প্রকাশিত হয়, যার মধ্যে সমগ্র অস্তিত্ব সুপ্ত অবস্থায় বিরাজ করে।
+</span>
+
+<span class="hi" lang="hi">
+पर्वत, नदियाँ, नक्षत्र, ग्रह, जीव, ऋषि, देवता और यहाँ तक कि पवित्र शास्त्र भी उस समय परम सत्य के भीतर अदृश्य और संभावित रूप में विद्यमान थे। कुछ भी अभी प्रकट नहीं हुआ था, फिर भी सब कुछ अनंत दिव्य चेतना के माध्यम से पहले से अस्तित्व में था। शिव पुराण सिखाता है कि सृष्टि शून्य से उत्पन्न नहीं होती; वह उस शाश्वत स्रोत से प्रकट होती है जिसमें समस्त अस्तित्व समाहित है।
 </span>
 
 </p>
@@ -1160,6 +1617,10 @@ The First Stirring of Divine Will
 ঐশ্বরিক ইচ্ছার প্রথম জাগরণ
 </span>
 
+<span class="hi" lang="hi">
+दिव्य इच्छा का प्रथम स्पंदन
+</span>
+
 </h2>
 
 <div class="sp-feature-grid">
@@ -1176,6 +1637,10 @@ Compassion
 করুণা
 </span>
 
+<span class="hi" lang="hi">
+करुणा
+</span>
+
 </h3>
 
 <p>
@@ -1186,6 +1651,10 @@ Creation began through the limitless compassion of the Supreme for all future be
 
 <span class="bn hidden">
 সমস্ত ভবিষ্যৎ জীবের কল্যাণের জন্য পরমেশ্বরের অসীম করুণা থেকেই সৃষ্টির সূচনা হয়।
+</span>
+
+<span class="hi" lang="hi">
+भविष्य के सभी प्राणियों के लिए परमेश्वर की असीम करुणा से सृष्टि का आरम्भ हुआ।
 </span>
 
 </p>
@@ -1204,6 +1673,10 @@ Divine Purpose
 ঐশ্বরিক উদ্দেশ্য
 </span>
 
+<span class="hi" lang="hi">
+दिव्य उद्देश्य
+</span>
+
 </h3>
 
 <p>
@@ -1214,6 +1687,10 @@ Every stage of creation would serve the spiritual evolution of countless souls.
 
 <span class="bn hidden">
 সৃষ্টির প্রতিটি ধাপ অসংখ্য আত্মার আধ্যাত্মিক বিকাশের উদ্দেশ্যেই নির্ধারিত হয়েছিল।
+</span>
+
+<span class="hi" lang="hi">
+सृष्टि का प्रत्येक चरण असंख्य आत्माओं के आध्यात्मिक विकास की सेवा करेगा।
 </span>
 
 </p>
@@ -1232,6 +1709,10 @@ Cosmic Order
 মহাজাগতিক নিয়ম
 </span>
 
+<span class="hi" lang="hi">
+ब्रह्मांडीय व्यवस्था
+</span>
+
 </h3>
 
 <p>
@@ -1242,6 +1723,10 @@ Nothing would arise randomly; every event would follow the eternal order establi
 
 <span class="bn hidden">
 কিছুই আকস্মিকভাবে প্রকাশিত হবে না; প্রতিটি ঘটনা পরম সত্যের প্রতিষ্ঠিত চিরন্তন নিয়ম অনুসরণ করবে।
+</span>
+
+<span class="hi" lang="hi">
+कुछ भी संयोग से उत्पन्न नहीं होगा; प्रत्येक घटना परमेश्वर द्वारा स्थापित शाश्वत व्यवस्था का अनुसरण करेगी।
 </span>
 
 </p>
@@ -1269,6 +1754,10 @@ The Sacred Lesson of Creation
 সৃষ্টির পবিত্র শিক্ষা
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि की पवित्र शिक्षा
+</span>
+
 </h2>
 
 <div class="sp-chapter-text">
@@ -1281,6 +1770,10 @@ The opening chapter of Srishti Khanda reminds every seeker that the universe is 
 
 <span class="bn hidden">
 সৃষ্টি খণ্ডের প্রথম অধ্যায় প্রত্যেক সাধককে স্মরণ করিয়ে দেয় যে এই বিশ্বব্রহ্মাণ্ড কোনো আকস্মিক ঘটনা নয় এবং এর প্রতিটি সৃষ্টির গভীর উদ্দেশ্য রয়েছে। প্রতিটি জীব, প্রতিটি জগৎ এবং অস্তিত্বের প্রতিটি মুহূর্ত পরম দিব্য সত্য থেকেই উদ্ভূত। ভক্তি ও বিনয়ের সঙ্গে এই সত্যের ধ্যান করলে মানুষ ধীরে ধীরে উপলব্ধি করে যে সমগ্র সৃষ্টি পবিত্র এবং তার চিরন্তন উৎসকে চিনতেই মুক্তির পথের সূচনা হয়।
+</span>
+
+<span class="hi" lang="hi">
+सृष्टि खण्ड का यह आरम्भिक अध्याय प्रत्येक साधक को स्मरण कराता है कि ब्रह्मांड न तो आकस्मिक है और न ही उद्देश्यहीन। प्रत्येक जीव, प्रत्येक लोक और अस्तित्व का प्रत्येक क्षण परम दिव्य सत्य से उत्पन्न होता है। भक्ति और विनम्रता के साथ इस सत्य का चिंतन करने पर मनुष्य धीरे-धीरे समझता है कि समस्त सृष्टि पवित्र है और मुक्ति का मार्ग उसके शाश्वत स्रोत को पहचानने से आरम्भ होता है।
 </span>
 
 </p>
@@ -1303,6 +1796,10 @@ Continue Your Journey Through Srishti Khanda
 সৃষ্টি খণ্ডের পবিত্র যাত্রা অব্যাহত রাখুন
 </span>
 
+<span class="hi" lang="hi">
+सृष्टि खण्ड के माध्यम से अपनी यात्रा जारी रखें
+</span>
+
 </h2>
 
 <p>
@@ -1313,6 +1810,10 @@ You have completed the opening chapter of Srishti Khanda. Continue to discover t
 
 <span class="bn hidden">
 আপনি সৃষ্টি খণ্ডের প্রথম অধ্যায় সম্পূর্ণ করেছেন। এখন ভগবান শিবের চিরন্তন স্বরূপ এবং সমগ্র সৃষ্টির অন্তর্নিহিত ঐশ্বরিক রহস্য আবিষ্কার করতে পরবর্তী অধ্যায়ে এগিয়ে চলুন।
+</span>
+
+<span class="hi" lang="hi">
+आपने सृष्टि खण्ड का आरम्भिक अध्याय पूरा कर लिया है। भगवान शिव के शाश्वत स्वरूप और समस्त सृष्टि के पीछे छिपे दिव्य रहस्य को जानने के लिए अपनी यात्रा आगे बढ़ाएँ।
 </span>
 
 </p>
@@ -1333,6 +1834,10 @@ Previous Page
 পূর্ববর্তী পৃষ্ঠা
 </span>
 
+<span class="hi" lang="hi">
+पिछला पृष्ठ
+</span>
+
 </h3>
 
 <p>
@@ -1343,6 +1848,10 @@ Previous Page
 
 <span class="bn hidden">
 📖 সৃষ্টি খণ্ডের পরিচিতি
+</span>
+
+<span class="hi" lang="hi">
+📖 सृष्टि खण्ड का परिचय
 </span>
 
 </p>
@@ -1367,6 +1876,10 @@ Next Chapter
 পরবর্তী অধ্যায়
 </span>
 
+<span class="hi" lang="hi">
+अगला अध्याय
+</span>
+
 </h3>
 
 <p>
@@ -1377,6 +1890,10 @@ Next Chapter
 
 <span class="bn hidden">
 📖 ভগবান শিবের চিরন্তন স্বরূপ
+</span>
+
+<span class="hi" lang="hi">
+📖 भगवान शिव का शाश्वत स्वरूप
 </span>
 
 </p>
@@ -1391,38 +1908,156 @@ Next Chapter
 
 </section>
 
-<footer>
+<footer class="bd-footer bd-footer-dark" aria-label="Footer">
 
-<img src="assets/logo.webp" alt="Bholenath Dham Logo" class="footer-logo">
+  <div class="bd-footer-inner">
 
-<h3>Bholenath Dham</h3>
+    <div class="bd-footer-brand">
 
-<p class="en">
-A sacred abode of Lord Shiva in Digha, Chandpara, North 24 Parganas, West Bengal – 743245.
-</p>
+      <img
+        src="https://bholenathdham.in/assets/logo.webp"
+        alt="Bholenath Dham Logo"
+        class="bd-footer-logo"
+      >
 
-<p class="bn hidden">
-পশ্চিমবঙ্গের উত্তর ২৪ পরগনা জেলার দিঘা, চাঁদপাড়া (পিন – ৭৪৩২৪৫)-এ অবস্থিত ভগবান শিবের এক পবিত্র ধাম।
-</p>
+      <h3>Bholenath Dham</h3>
 
-<div class="footer-divider"></div>
+      <p class="en hidden">
+        A sacred digital home dedicated to Lord Shiva, devotion, scripture and seva.
+      </p>
 
-<p class="mahadev-footer">
-🔱 Har Har Mahadev 🔱
-</p>
+      <p class="bn hidden">
+        ভগবান শিব, ভক্তি, শাস্ত্র ও সেবার উদ্দেশ্যে নিবেদিত এক পবিত্র ডিজিটাল ধাম।
+      </p>
 
-<p>
-© 2026 Bholenath Dham. All Rights Reserved.
-</p>
+      <p class="hi" lang="hi">
+        भगवान शिव, भक्ति, शास्त्र और सेवा को समर्पित एक पवित्र डिजिटल धाम।
+      </p>
 
- <p class="footer-domain">
-🌐 bholenathdham.in
-</p>   
-<a href="../../../privacy.html" class="privacy-link">
-📜 Privacy Policy & Terms
-</a>
+      <div class="bd-footer-ornament" aria-hidden="true">
+        <span></span>
+        <b>◇</b>
+        <span></span>
+      </div>
+
+    </div>
+
+
+    <div class="bd-footer-group">
+
+      <h4>
+        <span class="en hidden">Sacred Library</span>
+        <span class="bn hidden">পবিত্র গ্রন্থাগার</span>
+        <span class="hi" lang="hi">पवित्र ग्रंथ</span>
+      </h4>
+
+      <nav class="bd-footer-links" aria-label="Sacred Library">
+
+        <a href="https://bholenathdham.in/shiva-purana/shiva-purana.html">
+          <span class="en hidden">Shiva Purana</span>
+          <span class="bn hidden">শিব পুরাণ</span>
+          <span class="hi" lang="hi">शिव पुराण</span>
+        </a>
+
+        <a href="https://bholenathdham.in/chalisa.html">
+          <span class="en hidden">Shiva Chalisa</span>
+          <span class="bn hidden">শিব চালিসা</span>
+          <span class="hi" lang="hi">शिव चालीसा</span>
+        </a>
+
+        <a href="https://bholenathdham.in/108names.html">
+          <span class="en hidden">108 Names of Shiva</span>
+          <span class="bn hidden">শিবের ১০৮ নাম</span>
+          <span class="hi" lang="hi">शिव के 108 नाम</span>
+        </a>
+
+        <a href="https://bholenathdham.in/explore/forms-of-shiva.html">
+          <span class="en hidden">Explore Shiva</span>
+          <span class="bn hidden">শিবকে জানুন</span>
+          <span class="hi" lang="hi">शिव को जानें</span>
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <div class="bd-footer-group">
+
+      <h4>
+        <span class="en hidden">Devotion</span>
+        <span class="bn hidden">ভক্তি</span>
+        <span class="hi" lang="hi">भक्ति</span>
+      </h4>
+
+      <nav class="bd-footer-links" aria-label="Devotion">
+
+        <a href="https://bholenathdham.in/hanuman/index.html">
+          <span class="en hidden">Shri Hanuman</span>
+          <span class="bn hidden">শ্রী হনুমান</span>
+          <span class="hi" lang="hi">श्री हनुमान</span>
+        </a>
+
+        <a href="https://bholenathdham.in/seva.html">
+          <span class="en hidden">Seva</span>
+          <span class="bn hidden">সেবা</span>
+          <span class="hi" lang="hi">सेवा</span>
+        </a>
+
+        <a href="https://bholenathdham.in/media.html">
+          <span class="en hidden">Media</span>
+          <span class="bn hidden">মিডিয়া</span>
+          <span class="hi" lang="hi">मीडिया</span>
+        </a>
+
+        <a href="https://bholenathdham.in/maha-shivaratri-2027.html">
+          <span class="en hidden">Maha Shivaratri</span>
+          <span class="bn hidden">মহাশিবরাত্রি</span>
+          <span class="hi" lang="hi">महा शिवरात्रि</span>
+        </a>
+
+      </nav>
+
+    </div>
+
+  </div>
+
+
+  <div class="bd-footer-legal">
+
+    <a href="https://bholenathdham.in/privacy.html">
+      <span class="en hidden">Privacy &amp; Terms</span>
+      <span class="bn hidden">গোপনীয়তা ও শর্তাবলি</span>
+      <span class="hi" lang="hi">गोपनीयता एवं शर्तें</span>
+    </a>
+
+    <span aria-hidden="true">•</span>
+
+    <a href="https://bholenathdham.in/sitemap.html">
+      <span class="en hidden">Sitemap</span>
+      <span class="bn hidden">সাইটম্যাপ</span>
+      <span class="hi" lang="hi">साइट मैप</span>
+    </a>
+
+  </div>
+
+
+  <div class="bd-footer-divider"></div>
+
+  <p class="bd-footer-mahadev">✦ Har Har Mahadev ✦</p>
+
+  <p class="bd-footer-copy">
+    © 2026 Bholenath Dham. All Rights Reserved.
+  </p>
+
+  <p class="bd-footer-domain">
+    🌐 bholenathdham.in
+  </p>
+
 </footer>
 
-<script src="js/main.js"></script> 
+<script src="js/main.js"></script>
+<script src="js/hindi-language.js"></script>
+<script src="js/navbar.js"></script> 
 </body>
 </html>
