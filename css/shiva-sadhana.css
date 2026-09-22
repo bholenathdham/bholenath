@@ -1,9 +1,9 @@
-/* Bholenath Dham — Shiva Sadhana visual redesign
+ /* Bholenath Dham — Shiva Sadhana visual redesign
    Built to match the site's editorial/devotional visual language. */
 .shiva-sadhana-page{
   --sd-maroon:#72140e;--sd-maroon-dark:#4b0c08;--sd-gold:#c7923d;--sd-gold-light:#e8c984;
   --sd-cream:#fffaf0;--sd-paper:#fffdf9;--sd-ink:#3d2b24;--sd-muted:#6d5b50;--sd-line:rgba(126,76,28,.18);
-  color:var(--sd-ink);background:#fffdf9;font-family:"Poppins",Arial,sans-serif;overflow:hidden;
+  color:var(--sd-ink);background:#fffdf9;font-family:"Poppins",Arial,sans-serif;overflow:visible;
 }
 .shiva-sadhana-page *{box-sizing:border-box}.shiva-sadhana-page img{max-width:100%;display:block}.shiva-sadhana-page a{color:inherit}.shiva-sadhana-page .hidden{display:none!important}
 
