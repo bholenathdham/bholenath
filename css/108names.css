@@ -20,7 +20,7 @@
     radial-gradient(circle at 10% 0%, rgba(212,154,58,.08), transparent 28rem),
     radial-gradient(circle at 90% 30%, rgba(196,92,0,.06), transparent 30rem),
     var(--names-paper);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .names-page *,
