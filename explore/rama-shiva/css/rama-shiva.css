@@ -1,1 +1,1363 @@
+/* =========================================================
+   BHOlenath Dham — RAMA & SHIVA SACRED LIBRARY
+   Premium stylesheet for the supplied index(3).html
+   Visual language adapted from the supplied Shiva Purana CSS:
+   ivory surfaces • maroon • saffron • gold • sacred linework
+   ========================================================= */
 
+:root {
+  --rs-maroon: #7a0000;
+  --rs-maroon-dark: #650000;
+  --rs-maroon-soft: #8b1600;
+  --rs-saffron: #c45c00;
+  --rs-orange: #d67a15;
+  --rs-gold: #f1bd54;
+  --rs-gold-deep: #d49a21;
+  --rs-gold-pale: #f8e1a8;
+
+  --rs-ivory: #fffaf4;
+  --rs-cream: #fff7ea;
+  --rs-surface: #fffdf8;
+  --rs-surface-warm: #fff5e4;
+
+  --rs-text: #333;
+  --rs-muted: #555;
+  --rs-border: #e7d8c6;
+  --rs-sacred-border: rgba(185, 101, 16, 0.30);
+
+  --rs-shadow-soft: 0 10px 25px rgba(91, 48, 13, 0.08);
+  --rs-shadow-medium: 0 16px 36px rgba(91, 48, 13, 0.12);
+  --rs-shadow-hover: 0 24px 50px rgba(91, 48, 13, 0.16);
+
+  --rs-sacred-surface:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.18) 0,
+      rgba(232, 171, 67, 0) 36%
+    ),
+    linear-gradient(145deg, #fff 0%, #fffaf1 58%, #fff5e4 100%);
+
+  --rs-sacred-line:
+    linear-gradient(
+      90deg,
+      var(--rs-maroon) 0%,
+      var(--rs-saffron) 35%,
+      var(--rs-gold) 50%,
+      var(--rs-saffron) 65%,
+      var(--rs-maroon) 100%
+    );
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.rs-section,
+.rs-section *,
+.rs-hero,
+.rs-hero * {
+  box-sizing: border-box;
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(241, 189, 84, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 45%,
+      rgba(122, 0, 0, 0.035),
+      transparent 32%
+    ),
+    #fffaf4;
+  color: var(--rs-text);
+}
+
+.rs-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.rs-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1240px;
+  margin: 38px auto 55px;
+  padding: 76px 34px 82px;
+  border: 1px solid rgba(212, 154, 33, 0.52);
+  border-radius: 28px;
+  background:
+    radial-gradient(
+      circle at 15% 22%,
+      rgba(255, 225, 151, 0.30),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 78%,
+      rgba(255, 198, 85, 0.18),
+      transparent 32%
+    ),
+    linear-gradient(145deg, #fffdf8 0%, #fff8ea 58%, #fff0d3 100%);
+  box-shadow:
+    0 22px 48px rgba(91, 48, 13, 0.13),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.86);
+  text-align: center;
+}
+
+.rs-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -145px;
+  right: -115px;
+  width: 330px;
+  height: 330px;
+  border: 1px solid rgba(196, 92, 0, 0.11);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 34px rgba(196, 92, 0, 0.025),
+    0 0 0 70px rgba(196, 92, 0, 0.016);
+  pointer-events: none;
+}
+
+.rs-hero::after {
+  content: "ॐ";
+  position: absolute;
+  right: 38px;
+  bottom: 18px;
+  color: rgba(122, 0, 0, 0.055);
+  font-size: 105px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.rs-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.rs-hero .eyebrow {
+  margin: 0 0 18px;
+  color: var(--rs-saffron);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.rs-hero h1 {
+  max-width: 1050px;
+  margin: 0 auto 15px;
+  color: var(--rs-maroon);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.rs-hero .hero-sub {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  color: var(--rs-saffron);
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.rs-hero .hero-text {
+  max-width: 880px;
+  margin: 0 auto 30px;
+  color: #4d4138;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.rs-hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 50px;
+  padding: 13px 27px;
+  background: linear-gradient(
+    135deg,
+    var(--rs-maroon) 0%,
+    #a32900 48%,
+    var(--rs-saffron) 100%
+  );
+  border: 1px solid rgba(122, 0, 0, 0.15);
+  border-radius: 14px;
+  box-shadow:
+    0 9px 20px rgba(122, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.rs-hero-button::after {
+  content: "↓";
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.rs-hero-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(
+    135deg,
+    var(--rs-maroon-dark),
+    #921f00 48%,
+    #b95300
+  );
+  box-shadow:
+    0 14px 28px rgba(122, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.rs-hero-button:hover::after {
+  transform: translateY(3px);
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+  margin-bottom: 38px;
+}
+
+.section-heading.center {
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  margin: 0 0 9px;
+  color: var(--rs-saffron);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--rs-maroon);
+  font-size: clamp(2rem, 4vw, 2.65rem);
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.section-heading h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 12px auto 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--rs-saffron),
+      var(--rs-gold),
+      var(--rs-saffron),
+      transparent
+    );
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(196, 92, 0, 0.18);
+}
+
+.section-heading:not(.center) h2::after {
+  margin-left: 0;
+}
+
+.section-heading > p:last-child {
+  max-width: 900px;
+  margin: 17px auto 0;
+  color: var(--rs-muted);
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+.section-heading:not(.center) > p:last-child {
+  margin-left: 0;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.rs-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: 25px;
+  margin-bottom: 78px;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  background: var(--rs-sacred-surface);
+  border: 1px solid var(--rs-sacred-border);
+  border-radius: 25px;
+  box-shadow: var(--rs-shadow-medium);
+}
+
+.rs-intro::before,
+.pathway::before,
+.scripture-inner::before,
+.related-inner::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--rs-sacred-line);
+}
+
+.rs-intro::after,
+.pathway::after,
+.scripture-inner::after,
+.related-inner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -65px;
+  right: -60px;
+  width: 155px;
+  height: 155px;
+  border: 1px solid rgba(196, 92, 0, 0.085);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 21px rgba(196, 92, 0, 0.024),
+    0 0 0 44px rgba(196, 92, 0, 0.016);
+  pointer-events: none;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+}
+
+.intro-grid > div {
+  position: relative;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(196, 92, 0, 0.18);
+  border-radius: 20px;
+  box-shadow:
+    0 8px 20px rgba(91, 48, 13, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.intro-grid p {
+  margin: 0;
+  color: #443a33;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   PATHWAYS
+   ========================================================= */
+
+.pathways {
+  margin-bottom: 80px;
+}
+
+.pathway-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
+}
+
+.pathway {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 30px;
+  background: var(--rs-sacred-surface);
+  border: 1px solid var(--rs-sacred-border);
+  border-radius: 25px;
+  box-shadow: var(--rs-shadow-medium);
+}
+
+.pathway-title {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(196, 92, 0, 0.16);
+}
+
+.pathway-title .number {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  background: var(--rs-maroon);
+  border: 3px solid rgba(241, 189, 84, 0.62);
+  border-radius: 50%;
+  box-shadow:
+    0 8px 18px rgba(122, 0, 0, 0.16),
+    inset 0 0 0 4px rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.pathway-title h3 {
+  margin: 0;
+  color: var(--rs-maroon);
+  font-size: 1.65rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================================================
+   PREMIUM ARTICLE CARDS
+   Directly matches the supplied index(3).html classes
+   ========================================================= */
+
+.article-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  min-width: 0;
+  min-height: 315px;
+  padding: 28px 25px 24px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.18) 0,
+      rgba(232, 171, 67, 0) 36%
+    ),
+    linear-gradient(145deg, #fff 0%, #fffaf1 58%, #fff5e4 100%);
+  border: 1px solid rgba(185, 101, 16, 0.28);
+  border-radius: 24px;
+  box-shadow:
+    0 12px 30px rgba(91, 48, 13, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.90);
+  color: var(--rs-text);
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.article-card::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--rs-sacred-line);
+}
+
+.article-card::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -48px;
+  right: -56px;
+  width: 135px;
+  height: 135px;
+  border: 1px solid rgba(196, 92, 0, 0.10);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 18px rgba(196, 92, 0, 0.035),
+    0 0 0 38px rgba(196, 92, 0, 0.025);
+  pointer-events: none;
+}
+
+.article-card > * {
+  position: relative;
+  z-index: 3;
+}
+
+.article-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(196, 92, 0, 0.65);
+  box-shadow:
+    var(--rs-shadow-hover),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.95);
+  color: var(--rs-text);
+}
+
+.article-card:focus-visible {
+  outline: 3px solid rgba(212, 160, 23, 0.55);
+  outline-offset: 4px;
+}
+
+.card-kicker {
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  margin: 0 0 21px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #fff9eb, #ffedca);
+  border: 1px solid rgba(197, 106, 0, 0.22);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.045);
+  color: #a55200;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+}
+
+.article-card h4 {
+  margin: 0 0 15px;
+  color: #8b0000;
+  font-size: 1.45rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.article-card h4::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin: 12px auto 0;
+  background:
+    linear-gradient(
+      90deg,
+      var(--rs-saffron),
+      var(--rs-gold),
+      var(--rs-saffron)
+    );
+  border-radius: 20px;
+}
+
+.article-card p {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 4px;
+  color: #3f352d;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  justify-self: stretch;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 23px;
+  padding: 11px 17px;
+  background: linear-gradient(
+    135deg,
+    var(--rs-maroon) 0%,
+    #a32900 48%,
+    var(--rs-saffron) 100%
+  );
+  border: 1px solid rgba(122, 0, 0, 0.15);
+  border-radius: 13px;
+  box-shadow:
+    0 8px 18px rgba(122, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.20);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.read-more::after {
+  content: "→";
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .read-more {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    var(--rs-maroon-dark) 0%,
+    #921f00 45%,
+    #b95300 100%
+  );
+  box-shadow:
+    0 12px 24px rgba(122, 0, 0, 0.23),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.article-card:hover .read-more::after {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   SCRIPTURE & TRADITION
+   ========================================================= */
+
+.scripture {
+  max-width: none;
+  margin: 0 0 78px;
+  padding: 0 20px;
+}
+
+.scripture-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 42px;
+  background: var(--rs-sacred-surface);
+  border: 1px solid var(--rs-sacred-border);
+  border-radius: 25px;
+  box-shadow: var(--rs-shadow-medium);
+}
+
+.scripture-inner > * {
+  position: relative;
+  z-index: 3;
+}
+
+.scripture-inner > p {
+  max-width: 980px;
+  margin: 0 auto;
+  color: #443a33;
+  font-size: 18px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+/* =========================================================
+   RELATED SECTIONS
+   ========================================================= */
+
+.related,
+.related-section {
+  margin-bottom: 75px;
+}
+
+.related-inner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 45px 35px;
+  background: var(--rs-sacred-surface);
+  border: 1px solid var(--rs-sacred-border);
+  border-radius: 25px;
+  box-shadow: var(--rs-shadow-medium);
+}
+
+.related-inner > * {
+  position: relative;
+  z-index: 3;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.related-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 115px;
+  padding: 22px 18px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(232, 171, 67, 0.15),
+      transparent 40%
+    ),
+    linear-gradient(145deg, #fff 0%, #fffaf1 100%);
+  border: 1px solid rgba(185, 101, 16, 0.26);
+  border-radius: 19px;
+  box-shadow: var(--rs-shadow-soft);
+  color: var(--rs-maroon);
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.related-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--rs-sacred-line);
+}
+
+.related-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(196, 92, 0, 0.60);
+  box-shadow: var(--rs-shadow-hover);
+  color: var(--rs-maroon);
+}
+
+/* =========================================================
+   CLOSING DEVOTIONAL SECTION
+   ========================================================= */
+
+.rs-closing,
+.closing {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 85px auto;
+  padding: 60px 35px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(255, 225, 151, 0.24),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 88% 80%,
+      rgba(255, 198, 85, 0.18),
+      transparent 32%
+    ),
+    linear-gradient(135deg, #5b0000 0%, #8b1600 44%, #c45c00 100%);
+  border: 1px solid rgba(241, 189, 84, 0.68);
+  border-radius: 25px;
+  box-shadow:
+    0 22px 48px rgba(91, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 233, 183, 0.16);
+  color: #fff;
+  text-align: center;
+}
+
+.rs-closing::before,
+.closing::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 225, 151, 0.14);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 34px rgba(255, 225, 151, 0.04),
+    0 0 0 72px rgba(255, 225, 151, 0.026);
+}
+
+.rs-closing > *,
+.closing > * {
+  position: relative;
+  z-index: 2;
+}
+
+.rs-closing h2,
+.closing h2 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.3;
+}
+
+.rs-closing p,
+.closing p {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 19px;
+  line-height: 1.85;
+}
+
+/* =========================================================
+   LANGUAGE VISIBILITY
+   Keeps existing global .hidden system safe
+   ========================================================= */
+
+.hidden {
+  display: none !important;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible {
+  outline: 3px solid rgba(212, 160, 23, 0.55);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .rs-hero {
+    margin: 25px 15px 45px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway {
+    padding: 25px 20px;
+  }
+
+  .scripture-inner,
+  .related-inner {
+    padding: 38px 25px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .rs-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .rs-hero {
+    margin: 18px 12px 35px;
+    padding: 48px 20px 52px;
+    border-radius: 22px;
+  }
+
+  .rs-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .rs-hero .hero-sub {
+    font-size: 1.15rem;
+  }
+
+  .rs-hero .hero-text {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .rs-hero::after {
+    right: 12px;
+    font-size: 75px;
+  }
+
+  .rs-intro {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 21px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .section-heading > p:last-child {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .intro-grid {
+    gap: 16px;
+  }
+
+  .intro-grid > div {
+    padding: 22px 18px;
+    border-radius: 17px;
+  }
+
+  .intro-grid p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .pathways {
+    margin-bottom: 55px;
+  }
+
+  .pathway-grid {
+    gap: 22px;
+  }
+
+  .pathway {
+    padding: 24px 15px;
+    border-radius: 21px;
+  }
+
+  .pathway-title {
+    align-items: flex-start;
+    gap: 13px;
+    margin-bottom: 22px;
+  }
+
+  .pathway-title .number {
+    width: 52px;
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .pathway-title h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .article-card {
+    min-height: 0;
+    padding: 25px 20px 21px;
+    border-radius: 20px;
+  }
+
+  .article-card h4 {
+    font-size: 1.3rem;
+  }
+
+  .article-card p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .read-more {
+    min-height: 45px;
+  }
+
+  .scripture {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 55px;
+  }
+
+  .scripture-inner {
+    padding: 35px 20px;
+    border-radius: 21px;
+  }
+
+  .scripture-inner > p {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .related-inner {
+    padding: 35px 17px;
+    border-radius: 21px;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .related-card {
+    min-height: 85px;
+  }
+
+  .rs-closing,
+  .closing {
+    margin: 60px 12px;
+    padding: 42px 20px;
+    border-radius: 21px;
+  }
+
+  .rs-closing h2,
+  .closing h2 {
+    font-size: 30px;
+  }
+
+  .rs-closing p,
+  .closing p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+}
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .rs-hero h1 {
+    font-size: 2rem;
+  }
+
+  .rs-hero .hero-sub {
+    font-size: 1.08rem;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .pathway-title h3 {
+    font-size: 1.2rem;
+  }
+
+  .article-card {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .article-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .card-kicker {
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .article-card,
+  .related-card,
+  .rs-hero-button,
+  .read-more {
+    transition: none;
+  }
+
+  .article-card:hover,
+  .related-card:hover,
+  .rs-hero-button:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   RELATED CARDS — matches the existing index(3).html markup
+   ========================================================= */
+.related > .related-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.related > .related-grid > a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 145px;
+  padding: 27px 22px 24px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(232,171,67,.16), transparent 40%),
+    linear-gradient(145deg, #fff 0%, #fffaf1 100%);
+  border: 1px solid rgba(185,101,16,.26);
+  border-radius: 20px;
+  box-shadow: var(--rs-shadow-soft);
+  color: var(--rs-maroon);
+  text-decoration: none;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.related > .related-grid > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--rs-sacred-line);
+  z-index: 2;
+}
+
+.related > .related-grid > a::after {
+  content: "";
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  right: -48px;
+  top: -48px;
+  border: 1px solid rgba(196,92,0,.10);
+  border-radius: 50%;
+  box-shadow: 0 0 0 16px rgba(196,92,0,.025);
+  pointer-events: none;
+}
+
+.related > .related-grid > a:hover {
+  transform: translateY(-7px);
+  border-color: rgba(196,92,0,.58);
+  box-shadow: var(--rs-shadow-hover);
+  color: var(--rs-maroon);
+}
+
+.related > .related-grid > a strong {
+  position: relative;
+  z-index: 3;
+  display: block;
+  margin-bottom: 9px;
+  color: var(--rs-maroon);
+  font-size: 18px;
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.related > .related-grid > a span {
+  position: relative;
+  z-index: 3;
+  display: block;
+  color: var(--rs-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.related > .related-grid > a:hover strong {
+  color: var(--rs-maroon-dark);
+}
+
+@media (max-width: 1100px) {
+  .related > .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .related > .related-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .related > .related-grid > a {
+    min-height: 110px;
+    padding: 23px 20px;
+    border-radius: 18px;
+  }
+
+  .related > .related-grid > a strong {
+    font-size: 17px;
+  }
+
+  .related > .related-grid > a span {
+    font-size: 15px;
+  }
+}
+
+/* ==================================================
+   RAMA–SHIVA READING NAVIGATION
+   Reuses the visual language of Shiva Purana .sp-nav-card
+================================================== */
+.rs-page-nav {
+  max-width: 1200px;
+  margin: 70px auto 45px;
+  padding: 42px 20px 0;
+  text-align: center;
+}
+
+.rs-page-nav h2 {
+  margin: 0 0 12px;
+  color: var(--rs-maroon, #7b0d0d);
+  font-size: 30px;
+  line-height: 1.35;
+}
+
+.rs-page-nav > p {
+  max-width: 850px;
+  margin: 0 auto 32px;
+  color: var(--rs-muted, #665b54);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.rs-page-nav .sp-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.rs-page-nav .sp-nav-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  min-height: 125px;
+  padding: 25px 28px;
+  color: inherit;
+  background: var(--rs-surface, #fffaf2);
+  border: 1px solid var(--rs-border, rgba(123,13,13,.14));
+  border-radius: 22px;
+  box-shadow: var(--rs-shadow, 0 14px 35px rgba(80,40,15,.10));
+  text-align: left;
+  text-decoration: none;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.rs-page-nav .sp-nav-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #8f160f, #d88712, #b63b12);
+}
+
+.rs-page-nav .sp-nav-card::after {
+  content: "";
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  top: -62px;
+  right: -52px;
+  border: 1px solid rgba(196,92,0,.10);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(196,92,0,.025), 0 0 0 40px rgba(196,92,0,.015);
+  pointer-events: none;
+}
+
+.rs-page-nav .sp-nav-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196,92,0,.48);
+  box-shadow: 0 20px 42px rgba(80,40,15,.15);
+}
+
+.rs-page-nav .sp-nav-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.rs-page-nav .sp-nav-arrow {
+  flex: 0 0 auto;
+  color: var(--rs-maroon, #7b0d0d);
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.rs-page-nav .sp-nav-card h3 {
+  margin: 0 0 7px;
+  color: var(--rs-maroon, #7b0d0d);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.rs-page-nav .sp-nav-card p {
+  margin: 0;
+  color: var(--rs-text, #463d37);
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.rs-page-nav .sp-nav-card.sp-next {
+  justify-content: space-between;
+  text-align: right;
+}
+
+.rs-page-nav .sp-nav-card.sp-next > div:nth-child(1) {
+  flex: 1;
+}
+
+.rs-page-nav .hidden { display: none !important; }
+
+@media (max-width: 768px) {
+  .rs-page-nav {
+    margin: 48px auto 32px;
+    padding: 28px 15px 0;
+  }
+
+  .rs-page-nav h2 { font-size: 24px; }
+  .rs-page-nav > p { font-size: 15px; line-height: 1.7; margin-bottom: 22px; }
+
+  .rs-page-nav .sp-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .rs-page-nav .sp-nav-card,
+  .rs-page-nav .sp-nav-card.sp-next {
+    min-height: 105px;
+    padding: 21px 20px;
+    text-align: left;
+  }
+
+  .rs-page-nav .sp-nav-card.sp-next { flex-direction: row; }
+  .rs-page-nav .sp-nav-card.sp-next .sp-nav-arrow { order: 2; }
+  .rs-page-nav .sp-nav-arrow { font-size: 28px; }
+  .rs-page-nav .sp-nav-card p { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rs-page-nav .sp-nav-card { transition: none; }
+  .rs-page-nav .sp-nav-card:hover { transform: none; }
+}
