@@ -4,7 +4,25 @@
 }
 @media(max-width:620px){
     .han-hero{
-        min-height:460px;
+        min-height:340px;
+        height:auto;
+        aspect-ratio:auto;
         background-position:center top;
+        background-size:cover;
+    }
+    .han-hero-inner{
+        padding:58px 0 38px;
+    }
+    .han-hero h1{
+        font-size:2.15rem;
+        line-height:1.08;
+        margin:14px 0;
+    }
+    .han-lead{
+        font-size:.96rem;
+        line-height:1.55;
+    }
+    .han-actions{
+        margin-top:16px;
     }
 }
