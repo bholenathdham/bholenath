@@ -1,0 +1,170 @@
+
+/* =========================================================
+   Bholenath Dham — Premium Thank You Page
+   ========================================================= */
+
+.bd-thanks-page {
+  --bd-saffron: #c45c00;
+  --bd-gold: #d2a04a;
+  --bd-ink: #2a211c;
+  min-height: calc(100vh - 90px);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(208,155,67,.12), transparent 31%),
+    radial-gradient(circle at 10% 80%, rgba(196,92,0,.07), transparent 28%),
+    linear-gradient(180deg, #fffdf9 0%, #fff7ec 100%);
+  color: var(--bd-ink);
+}
+.bd-thanks-hero {
+  min-height: 78vh;
+  display: grid;
+  place-items: center;
+  padding: 70px 18px 95px;
+  position: relative;
+  overflow: hidden;
+}
+.bd-thanks-hero::before,
+.bd-thanks-hero::after {
+  content: "";
+  position: absolute;
+  width: 560px; height: 560px;
+  border: 1px solid rgba(180,117,30,.09);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.bd-thanks-hero::before { left: -340px; top: 6%; }
+.bd-thanks-hero::after { right: -360px; bottom: -22%; }
+
+.bd-thanks-stars {
+  position: absolute;
+  inset: 12% 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  color: rgba(169,108,29,.35);
+  font-size: 14px;
+  pointer-events: none;
+}
+.bd-thanks-card {
+  width: min(780px, 100%);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: clamp(38px, 7vw, 68px) clamp(22px, 7vw, 70px);
+  border: 1px solid rgba(146,88,23,.18);
+  border-radius: 30px;
+  background: rgba(255, 253, 249, .93);
+  box-shadow: 0 30px 100px rgba(74,43,15,.13);
+}
+.bd-thanks-card::before {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgba(199,154,59,.15);
+  border-radius: 23px;
+  pointer-events: none;
+}
+.bd-thanks-seal {
+  width: 104px; height: 104px;
+  margin: 0 auto 24px;
+  position: relative;
+  display: grid; place-items: center;
+}
+.bd-seal-ring {
+  position: absolute; inset: 0;
+  border: 1px solid rgba(180,117,30,.44);
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(199,154,59,.05);
+}
+.bd-seal-om {
+  font-family: "Noto Sans Devanagari", serif;
+  font-size: 43px; color: #9d4700;
+}
+.bd-seal-flame {
+  position: absolute; bottom: 5px;
+  color: #c7902d; font-size: 13px;
+}
+.bd-thanks-kicker {
+  margin: 0 0 10px;
+  color: #a25a16;
+  font-size: .75rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+}
+.bd-thanks-card h1 {
+  margin: 0;
+  color: #38271d;
+  font-family: "Noto Sans Devanagari", "Noto Sans Bengali", "Poppins", sans-serif;
+  font-size: clamp(2.7rem, 7vw, 5rem);
+  line-height: 1.1;
+}
+.bd-thanks-divider {
+  display: flex; align-items: center; justify-content: center; gap: 17px;
+  margin: 23px 0;
+}
+.bd-thanks-divider span { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, rgba(164,95,16,.36)); }
+.bd-thanks-divider span:last-child { background: linear-gradient(90deg, rgba(164,95,16,.36), transparent); }
+.bd-thanks-divider b { color: #b76810; }
+.bd-thanks-main {
+  margin: 0;
+  color: #46352a;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.65;
+}
+.bd-thanks-copy {
+  max-width: 590px;
+  margin: 14px auto 0;
+  color: #75685f;
+  line-height: 1.9;
+}
+.bd-thanks-blessing {
+  max-width: 590px;
+  margin: 26px auto 0;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: #fff6e6;
+  border: 1px solid rgba(199,154,59,.18);
+  color: #8d510d;
+  font-size: .92rem;
+  line-height: 1.75;
+}
+.bd-thanks-actions {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 12px;
+  margin-top: 30px;
+}
+.bd-thanks-actions a {
+  min-height: 49px;
+  padding: 13px 21px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .9rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.bd-thanks-primary {
+  color: #fff;
+  background: linear-gradient(135deg, #9d4500, #cd6508);
+  box-shadow: 0 10px 26px rgba(157,69,0,.18);
+}
+.bd-thanks-secondary {
+  color: #7e420e;
+  background: #fffaf1;
+  border: 1px solid rgba(157,91,24,.24);
+}
+.bd-thanks-actions a:hover { transform: translateY(-2px); }
+.bd-thanks-actions a:focus-visible { outline: 3px solid rgba(199,154,59,.5); outline-offset: 3px; }
+.bd-thanks-signature {
+  margin: 30px 0 0;
+  color: #9d6a24;
+  font-size: .82rem;
+  letter-spacing: .08em;
+}
+@media (max-width: 620px) {
+  .bd-thanks-hero { padding: 40px 10px 65px; }
+  .bd-thanks-card { border-radius: 22px; padding: 38px 19px 42px; }
+  .bd-thanks-card::before { border-radius: 17px; }
+  .bd-thanks-seal { width: 86px; height: 86px; }
+  .bd-seal-om { font-size: 35px; }
+  .bd-thanks-card h1 { font-size: 2.8rem; }
+  .bd-thanks-divider span { width: 50px; }
+  .bd-thanks-actions a { width: 100%; }
+}
