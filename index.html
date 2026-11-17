@@ -51,7 +51,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Hind+Siliguri:wght@400;500;600&family=Hind:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700&family=Noto+Serif+Devanagari:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Premium design layer (loads last) -->
+    <link href="css/premium.css" rel="stylesheet">
 
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="9e3AuK6zHFGHbXeNaO8rAr8vOQEloW8o-0y54058lYs">
@@ -330,15 +332,9 @@
 
   </div>
 </header>
-<div class="top-bar en hidden">
-      🕉️ Welcome to Bholenath Dham • Open 24 Hour • Har Har Mahadev 🔱
-    </div>
-<div class="top-bar bn hidden">
-      🕉️ ভোলেনাথ ধামে স্বাগতম • ২৪ ঘণ্টা খোলা • হর হর মহাদেব 🔱
-    </div>
-<div class="top-bar hi" lang="hi">
-      🕉️ भोलेनाथ धाम में आपका स्वागत है • 24 घंटे खुला रहता है • हर हर महादेव 🔱
-    </div>
+<div class="top-bar en hidden">Welcome to Bholenath Dham • Open 24 Hour • Har Har Mahadev</div>
+<div class="top-bar bn hidden">ভোলেনাথ ধামে স্বাগতম • ২৪ ঘণ্টা খোলা • হর হর মহাদেব</div>
+<div class="top-bar hi" lang="hi">भोलेनाथ धाम में आपका स्वागत है • 24 घंटे खुला रहता है • हर हर महादेव</div>
 <section class="hero" id="home">
 <div class="hero-content">
 <h2 class="en hidden">Om Namah Shivaya</h2>
@@ -366,19 +362,29 @@
           पश्चिम बंगाल के चांदपाड़ा में स्थित भोलेनाथ धाम में आपका स्वागत है।
           यह भगवान शिव को समर्पित एक पवित्र मंदिर है।
         </p>
-<a class="btn en hidden" href="#inspiration"> Explore Temple </a>
-<a class="btn bn hidden" href="#inspiration-bn">
-          মন্দির সম্পর্কে জানুন
-        </a>
-<a class="btn hi" href="#inspiration-hi" lang="hi"> पावन धाम में प्रवेश करें </a>
+<div class="hero-actions">
+<a class="bd-btn bd-btn-primary en hidden" href="#inspiration">Explore Temple</a>
+<a class="bd-btn bd-btn-primary bn hidden" href="#inspiration-bn">মন্দির সম্পর্কে জানুন</a>
+<a class="bd-btn bd-btn-primary hi" href="#inspiration-hi" lang="hi">पावन धाम में प्रवेश करें</a>
+<a class="bd-btn bd-btn-ghost" href="https://maps.app.goo.gl/pTujzyq8HFqA7LqV6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="en hidden">Get Directions</span><span class="bn hidden">যাওয়ার পথ দেখুন</span><span class="hi" lang="hi">मार्ग देखें</span></a>
+<button class="bd-btn bd-btn-ghost" type="button" data-bd-share><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span class="en hidden">Share</span><span class="bn hidden">শেয়ার করুন</span><span class="hi" lang="hi">साझा करें</span></button>
 </div>
+<div class="hero-countdown" id="shivaratriCountdown" data-target="2027-03-05T18:30:00Z" hidden>
+<p class="hc-label"><span class="en hidden">Maha Shivaratri · 6 March 2027</span><span class="bn hidden">মহাশিবরাত্রি · ৬ মার্চ ২০২৭</span><span class="hi" lang="hi">महा शिवरात्रि · 6 मार्च 2027</span></p>
+<div class="hc-grid">
+<div><b data-u="d">0</b><small><span class="en hidden">Days</span><span class="bn hidden">দিন</span><span class="hi" lang="hi">दिन</span></small></div>
+<div><b data-u="h">00</b><small><span class="en hidden">Hours</span><span class="bn hidden">ঘণ্টা</span><span class="hi" lang="hi">घंटे</span></small></div>
+<div><b data-u="m">00</b><small><span class="en hidden">Min</span><span class="bn hidden">মিনিট</span><span class="hi" lang="hi">मिनट</span></small></div>
+<div><b data-u="s">00</b><small><span class="en hidden">Sec</span><span class="bn hidden">সেকেন্ড</span><span class="hi" lang="hi">सेकंड</span></small></div>
+</div>
+</div>
+</div>
+<span class="hero-scroll" aria-hidden="true"></span>
 </section>
 <div class="festival-bar">
 <span class="en hidden">
-<a href="/maha-shivaratri-2027.html">
-          🔱 Maha Shivaratri 2027 Celebrations Announced • 6 March 2027 • Click
-          to View Details →
-        </a>
+<a href="/maha-shivaratri-2027.html">Maha Shivaratri 2027 Celebrations Announced • 6 March 2027 • Click
+ to View Details →</a>
 </span>
 <span class="bn hidden">
 <a href="/maha-shivaratri-2027.html">
@@ -394,9 +400,9 @@
 </span>
 </div>
 <section class="quick-nav">
-<h3 class="en hidden">🔱 Quick Navigation 🔱</h3>
-<h3 class="bn hidden">🔱 দ্রুত নেভিগেশন 🔱</h3>
-<h3 class="hi" lang="hi">🔱 नेविगेशन 🔱</h3>
+<h3 class="en hidden">Quick Navigation</h3>
+<h3 class="bn hidden">দ্রুত নেভিগেশন</h3>
+<h3 class="hi" lang="hi">नेविगेशन</h3>
 <p class="en hidden">
         🕉️ Explore the sacred teachings, prayers, mantras and divine names of
         Mahadev.
@@ -570,7 +576,7 @@
 </section>
 <section id="temple-bell">
 <div class="bell-container">
-<div class="bell-decoration">🔱 🕉️ 🔔 🕉️ 🔱</div>
+<div class="bell-decoration" aria-hidden="true"></div>
 <div class="bell-icon">🔔</div>
 <h2 class="en hidden">Ring the Sacred Temple Bell</h2>
 <h2 class="bn hidden">পবিত্র মন্দিরের ঘণ্টা বাজান</h2>
@@ -589,6 +595,7 @@
 <span class="bn hidden">🔔 ঘণ্টা বাজান</span>
 <span class="hi" lang="hi">🔔घंटी बजाओ</span>
 </button>
+<p class="bell-count" id="bellCount" hidden=""><span class="en hidden">Bells you have rung: </span><span class="bn hidden">আপনার বাজানো ঘণ্টা: </span><span class="hi" lang="hi">आपके द्वारा बजाई गई घंटियाँ: </span><b data-bell-n="">0</b></p>
 <div class="bell-divider">🕉️ Har Har Mahadev 🕉️</div>
 <audio id="bellSound">
 <source src="assets/bell.mp3" type="audio/mpeg"/>
@@ -628,7 +635,7 @@
 <h2 class="bn hidden">ভোলেনাথ ধাম সম্পর্কে</h2>
 <h2 class="hi" lang="hi">भोलेनाथ धाम के बारे में</h2>
 <div class="card">
-<h3><span class="en hidden">🔱 Temple Overview 🔱</span><span class="bn hidden">🔱 মন্দির পরিচিতি 🔱</span><span class="hi" lang="hi">🔱 मंदिर का परिचय 🔱</span></h3>
+<h3><span class="en hidden"> Temple Overview </span><span class="bn hidden"> মন্দির পরিচিতি </span><span class="hi" lang="hi"> मंदिर का परिचय </span></h3>
 <p class="en hidden">
           Bholenath Dham is a sacred Shiva Temple located at near Durga Mandir,
           Digha, Chandpara, Dhakuria-Ramchandrapur Road, North 24 Parganas, West
@@ -647,11 +654,9 @@
 </section>
 <section class="spx-slider-section">
 <div class="spx-slider-header">
-<h2>
-<span class="en hidden">📖 Explore Shiva Purana</span>
-<span class="bn hidden">📖 শিব পুরাণের জগতে প্রবেশ করুন</span>
-<span class="hi" lang="hi">📖 शिव पुराण का अध्ययन करें</span>
-</h2>
+<h2><span class="en hidden"> Explore Shiva Purana</span>
+<span class="bn hidden"> শিব পুরাণের জগতে প্রবেশ করুন</span>
+<span class="hi" lang="hi"> शिव पुराण का अध्ययन करें</span></h2>
 <p>
 <span class="en hidden">
             Explore the Samhitas, Khandas, and the journey of Bholenath Dham.
@@ -690,11 +695,9 @@ SHIVA PURANA SAMHITAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Vidyeshvara Samhita</span>
+<h3><span class="en hidden">Vidyeshvara Samhita</span>
 <span class="bn hidden">বিদ্যেশ্বর সংহিতা</span>
-<span class="hi" lang="hi">विद्येश्वर संहिता</span>
-</h3>
+<span class="hi" lang="hi">विद्येश्वर संहिता</span></h3>
 <p>
 <span class="en hidden">
                   The sacred beginning of the Shiva Purana and the glory of Lord
@@ -725,11 +728,9 @@ SHIVA PURANA SAMHITAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Rudra Samhita</span>
+<h3><span class="en hidden">Rudra Samhita</span>
 <span class="bn hidden">রুদ্র সংহিতা</span>
-<span class="hi" lang="hi">रूद्र संहिता</span>
-</h3>
+<span class="hi" lang="hi">रूद्र संहिता</span></h3>
 <p>
 <span class="en hidden">
                   The divine stories of Shiva, Sati, Parvati, Kumara and the
@@ -760,11 +761,9 @@ SHIVA PURANA SAMHITAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Shatarudra Samhita</span>
+<h3><span class="en hidden">Shatarudra Samhita</span>
 <span class="bn hidden">শতরুদ্র সংহিতা</span>
-<span class="hi" lang="hi">शतरुद्र संहिता</span>
-</h3>
+<span class="hi" lang="hi">शतरुद्र संहिता</span></h3>
 <p>
 <span class="en hidden">
                   The hundred forms and glories of Rudra worship.
@@ -794,11 +793,9 @@ SHIVA PURANA SAMHITAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Kotirudra Samhita</span>
+<h3><span class="en hidden">Kotirudra Samhita</span>
 <span class="bn hidden">কোটিরুদ্র সংহিতা</span>
-<span class="hi" lang="hi">कोटिरुद्र संहिता</span>
-</h3>
+<span class="hi" lang="hi">कोटिरुद्र संहिता</span></h3>
 <p>
 <span class="en hidden">
                   The countless manifestations and divine powers of Shiva.
@@ -828,11 +825,9 @@ SHIVA PURANA SAMHITAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Uma Samhita</span>
+<h3><span class="en hidden">Uma Samhita</span>
 <span class="bn hidden">উমা সংহিতা</span>
-<span class="hi" lang="hi">उमा संहिता</span>
-</h3>
+<span class="hi" lang="hi">उमा संहिता</span></h3>
 <p>
 <span class="en hidden">
                   The wisdom of Goddess Uma and the path of devotion.
@@ -860,11 +855,9 @@ SHIVA PURANA SAMHITAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Kailasa Samhita</span>
+<h3><span class="en hidden">Kailasa Samhita</span>
 <span class="bn hidden">কৈলাস সংহিতা</span>
-<span class="hi" lang="hi">कैलाश संहिता</span>
-</h3>
+<span class="hi" lang="hi">कैलाश संहिता</span></h3>
 <p>
 <span class="en hidden">
                   Sacred teachings revealed upon Mount Kailasa.
@@ -894,11 +887,9 @@ SHIVA PURANA SAMHITAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Vayaviya Samhita</span>
+<h3><span class="en hidden">Vayaviya Samhita</span>
 <span class="bn hidden">বায়বীয় সংহিতা</span>
-<span class="hi" lang="hi">वायवीय संहिता</span>
-</h3>
+<span class="hi" lang="hi">वायवीय संहिता</span></h3>
 <p>
 <span class="en hidden">
                   Philosophical teachings and the highest knowledge of Shiva.
@@ -931,11 +922,9 @@ RUDRA SAMHITA KHANDAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Srishti Khanda</span>
+<h3><span class="en hidden">Srishti Khanda</span>
 <span class="bn hidden">সৃষ্টি খণ্ড</span>
-<span class="hi" lang="hi">सृष्टि खण्ड</span>
-</h3>
+<span class="hi" lang="hi">सृष्टि खण्ड</span></h3>
 <p>
 <span class="en hidden">
                   Creation of the universe and the divine origins of existence.
@@ -965,11 +954,9 @@ RUDRA SAMHITA KHANDAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Sati Khanda</span>
+<h3><span class="en hidden">Sati Khanda</span>
 <span class="bn hidden">সতী খণ্ড</span>
-<span class="hi" lang="hi">सती खण्ड</span>
-</h3>
+<span class="hi" lang="hi">सती खण्ड</span></h3>
 <p>
 <span class="en hidden">
                   The life, devotion and sacrifice of Goddess Sati.
@@ -999,11 +986,9 @@ RUDRA SAMHITA KHANDAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Parvati Khanda</span>
+<h3><span class="en hidden">Parvati Khanda</span>
 <span class="bn hidden">পার্বতী খণ্ড</span>
-<span class="hi" lang="hi">पार्वती खण्ड</span>
-</h3>
+<span class="hi" lang="hi">पार्वती खण्ड</span></h3>
 <p>
 <span class="en hidden">
                   The rebirth of Sati, her penance and marriage to Lord Shiva.
@@ -1033,11 +1018,9 @@ RUDRA SAMHITA KHANDAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Kumara Khanda</span>
+<h3><span class="en hidden">Kumara Khanda</span>
 <span class="bn hidden">কুমার খণ্ড</span>
-<span class="hi" lang="hi">कुमार खण्ड</span>
-</h3>
+<span class="hi" lang="hi">कुमार खण्ड</span></h3>
 <p>
 <span class="en hidden">
                   The birth and heroic deeds of Lord Kartikeya.
@@ -1067,11 +1050,9 @@ RUDRA SAMHITA KHANDAS
 <span class="hi" lang="hi">✅ पूर्ण हुआ</span>
 </span>
 </div>
-<h3>
-<span class="en hidden">Yuddha Khanda</span>
+<h3><span class="en hidden">Yuddha Khanda</span>
 <span class="bn hidden">যুদ্ধ খণ্ড</span>
-<span class="hi" lang="hi">युद्ध खण्ड</span>
-</h3>
+<span class="hi" lang="hi">युद्ध खण्ड</span></h3>
 <p>
 <span class="en hidden">
                   The celestial wars and the ultimate victory of dharma.
@@ -1097,11 +1078,9 @@ COMMUNITY
 <span class="bn hidden">ইউটিউব</span>
 <span class="hi" lang="hi">यूट्यूब</span>
 </span>
-<h3>
-<span class="en hidden">Bholenath Dham Journey</span>
+<h3><span class="en hidden">Bholenath Dham Journey</span>
 <span class="bn hidden">ভোলেনাথ ধামের যাত্রা</span>
-<span class="hi" lang="hi">भोलेनाथ धाम यात्रा</span>
-</h3>
+<span class="hi" lang="hi">भोलेनाथ धाम यात्रा</span></h3>
 <p>
 <span class="en hidden">
                   Follow the complete journey of building Bholenath Dham and
@@ -1125,11 +1104,9 @@ COMMUNITY
 <span class="bn hidden">কমিউনিটি</span>
 <span class="hi" lang="hi">समुदाय</span>
 </span>
-<h3>
-<span class="en hidden">Facebook Community</span>
+<h3><span class="en hidden">Facebook Community</span>
 <span class="bn hidden">ফেসবুক কমিউনিটি</span>
-<span class="hi" lang="hi">फेसबुक समुदाय</span>
-</h3>
+<span class="hi" lang="hi">फेसबुक समुदाय</span></h3>
 <p>
 <span class="en hidden">
                   Daily Shiva wisdom, updates and spiritual discussions.
@@ -1163,8 +1140,7 @@ COMMUNITY
         সেবাসমূহ অন্বেষণ করুন।
       </p>
 <p class="festival-subtitle hi" lang="hi">
-        शिक्षाओं, धर्मग्रंथों, प्रार्थनाओं, त्योहारों और पवित्र की खोज करें
-        भगवान शिव को समर्पित प्रसाद।
+        भगवान शिव को समर्पित शिक्षाओं, धर्मग्रंथों, प्रार्थनाओं, त्योहारों और पवित्र सेवाओं की खोज करें।
       </p>
 <div class="festival-container">
 <div class="festival-card">
@@ -1186,15 +1162,15 @@ COMMUNITY
           </p>
 </div>
 <div class="festival-card">
-<div class="new-badge">📖 LATEST</div>
+<div class="new-badge">LATEST</div>
 <div class="festival-icon">📖</div>
 <a href="shiva-purana/shiva-purana.html">
 <h3 class="en hidden">Shiva Purana</h3>
 <h3 class="bn hidden">শিব পুরাণ</h3><h3 class="hi" lang="hi">शिव पुराण</h3>
 </a>
 <p class="en hidden">Read the sacred Shiva Purana in Hindi, English and Bengali.</p>
-<p class="bn hidden">বাংলা ও ইংরেজিতে পবিত্র শিব পুরাণ পাঠ করুন।</p>
-<p class="hi" lang="hi">अंग्रेजी और बंगाली में पवित्र शिव पुराण पढ़ें।</p>
+<p class="bn hidden">হিন্দি, ইংরেজি ও বাংলায় পবিত্র শিব পুরাণ পাঠ করুন।</p>
+<p class="hi" lang="hi">हिंदी, अंग्रेज़ी और बंगाली में पवित्र शिव पुराण पढ़ें।</p>
 </div>
 <div class="festival-card">
 <div class="festival-icon">🙏</div>
@@ -1260,7 +1236,7 @@ COMMUNITY
           </p>
 </div>
 <div class="festival-card">
-<div class="new-badge">📖 NEW</div>
+<div class="new-badge">NEW</div>
 <div class="festival-icon">🌙</div>
 <a href="maha-shivaratri-2027.html">
 <h3 class="en hidden">Maha Shivaratri</h3>
@@ -1337,13 +1313,11 @@ COMMUNITY
             following months, opportunities appeared, hardships gradually
             disappeared, and by the end of 2023, the family's circumstances had
             improved beyond what they had imagined. Yet amid this newfound
-            prosperity, Shivaninever forgot the promise she had made before
+            prosperity, Shivani never forgot the promise she had made before
             Mahakal.
           </p>
-<h3>
-            Guided by faith, gratitude, and devotion to Lord Shiva, she and her
-            family began the construction of a temple dedicated to Bholenath.
-          </h3>
+<h3>Guided by faith, gratitude, and devotion to Lord Shiva, she and her
+ family began the construction of a temple dedicated to Bholenath.</h3>
 <br/>
 <p>
             After months of dedication and sacred preparation,
@@ -1411,13 +1385,11 @@ COMMUNITY
             শেষ নাগাদ পরিবারটি আর্থিকভাবে অনেক শক্তিশালী ও স্থিতিশীল হয়ে ওঠে।
           </p>
 <p>
-            কিন্তু এই সাফল্যের মাঝেও শিবানীী মহাকালের সামনে করা প্রতিশ্রুতি
+            কিন্তু এই সাফল্যের মাঝেও শিবানী মহাকালের সামনে করা প্রতিশ্রুতি
             ভুলে যাননি।
           </p>
-<h3>
-            মহাদেবের প্রতি অটল বিশ্বাস, গভীর কৃতজ্ঞতা এবং ভক্তি থেকেই তিনি ও
-            তাঁর পরিবার ভোলেনাথের উদ্দেশ্যে একটি মন্দির নির্মাণের কাজ শুরু করেন।
-          </h3>
+<h3>মহাদেবের প্রতি অটল বিশ্বাস, গভীর কৃতজ্ঞতা এবং ভক্তি থেকেই তিনি ও
+ তাঁর পরিবার ভোলেনাথের উদ্দেশ্যে একটি মন্দির নির্মাণের কাজ শুরু করেন।</h3>
 <br/>
 <p>
             দীর্ঘ পরিশ্রম, নিষ্ঠা ও ভক্তির মাধ্যমে ভোলেনাথ ধাম নির্মিত হয় এবং
@@ -1471,9 +1443,7 @@ COMMUNITY
 <p>
             समय बीतने के साथ परिवार के जीवन में उल्लेखनीय परिवर्तन होने लगे। आने वाले महीनों में नए अवसर प्राप्त हुए, कठिनाइयाँ धीरे-धीरे कम हुईं और वर्ष 2023 के अंत तक परिवार की परिस्थितियों में उनकी कल्पना से कहीं अधिक सुधार आ गया। इस समृद्धि के बीच भी शिवानी महाकाल के समक्ष किए अपने संकल्प को कभी नहीं भूलीं।
           </p>
-<h3>
-            भगवान शिव के प्रति श्रद्धा, कृतज्ञता और भक्ति से प्रेरित होकर शिवानी और उनके परिवार ने भोलेनाथ को समर्पित मंदिर का निर्माण आरंभ किया।
-          </h3>
+<h3>भगवान शिव के प्रति श्रद्धा, कृतज्ञता और भक्ति से प्रेरित होकर शिवानी और उनके परिवार ने भोलेनाथ को समर्पित मंदिर का निर्माण आरंभ किया।</h3>
 <br/>
 <p>
             महीनों के समर्पण और पवित्र तैयारी के बाद,
@@ -1497,13 +1467,9 @@ COMMUNITY
 </div>
 </section>
 <section aria-labelledby="darshanHeading" class="darshan-section">
-<h2 class="en hidden" id="darshanHeading">
-        Six Gentle Steps for a Sacred Darshan
-      </h2>
+<h2 class="en hidden" id="darshanHeading">Six Gentle Steps for a Sacred Darshan</h2>
 <h2 class="bn hidden">পবিত্র দর্শনের ছয়টি সহজ ধাপ</h2>
-<h2 class="hi" lang="hi">
-        पवित्र दर्शन के लिए छह सौम्य कदम
-      </h2>
+<h2 class="hi" lang="hi">पवित्र दर्शन के लिए छह सौम्य कदम</h2>
 <p class="section-intro en hidden">
         There is no single perfect way to pray. These simple steps can help
         every visitor enter respectfully and turn temple darshan into a
@@ -1600,7 +1566,7 @@ COMMUNITY
 <div>
 <h3 class="en hidden">Sit, Listen and Reflect</h3>
 <h3 class="bn hidden">বসুন, শুনুন ও মনন করুন</h3>
-<h3 class="hi" lang="hi">बैठो, सुनो और चिंतन करो</h3>
+<h3 class="hi" lang="hi">बैठें, सुनें और चिंतन करें</h3>
 <p class="en hidden">
               If circumstances permit, spend a few quiet minutes after darshan
               and carry one clear prayer with you.
@@ -1611,7 +1577,7 @@ COMMUNITY
             </p>
 <p class="hi" lang="hi">
               यदि परिस्थितियाँ अनुमति दें, तो दर्शन के बाद कुछ शांत मिनट बिताएँ
-              और एक स्पष्ट प्रार्थना अपने साथ रखो।
+              और एक स्पष्ट प्रार्थना अपने साथ रखें।
             </p>
 </div>
 </li>
@@ -2006,7 +1972,7 @@ COMMUNITY
 <p class="en hidden">
             Near Durga Mandir, Digha, Chandpara<br/>
             Dhakuria-Ramchandrapur Road<br/>
-            24 Parganas North<br/>
+            North 24 Parganas<br/>
             West Bengal – 743245
           </p>
 <p class="bn hidden">
@@ -2087,9 +2053,9 @@ COMMUNITY
 </div>
 </section>
 <section class="related-links">
-<h2 class="en hidden">🔱 More Ways to Stay Close to Mahadev 🔱</h2>
-<h2 class="bn hidden">🔱 মহাদেবের সান্নিধ্যে থাকার আরও পথ 🔱</h2>
-<h2 class="hi" lang="hi">🔱 महादेव के करीब रहने के और भी तरीके 🔱</h2>
+<h2 class="en hidden">More Ways to Stay Close to Mahadev</h2>
+<h2 class="bn hidden">মহাদেবের সান্নিধ্যে থাকার আরও পথ</h2>
+<h2 class="hi" lang="hi">महादेव के करीब रहने के और भी तरीके</h2>
 <p class="related-subtitle en hidden">
         Explore more sacred teachings and prayers dedicated to Mahadev.
       </p>
@@ -2587,14 +2553,19 @@ COMMUNITY
       </button>
 <img alt="Temple Image" id="lightbox-img" src="images/temple1.webp"/>
 </div>
+<nav class="bd-fab" aria-label="Quick actions">
+<a href="https://maps.app.goo.gl/pTujzyq8HFqA7LqV6" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span class="en hidden">Directions</span><span class="bn hidden">পথ</span><span class="hi" lang="hi">मार्ग</span></a>
+<button type="button" data-bd-share><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg><span class="en hidden">Share</span><span class="bn hidden">শেয়ার</span><span class="hi" lang="hi">साझा करें</span></button>
+<a href="seva.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5.2 5.2 0 0 0-7.4 0L12 7l-1.4-1.4a5.2 5.2 0 0 0-7.4 7.4L12 21.8l8.8-8.8a5.2 5.2 0 0 0 0-7.4z"/></svg><span class="en hidden">Seva</span><span class="bn hidden">সেবা</span><span class="hi" lang="hi">सेवा</span></a>
+</nav>
 <button id="backToTop" title="Back to Top" type="button">🕉️</button>
 <div class="popup-card" id="popupCard">
 <button aria-label="Close welcome message" id="closePopup" type="button">
         ✕
       </button>
-<h3 class="en hidden">🔱 Har Har Mahadev 🔱</h3>
-<h3 class="bn hidden">🔱 হর হর মহাদেব 🔱</h3>
-<h3 class="hi" lang="hi">🔱 हर हर महादेव 🔱</h3>
+<h3 class="en hidden">Har Har Mahadev</h3>
+<h3 class="bn hidden">হর হর মহাদেব</h3>
+<h3 class="hi" lang="hi">हर हर महादेव</h3>
 <p class="en hidden">
         Welcome to Bholenath Dham. 🔔 New videos and photos from Bholenath Dham
         are now available.
@@ -2617,5 +2588,6 @@ COMMUNITY
     </button>
 <script src="js/main.js"></script>
 <script src="js/hindi-language.js"></script>
-<script src="js/navbar.js"></script></body>
+<script src="js/navbar.js"></script>
+<script src="js/premium.js" defer></script></body>
 </html>
