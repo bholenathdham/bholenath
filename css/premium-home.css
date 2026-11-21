@@ -1,0 +1,379 @@
+/* =========================================================
+   Bholenath Dham — homepage-only premium styling (index.html only)
+   Uses tokens (--bd-*) and fonts defined in premium.css.
+   ========================================================= */
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: min(86vh, 820px);
+  height: auto;
+  padding: 72px 20px 110px;
+  background: var(--bd-ink);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  z-index: -2;
+  background: url("../images/temple1.webp") center / cover no-repeat;
+  animation: bd-kenburns 32s ease-in-out infinite alternate;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(22, 7, 8, 0.15) 0%, rgba(22, 7, 8, 0.62) 70%),
+    linear-gradient(180deg, rgba(22, 7, 8, 0.55) 0%, rgba(22, 7, 8, 0.2) 38%, rgba(22, 7, 8, 0.92) 100%);
+}
+@keyframes bd-kenburns {
+  from { transform: scale(1) translate3d(0, 0, 0); }
+  to   { transform: scale(1.09) translate3d(-1.2%, -1%, 0); }
+}
+.hero-content { max-width: 920px; width: 100%; }
+
+.hero h2 {
+  font-family: var(--bd-serif);
+  font-weight: 700;
+  font-size: clamp(2.7rem, 8vw, 5.6rem);
+  line-height: 1.22;
+  letter-spacing: 0.01em;
+  margin: 0 0 6px;
+  padding-bottom: 0.08em;
+  background: linear-gradient(180deg, #fff6dc 10%, var(--bd-gold-hi) 55%, var(--bd-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.55));
+}
+.hero h2::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 14px;
+  margin: 14px auto 0;
+  background:
+    linear-gradient(90deg, transparent, var(--bd-gold)) left center / 62px 1px no-repeat,
+    linear-gradient(270deg, transparent, var(--bd-gold)) right center / 62px 1px no-repeat;
+  position: relative;
+}
+.hero-tagline {
+  font-family: var(--bd-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.6vw, 1.7rem);
+  color: #fbeed2;
+  margin: 18px auto 24px;
+  max-width: 34ch;
+  line-height: 1.5;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+}
+.hero .status-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 8px;
+}
+.hero .status {
+  background: rgba(22, 7, 8, 0.45);
+  border: 1px solid rgba(241, 213, 143, 0.4);
+  color: #fbeed2;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  padding: 8px 16px;
+  border-radius: 999px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: none;
+}
+.hero-content > p:not(.hero-tagline) {
+  max-width: 56ch;
+  margin: 14px auto 0;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #fff6e4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9), 0 0 22px rgba(0, 0, 0, 0.85);
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+.bd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font: 600 0.92rem/1 var(--bd-sans);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.bd-btn.hidden { display: none; }   /* keep the site's language hiding working */
+.bd-btn svg { width: 18px; height: 18px; flex: none; }
+.bd-btn-primary {
+  background: linear-gradient(135deg, var(--bd-gold-hi), var(--bd-gold) 60%, #a97a22);
+  color: #2b1304;
+  border: 0;
+  box-shadow: 0 10px 26px -10px rgba(201, 154, 60, 0.8);
+}
+.bd-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -10px rgba(201, 154, 60, 0.95); }
+.bd-btn-ghost {
+  background: rgba(22, 7, 8, 0.35);
+  color: #fbeed2;
+  border: 1px solid rgba(241, 213, 143, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+.bd-btn-ghost:hover { background: rgba(241, 213, 143, 0.16); transform: translateY(-2px); }
+.bd-btn:focus-visible { outline: 3px solid var(--bd-gold-hi); outline-offset: 3px; }
+
+/* Countdown */
+.hero-countdown {
+  margin: 34px auto 0;
+  display: inline-block;
+  padding: 16px 22px 18px;
+  border: 1px solid rgba(241, 213, 143, 0.4);
+  border-radius: var(--bd-radius);
+  background: rgba(22, 7, 8, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.hero-countdown[hidden] { display: none; }
+.hc-label {
+  margin: 0 0 10px !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bd-gold-hi) !important;
+}
+.hc-grid { display: flex; gap: 10px; justify-content: center; }
+.hc-grid > div {
+  min-width: 62px;
+  padding: 8px 6px 7px;
+  border-radius: 12px;
+  background: rgba(255, 246, 228, 0.07);
+}
+.hc-grid b {
+  display: block;
+  font: 700 1.7rem/1.1 var(--bd-serif);
+  color: #fff6dc;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+.hc-grid small { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(251, 238, 210, 0.75); }
+
+/* Scroll cue */
+.hero-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 26px;
+  width: 24px;
+  height: 40px;
+  margin-left: -12px;
+  border: 1.5px solid rgba(241, 213, 143, 0.7);
+  border-radius: 14px;
+}
+.hero-scroll::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  width: 3px;
+  height: 8px;
+  margin-left: -1.5px;
+  border-radius: 3px;
+  background: var(--bd-gold-hi);
+  animation: bd-scroll 1.8s ease-in-out infinite;
+}
+@keyframes bd-scroll { 0% { opacity: 0; transform: translateY(0); } 40% { opacity: 1; } 100% { opacity: 0; transform: translateY(14px); } }
+
+/* ---------- Section headings ---------- */
+.quick-nav h3,
+.sacred-pathways h2,
+.observances-section h2,
+.daily-worship-section h2,
+.homepage-faq h2,
+#about > h2, #mantras h2, #visit h2, #location h2, #gallery h2,
+.related-links h2, .darshan-section h2 {
+  font-family: var(--bd-serif);
+  font-weight: 700;
+  color: var(--bd-maroon);
+  letter-spacing: 0.01em;
+}
+.sacred-pathways h2, .observances-section h2, .homepage-faq h2,
+.daily-worship-section h2, .darshan-section h2 { font-size: clamp(2rem, 4.6vw, 3rem); }
+
+section h2, .spx-slider-section h2, #about h3 {
+  font-family: var(--bd-serif);
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Quick navigation ---------- */
+.quick-nav-links a {
+  border: 1px solid rgba(201, 154, 60, 0.55);
+  background: var(--bd-ivory);
+  color: var(--bd-maroon);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.quick-nav-links a:hover {
+  background: var(--bd-maroon);
+  color: var(--bd-gold-hi);
+  transform: translateY(-2px);
+  box-shadow: var(--bd-shadow);
+}
+
+/* ---------- Pathway cards ---------- */
+.pathway-card {
+  border: 1px solid rgba(201, 154, 60, 0.4) !important;
+  border-top: 3px solid var(--bd-gold) !important;
+  border-radius: var(--bd-radius);
+  background: linear-gradient(180deg, #fffdf8, var(--bd-cream));
+  box-shadow: var(--bd-shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.pathway-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--bd-gold) !important;
+  box-shadow: 0 26px 46px -20px rgba(107, 15, 20, 0.45);
+}
+.pathway-number {
+  font-family: var(--bd-serif);
+  font-weight: 700;
+  color: rgba(201, 154, 60, 0.7);
+}
+.pathway-card h3 { font-family: var(--bd-serif); font-size: 1.45rem; color: var(--bd-maroon); line-height: 1.2; }
+
+/* ---------- Temple bell ---------- */
+.bell-decoration {
+  height: 18px;
+  margin-bottom: 10px;
+  font-size: 0;
+  background:
+    linear-gradient(90deg, transparent, var(--bd-gold)) left center / 40% 1px no-repeat,
+    linear-gradient(270deg, transparent, var(--bd-gold)) right center / 40% 1px no-repeat;
+  position: relative;
+}
+.bell-decoration::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  background: var(--bd-gold);
+  transform: rotate(45deg);
+}
+.bell-container h2 { font-family: var(--bd-serif); }
+.bell-container .bell-icon { transform-origin: 50% 8%; }
+.bell-container .bell-icon.is-ringing { animation: bd-ring 1.1s ease-in-out 1; }
+@keyframes bd-ring {
+  0%, 100% { transform: rotate(0); }
+  15% { transform: rotate(18deg); } 30% { transform: rotate(-16deg); }
+  45% { transform: rotate(12deg); } 60% { transform: rotate(-9deg); }
+  75% { transform: rotate(5deg); }  90% { transform: rotate(-2deg); }
+}
+#bellBtn {
+  background: linear-gradient(135deg, var(--bd-gold-hi), var(--bd-gold) 60%, #a97a22);
+  color: #2b1304;
+  border: 0;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 12px 26px -12px rgba(169, 122, 34, 0.9);
+}
+#bellBtn:active { transform: scale(0.97); }
+.bell-count {
+  margin: 14px 0 0;
+  font-size: 0.9rem;
+  color: var(--bd-maroon);
+  letter-spacing: 0.02em;
+}
+.bell-count[hidden] { display: none; }
+.bell-count b { font: 700 1.2rem var(--bd-serif); font-feature-settings: "lnum" 1; }
+
+/* ---------- Welcome popup: never block the hero on arrival ---------- */
+.popup-card {
+  animation: bd-pop 0.6s ease 9s both;
+  border-radius: var(--bd-radius);
+  border: 1px solid rgba(201, 154, 60, 0.6);
+}
+@keyframes bd-pop {
+  from { opacity: 0; transform: translateY(18px); pointer-events: none; }
+  to   { opacity: 1; transform: none; pointer-events: auto; }
+}
+
+/* ---------- Mobile quick-action bar ---------- */
+.bd-fab { display: none; }
+@media (max-width: 768px) {
+  body { padding-bottom: 72px; }
+  .bd-fab {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 9990;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(201, 154, 60, 0.45);
+    border-top: 1px solid rgba(201, 154, 60, 0.6);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bd-fab a, .bd-fab button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 6px;
+    border: 0;
+    background: var(--bd-ink);
+    color: var(--bd-gold-hi);
+    font: 500 0.72rem/1.2 var(--bd-sans);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .bd-fab svg { width: 20px; height: 20px; }
+  #backToTop, .popup-launcher { bottom: 88px !important; }
+  .popup-card { bottom: 84px !important; max-width: calc(100vw - 24px); }
+  .hero { padding: 48px 16px 100px; min-height: 84vh; }
+  .hero-actions { flex-direction: column; align-items: stretch; max-width: 320px; margin-inline: auto; }
+  .bd-btn { justify-content: center; }
+  .hc-grid { gap: 6px; }
+  .hc-grid > div { min-width: 54px; }
+  .hc-grid b { font-size: 1.4rem; }
+  .hero-countdown { padding: 14px 12px 16px; }
+}
+
+/* ---------- Scroll reveal (only active when JS adds .bd-js) ---------- */
+.bd-js .bd-reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.bd-js .bd-reveal.bd-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .hero-scroll::after, .popup-card, .bell-container .bell-icon.is-ringing { animation: none !important; }
+  .bd-js .bd-reveal { opacity: 1; transform: none; transition: none; }
+}
+
+
+/* Very small phones (320px): keep mantra cards inside the screen */
+@media (max-width: 360px) {
+  .mantra-container { grid-template-columns: minmax(0, 1fr); }
+  .mantra-card { min-width: 0; box-sizing: border-box; }
+}

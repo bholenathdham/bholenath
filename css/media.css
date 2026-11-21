@@ -251,3 +251,137 @@ body {
         max-height: 75vh; /* Fits cleanly inside mobile phone height bounds */
     }
 }
+
+/* =========================================================
+   Premium media page additions (video facades, groups, lightbox)
+   ========================================================= */
+
+/* Tap-to-play video: a light thumbnail instead of a full YouTube player */
+.yt-facade {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border: 3px solid #fde68a;
+    border-radius: 14px;
+    background: linear-gradient(160deg, #2a0d0f, #6b0f14);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+.yt-facade img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+.yt-facade::after {              /* soft darkening so the play button always reads */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(22,7,8,.05) 40%, rgba(22,7,8,.55) 100%);
+}
+.yt-facade:hover img { transform: scale(1.05); }
+.yt-play {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    height: 68px;
+    margin: -34px 0 0 -34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #2b1304;
+    background: linear-gradient(135deg, #f1d58f, #c99a3c 60%, #a97a22);
+    box-shadow: 0 10px 28px -6px rgba(0,0,0,.6), 0 0 0 6px rgba(241,213,143,.28);
+    transition: transform .2s ease;
+}
+.yt-play svg { width: 30px; height: 30px; margin-left: 3px; }
+.yt-facade:hover .yt-play { transform: scale(1.1); }
+.yt-facade:focus-visible { outline: 3px solid #c99a3c; outline-offset: 3px; }
+.video-wrapper iframe.yt-live { max-width: 350px; }
+
+@media (max-width: 768px) { .yt-facade { max-width: 320px; } }
+
+/* Group headings between video sets */
+.media-group-title {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 34px 0 2px;
+}
+.media-group-title:first-child { margin-top: 0; }
+.media-group-title h2 {
+    margin: 0;
+    font-family: var(--bd-serif, Georgia, serif);
+    font-weight: 700;
+    font-size: clamp(1.7rem, 3.8vw, 2.5rem);
+    color: var(--bd-maroon, #6b0f14);
+    letter-spacing: .01em;
+}
+.media-group-title::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg, transparent, #c99a3c, transparent);
+}
+
+/* Cards and headings: warmer, more refined */
+.media-card {
+    border: 1px solid rgba(201, 154, 60, .45);
+    border-radius: 18px;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+.media-card:hover { transform: translateY(-4px); }
+.media-card h3 {
+    font-family: var(--bd-serif, Georgia, serif);
+    font-size: 1.5rem;
+    color: var(--bd-maroon, #6b0f14);
+}
+.names-hero h1, .media-intro h2, #gallery h2, #gallery-mahadev h2 {
+    font-family: var(--bd-serif, Georgia, serif);
+}
+#gallery-mahadev { text-align: center; }
+#gallery-mahadev h2 { color: var(--bd-maroon, #6b0f14); }
+
+/* Lightbox: arrows, caption, swipe */
+.lb-figure { margin: 0; max-width: 100%; text-align: center; }
+#lightbox-cap {
+    margin-top: 12px;
+    color: #f7ecd6;
+    font-size: .95rem;
+    letter-spacing: .02em;
+}
+.lb-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(241,213,143,.6);
+    border-radius: 50%;
+    background: rgba(22,7,8,.6);
+    color: #f1d58f;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+}
+.lb-nav:hover { background: rgba(201,154,60,.35); }
+.lb-prev { left: 16px; }
+.lb-next { right: 16px; }
+@media (max-width: 768px) {
+    .lb-nav { width: 42px; height: 42px; font-size: 1.6rem; top: auto; bottom: 22px; transform: none; }
+    .lb-prev { left: calc(50% - 56px); }
+    .lb-next { right: calc(50% - 56px); }
+}
+body.lb-open { overflow: hidden; }
+@media (prefers-reduced-motion: reduce) {
+    .yt-facade img, .yt-play, .media-card { transition: none; }
+}
