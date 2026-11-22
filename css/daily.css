@@ -1,0 +1,9 @@
+.dc-page{background:radial-gradient(circle at 50% 0,#2a0d0f,#160708 70%);padding:40px 16px 70px;min-height:70vh}
+.dc-wrap{max-width:520px;margin:0 auto;text-align:center}
+.dc-kicker{margin:0;color:#c99a3c;letter-spacing:.3em;text-transform:uppercase;font-size:.8rem}
+.dc-wrap h1{margin:8px 0;color:#f1d58f;font-size:clamp(1.8rem,5vw,2.4rem)}
+.dc-sub{color:#e6d9c4;margin:0 0 20px}
+#dcCanvas{width:100%;height:auto;border-radius:16px;border:1px solid rgba(241,213,143,.5);box-shadow:0 24px 60px -24px #000}
+.dc-actions{display:grid;gap:10px;margin-top:20px}
+.dc-btn{padding:14px 18px;border-radius:999px;border:1px solid #c99a3c;background:transparent;color:#f1d58f;font:600 15px Poppins,'Noto Sans Bengali','Noto Sans Devanagari',sans-serif;cursor:pointer}
+.dc-primary{background:linear-gradient(180deg,#f1d58f,#c99a3c);color:#2a0d0f;border-color:transparent}

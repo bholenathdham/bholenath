@@ -1,0 +1,15 @@
+.tr-page{background:linear-gradient(#fdf8ee,#f7ecd6);padding:50px 16px 80px;color:#2b1a14}
+.tr-wrap{max-width:980px;margin:0 auto}
+.tr-kicker{margin:0;text-align:center;color:#b07a1c;letter-spacing:.3em;text-transform:uppercase;font-size:.8rem;font-weight:600}
+.tr-wrap h1{text-align:center;color:#6b0f14;font-family:"Cormorant Garamond","Noto Serif Bengali","Noto Serif Devanagari",Georgia,serif;font-size:clamp(2rem,5vw,3rem);margin:8px 0 14px}
+.tr-lead{max-width:720px;margin:0 auto 34px;text-align:center;font-size:1.05rem;line-height:1.8}
+.tr-timeline{list-style:none;margin:0 auto 36px;padding:0;max-width:640px;border-left:2px solid #c99a3c}
+.tr-timeline li{position:relative;padding:6px 0 18px 22px;display:flex;flex-direction:column;gap:2px}
+.tr-timeline li::before{content:"";position:absolute;left:-7px;top:12px;width:12px;height:12px;border-radius:50%;background:#c99a3c;box-shadow:0 0 0 4px #fdf8ee}
+.tr-timeline b{color:#6b0f14}
+.tr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.tr-card{background:#fff;border:1px solid rgba(201,154,60,.55);border-radius:18px;padding:22px;box-shadow:0 18px 40px -26px rgba(60,20,10,.45)}
+.tr-card h3{margin:0 0 8px;color:#6b0f14;font-size:1.1rem}.tr-card p{margin:0;line-height:1.75}
+.tr-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.tr-btn{padding:13px 26px;border-radius:999px;background:#6b0f14;color:#fff;text-decoration:none;font-weight:600}
+.tr-btn.ghost{background:transparent;color:#6b0f14;border:1px solid #6b0f14}

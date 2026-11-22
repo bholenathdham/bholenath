@@ -377,3 +377,16 @@ section h2, .spx-slider-section h2, #about h3 {
   .mantra-container { grid-template-columns: minmax(0, 1fr); }
   .mantra-card { min-width: 0; box-sizing: border-box; }
 }
+
+/* Story share + daily card promo */
+.story-share{display:block;margin:14px auto 0;padding:11px 22px;border-radius:999px;border:1px solid #c99a3c;background:transparent;color:#6b0f14;font:600 14px Poppins,'Noto Sans Bengali','Noto Sans Devanagari',sans-serif;cursor:pointer}
+.story-share:hover{background:#c99a3c;color:#2a0d0f}
+.bd-daily-promo{background:radial-gradient(circle at 50% 0,#2a0d0f,#160708 75%);padding:56px 16px;text-align:center;border-top:1px solid rgba(201,154,60,.5);border-bottom:1px solid rgba(201,154,60,.5)}
+.bd-daily-inner{max-width:640px;margin:0 auto}
+.bd-daily-kicker{margin:0;color:#c99a3c;letter-spacing:.3em;text-transform:uppercase;font-size:.8rem}
+.bd-daily-promo h2{margin:8px 0 10px;color:#f1d58f;font-family:var(--bd-serif);font-size:clamp(1.9rem,5vw,2.6rem)}
+.bd-daily-promo p{color:#e6d9c4;line-height:1.7}
+.bd-daily-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:20px}
+.bd-daily-btn{padding:13px 26px;border-radius:999px;background:linear-gradient(180deg,#f1d58f,#c99a3c);color:#2a0d0f;font-weight:700;text-decoration:none}
+.bd-daily-link{color:#f1d58f;text-decoration:underline}
+.bd-daily-promo .hidden{display:none}
