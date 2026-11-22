@@ -58,10 +58,25 @@
     "html.bd-rm-night .sp-intro p,html.bd-rm-night .sp-section p,html.bd-rm-night .sp-section li,html.bd-rm-night .sp-quote p,html.bd-rm-night .sp-chapter-text p,html.bd-rm-night .sp-chapter-nav p{color:#e6d9c4!important}",
     "html.bd-rm-night .sp-intro h1,html.bd-rm-night .sp-section h2,html.bd-rm-night .sp-section h3,html.bd-rm-night .sp-chapter-nav h2,html.bd-rm-night .sp-quote h2{color:#f1d58f!important}",
     "html.bd-rm-night .sp-chapter-nav a{background:#2a0d0f!important;color:#f1d58f!important;border-color:rgba(201,154,60,.5)!important}",
-    "html.bd-rm-night .sp-intro p,html.bd-rm-night .sp-chapter-text,html.bd-rm-night .sp-feature-card,html.bd-rm-night .sp-info-card,html.bd-rm-night .sp-quote-box{background:#201813!important;background-image:none!important;border-color:rgba(201,154,60,.35)!important;box-shadow:none!important}",
-    "html.bd-rm-night .sp-feature-card *,html.bd-rm-night .sp-info-card *,html.bd-rm-night .sp-quote-box *{color:#e6d9c4!important}",
+    "html.bd-rm-night .sp-intro p,html.bd-rm-night .sp-chapter-text,html.bd-rm-night .sp-feature-card,html.bd-rm-night .sp-info-card,html.bd-rm-night .sp-structure-box,html.bd-rm-night .sp-faq-item,html.bd-rm-night .sp-card,html.bd-rm-night .sp-samhita-list div,html.bd-rm-night .sp-quote-box{background:#201813!important;background-image:none!important;border-color:rgba(201,154,60,.35)!important;box-shadow:none!important}",
+    "html.bd-rm-night .sp-feature-card *,html.bd-rm-night .sp-info-card *,html.bd-rm-night .sp-structure-box *,html.bd-rm-night .sp-faq-item *,html.bd-rm-night .sp-card *,html.bd-rm-night .sp-samhita-list div *,html.bd-rm-night .sp-quote-box *{color:#e6d9c4!important}",
     "html.bd-rm-night .sp-feature-card h3,html.bd-rm-night .sp-info-card h3,html.bd-rm-night .sp-quote-box h2,html.bd-rm-night .sp-quote-box h3{color:#f1d58f!important}",
-    "html.bd-rm-night .sp-chapter-text a{color:#f1d58f}"
+    "html.bd-rm-night .sp-chapter-text *{color:#e6d9c4!important}",
+    "html.bd-rm-night :is(.sp-intro,.sp-section,.sp-quote,.sp-chapter-nav) :is(h1,h2,h3,h4) *{color:inherit!important}",
+    "html.bd-rm-night .sp-chapter-nav a *{color:#f1d58f!important}",
+    "html.bd-rm-night .sp-feature-icon,html.bd-rm-night .sp-feature-icon *,html.bd-rm-night .sp-feature-card .sp-feature-icon,html.bd-rm-night .sp-feature-card .sp-feature-icon *,html.bd-rm-night .sp-info-card .sp-info-icon,html.bd-rm-night .sp-info-card .sp-info-icon *{color:#6b0f14!important}",
+    "html.bd-rm-night .sp-feature-section{background:transparent!important}",
+    "html.bd-rm-night .sp-feature-section :is(h1,h2,h3,h4),html.bd-rm-night .sp-feature-section :is(h1,h2,h3,h4) *{color:#f1d58f!important}",
+    "html.bd-rm-night .sp-quote-box p{background:transparent!important;color:#e6d9c4!important}",
+    "html.bd-rm-night .chapter-list li{background:#201813!important;background-image:none!important;border-color:rgba(201,154,60,.35)!important}",
+    "html.bd-rm-night .chapter-list li,html.bd-rm-night .chapter-list li *{color:#e6d9c4!important}",
+    "html.bd-rm-night .chapter-list li a,html.bd-rm-night .chapter-list li a *{color:#f1d58f!important}",
+    "html.bd-rm-night section[class^=sp-] :is(h1,h2,h3,h4),html.bd-rm-night section[class^=sp-] :is(h1,h2,h3,h4) *{color:#f1d58f!important}",
+    "html.bd-rm-night section[class^=sp-] :is(p,li) a{color:#f1d58f!important}",
+    "html.bd-rm-night .sp-chapter-text{color:#e6d9c4!important}",
+    "html.bd-rm-night .sp-next-card p,html.bd-rm-night .sp-next-card p *{color:#e6d9c4!important}",
+    "html.bd-rm-night .chapter-status,html.bd-rm-night .chapter-status *{color:#1b5e20!important}",
+    "html.bd-rm-night .sp-chapter-text a{color:#f1d58f!important}"
   ].join("\n");
   var st = document.createElement("style");
   st.textContent = css;
