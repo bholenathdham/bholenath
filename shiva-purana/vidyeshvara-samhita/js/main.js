@@ -243,7 +243,7 @@ if(lastClosed){
 
 }
 
-closeBtn.addEventListener("click", () => {
+if (closeBtn) closeBtn.addEventListener("click", () => {
 
     popup.style.display = "none";
 
@@ -256,7 +256,7 @@ closeBtn.addEventListener("click", () => {
 
 });
 
-launcher.addEventListener("click", () => {
+if (launcher) launcher.addEventListener("click", () => {
 
     popup.style.display = "block";
 

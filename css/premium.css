@@ -100,3 +100,6 @@ body { font-family: var(--bd-sans); }
   .bholenath-home-header .logo img { width: 32px; height: 32px; }
   .bholenath-home-header .header-container .logo-text h1 { font-size: 12.5px !important; letter-spacing: 0; }
 }
+
+/* Header never wider than the screen (fixes 8px sideways scroll on some Explore pages) */
+.bholenath-home-header .header-container { box-sizing: border-box; max-width: 100%; }

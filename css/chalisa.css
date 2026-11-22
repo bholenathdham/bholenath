@@ -500,3 +500,8 @@ footer p {
 .hidden {
     display: none !important;
 }
+/* Faint watermarks must not push the page sideways on phones */
+@media (max-width: 1100px) {
+    .chalisa-container::before { left: 0; }
+    .chalisa-container::after { right: 0; }
+}
