@@ -44,21 +44,7 @@ body { font-family: var(--bd-sans); }
   border-bottom: 1px solid rgba(201, 154, 60, 0.45);
   box-shadow: 0 6px 24px -14px rgba(60, 20, 10, 0.35);
 }
-.bholenath-home-header .logo-text h1 {
-  font-family: var(--bd-serif);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #5a0c11;
-  -webkit-text-stroke: 0.5px #5a0c11;   /* Cormorant is fine-stroked: adds the weight a site name needs */
-  paint-order: stroke fill;
-}
-/* Bigger brand name only where there is room; the navbar's own rules size it elsewhere */
-@media (min-width: 1320px) {
-  .bholenath-home-header .logo-text h1 { font-size: 1.7rem; }
-}
-@media (max-width: 1319px) and (min-width: 769px) {
-  .bholenath-home-header .logo-text h1 { font-size: 1.3rem; }
-}
+/* Brand name keeps its original red Poppins look from navbar.css */
 /* Tablets / small laptops: the full menu needs the room, so show the emblem only */
 @media (min-width: 769px) and (max-width: 1160px) {
   .bholenath-home-header .logo { min-width: 0; }
@@ -109,47 +95,8 @@ body { font-family: var(--bd-sans); }
   .bholenath-home-header #langToggle { min-width: 64px; }
 }
 
-/* =========================================================
-   Phone header: [emblem][Bholenath Dham]  [language]  [menu]
-   Keeps the original order; the name gets a bolder, heading-style look.
-   ========================================================= */
-@media (max-width: 768px) {
-  .bholenath-home-header .logo { gap: 8px; }
-  .bholenath-home-header .logo img { width: 44px; height: 44px; }
-  .bholenath-home-header .logo-text h1 {
-    font-family: var(--bd-serif);
-    font-size: 24px !important;
-    font-weight: 700;
-    letter-spacing: 0.025em;
-    line-height: 1.05;
-    overflow: visible;
-    text-overflow: clip;
-    color: #5a0c11;
-    -webkit-text-stroke: 0.7px #5a0c11;   /* Cormorant is a fine-stroke face: adds real weight on phones */
-    paint-order: stroke fill;
-  }
-  .bholenath-home-header .logo-text h1::after {
-    content: "";
-    display: block;
-    height: 1px;
-    margin-top: 4px;
-    background: linear-gradient(90deg, var(--bd-gold), transparent);
-  }
-}
-@media (max-width: 430px) {
-  .bholenath-home-header .logo { gap: 7px; }
-  .bholenath-home-header .logo img { width: 40px; height: 40px; }
-  .bholenath-home-header .logo-text h1 { font-size: 22px !important; letter-spacing: 0.02em; }
-  /* give the name room: the language button keeps its text but drops the globe icon */
-  .bholenath-home-header .site-language-select .site-language-icon { display: none; }
-  .bholenath-home-header .site-language-select { padding: 0 8px; }
-}
-@media (max-width: 380px) {
-  .bholenath-home-header .logo img { width: 36px; height: 36px; }
-  .bholenath-home-header .logo-text h1 { font-size: 20px !important; }
-}
+/* Very small phones (320px): keep the full red brand name visible, no clipping */
 @media (max-width: 345px) {
-  .bholenath-home-header .logo { gap: 5px; }
-  .bholenath-home-header .logo img { width: 30px; height: 30px; }
-  .bholenath-home-header .logo-text h1 { font-size: 18px !important; letter-spacing: 0.01em; }
+  .bholenath-home-header .logo img { width: 32px; height: 32px; }
+  .bholenath-home-header .header-container .logo-text h1 { font-size: 12.5px !important; letter-spacing: 0; }
 }
