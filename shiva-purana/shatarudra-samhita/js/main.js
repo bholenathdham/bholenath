@@ -1,3 +1,5 @@
+/* Sacred icons loader */
+(function(){try{var p=location.pathname,m=p.match(/^(.*?)\/(shiva-purana|explore|glossary)\//),local=location.protocol==="file:"||/^(localhost|127\.0\.0\.1)$/.test(location.hostname),b="https://bholenathdham.in";if(local)b=location.origin.replace("null","")+(m?m[1]:p.replace(/\/[^\/]*$/,""));var s=document.createElement("script");s.src=b+"/js/icons.js";s.defer=true;document.head.appendChild(s);}catch(e){}})();
 /* Purana reading mode loader */
 (function(){try{var u="https://bholenathdham.in/js/reading-mode.js",p=location.pathname,i=p.indexOf("/shiva-purana/");if((location.protocol==="file:"||/^(localhost|127\.0\.0\.1)$/.test(location.hostname))&&i>-1)u=location.origin.replace("null","")+p.slice(0,i)+"/js/reading-mode.js";var s=document.createElement("script");s.src=u;s.defer=true;document.head.appendChild(s);}catch(e){}})();
 // LANGUAGE TOGGLE

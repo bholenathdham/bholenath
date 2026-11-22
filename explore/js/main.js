@@ -1,3 +1,5 @@
+/* Sacred icons loader */
+(function(){try{var p=location.pathname,m=p.match(/^(.*?)\/(shiva-purana|explore|glossary)\//),local=location.protocol==="file:"||/^(localhost|127\.0\.0\.1)$/.test(location.hostname),b="https://bholenathdham.in";if(local)b=location.origin.replace("null","")+(m?m[1]:p.replace(/\/[^\/]*$/,""));var s=document.createElement("script");s.src=b+"/js/icons.js";s.defer=true;document.head.appendChild(s);}catch(e){}})();
 (function () {
   "use strict";
 

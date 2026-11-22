@@ -1326,5 +1326,6 @@
 document.querySelectorAll(".upi-copy").forEach(function(b){b.addEventListener("click",function(){var t=b.getAttribute("data-copy");function ok(){b.classList.add("done")}
 if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){})}else{var i=document.createElement("input");i.value=t;document.body.appendChild(i);i.select();try{document.execCommand("copy");ok()}catch(e){}document.body.removeChild(i)}})});
 </script>
+<script src="js/icons.js" defer></script>
 </body>
 </html>
